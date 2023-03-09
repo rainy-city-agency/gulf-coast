@@ -1,0 +1,276 @@
+<div class="bg-gray-100">
+    {%- if section.settings.image != blank -%}
+    <div class="page-banner">
+        <img
+        data-sizes="auto"
+        src="{{ section.settings.image | img_url: 'small'}}"
+        data-srcset="
+        {% if section.settings.image_mobile != blank %}
+            {{ section.settings.image_mobile | img_url: '768x' }} 567w,
+        {% endif%}
+        {{ section.settings.image | img_url: '992x' }} 768w,
+        {{ section.settings.image | img_url: '1200x' }} 992w,
+        {{ section.settings.image | img_url: '1920x' }} 1200w,
+        {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+        {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+        {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+        "
+        class="lazyload img-wrapper mw-100 " alt="{{ page.title | escape }}" />
+    </div>
+    {%- endif -%}
+    <div class="pt-7 pt-md-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-12 col-xl-10 mx-auto">
+                    <h1 class="font-weight-bold letter-spacing text-uppercase text-center text-primary mb-3 mb-md-8">{{ page.title}}</h1>
+                    {{- page.content -}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if section.blocks.size > 0 %}
+    <div class="pt-7 pt-md-12">
+        <div class="container">
+            <div class="row">
+                {% if section.settings.enable_faq_1 %}
+                <div class="col-md-9 col-lg-10 col-xl-9 mx-auto">
+                    <div class="mb-9">
+                        <h2 class="font-weight-normal letter-spacing-2 text-uppercase mb-6">{{ section.settings.faq_title_1 }}</h2>
+
+                        <div class="plan-accordion" id="accordionExample">
+                            {% assign count = 0 %}
+                            {% for block in section.blocks %}
+                                {% if block.type == 'plan' %}
+                                {% assign count = count | plus: 1 %}
+                                {% assign mod = count| modulo: 2 %}
+                                <div class="card rounded-0 border-0 {% if mod == 0 %} bg-gray-200 {% else %}bg-white{% endif %}">
+                                    <div class="card-header bg-transparent border-0 p-0" id="heading-{{block.settings.title | handleize}}">
+                                        <button class="border-0 pl-4 pl-md-6 pr-8 py-md-5 btn btn-block position-relative btn-link text-left text-decoration-none text-body font-size-lg collapsed text-initial" type="button" data-toggle="collapse" data-target="#collapse-{{block.settings.title | handleize}}" aria-expanded="false" aria-controls="collapseOne">
+                                            {{ block.settings.title }}
+                                            <span class="pl-md-">
+                                                <i class="fas fa-plus"></i>
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div id="collapse-{{block.settings.title | handleize}}" class="collapse" aria-labelledby="heading-{{block.settings.title | handleize}}" data-parent="#accordionExample">
+                                        <div class="card-body px-4 px-md-6">
+                                            {{- block.settings.caption -}}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endif %}
+
+                {% if section.settings.enable_faq_2 %}
+                <div class="col-md-9 col-lg-10 col-xl-9 mx-auto">
+                    <div class="mb-9">
+                        <h2 class="font-weight-normal letter-spacing-2 text-uppercase mb-6">{{ section.settings.faq_title_2 }}</h2>
+
+                        <div class="plan-accordion" id="accordionExample">
+                            {% assign count1 = 0 %}
+                            {% for block in section.blocks %}
+                                {% if block.type == 'claim' %}
+                                {% assign count1 = count1 | plus: 1 %}
+                                {% assign mod = count1| modulo: 2 %}
+                                <div class="card rounded-0 border-0 {% if mod == 0 %} bg-gray-200 {% else %}bg-white{% endif %}">
+                                    <div class="card-header bg-transparent border-0 p-0" id="heading-{{block.settings.title | handleize}}">
+                                        <button class="border-0 pl-4 pl-md-6 pr-8 py-md-5 btn btn-block position-relative btn-link text-left text-decoration-none text-body font-size-lg collapsed text-initial" type="button" data-toggle="collapse" data-target="#collapse-{{block.settings.title | handleize}}" aria-expanded="false" aria-controls="collapseOne">
+                                            {{ block.settings.title }}
+                                            <span>
+                                                <i class="fas fa-plus"></i>
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div id="collapse-{{block.settings.title | handleize}}" class="collapse" aria-labelledby="heading-{{block.settings.title | handleize}}" data-parent="#accordionExample">
+                                        <div class="card-body px-4 px-md-6">
+                                            {{- block.settings.caption -}}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endif %}
+
+                {% if section.settings.enable_faq_3 %}
+                <div class="col-md-9 col-lg-10 col-xl-9 mx-auto">
+                    <div class="mb-9">
+                        <h2 class="font-weight-normal letter-spacing-2 text-uppercase mb-6">{{ section.settings.faq_title_3 }}</h2>
+
+                        <div class="plan-accordion" id="accordionExample">
+                            {% assign count = 0 %}
+                            {% for block in section.blocks %}
+                                {% if block.type == 'faq' %}
+                                {% assign count = count | plus: 1 %}
+                                {% assign mod = count| modulo: 2 %}
+                                <div class="card rounded-0 border-0 {% if mod == 0 %} bg-gray-200 {% else %}bg-white{% endif %}">
+                                    <div class="card-header bg-transparent border-0 p-0" id="heading-{{block.settings.title | handleize}}">
+                                        <button class="border-0 pl-4 pl-md-6 pr-8 py-md-5 btn btn-block position-relative btn-link text-left text-decoration-none text-body font-size-lg collapsed text-initial" type="button" data-toggle="collapse" data-target="#collapse-{{block.settings.title | handleize}}" aria-expanded="false" aria-controls="collapseOne">
+                                            {{ block.settings.title }}
+                                            <span>
+                                                <i class="fas fa-plus"></i>
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div id="collapse-{{block.settings.title | handleize}}" class="collapse" aria-labelledby="heading-{{block.settings.title | handleize}}" data-parent="#accordionExample">
+                                        <div class="card-body px-4 px-md-6">
+                                            {{- block.settings.caption -}}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Warranty Faqs Template",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "ratina_image",
+            "label": "Select Image for Large Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image for Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Select Image for Mobile"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_faq_1",
+            "label": "Enable Plan FAQ",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "faq_title_1",
+            "label": "FAQ Title 1",
+            "default": "Purchase A Protection Plan"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_faq_2",
+            "label": "Enable Claim FAQ",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "faq_title_2",
+            "label": "FAQ Title 2",
+            "default": "Claims"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_faq_3",
+            "label": "Enable FAQs",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "faq_title_3",
+            "label": "FAQ Title 3",
+            "default": "Frequently Asked Questions"
+        }
+    ],
+    "blocks": [{
+        "type": "plan",
+        "name": "Plan Item",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Question"
+            },
+            {
+                "type": "textarea",
+                "id": "caption",
+                "label": "Answer"
+            }
+        ]
+    },
+    {
+        "type": "claim",
+        "name": "Claim Item",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Question"
+            },
+            {
+                "type": "textarea",
+                "id": "caption",
+                "label": "Answer"
+            }
+        ]
+    },
+    {
+        "type": "faq",
+        "name": "FAQ Item",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Question"
+            },
+            {
+                "type": "textarea",
+                "id": "caption",
+                "label": "Answer"
+            }
+        ]
+    }]
+  }
+{% endschema %}

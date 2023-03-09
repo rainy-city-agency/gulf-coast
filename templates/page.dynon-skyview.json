@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "dynon_skyview": {
+      "type": "dynon-skyview",
+      "blocks": {
+        "89a941f3-046b-4495-958c-b141f9ba54cf": {
+          "type": "category",
+          "settings": {
+            "heading": "",
+            "link": "dynon-skyview"
+          }
+        }
+      },
+      "block_order": [
+        "89a941f3-046b-4495-958c-b141f9ba54cf"
+      ],
+      "settings": {
+        "enable": true,
+        "banner_image": "shopify:\/\/shop_images\/Dynon_Configuration_Page_Banner_7db7de2c-53d8-4900-9b48-65846d90a303.png",
+        "banner_title": "Dynon Skyview Quote & Order Worksheet",
+        "banner_heading": "Build Your Custom Dynon Skyview Package",
+        "banner_desc": "Use the worksheet below to compile a list of the components that you need to get the features and <br>capabilities you're looking for in your Dynon SkyView system. Once you have selected all of the items, <br>submit a request at the bottom of the page and we will provide you with a comprehensive <br>quote including a discount based on the package as a whole.",
+        "enable-header": false,
+        "html_desc": "Use the worksheet below to compile a list of the components that you need to get the features and capabilities you're looking for in your Dynon Skyview system. Once you have selected all of the items, submit a request at the bottom of the page and we will provide you with a comprehensive quote including a discount based on the package as a whole."
+      }
+    }
+  },
+  "order": [
+    "dynon_skyview"
+  ]
+}

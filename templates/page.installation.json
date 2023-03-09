@@ -1,0 +1,321 @@
+{
+  "sections": {
+    "avionics_installation": {
+      "type": "avionics-installation",
+      "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+            "financing_url": "https:\/\/madisoncapital.com\/specialized-financing\/avionics-financing\/",
+            "financing_img": "shopify:\/\/shop_images\/madison_capital_488238d7-01e6-4e18-a0d4-41d302ecce50.jpg",
+            "financing_title": "",
+            "financing_text": "Find out about installation financing"
+          }
+        },
+        "563ccf68-c5b4-4635-8e0d-08238ddb7d8d": {
+          "type": "content",
+          "settings": {
+            "financing_url": "https:\/\/www.airloans.com\/",
+            "financing_title": "NAFCO",
+            "financing_text": "Find out about installation financing"
+          }
+        },
+        "60d0dfac-6ffe-4a63-a536-256acec8f15e": {
+          "type": "content",
+          "settings": {
+            "financing_url": "https:\/\/banterraaircraft.com\/gulf-coast-avionics\/",
+            "financing_img": "shopify:\/\/shop_images\/Banterra_fe489275-64e9-40fb-9156-d5a08234a993.jpg",
+            "financing_title": "",
+            "financing_text": "Find out about installation financing"
+          }
+        }
+      },
+      "block_order": [
+        "content",
+        "563ccf68-c5b4-4635-8e0d-08238ddb7d8d",
+        "60d0dfac-6ffe-4a63-a536-256acec8f15e"
+      ],
+      "settings": {
+        "ratina_image": "shopify:\/\/shop_images\/GCA_hangar_2.jpg",
+        "image": "shopify:\/\/shop_images\/GCA_hangar_2.jpg",
+        "contact_enable": true,
+        "contact_heading": "Request installation quote",
+        "contact_caption": "Request an estimate online",
+        "contact_url": "shopify:\/\/pages\/installations-estimate",
+        "call_enable": true,
+        "call_heading": "CALL MATT TODAY!",
+        "call_caption": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/me.png?v=1647030643\" alt=\"Matt\" width=\"190\" height=\"230\"><br><br>\n<p class=\"mb-0 text-primary\">Call today for your custom quote<\/p>\n                            <a href=\"tel:8637099714\" class=\"mb-0 text-primary\">863.709.9714 ext 112<\/a>"
+      }
+    },
+    "logo_list_style_1": {
+      "type": "logo-list-style-1",
+      "blocks": {
+        "logo_content": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/24.jpg",
+            "logo_url": "shopify:\/\/collections\/garmin-avionics"
+          }
+        },
+        "89a27869-8d90-4db9-975f-d4430815f447": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/17.jpg",
+            "logo_url": "shopify:\/\/collections\/aspen-avionics"
+          }
+        },
+        "2d1d8d8b-cbd1-4590-9d0d-c1b8101f61ef": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/18.jpg",
+            "logo_url": "shopify:\/\/collections\/appareo"
+          }
+        },
+        "7fbeb741-0087-44ec-b7d4-988410eb3d16": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/19.jpg",
+            "logo_url": "shopify:\/\/collections\/bendixking"
+          }
+        },
+        "dd543e37-3a41-4091-bf7e-20054f9add1d": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/20.jpg",
+            "logo_url": "shopify:\/\/collections\/jp-instruments"
+          }
+        },
+        "26b1563b-17fe-458d-af82-5b11352c54da": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/21.jpg",
+            "logo_url": "shopify:\/\/collections\/ps-engineering"
+          }
+        }
+      },
+      "block_order": [
+        "logo_content",
+        "89a27869-8d90-4db9-975f-d4430815f447",
+        "2d1d8d8b-cbd1-4590-9d0d-c1b8101f61ef",
+        "7fbeb741-0087-44ec-b7d4-988410eb3d16",
+        "dd543e37-3a41-4091-bf7e-20054f9add1d",
+        "26b1563b-17fe-458d-af82-5b11352c54da"
+      ],
+      "settings": {
+        "heading": "",
+        "collection_URL": "",
+        "nav_arrows": false,
+        "nav_dots": true,
+        "auto_play": 3
+      }
+    },
+    "installations_package": {
+      "type": "installations-package",
+      "blocks": {
+        "b49385ef-6d08-4475-a061-b8c675621f40": {
+          "type": "slider",
+          "settings": {
+            "title": "Piper PA-32",
+            "slider_img1": "shopify:\/\/shop_images\/Piper_PA-32_Garmin_Upgrade_768x_78c7e608-542b-48f1-8ade-4dcdcfc4258f.png",
+            "slider_des1": "FEATURED AVIONICS",
+            "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g3x-touch-for-certified-aircraft-1\">Dual Garmin G3X Displays <\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gea-24-engine-indication-system-eis-for-g3x\">Garmin EIS Displayed on G3X<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-650xi\">Dual Garmin GTN 650 Xi GPS\/Nav\/Com<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gma-345\">Garmin GMA 345 Audio Panel<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc-500-digital-autopilot\">Garmin GFC 500 Digital Autopilot<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\">Garmin GTX 345 Remote ADS-B Transponder<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Designed and Fabricated Panel<\/li>"
+          }
+        },
+        "27a40af5-8664-45ab-8c91-072a4e97b3f3": {
+          "type": "slider",
+          "settings": {
+            "title": "Beech 58 Baron",
+            "slider_img1": "shopify:\/\/shop_images\/Beech_58_768x_a00d909d-4ddb-401b-a14f-0fb47933af3c.jpg",
+            "slider_des1": "FEATURED AVIONICS",
+            "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g500h-txi-touchscreen-flight-display-for-helicopters\">Garmin G500 TXi w\/SVT<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-650xi\">Garmin GTN 650 Xi GPS\/Nav\/Com<\/a><\/li> <li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/flight-stream-510-multimediacard-mmc\">Flight Stream 510 Connectivity<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc600h-flight-control-system\">Garmin GFC 600 Autopilot w\/Yaw Damper<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\">Garmin GTX 345 ADS-B In\/Out Transponder<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Garmin GWX 75 Digital Radar<\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Designed and Powder Coated Panel<\/li>"
+          }
+        },
+        "f21a3601-76b1-4c18-99a0-cef21f12b015": {
+          "type": "slider",
+          "settings": {
+            "title": "Cessna 182",
+            "slider_img1": "shopify:\/\/shop_images\/Cessna_182.jpg",
+            "slider_des1": "FEATURED AVIONICS",
+            "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g5-pfd-hsi-package\">Dual Garmin G5 Attitude and HSI<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/used-garmin-gtn-750-gpsnavcom\">GTN 750 Xi GPS\/Nav\/Com<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\">GTX 345 ADS-B Transponder<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">\n<a href=\"\/products\/edm-900-engine-monitor\">JP Instruments EDM-900 Engine Monitor<\/a><a><\/a>\n<\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Panel Design, Fabrication and Painting<\/li>"
+          }
+        },
+        "b2fa20c3-169a-4d5d-b31c-be8594a237e6": {
+          "type": "slider",
+          "settings": {
+            "title": "Beech A36 Bonanza",
+            "slider_img1": "shopify:\/\/shop_images\/Beech_A36.jpg",
+            "slider_des1": "FEATURED AVIONICS",
+            "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gi-275-eis-w-gea-24\">Dual Garmin GI 275s<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Garmin GMA35c Remote Audio Panel<\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-750xi\">Garmin GTN 750Xi GPS\/Nav\/Com<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc-500-digital-autopilot\">Garmin GFC 500 Digital Autopilot<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Fabricated Panels<\/li>"
+          }
+        },
+        "7a1616ee-09f9-4f7b-8294-e5de92438dc3": {
+          "type": "slider",
+          "settings": {
+            "title": "Cessna 208 Caravan",
+            "slider_img1": "shopify:\/\/shop_images\/Caravan_GI_275s_and_GFC_600_768x_5b655296-0763-48bb-8683-eaeaea6604f7.jpg",
+            "slider_des1": "FEATURED AVIONICS",
+            "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gi-275-hsi\">Dual Garmin GI 275s<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc-600\">Garmin GFC 600 Digital Autopilot<\/a><\/li>"
+          }
+        },
+        "1d3e5848-9d0e-45c9-869e-02ce474bc833": {
+          "type": "slider",
+          "settings": {
+            "title": "Piper Cheyenne",
+            "slider_img1": "shopify:\/\/shop_images\/Piper_Cheyenne.jpg",
+            "slider_des1": "FEATURED AVIONICS",
+            "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g600-txi-touchscreen-display\">Garmin G600 TXi <\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-750xi\">Dual Garmin GTN 750 Xi GPS\/Nav\/Com<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">GMA 35c Remote Audio Panel<\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/art-2100\">STEC 2100 Autopilot System<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx335-ads-b-out-transponder\">Dual Garmin GTX Remote ADS-B Transponders<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Designed Panel<\/li>"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 1",
+            "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_1-detail_grande_b5ac7012-a341-4c27-8334-b4bab096aa70.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p><br\/><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p>Garmin G5 Attitude<br\/>Garmin G5 HSI<br\/>Garmin GNC 255A Nav\/Com<br\/>Garmin GMA 342 Audio Panel<br\/>Garmin GTX 335 w\/GPS ADS-B Transponder<\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "bf6c0594-1d8a-43f8-bc21-67d05a60bdd9": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 2",
+            "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_1-detail_grande_b5ac7012-a341-4c27-8334-b4bab096aa70.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p>IFR Install Package 2<\/p><p>Installed from $37,375<\/p><p>Catalog No: (select an option)<\/p><p>Manufacturer: <a href=\"\/collections\/garmin\" title=\"GARMIN\">GARMIN<\/a><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p>Garmin G5 HSI<br\/>Garmin GMA 342 Audio Panel<br\/>Garmin GTN 650Xi GPS\/Nav\/Com<br\/>Garmin GTX 345 ADS-B Transponder<br\/><\/p>"
+          }
+        },
+        "f6518881-65db-4a59-867a-74ebaed4d62d": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 3",
+            "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_3-detail_grande_f204ad2b-399e-4f70-b89b-c91c6380d38f.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p><br\/><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p><br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "dc888389-2abe-4bfc-92ac-32deceaa723a": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 4",
+            "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_3-detail_grande_f204ad2b-399e-4f70-b89b-c91c6380d38f.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p><br\/><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p><br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "69b315cf-bb2c-4a4c-b401-34f7baa2b6ae": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 4.5",
+            "choose_img": "shopify:\/\/shop_images\/IFR_install_4.5-detail_grande_201b332b-5ccf-44d4-9f60-d56fbaa5d928.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p><br\/><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p><br\/><\/p><p><strong>Garmin GTX 345 ADS-B Transponder<\/strong><\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "1a5f72c4-8815-4c7a-af70-467cc12ad717": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 5",
+            "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_3-detail_grande_f204ad2b-399e-4f70-b89b-c91c6380d38f.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p><br\/><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p><br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "3b7103df-b251-41e2-9ede-6f5f6ab54598": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 6",
+            "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_6-detail_grande_0166ea03-8281-4939-a777-05ee680c7fea.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p><br\/><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p><br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "216af0d1-6ab6-46a4-b48e-306d1750aed0": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 7",
+            "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_6-detail_grande_0166ea03-8281-4939-a777-05ee680c7fea.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p><br\/><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p><br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "383d9372-bc7b-4867-b258-29f5748d8350": {
+          "type": "content",
+          "settings": {
+            "popup_text": "IFR Install Package 8",
+            "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_6-detail_grande_0166ea03-8281-4939-a777-05ee680c7fea.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p><br\/><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p><br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "0ecf8a09-6824-456e-bd5b-69aa51788512": {
+          "type": "content",
+          "settings": {
+            "popup_text": "VFR Install Package 1",
+            "choose_img": "shopify:\/\/shop_images\/VFR_Install_Package_1-detail_grande_b5a21333-374c-4c29-9546-685329c1a903.jpg",
+            "product_title": "GARMIN",
+            "product_content": "<p>VFR Install Package 1<\/p><p>Install from $11,995<br\/>Catalog No: (select an option)<br\/>Manufacturer: <a href=\"\/collections\/garmin\" title=\"GARMIN\">GARMIN<\/a><\/p><p>Call for Price<\/p><p><br\/><br\/><\/p>",
+            "feature_title": "Product Features",
+            "feature_content": "<p><br\/><\/p><p>Garmin Area 660 w\/AirGizmo Dock<br\/>Garmin GTR 225 Com Radio<br\/>Garmin GTX 345 w\/GPS ADS-B Transponder*<br\/><br\/>*includes GAE 12 Altitude Encoder<\/p><p><br\/><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b49385ef-6d08-4475-a061-b8c675621f40",
+        "27a40af5-8664-45ab-8c91-072a4e97b3f3",
+        "f21a3601-76b1-4c18-99a0-cef21f12b015",
+        "b2fa20c3-169a-4d5d-b31c-be8594a237e6",
+        "7a1616ee-09f9-4f7b-8294-e5de92438dc3",
+        "1d3e5848-9d0e-45c9-869e-02ce474bc833",
+        "content",
+        "bf6c0594-1d8a-43f8-bc21-67d05a60bdd9",
+        "f6518881-65db-4a59-867a-74ebaed4d62d",
+        "dc888389-2abe-4bfc-92ac-32deceaa723a",
+        "69b315cf-bb2c-4a4c-b401-34f7baa2b6ae",
+        "1a5f72c4-8815-4c7a-af70-467cc12ad717",
+        "3b7103df-b251-41e2-9ede-6f5f6ab54598",
+        "216af0d1-6ab6-46a4-b48e-306d1750aed0",
+        "383d9372-bc7b-4867-b258-29f5748d8350",
+        "0ecf8a09-6824-456e-bd5b-69aa51788512"
+      ],
+      "settings": {
+        "installation_enable": true,
+        "installation_heading": "INSTALLATIONS & PACKAGES",
+        "installation_text": "Custom Packages",
+        "package_enable": true,
+        "load_heading": "Installation Estimate",
+        "load_text": "REQUEST A QUOTE  ONLINE",
+        "btn_txt": "See More",
+        "load_url": "shopify:\/\/pages\/installations-estimate",
+        "slider_enable": true,
+        "enable_related_products": false,
+        "choose_collection": "",
+        "related_products_heading_txt": "Related Products",
+        "related_products_nav_arrows": true,
+        "related_products_nav_dots": false
+      }
+    }
+  },
+  "order": [
+    "avionics_installation",
+    "logo_list_style_1",
+    "installations_package"
+  ]
+}

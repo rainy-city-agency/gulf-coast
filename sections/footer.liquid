@@ -1,0 +1,625 @@
+{% assign footer_linklist1 = linklists[section.settings.footer_linklist] %}
+{% assign footer_linklist2 = linklists[section.settings.footer_linklist2] %}
+{% assign footer_linklist3 = linklists[section.settings.footer_linklist3] %}
+{% assign footer_linklist4 = linklists[section.settings.footer_linklist4] %}
+
+
+<footer class="site-footer" data-section-id="{{ section.id }}">
+    {%- if section.settings.enable_topfooter -%}
+    <div class="footer-top">
+        <div class="row no-gutters">
+            {% if section.settings.show_social_links %}
+            <div class="col-xl-6 col-sm-12 column">
+                <div class="social" style="background-color: #F5F5F5;">
+                    <div class="social-content d-ex-lg-flex align-items-center justify-content-center text-center">
+                        {% if section.settings.col_3_heading != '' %}
+                        <h5 class="mb-ex-lg-0 mb-3 letter-spacing-1 font-weight-medium">{{ section.settings.col_3_social_heading }}</h5>
+                        {% endif %}
+                        <ul class="list-unstyled nav social-links justify-content-center">
+                          {% if section.settings.social_icon_instagram %}
+                                <li class="ml-lg-8 ml-md-5 ml-3">
+                                    <a class="instagram" href="{{ settings.social_instagram_link }}" name="Instagram" title="Instagram" rel="nofollow noopener" aria-label="Instagram" target="_blank" >
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if section.settings.social_icon_facebook %}
+                                <li class="ml-lg-8 ml-md-5 ml-3">
+                                    <a class="facebook" href="{{ settings.social_facebook_link }}" name="Facebook" title="Facebook" rel="nofollow noopener" aria-label="Facebook" target="_blank">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if section.settings.social_icon_linkedin %}
+                                <li class="ml-lg-8 ml-md-5 ml-3">
+                                    <a class="linkedin" href="{{ settings.social_linkedin_link }}" name="linkedin" title="linkedin" rel="nofollow noopener" aria-label="linkedin" target="_blank" >
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if section.settings.social_icon_twitter %}
+                                <li class="ml-lg-8 ml-md-5 ml-3">
+                                    <a class="twitter" href="{{ settings.social_twitter_link }}" name="Twitter" title="Twitter" rel="nofollow noopener" aria-label="Twitter" target="_blank">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            
+
+                            {% if section.settings.social_icon_youtube %}
+                                <li class="ml-lg-8 ml-md-5 ml-3">
+                                    <a class="youtube" href="{{ settings.social_youtube_link }}" name="YouTube" title="YouTube" rel="nofollow noopener" aria-label="YouTube" target="_blank" >
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% if section.settings.show_shop %}
+            <div class="col-xl-6 d-flex w-100">
+                <div class="w-100 shop-options d-ex-lg-flex align-items-center justify-content-center text-center" style="background-color: #f5f5f5">
+                    <h5 class="mb-ex-lg-0 mb-3 d-none d-md-block">{{ section.settings.shop_title}}</h5>
+                    <div class="logo-section d-none d-md-block">
+                        {% for block in section.blocks %}
+                            {% if block.settings.choose_image != blank %}
+                            <a class="d-inline-block logo-width ml-lg-8 ml-md-5 ml-3" href="{%- if block.settings.choose_link != blank -%}{{block.settings.choose_link}}{%- else -%}#{%- endif -%}" rel="nofollow noopener" target="_blank">
+                                <img src="{{block.settings.choose_image | img_url: 'pico' }}"
+                                data-src="{{block.settings.choose_image | img_url: 'master' }}" 
+                                class="lazyload img-fluid" alt="{{section.settings.shop_title}}">
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {%- endif -%}
+
+    <div class="footer-bottom">
+        <div class="row no-gutters">
+            {%- if section.settings.enable_special -%}
+            <div class="col-lg-3 col-md-12">
+                <div class="specials-section pt-md-8 pt-5 bg-primary text-white h-100" data-special-section>
+                  <div>
+                    <div class="footer-logo px-lg-9 px-5 mb-lg-9 mb-4">
+                      <a class="d-inline-block" href="#"><img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/GCA-1984-Logo-RGB_e60858eb-41f9-4097-be1f-c0d18c8f2dd5.svg?v=1643990701" alt=""></a>
+                    </div>  
+                    <div class="offer-signup text-lg-left text-center px-lg-9 px-5">
+                          <h2 class="mb-5 font-weight-bold letter-spacing">{{ section.settings.special_title }}</h2>
+                          <div id="NewsletterFooter">
+                              <form id="email_signup" class="klaviyo_gdpr_embed_UQ6ViK" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate">
+                                <input type="hidden" name="g" value="UQ6ViK">
+                                <input type="hidden" name="$fields" value="$consent">
+                                <input type="hidden" name="$list_fields" value="$consent">
+                                  <div>
+                                      <div class="form-group d-flex">
+                                          <input type="email" value="" name="email" class="footer-newsletter w-100 px-3 py-2 text-lg-left text-center text-white rounded-0" placeholder="Enter Email" required="">
+                                          <a class="news-arrow" href="#"><i class="icon-news-arrow d-flex"></i></a>
+                                      </div>
+                                      <!-- <div class="clear">
+                                          <input type="submit" value="" name="" class="btn btn-white btn-lg klaviyo_submit_button">
+                                      </div> -->
+                                  </div>
+                                  <div class="klaviyo_messages">
+                                    <div class="success_message" style="display:none;"></div>
+                                    <div class="error_message" style="display:none;"></div>
+                                  </div>
+                                  <!-- <div class="copyright-title">
+                                    <p class="text-white font-weight-semibold">© 2021 Gulf Coast Avionics. <br>
+                                      All Rights Reserved.</p>
+                                  </div> -->
+                              </form>
+                          </div>
+                    </div>
+                  </div>
+                   
+                  <div class="px-lg-9 px-5 text-lg-left text-center">
+                    <div class="copyright-title">
+                      <p class="text-white font-weight-regular">© 2021 Gulf Coast Avionics. <br>
+                        All Rights Reserved.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            {%- endif -%}
+            <div class="{% if section.settings.enable_special %}col-lg-9 col-md-12{% else %}col-12{% endif %} footer-content-links px-lg-9 px-md-6 px-4 pt-6 pb-4 text-lg-left text-md-center">
+                <div id="divGCAContactSection" class="row no-gutters">
+                    <!-- {%- if section.settings.enable_col_1 -%}
+                    <div class="col-md-4 mb-md-4 mb-5">
+                        <div class="contact-section" id="divGCAVisit">
+                            <div class="address">
+                                <h5 class="text-uppercase">{{section.settings.col_1_heading}}</h5>
+                                {%- if section.settings.col_1_caption != '' -%}
+                                <p class="mb-0">{{section.settings.col_1_caption}}</p>
+                                {%- endif -%}
+                                <a class="link-item a-link text-initial" href="{%- if section.settings.col_1_link != blank -%}{{- section.settings.col_1_link -}}{%- else -%}#{%- endif -%}" id="lnkSeeAllLocations" class="locations">{{section.settings.col_1_link_txt}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    {%- endif -%}
+                    {%- if section.settings.enable_col_2 -%}
+                    <div class="col-md-4 mb-md-4 mb-5">
+                        <div class="contact-section" id="divGCAContact">
+                            <div class="phone-number">
+                                <h5 class="text-uppercase">{{section.settings.col_2_heading}}</h5>
+                                {%- if section.settings.col_1_caption != '' -%}
+                                <ul class="list-unstyled nav flex-column">{{section.settings.col_2_caption}}
+                                </ul>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                    </div>
+                    {%- endif -%} -->
+                    
+                </div>
+
+                <div class="row no-gutters">
+                    {%- if section.settings.enable_col_4 -%}
+                    <div class="col-md-4 col-6 mb-md-4 mb-5">
+                        <h5 class="font-weight-semibold letter-spacing-1 mb-0 text-uppercase">{{section.settings.col_4_heading}}</h5>
+                        {% if footer_linklist1.links.size > 0 %}
+                        <ul class="list-unstyled nav flex-column">
+                            {% for link in footer_linklist1.links %}
+                                <li class="nav-item my-2">
+                                    <a class="link-item d-inline-block my-1" href="{{ link.url }}" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">{{ link.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    {%- endif -%}
+                    <div class="col-6 mb-5 d-md-none">
+
+                      <div class="logo-section mobile-logo-section">
+                        <h5 class="font-weight-semibold letter-spacing-1 text-uppercase mb-3">shop</h5>
+                        {% for block in section.blocks %}
+                            {% if block.settings.choose_image != blank %}
+                            <a class="d-inline-block logo-width ml-lg-8 ml-md-5" href="{%- if block.settings.choose_link != blank -%}{{block.settings.choose_link}}{%- else -%}#{%- endif -%}" rel="nofollow noopener" target="_blank">
+                                <img src="{{block.settings.choose_image | img_url: 'pico' }}"
+                                data-src="{{block.settings.choose_image | img_url: 'master' }}" 
+                                class="lazyload img-fluid" alt="{{section.settings.shop_title}}">
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                    {%- if section.settings.enable_col_5 -%}
+                    <div class="col-md-4 col-6 mb-md-4 mb-5">
+                        <h5 class="font-weight-semibold letter-spacing-1 mb-0 text-uppercase">{{section.settings.col_5_heading}}</h5>
+                        {% if footer_linklist2.links.size > 0 %}
+                        <ul class="list-unstyled nav flex-column">
+                            {% for link in footer_linklist2.links %}
+                                <li class="nav-item my-2">
+                                    <a class="link-item d-inline-block my-1" href="{{ link.url }}" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">{{ link.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    {%- endif -%}
+                    {%- if section.settings.enable_col_6 -%}
+                    <div class="col-md-4 col-6 mb-md-4 mb-5">
+                     
+                        <div class="contact-section" id="divGCAFeedback">
+                            <div class="email-address">
+                                <h5 class="font-weight-semibold letter-spacing-1 mb-0 text-uppercase mb-3">{{section.settings.col_3_heading}}</h5>
+                                {%- if section.settings.col_3_email != '' -%}
+                                <p class="mb-1"><a class="link-item a-link text-initial" href="mailto:{{section.settings.col_3_email}}" target="_blank">{{ section.settings.col_3_email}}</a></p>
+                                {%- endif -%}
+                                <div class="shopper-link-section">
+                                    <!-- <a class="link-item shopperlink" href="https://www.shopperapproved.com/reviews/gulfcoastavionics.com/">
+                                        <img src="https://www.shopperapproved.com/newseals/30192/white-mini-icon.gif" style="border: 0" alt="Customer Reviews" oncontextmenu="var d = new Date(); alert('Copying Prohibited by Law - This image and all included logos are copyrighted by Shopper Approved \251 '+d.getFullYear()+'.'); return false;">
+                                    </a> -->
+                                    <a href="http://www.shopperapproved.com/reviews/gulfcoastavionics.com/" class="shopperlink d-block">
+                                      <img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/Screenshot_on_2021-12-23_at_20_32_22.png?v=1643982776" style="border: 0" alt="Customer Reviews" oncontextmenu="var d = new Date(); 
+                                      alert('Copying Prohibited by Law - This image and all included logos are copyrighted by Shopper Approved \251 '+d.getFullYear()+'.'); 
+                                      return false;" />
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                  
+
+                        <h5 class="font-weight-semibold letter-spacing-1 mb-0 text-uppercase">{{section.settings.col_6_heading}}</h5>
+                        {% if footer_linklist3.links.size > 0 %}
+                        <ul class="list-unstyled nav flex-column mb-3">
+                            {% for link in footer_linklist3.links %}
+                                <li class="nav-item my-2">
+                                    <a class="link-item d-inline-block my-1" href="{{ link.url }}" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">{{ link.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        {% if footer_linklist4.links.size > 0 %}
+                        <ul id="ulGCAImportant" class="important red list-unstyled nav flex-column mb-lg-5 mb-4">
+                            {% for link in footer_linklist4.links %}
+                                <li class="nav-item">
+                                    <a class="link-item text-primary" href="{{ link.url }}" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">{{ link.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        
+                        {%- if section.settings.col_6_caption != '' -%}
+                        <p class="important">{{section.settings.col_6_caption}}</p>{% endif %}
+                    </div>
+                    {%- endif -%}
+                </div>
+                {%- if section.settings.show_payment_icons -%}
+                <div class="pl-md-3 pt-lg-5">
+                    <ul class="disclaimer-cards list-unstyled nav text-lg-right justify-content-lg-end justify-content-center text-center">
+                        {%- if section.settings.payment_icon_visa -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="Visa"><img src="{{ 'visa.svg' | file_url }}" title="Visa" class="tooltip-styling"></li>{%- endif -%}
+                        {%- if section.settings.payment_icon_ae -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="American Express"><img src="{{ 'amxpress.svg' | file_url }}" title="American Express" class="tooltip-styling"></li>{%- endif -%}
+                        {%- if section.settings.payment_icon_dis -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="Discover"><img src="{{ 'discover.svg' | file_url }}" title="Discover" class="tooltip-styling"></li>{%- endif -%}
+                        {%- if section.settings.payment_icon_jcb -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="JCB"><img src="{{ 'jcb.svg' | file_url }}" title="JCB" class="tooltip-styling"></li>{%- endif -%}
+                        {%- if section.settings.payment_icon_mastercard -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="Mastercard"><img src="{{ 'mastercard.svg' | file_url }}" title="Mastercard" class="tooltip-styling"></li>{%- endif -%}
+                        {%- if section.settings.payment_icon_diners -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="Diners Club"><img src="{{ 'dinersclub.svg' | file_url }}" title="Diners Club" class="tooltip-styling"></li>{%- endif -%}
+                        {%- if section.settings.payment_icon_paypal -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="PayPal"><img src="{{ 'paypal.svg' | file_url }}" title="PayPal" class="tooltip-styling"></li>{%- endif -%}
+                    </ul>
+                </div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+
+    <!-- {%- if section.settings.enable_bottomfooter -%}
+    <div class="disclaimer bg-gray-600 py-md-4 py-3">
+    <div class="container">
+        <div class="d-md-flex align-items-center justify-content-between">
+            <div class="mb-md-0 mb-3">
+                <p class="dislcaimer-text mb-0 text-white text-lg-left text-center">
+                    © <span id="year">{{ 'now' | date: "%Y" }}</span> {{ shop.name }}. {{ 'layout.footer.all_rights_reserved' | t }}.
+                </p>
+            </div>
+            
+            {%- if section.settings.show_payment_icons -%}
+            <div class="pl-md-3">
+                <ul class="disclaimer-cards list-unstyled nav text-lg-right justify-content-lg-end justify-content-center text-center">
+                    {%- if section.settings.payment_icon_visa -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="Visa"><img src="{{ 'visa.svg' | file_url }}" title="Visa" class="tooltip-styling"></li>{%- endif -%}
+                    {%- if section.settings.payment_icon_ae -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="American Express"><img src="{{ 'amxpress.svg' | file_url }}" title="American Express" class="tooltip-styling"></li>{%- endif -%}
+                    {%- if section.settings.payment_icon_dis -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="Discover"><img src="{{ 'discover.svg' | file_url }}" title="Discover" class="tooltip-styling"></li>{%- endif -%}
+                    {%- if section.settings.payment_icon_jcb -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="JCB"><img src="{{ 'jcb.svg' | file_url }}" title="JCB" class="tooltip-styling"></li>{%- endif -%}
+                    {%- if section.settings.payment_icon_mastercard -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="Mastercard"><img src="{{ 'mastercard.svg' | file_url }}" title="Mastercard" class="tooltip-styling"></li>{%- endif -%}
+                    {%- if section.settings.payment_icon_diners -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="Diners Club"><img src="{{ 'dinersclub.svg' | file_url }}" title="Diners Club" class="tooltip-styling"></li>{%- endif -%}
+                    {%- if section.settings.payment_icon_paypal -%}<li class="ml-lg-4 ml-2" data-toggle="tooltip" data-placement="top" title="PayPal"><img src="{{ 'paypal.svg' | file_url }}" title="PayPal" class="tooltip-styling"></li>{%- endif -%}
+                </ul>
+            </div>
+            {%- endif -%}
+        </div>
+    </div>
+    </div>
+    {%- endif -%} -->
+
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Top Footer"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_topfooter",
+            "label": "Enable"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_social_links",
+            "label": "Show Social Links?",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "col_3_social_heading",
+            "label": "Heading",
+            "default": "FOLLOW US"
+        },
+        {
+            "type": "paragraph",
+            "content": "Select Networks"
+          },
+          {
+            "type": "checkbox",
+            "id": "social_icon_facebook",
+            "label": "Facebook",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "social_icon_twitter",
+            "label": "Twitter",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "social_icon_linkedin",
+            "label": "Linkedin",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "social_icon_instagram",
+            "label": "Instagram",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "social_icon_youtube",
+            "label": "Youtube",
+            "default": true
+          },
+          {
+            "type": "header",
+            "content": "Shop Content"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_shop",
+            "label": "Enable Shop",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "shop_title",
+            "label": "Heading",
+            "default": "Shop"
+          },
+          {
+            "type": "header",
+            "content": "Newsletter Content"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_special",
+            "label": "Enable"
+          },
+          {
+            "type": "text",
+            "id": "special_title",
+            "label": "Title",
+            "default": "Receive The Latest Deals and Blog"
+          },
+      {
+        "type": "header",
+        "content": "Visit Us"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_col_1",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "col_1_heading",
+        "label": "Heading",
+        "default": "Visit Us"
+      },
+      {
+        "type": "textarea",
+        "id": "col_1_caption",
+        "label": "Address"
+      },
+      {
+        "type": "text",
+        "id": "col_1_link_txt",
+        "label": "Link Text",
+        "default": "SEE ALL LOCATIONS"
+      },
+      {
+        "type": "url",
+        "id": "col_1_link",
+        "label": "Link URL"
+      },
+      {
+        "type": "header",
+        "content": "Call Us"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_col_2",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "col_2_heading",
+        "label": "Heading",
+        "default": "Call Us"
+      },
+      {
+        "type": "textarea",
+        "id": "col_2_caption",
+        "label": "Phone Number"
+      },
+      {
+        "type": "header",
+        "content": "Feedback"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_col_3",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "col_3_heading",
+        "label": "Heading",
+        "default": "Feedback"
+      },
+      {
+        "type": "text",
+        "id": "col_3_email",
+        "label": "Email"
+      },
+      {
+        "type": "header",
+        "content": "Company"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_col_4",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "col_4_heading",
+        "label": "Heading",
+        "default": "Company"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist",
+        "label": "Select Menu"
+      },
+      {
+        "type": "header",
+        "content": "Customer Service"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_col_5",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "col_5_heading",
+        "label": "Heading",
+        "default": "Customer Service"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist2",
+        "label": "Select Menu"
+      },
+      {
+        "type": "header",
+        "content": "Service Department"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_col_6",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "col_6_heading",
+        "label": "Heading",
+        "default": "Service Department"
+      },
+      {
+        "type": "textarea",
+        "id": "col_6_caption",
+        "label": "Important Text"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist3",
+        "label": "Select Menu 1"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist4",
+        "label": "Select Menu 2"
+      },
+        {
+            "type": "header",
+            "content": "Bottom Footer"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_bottomfooter",
+            "label": "Enable"
+        },
+        {
+            "type": "header",
+            "content": "Payment Icons"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_payment_icons",
+            "label": "Show Payment Icons?",
+            "default": true
+          },
+          {
+            "type": "paragraph",
+            "content": "Select Payment Methods"
+          },
+          {
+            "type": "checkbox",
+            "id": "payment_icon_visa",
+            "label": "Visa",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "payment_icon_mastercard",
+            "label": "Mastercard",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "payment_icon_ae",
+            "label": "American Express",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "payment_icon_diners",
+            "label": "Diners",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "payment_icon_paypal",
+            "label": "Paypal",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "payment_icon_dis",
+            "label": "Discover",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "payment_icon_jcb",
+            "label": "JCB",
+            "default": true
+          }
+    ],
+    "blocks": [
+    {
+      "type": "image",
+      "name": "Shop Item",
+      "settings": [
+        {
+            "type": "image_picker",
+            "id": "choose_image",
+            "label": "Choose Image"
+        },
+        {
+            "type": "url",
+            "id": "choose_link",
+            "label": "Choose URL"
+        }
+      ]
+    }]
+  }
+
+{% endschema %}

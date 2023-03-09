@@ -1,0 +1,34 @@
+{% paginate collection.products by 20 %}
+
+<section class="section-padding pt-md-6 pt-4">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-ex-lg-10 mx-auto collection-responsive">
+        {% if collection.image %}
+        <div class="winter-image mb-md-6 mb-4"> 
+          <img data-sizes="auto"
+          src="{{ collection.image | img_url: 'small'}}"
+          data-srcset="
+            {{ collection.image | img_url: '575x' }} 575x,
+            {{ collection.image | img_url: '768x' }} 567w,
+            {{ collection.image | img_url: '992x' }} 768w,
+            {{ collection.image | img_url: '1200x' }} 992w,
+            {{ collection.image | img_url: '1920x' }} 1200w,
+            {{ collection.image | img_url: '2560x' }} 1920w
+            "
+          class="lazyload img-wrapper"  alt="{{ collection.title | escape }}" />
+        </div>
+        {% endif %}
+        {%- if collection.description -%}
+          {{- collection.description -}}
+        {%- endif -%}
+        <div class="mt-5">
+          {% include 'searchanise-navigation' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endpaginate %}

@@ -1,0 +1,1798 @@
+{
+  "current": {
+    "main_logo": "shopify:\/\/shop_images\/logo.png",
+    "main_logo_light": "shopify:\/\/shop_images\/fluid-logo-light.png",
+    "main_logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/GCA-1984-Logo-RGB.svg?v=1643901001",
+    "logo_max_width": 300,
+    "enable_login": true,
+    "account_not_found": "Account does not exist.  You need to register for a new account.",
+    "account_enable": "Account found.  Fill in your password in order to login.  If you don't remember it, use the \"Forgot your password?\" link below to reset it.",
+    "account_disable": "Account found but it's currently disabled.  We sent you an email with an invitation link. Please follow the instructions.",
+    "account_invited": "You have been already invited.  In case you missed the email with the invitation link, we've just sent you another one. Please follow the instructions.",
+    "favicon_image": "shopify:\/\/shop_images\/favicon.png",
+    "favicon_image_retina": "",
+    "main_logo_socials": "shopify:\/\/shop_images\/GCA-logo-red.png",
+    "social_facebook_link": "https:\/\/www.facebook.com\/GulfCoastAvionics",
+    "social_twitter_link": "https:\/\/twitter.com\/GCAvionics",
+    "social_instagram_link": "http:\/\/www.instagram.com\/gulfcoastavionicscorp",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "http:\/\/www.youtube.com\/user\/GCAcorporation",
+    "social_vimeo_link": "",
+    "enable_color_swatches": false,
+    "enable_size_swatches": false,
+    "enable_wishlist": true,
+    "enable_google_translator": true,
+    "enable_meta_noindex": false,
+    "product_exclude_tag_text": "",
+    "enable_product_reviews": false,
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/GCA-logo-red.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Source Sans Pro",
+    "checkout_accent_color": "#d02130",
+    "checkout_button_color": "#d02130",
+    "checkout_error_color": "#ff6d6d",
+    "enable_quickshop": false,
+    "enable_qa_widget": false,
+    "path_issue_id": "",
+    "enable_recharge": false,
+    "enable_utilities_app": true,
+    "social_linkedin_link": "http:\/\/www.linkedin.com\/company\/gulf-coast-avionics",
+    "social_googleplus_link": "",
+    "enable_multiple_currencies": true,
+    "show_multiple_currencies": true,
+    "currency_format": "money_format",
+    "supported_currencies": "INR GBP CAD USD AUD EUR JPY",
+    "default_currency": "USD",
+    "fb_pixel_id": "",
+    "google_site_tag_code": "",
+    "google_universal_analytics_code": "",
+    "enable_login_helper": true,
+    "customer_tag_text": "cj-import",
+    "customer_tag_message": "<p>Please <a href=\"http:\/\/www.google.com\" title=\"http:\/\/www.google.com\">click here<\/a> to login at your old account.<\/p>",
+    "enable_legacy_support": false,
+    "storefront_access_token": "da18255b7e1ffeb96b0f85850b04461a",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "4b57d6f6-e9ba-411b-9eb3-315e0be74633": {
+            "type": "coupon",
+            "settings": {
+              "commonUrl": "",
+              "offer": "Free Shipping",
+              "offerName": "Offer",
+              "coupon_policy": "government-sales",
+              "seeoffer": ""
+            }
+          },
+          "616449ad-6586-4a02-bb7b-05e250cdf61e": {
+            "type": "coupon",
+            "settings": {
+              "commonUrl": "shopify:\/\/collections\/accessories",
+              "offer": "Offer",
+              "offerName": "",
+              "coupon_policy": "content",
+              "seeoffer": ""
+            }
+          }
+        },
+        "block_order": [
+          "4b57d6f6-e9ba-411b-9eb3-315e0be74633",
+          "616449ad-6586-4a02-bb7b-05e250cdf61e"
+        ],
+        "settings": {
+          "is_sticky": true,
+          "main_linklist": "main-menu",
+          "mega_menu": "Shop",
+          "MegaProduct": "david-clark-h10-13s",
+          "ShopImage1": "shopify:\/\/shop_images\/cat_yaesu_b57e41af-850c-49c1-9906-ea7092d43199.jpg",
+          "shopText1": "Skybolt Fasteners",
+          "shopBtnUrl1": "",
+          "ShopImage2": "shopify:\/\/shop_images\/cat_yaesu_b57e41af-850c-49c1-9906-ea7092d43199.jpg",
+          "shopText2": "Skybolt Fasteners",
+          "shopBtnUrl2": "",
+          "ShopImage3": "shopify:\/\/shop_images\/aera795_250x_22a10043-eb4a-405d-bdb1-1d036ec07126.jpg",
+          "shopText3": "Skybolt Fasteners",
+          "shopBtnUrl3": "",
+          "shopText4": "Skybolt Fasteners",
+          "shopBtnUrl4": "",
+          "cart_type": "cart_drawer",
+          "topbar_enabled": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "b4feb702-f642-4284-a677-beedee5967c8": {
+            "type": "image",
+            "settings": {
+              "choose_image": "shopify:\/\/shop_images\/amazon-logo.png",
+              "choose_link": "https:\/\/www.amazon.com\/s?me=ADLJ1WDSSUUMG&marketplaceID=ATVPDKIKX0DER"
+            }
+          },
+          "954f0d76-34da-4749-af57-85e4d9fa0f46": {
+            "type": "image",
+            "settings": {
+              "choose_image": "shopify:\/\/shop_images\/google-store.png",
+              "choose_link": "https:\/\/shopping.google.com\/u\/0\/s?m=7308585&sa=X&ved=0ahUKEwiPguqokOjoAhVUZM0KHShwA4EQ0NoDCB0"
+            }
+          },
+          "b85b35c6-088f-4f82-bccc-59c3ded5a39f": {
+            "type": "image",
+            "settings": {
+              "choose_image": "shopify:\/\/shop_images\/ebay-logo.png",
+              "choose_link": "https:\/\/www.ebay.com\/str\/gulfcoastavionics"
+            }
+          }
+        },
+        "block_order": [
+          "b4feb702-f642-4284-a677-beedee5967c8",
+          "954f0d76-34da-4749-af57-85e4d9fa0f46",
+          "b85b35c6-088f-4f82-bccc-59c3ded5a39f"
+        ],
+        "settings": {
+          "enable_topfooter": true,
+          "show_social_links": true,
+          "col_3_social_heading": "FOLLOW US",
+          "social_icon_facebook": true,
+          "social_icon_twitter": true,
+          "social_icon_linkedin": true,
+          "social_icon_instagram": true,
+          "social_icon_youtube": true,
+          "show_shop": true,
+          "shop_title": "Shop",
+          "enable_special": true,
+          "special_title": "Receive The Latest Deals and Blog",
+          "enable_col_1": true,
+          "col_1_heading": "Visit Us",
+          "col_1_caption": "3650 Drane Field Road\n                                        <br>\n                                        Lakeland Linder Int'l Airport<br>\n                                        Lakeland, Florida 33811\n                                        <br>\n                                        8:30 AM to 5:30 PM",
+          "col_1_link_txt": "SEE ALL LOCATIONS",
+          "col_1_link": "shopify:\/\/pages\/locations",
+          "enable_col_2": true,
+          "col_2_heading": "Call Us",
+          "col_2_caption": "<li>Phone: 863.709.9714<\/li>\n                                        <li>Toll Free: 800.474.9714<\/li>\n                                        <li>Fax: 863.709.9736<\/li>",
+          "enable_col_3": true,
+          "col_3_heading": "FEEDBACK",
+          "col_3_email": "Ecommerce@GCA.aero",
+          "enable_col_4": true,
+          "col_4_heading": "COMPANY",
+          "footer_linklist": "company",
+          "enable_col_5": true,
+          "col_5_heading": "CUSTOMER SERVICE",
+          "footer_linklist2": "customer-service",
+          "enable_col_6": true,
+          "col_6_heading": "Service Department",
+          "col_6_caption": "Prices & Terms Subject To<br>\n                                Change Without Notice<br>\n                                Se Habla Español - Llámenos",
+          "footer_linklist3": "service-department",
+          "footer_linklist4": "repair-station",
+          "enable_bottomfooter": true,
+          "show_payment_icons": true,
+          "payment_icon_visa": true,
+          "payment_icon_mastercard": true,
+          "payment_icon_ae": true,
+          "payment_icon_diners": true,
+          "payment_icon_paypal": true,
+          "payment_icon_dis": true,
+          "payment_icon_jcb": true
+        }
+      },
+      "template-cart": {
+        "type": "template-cart",
+        "settings": {
+          "show_back_btn": true
+        }
+      },
+      "template-product": {
+        "type": "template-product",
+        "settings": {
+          "show_vendor": true,
+          "warrant_txt": "",
+          "warrant_link_txt": "",
+          "warranty_url": "",
+          "enable_related_products": false,
+          "related_products_heading_txt": "Related Products",
+          "related_products_nav_arrows": true,
+          "related_products_nav_dots": false
+        }
+      },
+      "index-header-slider": {
+        "type": "index-header-slider",
+        "blocks": {
+          "c709fd1e-baef-421c-8206-e9ee2966e80b": {
+            "type": "image",
+            "settings": {
+              "ratina_image": "shopify:\/\/shop_images\/GCA-Holiday-Shipping-Slider.jpg",
+              "image": "shopify:\/\/shop_images\/GCA-Holiday-Shipping-Slider.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/GCA-PCA-Homepage-Sliders-500px.jpg",
+              "alignment": "text-center",
+              "heading": "",
+              "caption": "",
+              "heading_txt_color": "",
+              "caption_txt_color": "",
+              "btn_txt": "",
+              "btn_link": "",
+              "btn_type": "",
+              "btn_variant": "primary",
+              "btn_size": "",
+              "enable_overlay": false,
+              "overlay_bg_color": "#000000",
+              "overlay_opacity": 0.5,
+              "overlay_pattern_img": "none"
+            }
+          },
+          "1512636537154": {
+            "type": "image",
+            "settings": {
+              "ratina_image": "shopify:\/\/shop_images\/GCA-PCA-Bravo.jpg",
+              "image": "shopify:\/\/shop_images\/GCA-PCA-Bravo.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/2fc858ac647fe5b2c08948fd93f54118.jpg",
+              "alignment": "text-center",
+              "heading": "",
+              "caption": "",
+              "heading_txt_color": "rgba(0,0,0,0)",
+              "caption_txt_color": "rgba(0,0,0,0)",
+              "btn_txt": "",
+              "btn_link": "shopify:\/\/products\/bravo-throttle-quadrant",
+              "btn_type": "",
+              "btn_variant": "primary",
+              "btn_size": "",
+              "enable_overlay": false,
+              "overlay_bg_color": "#000000",
+              "overlay_opacity": 0.4,
+              "overlay_pattern_img": "none"
+            }
+          },
+          "e0f51d32-eda4-4cb7-872c-22f256704231": {
+            "type": "image",
+            "settings": {
+              "ratina_image": "shopify:\/\/shop_images\/GCA-PCA-BoseA20.jpg",
+              "image": "shopify:\/\/shop_images\/GCA-PCA-BoseA20.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/a1fdd2d780ba43e7aa99d49ea974e753.jpg",
+              "alignment": "text-center",
+              "heading": "",
+              "caption": "",
+              "heading_txt_color": "",
+              "caption_txt_color": "",
+              "btn_txt": "",
+              "btn_link": "shopify:\/\/products\/bose-a20-aviation-headset",
+              "btn_type": "",
+              "btn_variant": "primary",
+              "btn_size": "",
+              "enable_overlay": false,
+              "overlay_bg_color": "#000000",
+              "overlay_opacity": 0.5,
+              "overlay_pattern_img": "none"
+            }
+          },
+          "9e802d36-e245-470d-8e17-ba8f8d709ecd": {
+            "type": "image",
+            "settings": {
+              "ratina_image": "shopify:\/\/shop_images\/GCA-PCA-Yaesu850L.jpg",
+              "image": "shopify:\/\/shop_images\/GCA-PCA-Yaesu850L.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/9e1ce882ec55cf842d6f32bf68998773.jpg",
+              "alignment": "text-center",
+              "heading": "",
+              "caption": "",
+              "heading_txt_color": "",
+              "caption_txt_color": "",
+              "btn_txt": "",
+              "btn_link": "shopify:\/\/products\/gps-175-kit",
+              "btn_type": "",
+              "btn_variant": "primary",
+              "btn_size": "",
+              "enable_overlay": false,
+              "overlay_bg_color": "#000000",
+              "overlay_opacity": 0.5,
+              "overlay_pattern_img": "none"
+            }
+          }
+        },
+        "block_order": [
+          "c709fd1e-baef-421c-8206-e9ee2966e80b",
+          "1512636537154",
+          "e0f51d32-eda4-4cb7-872c-22f256704231",
+          "9e802d36-e245-470d-8e17-ba8f8d709ecd"
+        ],
+        "settings": {
+          "enabled": true,
+          "nav_arrows": false,
+          "nav_dots": true,
+          "auto_play": 7,
+          "enable_section": true,
+          "ship_txt": "Over $100 = free ground shipping",
+          "cash_txt": "Get Cash for Used Avionics",
+          "cash_link": "shopify:\/\/pages\/cash-for-used-avionics",
+          "current_txt": "Current Special\/Rebates",
+          "current_link": "shopify:\/\/pages\/current-rebates",
+          "choose_catalog": "shopify:\/\/shop_images\/gca-catalog-closeup_952b268b-09ba-455d-9e4c-7b9fc8ed1df4.png",
+          "catalog_title": "View Our Online Catalog",
+          "catalog_link": "shopify:\/\/pages\/free-catalog"
+        }
+      },
+      "template-blog": {
+        "type": "template-blog",
+        "settings": {
+          "items_per_page": 10,
+          "ratina_image": "shopify:\/\/shop_images\/blog-header_f6c7e676-da44-4983-9068-6a4fdc81e00e.jpg",
+          "image": "shopify:\/\/shop_images\/blog-header_f6c7e676-da44-4983-9068-6a4fdc81e00e.jpg",
+          "image_mobile": "shopify:\/\/shop_images\/blog-header_f6c7e676-da44-4983-9068-6a4fdc81e00e.jpg",
+          "title": "PLANE SPEAK",
+          "enable_sort": true
+        }
+      },
+      "template-search": {
+        "type": "template-search",
+        "settings": {
+          "fluid_layout": false,
+          "items_per_page": 12
+        }
+      },
+      "mobile-navigation": {
+        "type": "mobile-navigation",
+        "settings": {
+          "mobile_nav_show_logo": true,
+          "main_logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/GCA-1984-Logo-RGB.svg?v=1643901001",
+          "logo_max_width": 180,
+          "main_menu_linklist": "main-menu",
+          "footer_mob": "footer"
+        }
+      },
+      "search-layer": {
+        "type": "search-layer",
+        "settings": {
+          "fluid_header": false,
+          "search_type": "reveal"
+        }
+      },
+      "template-faqs": {
+        "type": "template-faqs",
+        "blocks": {
+          "1511702589603": {
+            "type": "content",
+            "settings": {
+              "heading": "Lorem ipsum dolor sit amet?",
+              "txt": "<p>Morbi tempus elit at finibus viverra. In malesuada laoreet rhoncus. Cras id est eget est congue semper. Nullam facilisis varius orci a vestibulum. Nullam ex lorem, fringilla at semper luctus.<\/p>"
+            }
+          },
+          "1511702362895": {
+            "type": "content",
+            "settings": {
+              "heading": "Lorem ipsum dolor consectetur adipiscing elit?",
+              "txt": "<p>Morbi tempus elit at finibus viverra. In malesuada laoreet rhoncus. Cras id est eget est congue semper. Nullam facilisis varius orci a vestibulum. Nullam ex lorem, fringilla at semper luctus, ullamcorper eu magna. Morbi urna mauris, venenatis in velit sit amet, pulvinar porta lorem.<\/p>"
+            }
+          },
+          "1511702626552": {
+            "type": "content",
+            "settings": {
+              "heading": "Consectetur adipiscing elit?",
+              "txt": "<p>In malesuada laoreet rhoncus. Cras id est eget est congue semper. Nullam facilisis varius orci a vestibulum. Nullam ex lorem, fringilla at semper luctus, ullamcorper eu magna. Morbi urna mauris, venenatis in velit sit amet, pulvinar porta lorem. <\/p>"
+            }
+          },
+          "1511702607967": {
+            "type": "content",
+            "settings": {
+              "heading": "Lorem ipsum dolor sit adipiscing elit?",
+              "txt": "<p>Aliquam luctus in quam ut placerat. Suspendisse id odio nec augue posuere luctus. Nulla eu tortor dolor. In posuere accumsan ex, sollicitudin efficitur enim eleifend luctus. Maecenas at nisi ac enim dignissim egestas in nec justo. Vestibulum feugiat odio ullamcorper lobortis tristique. Nulla quis blandit est. Mauris vitae mauris nunc. Pellentesque tempor mollis ante in aliquam. Nullam sed justo dapibus, pellentesque tellus nec, maximus arcu. Praesent ut tincidunt libero. Nam enim tortor, venenatis vitae ornare quis, tempus vel quam. Pellentesque sagittis arcu a ligula molestie vulputate.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1511702589603",
+          "1511702362895",
+          "1511702626552",
+          "1511702607967"
+        ],
+        "settings": {
+          "fluid_layout": false,
+          "template_type": "accordion"
+        }
+      },
+      "template-contact": {
+        "type": "template-contact",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Building_Front_Banner.jpg",
+          "customer_enable": true,
+          "customer_heading": "Customer Support",
+          "customer_caption": "Have specific questions about your order?",
+          "customer_url": "shopify:\/\/pages\/customer-service",
+          "feedback_enable": true,
+          "feedback_heading": "Feedback",
+          "feedback_caption": "Give us a review of our services",
+          "feedback_url": "shopify:\/\/pages\/feedback",
+          "enable_form": true,
+          "map_enable": true,
+          "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d28183.332773185582!2d-82.015257!3d27.996448!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd39eab5dace75%3A0x4e2e3b4b9ddb0b16!2s3650%20Drane%20Field%20Rd%2C%20Lakeland%2C%20FL%2033811%2C%20USA!5e0!3m2!1sen!2sin!4v1615371710420!5m2!1sen!2sin",
+          "loc_enable": true,
+          "loc_title": "STOP BY OUR OFFICE",
+          "loc_sub_title": "Gulf Coast Avionics Corporation",
+          "loc_address": "Lakeland Linder International Airport<br>\n3650 Drane Field Rd, Lakeland, FL 33811",
+          "loc_map_url": "https:\/\/maps.google.com\/maps?f=q&source=embed&hl=en&geocode=&q=3650+Drane+Field,+Lakeland,+FL&sll=37.0625,-95.677068&sspn=40.460237,56.865234&ie=UTF8&hq=&hnear=3650+Drane+Field+Rd,+Lakeland,+Polk,+Florida+33811&ll=27.996448,-82.015257&spn=0.018947,0.034246&z=14",
+          "loc_other": "shopify:\/\/pages\/locations",
+          "driving_enable": true,
+          "driving_url": "shopify:\/\/pages\/driving-directions",
+          "driving_img": "shopify:\/\/shop_images\/sky-plane_1.jpg",
+          "driving_title": "Driving Directions",
+          "driving_caption": "<p>3650 Drane Field Road<br>\n                Lakeland Linder International Airport<br>\n                Lakeland, Florida 33811<\/p>",
+          "flying_enable": true,
+          "flying_url": "shopify:\/\/pages\/flying-in",
+          "flying_img": "shopify:\/\/shop_images\/airplanes_976347e1-9b26-4122-b683-ffa94330f0d4.jpg",
+          "flying_title": "Flying in",
+          "flying_caption": "<p class=\"col-md-5 mx-auto\">Download the Airport Diagram for Lakeland Linder International Airport<\/p>"
+        }
+      },
+      "1511810149210": {
+        "type": "index-featured-collection",
+        "settings": {
+          "heading_txt": "Featured Products",
+          "lead_txt": "",
+          "home_featured_collection": "featured-products",
+          "section_bg_color": "#ffffff",
+          "section_txt_color": "#343a40"
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {
+          "enabled": false,
+          "is_hidden_on_mobile": false,
+          "popup_delay": 1,
+          "popup_period_until": 7,
+          "heading": "Subscribe to Newsletter",
+          "text": "<p>Subscribe and get exclusive offers!<\/p>",
+          "footer_notes": "<p>No SPAM! We not share your email to any 3rd part companies!<\/p>",
+          "btn_txt": "Subscribe",
+          "template_type": "image_bg",
+          "bg_color_outer": "#5c6ac4",
+          "bg_color_inner": "#ffffff",
+          "txt_color": "#222222"
+        }
+      },
+      "template-404": {
+        "type": "template-404",
+        "settings": {
+          "icon_class": "icon ion-md-compass",
+          "icon_color": "#ced4da"
+        }
+      },
+      "template-password": {
+        "type": "template-password",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/slide-image.jpg",
+          "body_bg_color": "#222222",
+          "txt_color": "#ffffff",
+          "link_color": "#ffffff",
+          "button_bg_color": "#445bb8",
+          "button_txt_color": "#ffffff",
+          "enable_overlay": true,
+          "overlay_bg_color": "#000000",
+          "overlay_opacity": 0.5,
+          "overlay_pattern_img": "none",
+          "logo_img": "",
+          "logo_max_width": 120,
+          "title": "Opening Soon",
+          "enable_newsletter": true,
+          "newsletter_form_heading": "Be the first to know when we launch.",
+          "newsletter_placeholder": "Email address",
+          "newsletter_button_text": "Submit",
+          "footer_notes": "<p>No SPAM! We not share your email to any 3rd part companies!<\/p>",
+          "show_share_buttons": true,
+          "social_message": "Spread the word"
+        }
+      },
+      "1614165991ea8a93be": {
+        "type": "logo-list-style-1",
+        "blocks": {
+          "c1ff3823-8d86-4a33-ad28-7df084171be0": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/24.jpg",
+              "logo_url": "shopify:\/\/collections\/garmin-avionics"
+            }
+          },
+          "e221d75e-af68-4708-977c-d07c300a639f": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/17.jpg",
+              "logo_url": "shopify:\/\/collections\/aspen-avionics"
+            }
+          },
+          "e1f25dfc-5ee2-4b30-8943-98b966c872da": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/18.jpg",
+              "logo_url": "shopify:\/\/collections\/appareo"
+            }
+          },
+          "af4c785e-c2d1-46e3-885c-77f534afa43f": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/19.jpg",
+              "logo_url": "shopify:\/\/collections\/bendixking"
+            }
+          },
+          "f98a0703-6f3e-40a0-a7b1-8fc5030464e6": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/20.jpg",
+              "logo_url": "shopify:\/\/collections\/jp-instruments"
+            }
+          },
+          "4b545844-ab16-409b-83e2-ca7d875f880e": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/electronicsInternationalLogo_d16dbfae-dcae-496d-86bf-0d969df56ce2.png",
+              "logo_url": "shopify:\/\/collections\/electronics-international"
+            }
+          },
+          "00d2808e-a5b1-44b9-8cdc-b0b60a08534c": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/21.jpg",
+              "logo_url": "shopify:\/\/collections\/ps-engineering"
+            }
+          },
+          "aa977053-1549-4425-84eb-3bfc054e7bda": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/uAvionix-Logo-1500x603.png",
+              "logo_url": "shopify:\/\/collections\/uavionix"
+            }
+          }
+        },
+        "block_order": [
+          "c1ff3823-8d86-4a33-ad28-7df084171be0",
+          "e221d75e-af68-4708-977c-d07c300a639f",
+          "e1f25dfc-5ee2-4b30-8943-98b966c872da",
+          "af4c785e-c2d1-46e3-885c-77f534afa43f",
+          "f98a0703-6f3e-40a0-a7b1-8fc5030464e6",
+          "4b545844-ab16-409b-83e2-ca7d875f880e",
+          "00d2808e-a5b1-44b9-8cdc-b0b60a08534c",
+          "aa977053-1549-4425-84eb-3bfc054e7bda"
+        ],
+        "settings": {
+          "heading": "Manufacturers",
+          "nav_arrows": true,
+          "nav_dots": false,
+          "auto_play": 0
+        }
+      },
+      "16141936289c14c045": {
+        "type": "index-categories",
+        "settings": {
+          "enable_section": true,
+          "choose_img1": "shopify:\/\/shop_images\/04.jpg",
+          "icon1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/ADS-B-icon.svg?v=1614161316",
+          "title1": "ADS-B",
+          "choose_url1": "shopify:\/\/collections\/ads-b",
+          "choose_img2": "shopify:\/\/shop_images\/05.jpg",
+          "icon2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/avionics-icon.svg?v=1614161413",
+          "title2": "Instruments",
+          "choose_url2": "shopify:\/\/collections\/instruments",
+          "choose_img3": "shopify:\/\/shop_images\/06.jpg",
+          "icon3": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/Kit-panels-icon.svg?v=1614161477",
+          "title3": "Kit Panels",
+          "choose_url3": "shopify:\/\/pages\/kit-panels",
+          "choose_img4": "shopify:\/\/shop_images\/07.jpg",
+          "icon4": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/GPS-icon.svg?v=1614161436",
+          "title4": "GPS",
+          "choose_url4": "shopify:\/\/collections\/gps",
+          "choose_img5": "shopify:\/\/shop_images\/08.jpg",
+          "icon5": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/handhelds-icon.svg?v=1614161442",
+          "title5": "Handhelds",
+          "choose_url5": "shopify:\/\/collections\/handhelds",
+          "choose_img6": "shopify:\/\/shop_images\/09.jpg",
+          "icon6": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/Install-icon.svg?v=1614161462",
+          "title6": "Installations<br>& Repairs",
+          "choose_url6": "shopify:\/\/collections\/installation-supplies",
+          "choose_img7": "shopify:\/\/shop_images\/10.jpg",
+          "icon7": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/headsets-icon.svg?v=1614161453",
+          "title7": "Headsets",
+          "choose_url7": "shopify:\/\/collections\/pilot-headsets-intercoms",
+          "choose_img8": "shopify:\/\/shop_images\/23.jpg",
+          "icon8": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/pilot-supplies-icon.svg?v=1614161501",
+          "title8": "Pilot Supplies",
+          "choose_url8": "shopify:\/\/collections\/pilot-supplies"
+        }
+      },
+      "template-repair-form": {
+        "type": "template-repair-form",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Service_Banner.jpg",
+          "customer_enable": true,
+          "customer_heading": "Customer Support",
+          "customer_caption": "Have specific questions about your order?",
+          "customer_url": "shopify:\/\/pages\/customer-service",
+          "feedback_enable": true,
+          "feedback_heading": "Feedback",
+          "feedback_caption": "Give us a review of our services",
+          "feedback_url": "shopify:\/\/pages\/feedback",
+          "form_note": "<p>Please fill in the information below. After submission please print the <\/p><p>form and include with your repair when shipping to:<\/p><p>Gulf Coast Avionics Corp.<\/p><p>Attn: Service Department<\/p><p>3650 Drane Field Road<\/p><p>Lakeland Linder International Airport<\/p><p>Lakeland, Florida 33811<\/p>",
+          "enable_form": true
+        }
+      },
+      "template-kit-panels": {
+        "type": "template-kit-panels",
+        "blocks": {
+          "2097e0a3-f78e-431b-820e-92b9832fe97e": {
+            "type": "content",
+            "settings": {
+              "enable": true,
+              "choose_img": "shopify:\/\/shop_images\/Panel_Plan.png",
+              "title": "Design",
+              "caption": "<p>Design and layout of an instrument panel can be a tedious and complicated process. Our experienced designers and technicians know how to maximize available space. Our knowledge of avionics and instruments for kit panels results in practical, reliable, affordable designs.<br\/><br\/>Starting with a scale panel drawing and avionics specifications, we transform your ideas into a complete drawing. As part of the design process, we can assist you with placement of items in the panel, as well as interface considerations.<br\/><br\/>Once your panel is laid out, a complete quote is provided including all parts and labor listed. You know exactly what your panel will cost. There are no hidden surprises.<br\/><br\/>Once we have approval to start fabricating the panel, it is laid out by the technician to ensure a perfect fit. A great deal of time goes into the layout before the first hole is drilled.<\/p>"
+            }
+          },
+          "f40820c3-3db8-49b4-a9a6-1347935a666f": {
+            "type": "content",
+            "settings": {
+              "enable": true,
+              "choose_img": "shopify:\/\/shop_images\/Harness.png",
+              "title": "WIRING",
+              "caption": "<p>The system interconnect wiring is a critical part of any avionics installation. We use only the best MIL Spec quality wire, connectors, tools and specialized equipment to ensure the installation meets all FAA approved guidelines and manufacturer's instructions.<br\/><br\/>Using manufacturer installation manuals and custom designed interface systems, your panel is completely wired. All non-panel mounted instruments or remote boxes are wired to mating connectors or terminated as needed.<br\/><br\/>Our technicians take the worry out of even the most complicated packages by ensuring all the systems are wired correctly and interfaced together. Each system is double-checked for proper continuity prior to any power being applied.<\/p>"
+            }
+          },
+          "002cc04d-f85d-4d24-9c50-0b6c8cd1189d": {
+            "type": "content",
+            "settings": {
+              "enable": true,
+              "choose_img": "shopify:\/\/shop_images\/Router_43f6f044-d20f-484e-b321-62317d128443.jpg",
+              "title": "FABRICATION",
+              "caption": "<p>Expert panel build-up is our specialty. From avionics to instruments and all associated components, we provide professionally finished panels that are both beautiful and functional. By having all the specialized tools and equipment, we can ensure a proper fit and professional look to your panel.<br\/><br\/>Once panel layout and design is determined, all components are assembled and fitted to your panel. All switches, breakers, light assemblies and other parts are properly wired and installed. The radio stack is fitted to the panel, as well as any required supports or mounting rails.<br\/><br\/>Prior to final assembly, the panel and all sub-assemblies are custom painted as needed. Panels are engraved and all custom placards are provided.<\/p>"
+            }
+          },
+          "46582e3f-8a2c-45c0-904a-6e9b9be33036": {
+            "type": "content",
+            "settings": {
+              "enable": true,
+              "choose_img": "shopify:\/\/shop_images\/RV-7_Dual_D1000.jpg",
+              "title": "INSTALLATION",
+              "caption": "<p>Gulf Coast Avionics does professional avionics and instruments installation for a variety of business and personal aircraft. Our experience gives you the best possible installation for your kit aircraft as well.<br\/><br\/>Once all panel, radio, and remote assemblies have been completed, your panel is completely assembled and tested. All systems are inspected, as well as calibrated as needed. After we have confirmed all systems are operational, the panel is then professionally packaged for shipment.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "2097e0a3-f78e-431b-820e-92b9832fe97e",
+          "f40820c3-3db8-49b4-a9a6-1347935a666f",
+          "002cc04d-f85d-4d24-9c50-0b6c8cd1189d",
+          "46582e3f-8a2c-45c0-904a-6e9b9be33036"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/G3X.jpg",
+          "contact_enable": true,
+          "contact_heading": "Contact Us",
+          "contact_caption": "For a free panel package and quote.\nSpecify model aircraft.",
+          "contact_url": "shopify:\/\/pages\/contact",
+          "call_enable": true,
+          "call_img": "shopify:\/\/shop_images\/matt_schloss_1_c36b5fca-006d-4135-b3f5-38d34fe51045.jpg",
+          "call_heading": "CALL MATT TODAY!",
+          "call_caption": "<a class=\"a-link\" href=\"tel:8637099714,112\">863.709.9714 ext: 112<\/a>\n                                <a class=\"a-link\" href=\"mailto:matt@gca.aero\" target=\"_blank\">Matt@GCA.aero<\/a>",
+          "custom_enable": false,
+          "custom_heading": "Custom Kit Panels",
+          "custom_caption": "View a list of Custom Kit Panels available <br> at Gulf Coast\n                            Avionics."
+        }
+      },
+      "template-warranty-faqs": {
+        "type": "template-warranty-faqs",
+        "blocks": {
+          "af37aaef-bf6c-408e-a430-913ffb41d63e": {
+            "type": "plan",
+            "settings": {
+              "title": "Do I qualify for Clyde Protection Plan options?",
+              "caption": "<p>The Clyde Protection Plan is available to you if all of the following are true:<\/p>\n                                    <ul>\n                                        <li>You are a customer in the United States of America (excluding territories)<\/li>\n                                        <li>You purchased directly from Retailer on Retailer’s Website URL<\/li>\n                                        <li>Your order was placed on or after March 24th, 2020.<\/li>\n                                        <li>You purchased an eligible product<\/li>\n                                    <\/ul>"
+            }
+          },
+          "d00ac458-2a67-43b0-ad04-98479285f474": {
+            "type": "plan",
+            "settings": {
+              "title": "How do I purchase a protection plan?",
+              "caption": "<p>There are three ways to add a Clyde Protection Plan to your product:<\/p>\n                                    <ul>\n                                        <li>\n<strong>Gulf Coast Avionics’s website:<\/strong> Customers can choose the Clyde protection plan option at checkout when purchasing their product. <\/li>\n                                        <li>\n                                            <strong>Through the link in the post-purchase email within 30 days of purchasing the product:<\/strong> After purchase, customers will receive an email from Clyde offering the option to add protection. \n                                            Customers can click the link in the email which will direct them to the Clyde website. When using the email to purchase a Clyde protection plan, there is no need to create a \n                                            Clyde account prior to the purchase of the plan. \n                                        <\/li>\n                                        <li>\n                                            <strong>Directly from Clyde’s customer portal, <a href=\"https:\/\/www.HiClyde.com\" target=\"_blank\">HiClyde.com<\/a>:<\/strong> Customers have 30 days from the date of purchase or the delivery date (if provided to Clyde) \n                                            to purchase a protection plan. It will be necessary to create a Clyde account prior to completing the plan purchase through this method. Customers must use the same email address that was \n                                            used when purchasing a product when creating an account to link to their sales order.\n                                        <\/li>\n                                    <\/ul>"
+            }
+          },
+          "9c0e2d51-17ff-4877-9ea7-cdde89844f07": {
+            "type": "plan",
+            "settings": {
+              "title": "When are you ineligible to purchase a Clyde Protection Plan",
+              "caption": "<ul>\n                                        <li>Customers cannot purchase a protection plan after an accident occurs<\/li>\n                                        <li>Customers cannot purchase a protection plan after 30 days from the product’s purchase date or delivery date if provided to Clyde.<\/li>\n                                    <\/ul>"
+            }
+          },
+          "2bac12c0-4bbd-4709-8d52-1c157d7d8d83": {
+            "type": "claim",
+            "settings": {
+              "title": "How can I file a claim?",
+              "caption": "<p>\n                                        To file a claim on <a href=\"https:\/\/www.HiClyde.com\" target=\"_blank\">HiClyde.com<\/a>, customers have two options. They can log into their account, select the appropriate product, and click “File a Claim,” or they can file a claim as a guest by \n                                        entering the Contract ID found in their confirmation email into the homepage on <a href=\"https:\/\/www.HiClyde.com\" target=\"_blank\">HiClyde.com<\/a>. Customers typically receive an update on their claim within 48-72 hours and can check in on the \n                                        status of their claim in their Clyde account at any time. \n                                    <\/p>"
+            }
+          },
+          "06edb49c-79b3-422d-ae10-dd7c94f4727d": {
+            "type": "claim",
+            "settings": {
+              "title": "Can I file multiple claims?",
+              "caption": "<p>\n                                        Yes, you can file multiple claims using your Clyde Protection Plan during the course of the contract’s term. You are covered for multiple repairs up to the value of the original product purchase price. \n                                        <br><br>\n                                        If your claim is approved for a replacement product, then your contract is void. You will have the option to purchase a new protection plan for your replacement on <a href=\"https:\/\/www.HiClyde.com\" target=\"_blank\">HiClyde.com<\/a>.\n                                    <\/p>"
+            }
+          },
+          "9749ffa3-6300-4840-b1d8-e26d1baee3ae": {
+            "type": "claim",
+            "settings": {
+              "title": "Is there a deductible?",
+              "caption": "<p>\n                                        There are no deductibles.\n                                    <\/p>"
+            }
+          },
+          "7e7043f7-7b99-4220-84b7-5a37ff93fa83": {
+            "type": "faq",
+            "settings": {
+              "title": "Is the Clyde Protection Plan transferable?",
+              "caption": "<p>\n                                        Yes, this plan may be transferred to any person in the United States. To initiate the transfer of a plan, contact Clyde at <a href=\"mailto:protection@hiclyde.com\">protection@hiclyde.com<\/a>.\n                                    <\/p>"
+            }
+          },
+          "ee1fba7e-214d-4e05-9cd6-68b5a74ab82a": {
+            "type": "faq",
+            "settings": {
+              "title": "Does this Plan provide coverage for theft or lost items?",
+              "caption": "<p>\n                                        No, this Plan <em>does not cover<\/em> for loss or theft. \n                                    <\/p>"
+            }
+          },
+          "c317a3ff-35c6-491d-846c-0c417cc72257": {
+            "type": "faq",
+            "settings": {
+              "title": "Can the Clyde Protection Plan be canceled?",
+              "caption": "<p>\n                                        Yes, plans may be canceled. Reimbursement will be prorated based on time remaining on the contract and reduced by value of any claims previously covered.  A full refund is available if the cancellation \n                                        is made within 30 days of purchase. <br><br>\n                                        Please contact <a href=\"mailto:support@gca.areo\">support@gca.areo<\/a> to cancel your Clyde contract.\n                                    <\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "af37aaef-bf6c-408e-a430-913ffb41d63e",
+          "d00ac458-2a67-43b0-ad04-98479285f474",
+          "9c0e2d51-17ff-4877-9ea7-cdde89844f07",
+          "2bac12c0-4bbd-4709-8d52-1c157d7d8d83",
+          "06edb49c-79b3-422d-ae10-dd7c94f4727d",
+          "9749ffa3-6300-4840-b1d8-e26d1baee3ae",
+          "7e7043f7-7b99-4220-84b7-5a37ff93fa83",
+          "ee1fba7e-214d-4e05-9cd6-68b5a74ab82a",
+          "c317a3ff-35c6-491d-846c-0c417cc72257"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/mustang-p51.jpg",
+          "enable_faq_1": true,
+          "faq_title_1": "Purchase A Protection Plan",
+          "enable_faq_2": true,
+          "faq_title_2": "Claims",
+          "enable_faq_3": true,
+          "faq_title_3": "Frequently Asked Questions"
+        }
+      },
+      "free-catalog": {
+        "type": "free-catalog",
+        "blocks": {
+          "5f623e70-922f-4ade-bc60-bddc6372daf4": {
+            "type": "content",
+            "settings": {
+              "enable": true,
+              "choose_img": "shopify:\/\/shop_images\/daria-sukhorukova-6343-unsplash.jpg",
+              "title": "Interactive Catalog",
+              "caption": "Check out the new online catalog. Interactive pages, downloadable pdf versions, keyword search, and more!",
+              "choose_url": "shopify:\/\/pages\/catalog-2021"
+            }
+          },
+          "6be6a165-7631-48c2-8176-89a0a07c91d3": {
+            "type": "content",
+            "settings": {
+              "enable": true,
+              "choose_img": "shopify:\/\/shop_images\/skycraft-studios-1340768-unsplash.jpg",
+              "title": "Download PDF",
+              "caption": "Download a PDF version of our catalog for your convenience. Click here to download now!",
+              "choose_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/2021-GCA-Catalog.pdf?v=1616584098"
+            }
+          }
+        },
+        "block_order": [
+          "5f623e70-922f-4ade-bc60-bddc6372daf4",
+          "6be6a165-7631-48c2-8176-89a0a07c91d3"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/sky-plane.jpg",
+          "customer_enable": true,
+          "customer_heading": "CONTACT US",
+          "customer_caption": "Have questions or concerns?",
+          "customer_url": "shopify:\/\/pages\/contact",
+          "feedback_enable": true,
+          "feedback_heading": "Feedback",
+          "feedback_caption": "Give us a review of our services",
+          "feedback_url": "shopify:\/\/pages\/feedback",
+          "enable_form": true,
+          "catalog_heading": "CATALOG BY  MAIL",
+          "catalog_description": "If you would like a FREE copy of our Product Catalog sent to you by U.S. Mail, please fill out the form below. If your postal address is outside the U.S., please click the link above for our online interactive catalog."
+        }
+      },
+      "about-us": {
+        "type": "about-us",
+        "settings": {
+          "ratina_image": "shopify:\/\/shop_images\/plane-cockpit_b2813bfc-9c55-4571-b7c9-8a076a28c4ab.jpg",
+          "image": "shopify:\/\/shop_images\/plane-cockpit_b2813bfc-9c55-4571-b7c9-8a076a28c4ab.jpg",
+          "image_mobile": "shopify:\/\/shop_images\/plane-cockpit_b2813bfc-9c55-4571-b7c9-8a076a28c4ab.jpg",
+          "abt_us_back_plane_img": "shopify:\/\/shop_images\/airplanes.jpg",
+          "plane_title": "Contact Us",
+          "plane_caption": "<p>See our hours of operation and contact us with any questions.<\/p>",
+          "plane_url": "shopify:\/\/pages\/contact"
+        }
+      },
+      "avionics-installation": {
+        "type": "avionics-installation",
+        "blocks": {
+          "fc3fad60-97b0-44f3-b129-fd57d0f49f47": {
+            "type": "content",
+            "settings": {
+              "financing_url": "https:\/\/madisoncapital.com\/specialized-financing\/avionics-financing\/",
+              "financing_img": "shopify:\/\/shop_images\/madison_capital_488238d7-01e6-4e18-a0d4-41d302ecce50.jpg",
+              "financing_title": "",
+              "financing_text": "Find out about installation financing"
+            }
+          },
+          "d87b11a8-22be-4aa1-be2d-d15f83214138": {
+            "type": "content",
+            "settings": {
+              "financing_url": "https:\/\/www.airloans.com\/",
+              "financing_title": "NAFCO",
+              "financing_text": "Find out about installation financing"
+            }
+          },
+          "9e76f6cd-7124-46df-92a7-a72434079c0e": {
+            "type": "content",
+            "settings": {
+              "financing_url": "https:\/\/banterraaircraft.com\/gulf-coast-avionics\/",
+              "financing_img": "shopify:\/\/shop_images\/Banterra_fe489275-64e9-40fb-9156-d5a08234a993.jpg",
+              "financing_title": "",
+              "financing_text": "Find out about installation financing"
+            }
+          }
+        },
+        "block_order": [
+          "fc3fad60-97b0-44f3-b129-fd57d0f49f47",
+          "d87b11a8-22be-4aa1-be2d-d15f83214138",
+          "9e76f6cd-7124-46df-92a7-a72434079c0e"
+        ],
+        "settings": {
+          "ratina_image": "shopify:\/\/shop_images\/GCA_hangar_2.jpg",
+          "image": "shopify:\/\/shop_images\/GCA_hangar_2.jpg",
+          "image_mobile": "shopify:\/\/shop_images\/GCA_hangar_2.jpg",
+          "contact_enable": true,
+          "contact_heading": "Request installation quote",
+          "contact_caption": "Request an estimate online",
+          "contact_url": "shopify:\/\/pages\/installations-estimate",
+          "call_enable": true,
+          "call_img": "shopify:\/\/shop_images\/matt_schloss_1_a982118f-0c51-442d-acc7-7c2e87cd5e0e.jpg",
+          "call_heading": "CUSTOM QUOTES",
+          "call_caption": "<p class=\"mb-0 text-primary\">Call Matt today!<\/p>\n                            <a href=\"tel:8004749714,112\" class=\"mb-0 text-primary\">800-474-9714 ext: 112<\/a>\n                            <a href=\"mailto:matt@gca.aero\" class=\"mb-0 text-primary\">Matt@GCA.aero<\/a>"
+        }
+      },
+      "installations-package": {
+        "type": "installations-package",
+        "blocks": {
+          "4dc040e2-7402-49f2-b12b-994388b7f350": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 1",
+              "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_1-detail.png",
+              "product_title": "GARMIN",
+              "product_content": "<p>IFR Install Package 1<\/p><p>Installed from $27,775<\/p><p>Catalog No: (select an option)<\/p><p>Manufacturer: <a href=\"#\" title=\"#\">GARMIN<\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Garmin G5 Attitude<br\/>Garmin G5 HSI<br\/>Garmin GNC 255A Nav\/Com<br\/>Garmin GMA 342 Audio Panel<br\/>Garmin GTX 335 w\/GPS ADS-B Transponder<\/p>"
+            }
+          },
+          "8bad8082-0756-4008-9249-f2fcb4897138": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 2",
+              "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_2-detail.jpg",
+              "product_title": "GARMIN",
+              "product_content": "<p>IFR Install Package 2<\/p><p>Installed from $37,375<\/p><p>Catalog No: (select an option)<\/p><p>Manufacturer: <a href=\"#\" title=\"#\">GARMIN<\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Garmin G5 Attitude<\/p><p>Garmin G5 HSI<br\/><\/p><p>Garmin GMA 342 Audio Panel<br\/><\/p><p>Garmin GTN 650Xi GPS\/Nav\/Com<br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p>"
+            }
+          },
+          "34ffc03c-7a3e-4845-af46-b32192f33424": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 3",
+              "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_3-detail.jpg",
+              "product_title": "GARMIN",
+              "product_content": "<p>IFR Install Package 3<br\/><\/p><p>Install from $42,095<br\/><\/p><p>Catalog No: (select an option)<br\/><\/p><p>Manufacturer: <a href=\"#\" title=\"#\">GARMIN<br\/><\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Garmin G5 Attitude<\/p><p>Garmin G5 HSI<br\/><\/p><p>Garmin GMA 342 Audio Panel<br\/><\/p><p>Garmin GTN 750Xi GPS\/Nav\/Com<br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p>"
+            }
+          },
+          "bb7d9510-04cd-49ab-bb4f-140e5620cf4f": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 4",
+              "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_4-detail.jpg",
+              "product_title": "GARMIN",
+              "product_content": "<p>IFR Install Package <br\/><\/p><p>Install from $42,150<br\/><\/p><p>Catalog No: (select an option)<br\/><\/p><p>Manufacturer: <a href=\"#\" title=\"#\">GARMIN<br\/><\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Aspen E5 EFIS<br\/><\/p><p>Garmin GMA 342 Audio Panel<br\/><\/p><p>Garmin GTN 650Xi GPS\/Nav\/Com<br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p>"
+            }
+          },
+          "473289f8-daa9-4dcc-8b3e-aab58ee8c856": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 4.5",
+              "choose_img": "shopify:\/\/shop_images\/IFR_install_4.5-detail.jpg",
+              "product_title": "GARMIN",
+              "product_content": "<p>IFR Install Package 4.5<br\/><\/p><p>Install from $44,995<br\/><\/p><p>Catalog No: (select an option)<br\/><\/p><p>Manufacturer: <a href=\"#\" title=\"#\">GARMIN<br\/><\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p><strong>Garmin GI-275 Attitude Indicator<br\/><\/strong><\/p><p><strong>Garmin GI-275 H.S.I.<br\/><\/strong><\/p><p><strong>Garmin GMA 342 Audio Panel<br\/><\/strong><\/p><p><strong>Garmin GTN 750 Xi GPS\/NAV\/COM<br\/><\/strong><\/p><p><strong>Garmin GTX 345 ADS-B Transponder<\/strong><\/p>"
+            }
+          },
+          "fd091e57-54d1-4b54-8e0f-21c391d98ec6": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 5",
+              "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_5-detail.jpg",
+              "product_title": "ASPEN AVIONICS",
+              "product_content": "<p>IFR Install Package 5<br\/><\/p><p>Install from $46,995<br\/><\/p><p>Catalog No: (select an option)<br\/><\/p><p>Manufacturer: <a href=\"#\" title=\"#\">ASPEN AVIONICS<\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Aspen EFD1000 Pro Max<\/p><p>Garmin GMA 342 Audio Panel<br\/><\/p><p>Garmin GTN 750Xi GPS\/Nav\/Com<br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p>"
+            }
+          },
+          "49c796d5-de7d-4770-bd60-5bbebf8e48b3": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 6",
+              "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_6-detail.jpg",
+              "product_title": "GARMIN",
+              "product_content": "<p>IFR Install Package 6<br\/><\/p><p>Installed from $61,595<br\/><\/p><p>Catalog No: (select an option)<br\/><\/p><p>Manufacturer: <a href=\"#\" title=\"#\">GARMIN<br\/><\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Garmin G500 TXi EFIS<br\/><\/p><p>Garmin GMA 345 Audio Panel<br\/><\/p><p>Garmin GTN 750Xi GPS\/Nav\/Com<br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p>"
+            }
+          },
+          "b56e2c02-b880-48e9-b20c-f94916d9521d": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 7",
+              "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_7-detail.jpg",
+              "product_title": "GARMIN",
+              "product_content": "<p>IFR Install Package 7<br\/><\/p><p>Installed from $68,195<br\/><\/p><p>Catalog No: (select an option)<br\/><\/p><p>Manufacturer: <a href=\"#\" title=\"#\">GARMIN<br\/><\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Garmin G500 TXi EFIS<br\/><\/p><p>Garmin GMA 345 Audio Panel<br\/><\/p><p>Garmin GTN 750Xi GPS\/Nav\/Com<br\/><\/p><p>Garmin GNC 255A Nav\/Com<br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p>"
+            }
+          },
+          "a9d2d659-46ba-4d6a-8ff6-087f7deb166d": {
+            "type": "content",
+            "settings": {
+              "popup_text": "IFR Install Package 8",
+              "choose_img": "shopify:\/\/shop_images\/IFR_Install_Package_8-detail.jpg",
+              "product_title": "ASPEN AVIONICS",
+              "product_content": "<p>IFR Install Package 8<br\/><\/p><p>Install from $63,195<br\/><\/p><p>Catalog No: (select an option)<br\/><\/p><p>Manufacturer: <a href=\"#\" title=\"#\">ASPEN AVIONICS<\/a><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Aspen Evolution 2000 EFIS<br\/><\/p><p>Garmin GMA 345 Audio Panel<br\/><\/p><p>Garmin GTN 750Xi GPS\/Nav\/Com<br\/><\/p><p>Garmin GNC 255A Nav\/Com<br\/><\/p><p>Garmin GTX 345 ADS-B Transponder<\/p>"
+            }
+          },
+          "8cfca5b9-835c-42ad-b04c-f2115e0553d7": {
+            "type": "content",
+            "settings": {
+              "popup_text": "VFR Install Package 1",
+              "choose_img": "shopify:\/\/shop_images\/VFR_Install_Package_1-detail.jpg",
+              "product_title": "GARMIN",
+              "product_content": "<p>VFR Install Package 1<br\/><\/p><p>Install from $11,595<br\/><\/p><p>Catalog No: (select an option)<br\/><\/p><p>Manufacturer: GARMIN<br\/><\/p><p>Call for Price<\/p>",
+              "feature_title": "Product Features",
+              "feature_content": "<p>Garmin aera 660 w\/AirGizmo Dock<br\/><\/p><p>Garmin GTR 225 Com Radio<br\/><\/p><p>Garmin GTX 345 w\/GPS ADS-B Transponder*<br\/><\/p><p>*Includes GAE 12 Altitude Encoder<\/p>"
+            }
+          },
+          "c63aeb1a-7cbf-4d3f-b91f-3dfddd0c8c06": {
+            "type": "slider",
+            "settings": {
+              "title": "Piper PA-32",
+              "slider_img1": "shopify:\/\/shop_images\/Piper_PA-32_Garmin_Upgrade.png",
+              "slider_des1": "FEATURED AVIONICS",
+              "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g3x-touch-for-certified-aircraft-1\">Dual Garmin G3X Displays <\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gea-24-engine-indication-system-eis-for-g3x\">Garmin EIS Displayed on G3X<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-650xi\">Dual Garmin GTN 650 Xi GPS\/Nav\/Com<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gma-345\">Garmin GMA 345 Audio Panel<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc-500-digital-autopilot\">Garmin GFC 500 Digital Autopilot<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\">Garmin GTX 345 Remote ADS-B Transponder<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Designed and Fabricated Panel<\/li>"
+            }
+          },
+          "a53ed6f2-89f6-4ed0-8ebf-954b8cccfab7": {
+            "type": "slider",
+            "settings": {
+              "title": "Beech 58 Baron",
+              "slider_img1": "shopify:\/\/shop_images\/Beech_58.jpg",
+              "slider_des1": "FEATURED AVIONICS",
+              "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g500h-txi-touchscreen-flight-display-for-helicopters\">Garmin G500 TXi w\/SVT<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-650xi\">Garmin GTN 650 Xi GPS\/Nav\/Com<\/a><\/li> <li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/flight-stream-510-multimediacard-mmc\">Flight Stream 510 Connectivity<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc600h-flight-control-system\">Garmin GFC 600 Autopilot w\/Yaw Damper<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\">Garmin GTX 345 ADS-B In\/Out Transponder<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Garmin GWX 75 Digital Radar<\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Designed and Powder Coated Panel<\/li>"
+            }
+          },
+          "59babf6a-4e61-4781-9884-f32ebe771365": {
+            "type": "slider",
+            "settings": {
+              "title": "Cessna 182",
+              "slider_img1": "shopify:\/\/shop_images\/Cessna_182.jpg",
+              "slider_des1": "FEATURED AVIONICS",
+              "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g5-pfd-hsi-package\">Dual Garmin G5 Attitude and HSI<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/used-garmin-gtn-750-gpsnavcom\">GTN 750 Xi GPS\/Nav\/Com<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\">GTX 345 ADS-B Transponder<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">\n<a href=\"\/products\/edm-900-engine-monitor\">JP Instruments EDM-900 Engine Monitor<\/a><a><\/a>\n<\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Panel Design, Fabrication and Painting<\/li>"
+            }
+          },
+          "70baf5fe-12af-4678-b75e-0de99f6e7e59": {
+            "type": "slider",
+            "settings": {
+              "title": "Beech A36 Bonanza",
+              "slider_img1": "shopify:\/\/shop_images\/Beech_A36.jpg",
+              "slider_des1": "FEATURED AVIONICS",
+              "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gi-275-eis-w-gea-24\">Dual Garmin GI 275s<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Garmin GMA35c Remote Audio Panel<\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-750xi\">Garmin GTN 750Xi GPS\/Nav\/Com<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\">Dual GTN 750<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc-500-digital-autopilot\">Garmin GFC 500 Digital Autopilot<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Fabricated Panels<\/li>"
+            }
+          },
+          "b3da730a-a46e-4d92-b18b-7496d5b57402": {
+            "type": "slider",
+            "settings": {
+              "title": "Cessna 208 Caravan",
+              "slider_img1": "shopify:\/\/shop_images\/Caravan_GI_275s_and_GFC_600_6474b709-a0c5-46ec-975f-ab7f7b0c904a.jpg",
+              "slider_des1": "FEATURED AVIONICS",
+              "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gi-275-hsi\">Dual Garmin GI 275s<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc-600\">Garmin GFC 600 Digital Autopilot<\/a><\/li>"
+            }
+          },
+          "eb5a4677-64b5-4c1e-b5f3-2af4e622e8bf": {
+            "type": "slider",
+            "settings": {
+              "title": "Cessna 337 Skymaster",
+              "slider_img1": "shopify:\/\/shop_images\/Cessna_337.jpg",
+              "slider_des1": "FEATURED AVIONICS",
+              "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g600-txi-touchscreen-display\">Garmin G600 TXi EFIS<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">GMA-350c Audio Panel<\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-750xi\">GTN 750Xi GPS\/Nav\/Com<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gnc-255a-panel-mount-navcom-with-glide-slope\">Garmin GNC 255A Nav\/Com<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\">Garmin GTX 345 ADS-B Transponder<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/system-55x\">STEC 55X Autopilot<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/edm-960-all-in-one-engine-monitor-twin-engine-system\">JP Instruments EDM-960 Engine Monitor<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Panel Design, Fabrication and Powder Coating<\/li>"
+            }
+          },
+          "46daa5a7-7cba-4b5f-ae7b-632fb6ecd9bb": {
+            "type": "slider",
+            "settings": {
+              "title": "Cessna 414A",
+              "slider_img1": "shopify:\/\/shop_images\/Cessna_414_After_0067fdfc-f580-4fc5-8023-8f0d56d4a6bf.jpg",
+              "slider_des1": "FEATURED AVIONICS",
+              "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g600-txi-touchscreen-display\">Garmin G600 TXi EFIS<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-750xi\">Dual GTN750 GPS\/Nav\/Com<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Garmin GMA 35c Remote Audio Panel<\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\">Dual GTX Remote ADS-B Transponders<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gfc600h-flight-control-system\">Garmin GFC 600 Digital Autopilot<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/flight-stream-510-multimediacard-mmc\">Flight Stream 510<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/edm-960-all-in-one-engine-monitor-twin-engine-system\">JP Instruments EDM-960 Engine Monitor<\/a><\/li><li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Designed and Powder Coated Panels<\/li>"
+            }
+          },
+          "6cd60201-1c64-4e08-a4e1-66badcbfebd8": {
+            "type": "slider",
+            "settings": {
+              "title": "Piper Cheyenne",
+              "slider_img1": "shopify:\/\/shop_images\/Piper_Cheyenne.jpg",
+              "slider_des1": "FEATURED AVIONICS",
+              "call_caption": "<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/g600-txi-touchscreen-display\">Garmin G600 TXi <\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtn-750xi\">Dual Garmin GTN 750 Xi GPS\/Nav\/Com<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">GMA 35c Remote Audio Panel<\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/art-2100\">STEC 2100 Autopilot System<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\"><a href=\"\/products\/gtx335-ads-b-out-transponder\">Dual Garmin GTX Remote ADS-B Transponders<\/a><\/li>\n<li class=\"font-size-lg font-weight-bold col-md-6 mb-3\">Custom Designed Panel<\/li>"
+            }
+          }
+        },
+        "block_order": [
+          "4dc040e2-7402-49f2-b12b-994388b7f350",
+          "8bad8082-0756-4008-9249-f2fcb4897138",
+          "34ffc03c-7a3e-4845-af46-b32192f33424",
+          "bb7d9510-04cd-49ab-bb4f-140e5620cf4f",
+          "473289f8-daa9-4dcc-8b3e-aab58ee8c856",
+          "fd091e57-54d1-4b54-8e0f-21c391d98ec6",
+          "49c796d5-de7d-4770-bd60-5bbebf8e48b3",
+          "b56e2c02-b880-48e9-b20c-f94916d9521d",
+          "a9d2d659-46ba-4d6a-8ff6-087f7deb166d",
+          "8cfca5b9-835c-42ad-b04c-f2115e0553d7",
+          "c63aeb1a-7cbf-4d3f-b91f-3dfddd0c8c06",
+          "a53ed6f2-89f6-4ed0-8ebf-954b8cccfab7",
+          "59babf6a-4e61-4781-9884-f32ebe771365",
+          "70baf5fe-12af-4678-b75e-0de99f6e7e59",
+          "b3da730a-a46e-4d92-b18b-7496d5b57402",
+          "eb5a4677-64b5-4c1e-b5f3-2af4e622e8bf",
+          "46daa5a7-7cba-4b5f-ae7b-632fb6ecd9bb",
+          "6cd60201-1c64-4e08-a4e1-66badcbfebd8"
+        ],
+        "settings": {
+          "installation_enable": true,
+          "installation_heading": "INSTALLATIONS & PACKAGES",
+          "installation_text": "Custom Packages",
+          "package_enable": true,
+          "installation_ing": "shopify:\/\/shop_images\/mountains_e1aafd30-8739-43f3-9cec-f1e81fb6c2ab.jpg",
+          "load_heading": "Installation Estimate",
+          "load_text": "REQUEST A QUOTE  ONLINE",
+          "btn_txt": "See More",
+          "load_url": "shopify:\/\/pages\/installations-estimate",
+          "slider_enable": true,
+          "enable_related_products": true,
+          "choose_collection": "test-collection",
+          "related_products_heading_txt": "Related Products",
+          "related_products_nav_arrows": true,
+          "related_products_nav_dots": false
+        }
+      },
+      "news-blog": {
+        "type": "news-blog",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/plane-propeller.jpg",
+          "title": "WHAT'S NEW AT  GULF COAST AVIONICS"
+        }
+      },
+      "logo-list-style-1": {
+        "type": "logo-list-style-1",
+        "blocks": {
+          "f1fd0035-e3e0-4b87-b3c4-5a7b9968bafc": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/garmin_logo_pms285_rgb.jpg",
+              "logo_url": "shopify:\/\/collections\/garmin-avionics"
+            }
+          },
+          "fcdfb661-3131-4039-bef9-aee5c370b06a": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/Aspen_logo_w_tagline400x120.jpg",
+              "logo_url": "shopify:\/\/collections\/aspen-avionics"
+            }
+          },
+          "5c03dcdb-f1d6-4322-9f86-b3c3fcfeb327": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/Appareo.png",
+              "logo_url": "shopify:\/\/collections\/appareo"
+            }
+          },
+          "ac1ad709-1bdb-41ad-b643-e4cdcae3780c": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/Bendix.png",
+              "logo_url": "shopify:\/\/collections\/bendixking"
+            }
+          },
+          "e0b37fd1-799a-4a04-9af2-699f72a18c9f": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/JPI.jpg",
+              "logo_url": "shopify:\/\/collections\/jp-instruments"
+            }
+          },
+          "8d922fb9-5a3e-4019-8757-6341ac4ae071": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/PSEngineering.jpg",
+              "logo_url": "shopify:\/\/collections\/ps-engineering"
+            }
+          },
+          "63ffd9b4-25b2-4094-9ce5-e7d1539cf7d6": {
+            "type": "content",
+            "settings": {
+              "logo_img": "shopify:\/\/shop_images\/uAvionix-Logo-1500x603.png",
+              "logo_url": "shopify:\/\/collections\/uavionix"
+            }
+          }
+        },
+        "block_order": [
+          "f1fd0035-e3e0-4b87-b3c4-5a7b9968bafc",
+          "fcdfb661-3131-4039-bef9-aee5c370b06a",
+          "5c03dcdb-f1d6-4322-9f86-b3c3fcfeb327",
+          "ac1ad709-1bdb-41ad-b643-e4cdcae3780c",
+          "e0b37fd1-799a-4a04-9af2-699f72a18c9f",
+          "8d922fb9-5a3e-4019-8757-6341ac4ae071",
+          "63ffd9b4-25b2-4094-9ce5-e7d1539cf7d6"
+        ],
+        "settings": {
+          "heading": "",
+          "nav_arrows": true,
+          "nav_dots": true,
+          "auto_play": 0
+        }
+      },
+      "index-featured-collection": {
+        "type": "index-featured-collection",
+        "settings": {
+          "heading_txt": "FEATURED PRODUCTS",
+          "lead_txt": "",
+          "home_featured_collection": "test-collection",
+          "section_bg_color": "#f8f9fa",
+          "section_txt_color": "#343a40"
+        }
+      },
+      "template-manufacturers": {
+        "type": "template-manufacturers",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/King_Air.png",
+          "enable_categories": true,
+          "main_linklist": "manufacturers-categories"
+        }
+      },
+      "template-locations": {
+        "type": "template-locations",
+        "blocks": {
+          "8fe2f2d5-ac83-46e1-a096-9018fba7c499": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS CORP.",
+              "location_address1": "3650 Drane Field Road<br>\nLakeland Linder International Airport<br>\nLakeland, Florida 33811",
+              "location_phone": "863-709-9714",
+              "location_fax": "863-709-9736",
+              "location_tel": "",
+              "location_cell": "",
+              "location_email": "info@GCA.aero",
+              "location_address2": "FAA Approved Repair Station No. UB4R564M<br>\nClass 1, 2, 3 & Limited Instruments<br>\nColombia UAEAC TARE-016",
+              "location_text": "https:\/\/www.gulfcoastavionics.com\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d56366.804666144635!2d-82.019215!3d27.996182000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x38b059a849153769!2sGulf%20Coast%20Avionics!5e0!3m2!1sen!2sus!4v1616417619492!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Gulf+Coast+Avionics\/@27.996182,-82.019215,13z\/data=!4m5!3m4!1s0x0:0x38b059a849153769!8m2!3d27.996182!4d-82.019215?hl=en"
+            }
+          },
+          "96d64117-4740-4a24-b750-8fe9b9989109": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS COLOMBIA S.A.S.",
+              "location_address1": "Aeropuerto Internacional El Dorado<br>\nEntrada 1<br>\nCarrera 103 #26-92 Piso 3<br>\nBogotá Colombia",
+              "location_phone": "",
+              "location_fax": "",
+              "location_tel": "573168770097",
+              "location_cell": "573214934798",
+              "location_email": "Gerencia@GCAC.com.co",
+              "location_address2": "UAEAC-CDF-125",
+              "location_text": "https:\/\/www.avionicacolombia.com.co\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d994.1135810855957!2d-74.1303685!3d4.690839099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ca232ac565f%3A0xff7a1eba06ed3993!2sCarrera+103+%23+26-92%2C+Bogot%C3%A1%2C+Cundinamarca%2C+Colombia!5e0!3m2!1sen!2sus!4v1425925877001",
+              "below_map_text": ""
+            }
+          },
+          "7ae6da80-3949-45e7-b26b-636bf9aad8bc": {
+            "type": "location",
+            "settings": {
+              "heading": "PACIFIC COAST AVIONICS CORP.",
+              "location_address1": "22783 Airport Road<br>\nAurora State Airport<br>\nAurora, Oregon 97002",
+              "location_phone": "503-678-6242",
+              "location_fax": "503-678-6292",
+              "location_tel": "",
+              "location_cell": "",
+              "location_email": "info@PCA.aero",
+              "location_address2": "FAA Approved Repair Station No. OPXR455L<br>\nClass 1, 2 & Limited Instruments",
+              "location_text": "https:\/\/www.pacificcoastavionics.com\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d22471.564329005578!2d-122.764647!3d45.248894!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549568a9c841da57%3A0x4d06871d84564c67!2s22783%20Airport%20Rd%20NE%2C%20Aurora%2C%20OR%2097002!5e0!3m2!1sen!2sus!4v1616417987351!5m2!1sen!2sus",
+              "below_map_text": ""
+            }
+          },
+          "253154a6-1f79-4c3a-94f7-6cafed117c14": {
+            "type": "location",
+            "settings": {
+              "heading": "CENTRAL FLORIDA AVIONICS & INSTRUMENTS, LLC",
+              "location_address1": "Leesburg International Airport<br>\n8812 Airport Blvd.<br>\nLeesburg, FL 34788",
+              "location_phone": "352-787-0712",
+              "location_fax": "352-787-0720",
+              "location_tel": "",
+              "location_cell": "",
+              "location_email": "cflavionics@aol.com",
+              "location_address2": "FAA Approved Repair Station No. F4LR560Y",
+              "location_text": "http:\/\/www.cflai.com\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d27962.87308051139!2d-81.810093!3d28.828166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7be4595855555%3A0xd587d34105a2079b!2s8812%20Airport%20Blvd%2C%20Leesburg%2C%20FL%2034788!5e0!3m2!1sen!2sus!4v1616418125446!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/8812+Airport+Blvd,+Leesburg,+FL+34788\/@28.828166,-81.810093,14z\/data=!4m5!3m4!1s0x88e7be4595855555:0xd587d34105a2079b!8m2!3d28.8279847!4d-81.8101813?hl=en"
+            }
+          },
+          "79fc80d3-dd55-4047-8317-b2234b5a88f7": {
+            "type": "location",
+            "settings": {
+              "heading": "FLYDIRECT AVIATION",
+              "location_address1": "707 William Northern Blvd<br>\nTullahoma Regional Airport<br>\nTullahoma, TN 37388",
+              "location_phone": "931-841-9096",
+              "location_fax": "",
+              "location_tel": "",
+              "location_cell": "",
+              "location_email": "sales@flydirect-aviation.com",
+              "location_address2": "",
+              "location_text": "https:\/\/flydirect-aviation.com\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d52047.805169578045!2d-86.242823!3d35.380758!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x56a7cd0d3b8378d4!2sFlyDirect%20Aviation!5e0!3m2!1sen!2sus!4v1616418247545!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/FlyDirect+Aviation\/@35.380758,-86.242823,13z\/data=!4m5!3m4!1s0x0:0x56a7cd0d3b8378d4!8m2!3d35.3807581!4d-86.2428234?hl=en"
+            }
+          },
+          "2bd6bb34-7da1-4814-abbf-c951ea7e466d": {
+            "type": "location",
+            "settings": {
+              "heading": "HOLLYWOOD AVIONICS LLC",
+              "location_address1": "1610 SW 75th AVE.<br>\nNorth Perry Airport<br>\nPembroke Pines, FL 33023",
+              "location_phone": "954-591-0056",
+              "location_fax": "",
+              "location_tel": "",
+              "location_cell": "",
+              "location_email": "",
+              "location_address2": "",
+              "location_text": "",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d28689.05722675468!2d-80.237917!3d25.996488!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a8d37cd0678d%3A0xf26324ca053bbacf!2s1610%20SW%2075th%20Ave%2C%20Pembroke%20Pines%2C%20FL%2033023!5e0!3m2!1sen!2sus!4v1616418320518!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/1610+SW+75th+Ave,+Pembroke+Pines,+FL+33023\/@25.996488,-80.237917,14z\/data=!4m5!3m4!1s0x88d9a8d37cd0678d:0xf26324ca053bbacf!8m2!3d25.9964882!4d-80.2379171?hl=en-US"
+            }
+          },
+          "8a3a5948-053c-41c3-8333-f6579c4604ea": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS BRAZIL",
+              "location_address1": "Praça Capitão Frazão, nº 913 • Aeroporto Sta. Genoveva<br>\nHangar QUICK • CEP 74672-410 • Goiânia • GO",
+              "location_phone": "011 55 (62) 3207-2258",
+              "location_fax": "011 55 (62) 3207-2534",
+              "location_tel": "",
+              "location_cell": "011 55 (62) 9206-7443",
+              "location_email": "jonatas@GulfCoastAvionics.com.br",
+              "location_address2": "",
+              "location_text": "https:\/\/www.gulfcoastavionics.com.br\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d15291.505938446464!2d-49.226587!3d-16.632967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef25e82f82d77%3A0xd5a6ab041bdc8487!2zUHJhw6dhIENhcC4gRnJhesOjbywgR29pw6JuaWEgLSBHTywgQnJhemls!5e0!3m2!1sen!2sus!4v1616418436252!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Pra%C3%A7a+Cap.+Fraz%C3%A3o,+Goi%C3%A2nia+-+GO,+Brazil\/@-16.632967,-49.226587,15z\/data=!4m5!3m4!1s0x935ef25e82f82d77:0xd5a6ab041bdc8487!8m2!3d-16.6331243!4d-49.2261348?hl=en"
+            }
+          },
+          "74040e3d-ffb0-4ecb-a296-54ff036b2ed7": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS PANAMA",
+              "location_address1": "Aviazion Group S.A.<br>\nAeropuerto Albrook MAG, Hangar 5E<br>\nPanama, Ciudad de Panama",
+              "location_phone": "",
+              "location_fax": "",
+              "location_tel": "(507) 385-3450 – 385-3451",
+              "location_cell": "(507) 6747-6457",
+              "location_email": "gerencia@aviaziongroup.com",
+              "location_address2": "",
+              "location_text": "http:\/\/aviaziongroup.com\/",
+              "map_link": "\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d985.2590786583949!2d-79.56116199999995!3d8.968800999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNTgnMDcuNyJOIDc5wrAzMyc0MC4yIlc!5e0!3m2!1sen!2sco!4v1442240962236",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com.co\/maps\/place\/8%C2%B058'07.7%22N+79%C2%B033'40.2%22W\/@8.968801,-79.561162,19z\/data=!3m1!4b1!4m2!3m1!1s0x0:0x0"
+            }
+          },
+          "33c911e1-6e64-4a18-a8b7-fb4543770043": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS CHILE",
+              "location_address1": "AIRC<br>\nAv. Alcalde Fernando Castillo Velasco 7941,<br>\nHangar G-63, La Reina<br>\nSantiago Chile CP. 7880014",
+              "location_phone": "56 222731109",
+              "location_fax": "",
+              "location_tel": "",
+              "location_cell": "",
+              "location_email": "Claudio@AIRC.cl",
+              "location_address2": "",
+              "location_text": "http:\/\/www.airc.cl\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d13314.825135981018!2d-70.548006!3d-33.456958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ce168497d667%3A0xb0cf3299e2b13452!2sAv.%20Alcalde%20Fernando%20Castillo%20Velasco%207941%2C%20La%20Reina%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1sen!2sus!4v1616418663510!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Av.+Alcalde+Fernando+Castillo+Velasco+7941,+La+Reina,+Regi%C3%B3n+Metropolitana,+Chile\/@-33.456958,-70.548006,15z\/data=!4m5!3m4!1s0x9662ce168497d667:0xb0cf3299e2b13452!8m2!3d-33.4576957!4d-70.5488042?hl=en-US"
+            }
+          },
+          "eae54560-faa1-4762-bc09-4669ff6a6812": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS CHILE",
+              "location_address1": "Importadora y Comercializadora AVIONIX Ltda.<br>\nNapoleón 3565<br>\nOf. 202<br>\nLas Condes, Chile",
+              "location_phone": "",
+              "location_fax": "",
+              "location_tel": "+56998269179 <br> +56995440300 <br> +56997437633",
+              "location_cell": "",
+              "location_email": "contacto@avionix.cl",
+              "location_address2": "",
+              "location_text": "http:\/\/www.avionix.cl\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d6660.458198560158!2d-70.592261!3d-33.417271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf15d3fc4d85%3A0xf990fdaad36c6621!2sNapole%C3%B3n%203565%2C%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1sen!2sus!4v1616418807275!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Napole%C3%B3n+3565,+Las+Condes,+Regi%C3%B3n+Metropolitana,+Chile\/@-33.417271,-70.592261,16z\/data=!4m5!3m4!1s0x9662cf15d3fc4d85:0xf990fdaad36c6621!8m2!3d-33.4172707!4d-70.592261?hl=en-US"
+            }
+          },
+          "e15ddb07-a1a2-4161-a389-e4158b3b2c15": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS ECUADOR",
+              "location_address1": "INSUME<br>\nAv. Rumiñahui 1632<br>\nC.R.A.A. #6<br>\nQuito Ecuador",
+              "location_phone": "",
+              "location_fax": "593-2 2863769",
+              "location_tel": "593-2 6039458",
+              "location_cell": "",
+              "location_email": "pochoa@insume.com",
+              "location_address2": "",
+              "location_text": "http:\/\/www.insume.com\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d31918.151258044814!2d-78.469012!3d-0.285156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5bd42b6e43703%3A0xf9e030f2446f761b!2sAv.%20Gral.%20Rumi%C3%B1ahui%201632%2C%20Quito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1616418914744!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Av.+Gral.+Rumi%C3%B1ahui+1632,+Quito,+Ecuador\/@-0.285156,-78.469012,14z\/data=!4m5!3m4!1s0x91d5bd42b6e43703:0xf9e030f2446f761b!8m2!3d-0.3031315!4d-78.4536407?hl=en"
+            }
+          },
+          "ee3f3288-480c-403d-86d6-dab932f5b633": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS CHINA",
+              "location_address1": "Aeroer Technology Co. Ltd.<br>\nROOM 3-803, No.1 Shanyuan Street<br>\nHaidian District, Beijing, 100080",
+              "location_phone": "",
+              "location_fax": "86-10-62417935",
+              "location_tel": "86-10-62417826",
+              "location_cell": "",
+              "location_email": "sales@aeroer.com",
+              "location_address2": "",
+              "location_text": "http:\/\/www.aeroer.com\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d24457.727301276085!2d116.310105!3d39.98128!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f0514f055f6fc1%3A0x8acb771149157693!2sROOM%203-803%2C%20No%2C%201%20Shanyuan%20St%2C%20Zhong%20Guan%20Cun%2C%20Haidian%20Qu%2C%20Beijing%20Shi%2C%20China%2C%20100037!5e0!3m2!1sen!2sus!4v1616419014337!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/ROOM+3-803,+No,+1+Shanyuan+St,+Zhong+Guan+Cun,+Haidian+Qu,+Beijing+Shi,+China,+100037\/@39.98128,116.310105,14z\/data=!4m5!3m4!1s0x35f0514f055f6fc1:0x8acb771149157693!8m2!3d39.9809689!4d116.3095229?hl=en"
+            }
+          },
+          "5ab08a28-77ab-4c61-a19b-7aa567e1931b": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS MEXICO",
+              "location_address1": "LSA Avionics<br>\nArturo Carrillo<br>\nHangar núm. 40A del Apto. Inter. del Norte,<br>\nkm. 1.7, de la Carretera Monterrey-Salinas,<br>\nC.P. 66600, Apodaca, Nuevo León, México",
+              "location_phone": "",
+              "location_fax": "",
+              "location_tel": "",
+              "location_cell": "52 (229) 325-3174",
+              "location_email": "arturo@lsaavionics.com",
+              "location_address2": "",
+              "location_text": "https:\/\/lsa-avionics9.webnode.es\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d30060.380189395844!2d-98.979675!3d19.646633!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c81213a4fe79103!2sAdministrative%20Unit%20Heroes%20Tec%C3%A1mac!5e0!3m2!1sen!2sus!4v1616419135222!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Administrative+Unit+Heroes+Tec%C3%A1mac\/@19.646633,-98.979675,14z\/data=!4m5!3m4!1s0x0:0x8c81213a4fe79103!8m2!3d19.6466327!4d-98.9796753?hl=en"
+            }
+          },
+          "c096defb-e62f-4d6c-84df-9f16f4550b6b": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS PERU",
+              "location_address1": "Avionics Systems<br>\nAv.Costanera 1234 San Miguel<br>\nLima-Peru",
+              "location_phone": "",
+              "location_fax": "511-578-6854",
+              "location_tel": "",
+              "location_cell": "511-995953093",
+              "location_email": "dgactma025@yahoo.com",
+              "location_address2": "",
+              "location_text": "",
+              "map_link": "\/\/maps.google.com\/maps?f=q&source=s_q&hl=en&q=Costanera,+San+Miguel+District,+Lima+Province+15087,+Peru&aq=&sll=-12.085292,-77.096926&sspn=0.026815,0.02944&ie=UTF8&geocode=Fe2HR_8dHLJn-w&split=0&hq=&hnear=Costanera,+San+Miguel+District,+Lima+Province+15087,+Peru&t=m&ll=-12.08859,-77.089949&spn=0.016785,0.025663&z=14&iwloc=A&output=embed",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/maps.google.com\/maps?f=q&source=embed&hl=en&q=Costanera,+San+Miguel+District,+Lima+Province+15087,+Peru&aq=&sll=-12.085292,-77.096926&sspn=0.026815,0.02944&ie=UTF8&geocode=Fe2HR_8dHLJn-w&split=0&hq=&hnear=Costanera,+San+Miguel+District,+Lima+Province+15087,+Peru&t=m&ll=-12.08859,-77.089949&spn=0.016785,0.025663&z=14&iwloc=A"
+            }
+          },
+          "d0f95b4e-5ebd-4ab2-b10d-78a46a0ab395": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS DOMINICAN REPUBLIC",
+              "location_address1": "Avionica S.A.<br>\nAeropuerto Internacional La Isabela,<br>\nDr. Joaquín Balaguer, Hangar #31<br>\nSanto Domingo, Dominican Republic",
+              "location_phone": "809-826-4747",
+              "location_fax": "",
+              "location_tel": "",
+              "location_cell": "",
+              "location_email": "ebojos@gmail.com",
+              "location_address2": "",
+              "location_text": "",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d121022.75549287291!2d-69.98182200000001!3d18.575792!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6cdae50ebcd30173!2sLa%20Isabela%20International%20Airport!5e0!3m2!1sen!2sus!4v1616419318690!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/La+Isabela+International+Airport\/@18.575792,-69.981822,12z\/data=!4m5!3m4!1s0x0:0x6cdae50ebcd30173!8m2!3d18.5757922!4d-69.9818222?hl=en"
+            }
+          },
+          "ac2d0b1c-5e9b-402e-b1d9-6df792efc904": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS BOLIVIA",
+              "location_address1": "Iglesias Aviation S.R.L.<br>\nCalle Plácido Molina Hangar 87<br>\nAv. Centinelas del Chaco Hangar 113<br>\nSanta Cruz - Bolivia",
+              "location_phone": "",
+              "location_fax": "",
+              "location_tel": "(591-3) 3599758",
+              "location_cell": "(591) 78466670",
+              "location_email": "gonzalo250@hotmail.com",
+              "location_address2": "",
+              "location_text": "",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d1944707.9150705778!2d-63.12197999999999!3d-17.826553!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e81ca7c01a63%3A0x5c8b0a53a467611b!2sSanta%20Cruz%20de%20la%20Sierra%2C%20Bolivia!5e0!3m2!1sen!2sus!4v1616419415609!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Santa+Cruz+de+la+Sierra,+Bolivia\/@-17.826553,-63.12198,8z\/data=!4m5!3m4!1s0x93f1e81ca7c01a63:0x5c8b0a53a467611b!8m2!3d-17.8145819!4d-63.1560853?hl=en"
+            }
+          },
+          "e1774fef-7576-469b-8b6e-70abbcb417ec": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS ESPAÑA",
+              "location_address1": "C\/ Berna 15<br>\n43850 Cambrils<br>\nAeropuerto Reus<br>\nAeroclub Reus<br>\nTarragona España",
+              "location_phone": "",
+              "location_fax": "",
+              "location_tel": "977369843",
+              "location_cell": "645113357",
+              "location_email": "alfonso_rv6@terra.es",
+              "location_address2": "",
+              "location_text": "",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d48070.45082748436!2d1.165767!3d41.147553!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa700f81c5e6d6757!2sReus%20Airport!5e0!3m2!1sen!2sus!4v1616419513266!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Reus+Airport\/@41.147553,1.165767,13z\/data=!4m5!3m4!1s0x0:0xa700f81c5e6d6757!8m2!3d41.1482586!4d1.1682891?hl=en"
+            }
+          },
+          "2e455bd6-3c51-4703-b184-9b436ec814a9": {
+            "type": "location",
+            "settings": {
+              "heading": "GULF COAST AVIONICS ECUADOR",
+              "location_address1": "Alas de Socorro del Ecuador (ADSE)<br>\nAeropuerto Rio Amazonas<br>\nAv. Padre Luis Jácome, 1-05<br>\nShell Ecuador",
+              "location_phone": "",
+              "location_fax": "593-3-2795186",
+              "location_tel": "593-3-2795183",
+              "location_cell": "",
+              "location_email": "oma@ads-ec.org",
+              "location_address2": "",
+              "location_text": "http:\/\/www.ads-ec.org\/",
+              "map_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d31907.50696684562!2d-78.058215!3d-1.506972!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf95eedc230690080!2sAlas%20de%20Socorro%20del%20Ecuador!5e0!3m2!1sen!2sus!4v1616419629620!5m2!1sen!2sus",
+              "below_map_text": "View Larger Map",
+              "below_map_text_link": "https:\/\/www.google.com\/maps\/place\/Alas+de+Socorro+del+Ecuador\/@-1.506972,-78.058215,14z\/data=!4m5!3m4!1s0x0:0xf95eedc230690080!8m2!3d-1.506972!4d-78.058215?hl=en-US"
+            }
+          }
+        },
+        "block_order": [
+          "8fe2f2d5-ac83-46e1-a096-9018fba7c499",
+          "96d64117-4740-4a24-b750-8fe9b9989109",
+          "7ae6da80-3949-45e7-b26b-636bf9aad8bc",
+          "253154a6-1f79-4c3a-94f7-6cafed117c14",
+          "79fc80d3-dd55-4047-8317-b2234b5a88f7",
+          "2bd6bb34-7da1-4814-abbf-c951ea7e466d",
+          "8a3a5948-053c-41c3-8333-f6579c4604ea",
+          "74040e3d-ffb0-4ecb-a296-54ff036b2ed7",
+          "33c911e1-6e64-4a18-a8b7-fb4543770043",
+          "eae54560-faa1-4762-bc09-4669ff6a6812",
+          "e15ddb07-a1a2-4161-a389-e4158b3b2c15",
+          "ee3f3288-480c-403d-86d6-dab932f5b633",
+          "5ab08a28-77ab-4c61-a19b-7aa567e1931b",
+          "c096defb-e62f-4d6c-84df-9f16f4550b6b",
+          "d0f95b4e-5ebd-4ab2-b10d-78a46a0ab395",
+          "ac2d0b1c-5e9b-402e-b1d9-6df792efc904",
+          "e1774fef-7576-469b-8b6e-70abbcb417ec",
+          "2e455bd6-3c51-4703-b184-9b436ec814a9"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/plane-cockpit_b2813bfc-9c55-4571-b7c9-8a076a28c4ab.jpg"
+        }
+      },
+      "template-trade-in": {
+        "type": "template-trade-in",
+        "blocks": {
+          "bf651dc9-0a74-46b3-9c73-278fa6070442": {
+            "type": "trade_in",
+            "settings": {
+              "title": "Used aera® 795",
+              "image": "shopify:\/\/shop_images\/aera795_9958466b-689c-438b-b8ea-3629d0f75cb8.jpg",
+              "description_heading": "Trade-In Should Include:",
+              "description": "<li>Aera 795<\/li>\n                        <li>Yoke Mount<\/li>\n                        <li>Cigarette lighter adapter<\/li>\n                        <li>Home A\/C cradle dock<\/li>\n                        <li>GA25 remote GPS antenna<\/li>\n                        <li>USB Cable<\/li>\n                        <li>Carrying Case<\/li>",
+              "tradein_value": "$400",
+              "note": ""
+            }
+          },
+          "8c9589b0-4360-4a89-a34d-8e01fb5fbc06": {
+            "type": "trade_in",
+            "settings": {
+              "title": "Used aera® 796",
+              "image": "shopify:\/\/shop_images\/796.jpg",
+              "description_heading": "Trade-In Should Include:",
+              "description": "<li>Aera 796<\/li>\n                        <li>Yoke Mount<\/li>\n                        <li>XM Receiver\/Antenna<\/li>\n                        <li>Cigarette lighter adapter<\/li>\n                        <li>Home A\/C cradle dock<\/li>\n                        <li>GA25 remote GPS antenna<\/li>\n                        <li>USB Cable<\/li>\n                        <li>Carrying Case<\/li>",
+              "tradein_value": "$500*",
+              "note": "*Must include GXM-xx XM Antenna"
+            }
+          },
+          "1d7d596c-2e4a-4b08-a677-bf0b46c8643c": {
+            "type": "trade_in",
+            "settings": {
+              "title": "Used GPSMAP 695",
+              "image": "shopify:\/\/shop_images\/gpsmap695_b3eaf01b-7dc0-4466-ba9d-7744f2fc7742.jpg",
+              "description_heading": "Trade-In Should Include:",
+              "description": "<li>GPSMAP 695<\/li>\n<li>Yoke Mount<\/li>\n<li>12\/24 Volt Power Cable<\/li>\n<li>AC Adapter<\/li>\n<li>USB Cable<\/li>\n<li>GA 25 Remote Antenna with Suction Cup<\/li>\n<li>Mount<\/li>\n<li>Protective Cover<\/li>\n<li>Owner's Manual<\/li>\n<li>Quick Start Guide<\/li>",
+              "tradein_value": "$200",
+              "note": ""
+            }
+          },
+          "510f85c8-12da-4247-8d98-b63a63bb2ecc": {
+            "type": "trade_in",
+            "settings": {
+              "title": "Used GPSMAP 696",
+              "image": "shopify:\/\/shop_images\/gpsmap-696_f5c995f5-58b8-4ada-bc81-039f2f43f05d.jpg",
+              "description_heading": "Trade-In Should Include:",
+              "description": "<li>GPSMAP 695<\/li>\n<li>Yoke Mount<\/li>\n<li>GXM 40 XM Antenna<\/li>\n<li>12\/24 Volt Power Cable<\/li>\n<li>AC Adapter<\/li>\n<li>USB Cable<\/li>\n<li>GA 25 Remote Antenna with Suction Cup<\/li>\n<li>Mount<\/li>\n<li>Protective Cover<\/li>\n<li>Owner's Manual<\/li>\n<li>Quick Start Guide<\/li>",
+              "tradein_value": "$300*",
+              "note": "*Must include GXM-xx XM Antenna"
+            }
+          },
+          "4b4b02ee-26a1-40a5-b8b0-a639e69d0afd": {
+            "type": "trade_in",
+            "settings": {
+              "title": "Used aera® 500",
+              "image": "shopify:\/\/shop_images\/aera500_c8fe1189-5e01-4659-92c1-fb3ff8b1df1b.jpg",
+              "description_heading": "Trade-In Should Include:",
+              "description": "<li>aera® 500<\/li>\n<li>Yoke Mount<\/li>\n<li>Automotive Friction Mount<\/li>\n<li>Vehicle Power Cable<\/li>\n<li>Battery<\/li>\n<li>USB Cable<\/li>\n<li>Pilot's Guide<\/li>\n<li>Quick Start Guide<\/li>",
+              "tradein_value": "$200",
+              "note": ""
+            }
+          },
+          "2a760488-ea43-4509-aa71-f8586b157798": {
+            "type": "trade_in",
+            "settings": {
+              "title": "Used aera® 510",
+              "image": "shopify:\/\/shop_images\/aera510_abab6746-4cc1-4be8-82a3-68cf34758e15.jpg",
+              "description_heading": "Trade-In Should Include:",
+              "description": "<li>aera® 500<\/li>\n<li>GXM™ 40 XM Antenna<\/li>\n<li>Yoke Mount<\/li>\n<li>Automotive Friction Mount<\/li>\n<li>Vehicle Power Cable<\/li>\n<li>Battery<\/li>\n<li>A\/C Adapter<\/li>\n<li>USB Cable<\/li>\n<li>Pilot's Guide<\/li>\n<li>Quick Start Manuals<\/li>",
+              "tradein_value": "$300",
+              "note": "*Must include GXM-xx XM Antenna"
+            }
+          },
+          "1a507f91-a7c0-4d3a-b9c7-fc4f5b6588f7": {
+            "type": "trade_in",
+            "settings": {
+              "title": "Used aera® 550",
+              "image": "shopify:\/\/shop_images\/aera550_861afd0c-7646-4a78-9063-b35bea0366b2.jpg",
+              "description_heading": "Trade-In Should Include:",
+              "description": "<li>aera® 500<\/li>\n<li>Yoke Mount<\/li>\n<li>Automotive Friction Mount<\/li>\n<li>Vehicle Power Cable<\/li>\n<li>Battery<\/li>\n<li>USB Cable<\/li>\n<li>Pilot's Guide<\/li>\n<li>Quick Start Manuals<\/li>\n<li>Carrying Case<\/li>",
+              "tradein_value": "$200",
+              "note": ""
+            }
+          },
+          "480ce7f6-95ee-4ef8-a8b6-d3c91e1c158b": {
+            "type": "trade_in",
+            "settings": {
+              "title": "Used aera® 560",
+              "image": "shopify:\/\/shop_images\/aera560_75c4a7be-7261-422e-bc42-ad8a12f90c31.jpg",
+              "description_heading": "Trade-In Should Include:",
+              "description": "<li>aera® 500<\/li>\n<li>GXM™ 40 XM Antenna<\/li>\n<li>Yoke Mount<\/li>\n<li>Automotive Friction Mount<\/li>\n<li>Vehicle Power Cable<\/li>\n<li>Battery<\/li>\n<li>A\/C Adapter<\/li>\n<li>USB Cable<\/li>\n<li>Pilot's Guide<\/li>\n<li>Quick Start Manuals<\/li>\n<li>Carrying Case<\/li>",
+              "tradein_value": "$300*",
+              "note": "*Must include GXM-xx XM Antenna"
+            }
+          }
+        },
+        "block_order": [
+          "bf651dc9-0a74-46b3-9c73-278fa6070442",
+          "8c9589b0-4360-4a89-a34d-8e01fb5fbc06",
+          "1d7d596c-2e4a-4b08-a677-bf0b46c8643c",
+          "510f85c8-12da-4247-8d98-b63a63bb2ecc",
+          "4b4b02ee-26a1-40a5-b8b0-a639e69d0afd",
+          "2a760488-ea43-4509-aa71-f8586b157798",
+          "1a507f91-a7c0-4d3a-b9c7-fc4f5b6588f7",
+          "480ce7f6-95ee-4ef8-a8b6-d3c91e1c158b"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/plane-cockpit_33db5e72-adaa-4c6c-9fbc-61ccd398fbdf.jpg",
+          "image_mobile": "shopify:\/\/shop_images\/plane-cockpit_33db5e72-adaa-4c6c-9fbc-61ccd398fbdf.jpg",
+          "heading": "What's your trade in worth?",
+          "subheading": "See the great trade-in vaules offered by Gulf Coast Avionics",
+          "content_image": "shopify:\/\/shop_images\/trade-in1_0b251ab7-1782-49da-a2a6-5467acec68a4.jpg",
+          "content1": "Trade-in applies towards a purchase of a new Garmin GPSMAP 695, 696, or Aera 500, 510, 550, 560, \n                795, 796 and 660. Trade-in must be complete with all accessories listed below, and the unit must \n                look good cosmetically and be in good working condition. <span class=\"text-decoration\">Any unit not meeting this requirement will have a lesser trade-in value or may be returned.<\/span>",
+          "content2": "<li class=\"py-1\">1. Once you receive your new Garmin GPS, please call our customer service number at 800-474-9714 with your invoice number and model of unit to be traded. A Return Authorization Number (RMA) will be provided for the return of your trade-in to Gulf Coast Avionics.<\/li>\n                <li class=\"py-1\">2. After we receive your trade-in and it is verified that the unit is complete with applicable accessories and in good cosmetic and working condition, we will credit you the trade-in value. Trade-ins with missing accessories will add delay to the credit process.<\/li>",
+          "content3": "To verify current trade-in values, please call 800-474-9714 or email us at <a class=\"trade-email font-weight-bold\" href=\"mailto:info@gca.aero\">info@gca.aero<\/a>. We will beat any other supplier's price on any unit."
+        }
+      },
+      "template-trade-up": {
+        "type": "template-trade-up",
+        "blocks": {
+          "25e2b241-9ba9-46bc-9ad2-3d4172f0a44a": {
+            "type": "headsets",
+            "settings": {
+              "title": "Lightspeed ANR Headsets",
+              "image": "shopify:\/\/shop_images\/ezgif-3-749e91241f06.jpg",
+              "specification1": "ZULU (Original) Battery Power w\/Dual GA Plugs",
+              "price1": "$300",
+              "specification2": "ZULU.2 Battery Power w\/Dual GA Plugs",
+              "price2": "$400",
+              "specification3": "ZULU.2 Lemo \/ Panel Powered",
+              "price3": "$300",
+              "note": ""
+            }
+          },
+          "99819486-fb60-4faf-a295-18521c6ab268": {
+            "type": "headsets",
+            "settings": {
+              "title": "David Clark Headets",
+              "image": "shopify:\/\/shop_images\/tradeup-dconex_ba1d891f-b35a-4943-8ad6-1d1c1a786339.jpg",
+              "specification1": "DC Pro X Battery Power w\/Dual GA Plugs",
+              "price1": "$250",
+              "specification2": "DC Pro X Lemo \/ Panel Power",
+              "price2": "$200",
+              "specification3": "DC One X Battery Power w\/Dual GA Plugs",
+              "price3": "$450",
+              "note": "If your trade-in headset is not listed above, please call us. We will make an offer on most David Clark and Telex headsets."
+            }
+          }
+        },
+        "block_order": [
+          "25e2b241-9ba9-46bc-9ad2-3d4172f0a44a",
+          "99819486-fb60-4faf-a295-18521c6ab268"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/plane-cockpit_33db5e72-adaa-4c6c-9fbc-61ccd398fbdf.jpg",
+          "heading": "Headset Trade-up Program",
+          "content": "Gulf Coast Avionics Headset Trade-Up Program allows the trade-in of a working headset\n                towards the purchase of a new headset with a value of $650 or higher. The used headset must be in good\n                working order with no exposed wires, cracks, obvious damage, or engravings, and original ear seals in\n                good condition. Any costs involved in repairing the headset or replacing ear seals will reduce the\n                trade-in value. Any non-repairable or unacceptable headset will be returned.",
+          "step1": "Purchase your new headset either online\n                    or by calling <span id=\"spnPhone1\">800-474-9714<\/span>.",
+          "step2": "If you’re calling in your order, let the\n                    sales representative know you are trading in a headset, and a Return Authorization will be provided\n                    you to send with the trade-in. If ordering online, please call Customer Service at <span id=\"spnPhone2\">863-709-9714<\/span> to obtain the Return Authorization.",
+          "step3": "Once we have received, checked out the\n                    headset, and verified the headset is acceptable, we will either issue a credit to the same credit\n                    card used for the new headset purchase, or we will mail a check.",
+          "content2": "Call Customer Service for a Return Authorization and send that with the headset. Once the headset\n                has been received and evaluated, you will receive a telephone call from our Sales Dept to help\n                you place your order for the new headset minus the trade-in value."
+        }
+      },
+      "garmin-g3x": {
+        "type": "garmin-g3x",
+        "blocks": {
+          "e13288a5-5150-4a2f-88d7-c9d8c2ac6f81": {
+            "type": "category",
+            "settings": {
+              "heading": "STEP 1 – SELECT DISPLAYS",
+              "link": "garmin-step-1"
+            }
+          },
+          "4ad35184-0ab6-4f3b-91c3-133945a635e1": {
+            "type": "category",
+            "settings": {
+              "heading": "STEP 2 – SELECT STANDARD OR HIGH-PERFORMANCE LRU KIT",
+              "link": "garmin-step-2"
+            }
+          },
+          "4d690c72-5000-4b9e-8163-966dea9f95f6": {
+            "type": "category",
+            "settings": {
+              "heading": "STEP 3 – SELECT SYSTEM CONNECTOR KITS",
+              "link": "garmin-step-3"
+            }
+          },
+          "28eb7dbb-4434-4734-a346-088e4f4e22b8": {
+            "type": "category",
+            "settings": {
+              "heading": "STEP 4 – SELECT ENGINE\/AIRFRAME OPTIONS (IF APPLICABLE)",
+              "link": "garmin-step-4"
+            }
+          },
+          "151938d1-45a3-415d-a42a-c20ab8c4f451": {
+            "type": "category",
+            "settings": {
+              "heading": "STEP 5 – SELECT ADDITIONAL OPTIONS",
+              "link": "garmin-step-5"
+            }
+          }
+        },
+        "block_order": [
+          "e13288a5-5150-4a2f-88d7-c9d8c2ac6f81",
+          "4ad35184-0ab6-4f3b-91c3-133945a635e1",
+          "4d690c72-5000-4b9e-8163-966dea9f95f6",
+          "28eb7dbb-4434-4734-a346-088e4f4e22b8",
+          "151938d1-45a3-415d-a42a-c20ab8c4f451"
+        ],
+        "settings": {
+          "enable": true,
+          "banner_image": "shopify:\/\/shop_images\/Garmin_G3X_Configuration_Page_Banner_Option_2_88459c8e-2666-4582-a532-cb21adc10986.png",
+          "banner_title": "Garmin G3X Touch Quote & Order Worksheet",
+          "banner_heading": "Build Your Custom Garmin G3X Touch Package",
+          "banner_desc": "Use the worksheet below to compile a list of the components that you need to get the features and <br>capabilities you're looking for in your Garmin G3X system. Once you have selected all of the items, <br>submit a request at the bottom of the page and we will provide you with a comprehensive <br>quote including a discount based on the package as a whole.",
+          "enable-header": false,
+          "html_desc": "Use the worksheet below to compile a list of the components that you need to get the features and capabilities you're looking for in your Garmin G3X system. Once you have selected all of the items, submit a request at the bottom of the page and we will provide you with a comprehensive quote including a discount based on the package as a whole."
+        }
+      },
+      "dynon-skyview": {
+        "type": "dynon-skyview",
+        "blocks": {
+          "0361eec1-25ba-4851-9c9e-109cc7c9917b": {
+            "type": "category",
+            "settings": {
+              "heading": "",
+              "link": "dynon-skyview"
+            }
+          }
+        },
+        "block_order": [
+          "0361eec1-25ba-4851-9c9e-109cc7c9917b"
+        ],
+        "settings": {
+          "enable": true,
+          "banner_image": "shopify:\/\/shop_images\/Dynon_Configuration_Page_Banner_576a009b-45c3-4da3-b1d8-1bd60984faaf.png",
+          "banner_title": "Dynon Skyview Quote & Order Worksheet",
+          "banner_heading": "Build Your Custom Dynon Skyview Package",
+          "banner_desc": "Use the worksheet below to compile a list of the components that you need to get the features and <br>capabilities you're looking for in your Dynon SkyView system. Once you have selected all of the items, <br>submit a request at the bottom of the page and we will provide you with a comprehensive <br>quote including a discount based on the package as a whole.",
+          "enable-header": false,
+          "html_desc": "Use the worksheet below to compile a list of the components that you need to get the features and capabilities you're looking for in your Dynon Skyview system. Once you have selected all of the items, submit a request at the bottom of the page and we will provide you with a comprehensive quote including a discount based on the package as a whole."
+        }
+      }
+    },
+    "content_for_index": [
+      "1511810149210",
+      "16141936289c14c045",
+      "1614165991ea8a93be"
+    ],
+    "blocks": {
+      "10042746950867549768": {
+        "type": "shopify:\/\/apps\/hulk-product-options\/blocks\/app-embed\/380168ef-9475-4244-a291-f66b189208b5",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "319724205969189013": {
+        "type": "shopify:\/\/apps\/form-builder-with-file-upload\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "content_for_index": [
+
+      ]
+    }
+  }
+}

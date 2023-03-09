@@ -1,0 +1,218 @@
+{% assign logo = settings.main_logo | img_url: '200x' %}
+{% assign logo_svg = settings.main_logo_svg %}
+{% assign logo_width = settings.logo_max_width %}
+{%- assign megamenu = section.settings.mega_menu | handleize -%}
+<header
+  class="site-header {% if section.settings.is_sticky %}fixed-top{% endif %}"
+  data-site-header data-section-id="{{ section.id }}" data-cart-type="{{ section.settings.cart_type }}"
+  data-fixed-header="{% if section.settings.is_sticky%}true{% else %}false{% endif %}"
+  data-transparent-header="false">
+  {% if section.settings.topbar_enabled %}
+    <div class="topbar text-center" data-flickity='{
+      "contain": true,
+      "wrapAround": true,
+      "prevNextButtons": false,
+      "autoPlay": 1500,
+      "pageDots": false
+    }'>
+    {% for block in section.blocks limit: section.blocks.limit %}
+      {% if block.settings.coupon_policy != '' %}
+        {% assign couponPolicy = pages[block.settings.coupon_policy] %}
+          <p class="w-100 font-weight-bold text-white">{%if block.settings.commonUrl %}<a href="{{ block.settings.commonUrl.url}}" data-url="{{block.settings.commonUrl}}" class="topbar pl-2">{%endif%}<span class="font-weight-bold pr-2">{{block.settings.offer}}</span>{{block.settings.offerName}} {%if blog.settings.commonUrl %}</a>{%endif%} <a href="{{couponPolicy.url}}" class="topbar pl-2">{{block.settings.seeoffer}}</a></p>
+      {% endif %}
+    {% endfor %}
+    </div>
+  {%endif%}
+  <div
+    class="navbar navbar-main navbar-expand-lg p-lg-0 d-lg-block py-md-0">
+    <div class="container position-relative">
+      {% include 'navbar-default' %}
+      <!-- {%- if settings.enable_google_translator -%}
+      <div class="google-translate-wrap d-md-block d-none">
+        <div id="google_translate_element"></div>
+        <style>
+            .skiptranslate.goog-te-gadget,
+            .goog-logo-link {
+                color: #fff !important;
+            }
+        </style>
+      </div>
+      {%- endif -%} -->
+    </div>
+  </div>
+  
+
+</header>
+
+
+{% schema %}
+{
+"name": "Header",
+"settings": [
+{
+"type": "header",
+"content": "Layout"
+},
+{
+"type": "checkbox",
+"id": "is_sticky",
+"label": "Sticky Header?",
+"default": false
+},
+{
+"type": "header",
+"content": "Menu"
+},
+{
+"type": "link_list",
+"id": "main_linklist",
+"label": "Select Menu",
+"default": "main-menu"
+},
+{
+  "type": "text",
+  "id": "mega_menu",
+  "label": "Mega Menu"
+},
+{
+    "type": "product",
+    "id": "MegaProduct",
+    "label": "select product"
+},
+{
+    "type": "image_picker",
+    "id": "ShopImage1",
+    "label": "mega menu image 1 "
+},
+{
+  "type": "text",
+  "id": "shopText1",
+  "label": "Text on image 1",
+  "default": "Skybolt Fasteners"
+},
+{
+  "type": "url",
+  "id": "shopBtnUrl1",
+  "label": "Url on button 1"
+},
+{
+  "type": "image_picker",
+  "id": "ShopImage2",
+  "label": "mega menu image 2 "
+},
+{
+  "type": "text",
+  "id": "shopText2",
+  "label": "Text on image",
+  "default": "Skybolt Fasteners"
+},
+{
+  "type": "url",
+  "id": "shopBtnUrl2",
+  "label": "Url on button"
+},
+{
+  "type": "image_picker",
+  "id": "ShopImage3",
+  "label": "mega menu image 3 "
+},
+{
+  "type": "text",
+  "id": "shopText3",
+  "label": "Text on image 3",
+  "default": "Skybolt Fasteners"
+},
+{
+  "type": "url",
+  "id": "shopBtnUrl3",
+  "label": "Url on button 3"
+},
+{
+  "type": "image_picker",
+  "id": "ShopImage4",
+  "label": "mega menu image 4 "
+},
+{
+  "type": "text",
+  "id": "shopText4",
+  "label": "Text on image 4",
+  "default": "Skybolt Fasteners"
+},
+{
+  "type": "url",
+  "id": "shopBtnUrl4",
+  "label": "Url on button 4"
+},
+{
+  "type": "header",
+  "content": "Cart Button"
+},
+{
+  "type": "select",
+  "id": "cart_type",
+  "label": "Select Button Action",
+  "options": [{
+      "value": "cart_page",
+      "label": "Link to cart page"
+    },
+    {
+      "value": "cart_drawer",
+      "label": "Mini cart as right drawer"
+    }
+  ],
+  "default": "cart_page"
+},
+{
+  "type": "header",
+  "content": "Top Bar"
+},
+{
+  "type": "checkbox",
+  "id": "topbar_enabled",
+  "label": "Enabled?",
+  "default": false
+}
+],
+"blocks": [{
+  "type": "coupon",
+  "name": "coupon header",
+  "settings": [
+  {
+    "type": "url",
+    "id": "commonUrl",
+    "label": "Add link to all text"
+  },
+    {
+      "type": "text",
+      "id": "offer",
+      "label": "Offer Title"
+    },
+    {
+      "type": "text",
+      "id": "offerName",
+      "label": "Offer Name"
+    },
+    {
+      "type": "page",
+      "id": "coupon_policy",
+      "label": "select coupon policy page"
+    },
+    {
+      "type": "text",
+      "id": "seeoffer",
+      "label": "Offer button"
+    }
+  ]
+}],    "default": {
+  "settings": {},
+  "blocks": [{
+      "type": "coupon"
+    }
+  ]
+}
+}
+{% endschema %}
+
+
+{% javascript %}
+{% endjavascript %}

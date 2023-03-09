@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "template_repair_form": {
+      "type": "template-repair-form",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Service_Banner_1200x_277dfeb7-ec54-44c8-b845-f311542f8dad.jpg",
+        "customer_enable": false,
+        "customer_heading": "Customer Support",
+        "customer_caption": "Have specific questions about your order?",
+        "customer_url": "",
+        "feedback_enable": true,
+        "feedback_heading": "Service Question",
+        "feedback_caption": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/email-signature-photos-Sarah.jpg?v=1619032320\" alt=\"Sarah\" width=\"150\" height=\"190\"><br><br>\n<p class=\"mb-0 text-primary\">Fill out our avionics repair form to send your unit in for evaluation or repair<\/p>",
+        "feedback_url": "https:\/\/abynu362aowds783-54183133361.shopifypreview.com\/pages?preview_key=bc87d9e0c48772bbd001c7eb3e6c8ee2",
+        "form_note": "<p><strong>Ship your repair to:<\/strong><\/p><p><\/p><p>Attn: Service Dept.<\/p><p>Gulf Coast Avionics<\/p><p>3650 Drane Field Rd<\/p><p>Lakeland, FL 33811<br\/><\/p>",
+        "enable_form": true
+      }
+    }
+  },
+  "order": [
+    "template_repair_form"
+  ]
+}

@@ -1,0 +1,146 @@
+{%- if section.settings.image != blank -%}
+<div class="page-banner">
+    <img
+    data-sizes="auto"
+    src="{{ section.settings.image | img_url: 'small'}}"
+    data-srcset="
+        {% if section.settings.image_mobile != blank %}
+            {{ section.settings.image_mobile | img_url: '768x' }} 567w,
+        {% endif%}
+        {{ section.settings.image | img_url: '992x' }} 768w,
+        {{ section.settings.image | img_url: '1200x' }} 992w,
+        {{ section.settings.image | img_url: '1920x' }} 1200w,
+        {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+        {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+        {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+        "
+    class="lazyload mw-100 img-wrapper" alt="{{ page.title | escape }}" />
+</div> 
+{%- endif -%}
+
+<div class="pt-7 pt-md-10">
+    <div class="container">
+        <h1 class="font-weight-bold letter-spacing text-uppercase text-primary mb-3 mb-md-6 text-center">{{ page.title }}</h1>
+        {% for block in section.blocks %}
+            {% if block.type == 'location' %}
+                <div class="row no-gutters{% unless forloop.last %} border-bottom{% endunless %} py-5">
+                    <div class="col-sm-6 col-md-5 mb-5 mb-md-0">
+                        {% if block.settings.heading != blank %}
+                        <h4 class="font-weight-normal letter-spacing-2">{{ block.settings.heading }}</h4>
+                        {% endif %}
+                        <p class="mb-0">{% if block.settings.location_address1 != blank %}{{ block.settings.location_address1 }}<br>{% endif %}
+                        {% if block.settings.location_phone != '' %}Phone: {{ block.settings.location_phone }}<br>{% endif %}
+                        {% if block.settings.location_fax != '' %}Fax: {{ block.settings.location_fax }}<br>{% endif %}
+                        {% if block.settings.location_tel != '' %}Tel: {{ block.settings.location_tel }}<br>{% endif %}
+                        {% if block.settings.location_cell != '' %}Cell: {{ block.settings.location_cell }}<br>{% endif %}
+                        {% if block.settings.location_email != '' %}Email: <a href="mailto:{{ block.settings.location_email }}" class="font-weight-bold text-primary">{{ block.settings.location_email }}</a><br>{% endif %}
+                        {% if block.settings.location_address2 != '' %}{{ block.settings.location_address2 }}<br>{% endif %}</p>
+                        {% if block.settings.location_text != '' %}<a href="{{ block.settings.location_text }}" class="font-weight-bold text-primary">{{ block.settings.location_text }}</a>{% endif %}
+                    </div>
+                    {% if block.settings.map_link != blank %}
+                    <div class="col-sm-6 col-md-5">
+                        <iframe src="{{ block.settings.map_link }}" width="300" height="200" style="border:0;" class="d-block mb-2" allowfullscreen="" loading="lazy"></iframe>
+                        {% if block.settings.below_map_text != blank %}<a href="{% if block.settings.below_map_text_link != blank %}{{ block.settings.below_map_text_link }}{% else %}javascript:void(0){% endif %}" class="font-weight-bold" target="_blank">{{ block.settings.below_map_text }}</a>{% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Page Locations",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "ratina_image",
+            "label": "Select Image for Large Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image for Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Select Image for Mobile"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "location",
+            "name": "Location",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "textarea",
+                    "id": "location_address1",
+                    "label": "Address 1"
+                },
+                {
+                    "type": "text",
+                    "id": "location_phone",
+                    "label": "Phone"
+                },
+                {
+                    "type": "text",
+                    "id": "location_fax",
+                    "label": "Fax"
+                },
+                {
+                    "type": "text",
+                    "id": "location_tel",
+                    "label": "Tel"
+                },
+                {
+                    "type": "text",
+                    "id": "location_cell",
+                    "label": "Fax"
+                },
+                {
+                    "type": "text",
+                    "id": "location_email",
+                    "label": "Email"
+                },
+                {
+                    "type": "textarea",
+                    "id": "location_address2",
+                    "label": "Address 2"
+                },
+                {
+                    "type": "text",
+                    "id": "location_text",
+                    "label": "Website Link"
+                },
+                {
+                    "type": "textarea",
+                    "id": "map_link",
+                    "label": "Map Link"
+                },
+                {
+                    "type": "text",
+                    "id": "below_map_text",
+                    "label": "Below Map Text"
+                },
+                {
+                    "type": "url",
+                    "id": "below_map_text_link",
+                    "label": "Below Map Text Link"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

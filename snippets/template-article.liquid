@@ -1,0 +1,73 @@
+{% assign article_image = article.image.src | img_url %}
+{% assign current_found = false %}
+  {% assign done = false %}
+  {% for a in blog.articles %}
+    {% if current_found and done == false %}
+      {% assign next_article = a %}
+      {% assign done = true %}
+    {% endif %}
+    {% unless done %}
+      {% if a.id == article.id %}
+        {% assign current_found = true %}
+      {% else %}
+        {% assign prev_article = a %}
+      {% endif %}
+    {% endunless %}
+{% endfor %}
+
+<section data-section-id="{{ section.id }}" class="section-content" role="article">
+    <div class="container">
+
+      <div class="row">
+          <div class="col-md-10 mx-auto">
+          {% unless article_image contains 'no-image' %}
+            <div class="row mb-5">
+              <div class="col-12">
+                <div style="overflow: hidden">
+                  <img
+                      data-sizes="auto"
+                      src="{{ article.image.src | img_url: 'pico' }}"
+                      data-srcset="
+                        {{ article.image.src | img_url: 'large' }} 576w,
+                        {{ article.image.src | img_url: '1280x' }} 768w,
+                        {{ article.image.src | img_url: '1440x' }} 992w,
+                        {{ article.image.src | img_url: '1920x' }} 1200w
+                        "
+                      class="lazyload"
+                      alt="{{ article.image.alt }}"/>
+                  </div>
+              </div>
+            </div>
+          {% endunless %}
+          <h1 class="h4 mb-3 text-primary font-weight-normal f-open">{{ article.title }}</h1>
+          <time class="font-size-base text-gray-800">{{ article.published_at | date: "%A, %B %d, %Y" }}</time>
+          <div class="row mt-5">
+
+            {% comment %} layout without sidebar {% endcomment %}
+            <div class="col-12 article-body">
+            <div class="rte">
+                {{ article.content }}
+            </div>
+            <div class="article-pagination mt-md-5 mt-3">  
+                <a href="" class="back text-left d-md-none d-inline-block font-size-ex-lg font-weight-bold f-open text-primary pb-2 border-bottom w-100">View All</a>
+                <div class="link-section position-relative pt-md-0 pt-2 row">
+                    <div class="col-md-5 col-6 text-left">
+                      {% if prev_article %}
+                        <a href="{{ prev_article.url }}" class="back font-size-ex-lg font-weight-bold f-open text-primary equal-class">Previous Article</a>
+                      {% endif %}
+                    </div>
+                    <a href="{{blog.url}}" class="back text-center col-md-2 d-md-inline-block d-none font-size-ex-lg font-weight-bold f-open text-primary equal-class">View All</a>
+                    <div class="col-md-5 col-6 text-right ">
+                      {% if next_article %}
+                      <a href="{{ next_article.url }}" class="back font-size-ex-lg font-weight-bold f-open text-primary equal-class"> Next Article</a>
+                      {% endif %}
+                    </div>
+                </div>
+            </div>
+            </div>
+           </div>
+          </div>
+      </div>
+
+    </div>
+</section>

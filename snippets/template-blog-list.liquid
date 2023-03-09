@@ -1,0 +1,117 @@
+{% assign items_per_page = section.settings.items_per_page %}
+{% paginate blog.articles by items_per_page %}
+
+{%- if section.settings.image != blank -%}
+<section class="banner-section">
+    <div class="banner-wrapper">
+        <img
+            data-sizes="auto"
+            src="{{ section.settings.image | img_url: 'small'}}"
+            data-srcset="
+                {% if section.settings.image_mobile != blank %}
+                    {{ section.settings.image_mobile | img_url: '768x' }} 567w,
+                {% endif%}
+                {{ section.settings.image | img_url: '992x' }} 768w,
+                {{ section.settings.image | img_url: '1200x' }} 992w,
+                {{ section.settings.image | img_url: '1920x' }} 1200w,
+                {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+                {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+                {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+                "
+            class="lazyload img-wrapper img-fluid mw-100" alt="{{ blog.title | escape }}" />
+    </div>
+</section>
+{%- endif -%}
+
+<section class="section-content blog-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-ex-lg-9 col-md-11 mx-auto">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="font-weight-bold letter-spacing text-primary text-uppercase pb-md-4 pb-3 mb-4"
+                            style="border-bottom: 2px solid #333;">{{ section.settings.title }}</h1>
+                        {% if section.settings.enable_sort %}
+                        <div class="mb-5" style="max-width: 350px;"> 
+                            <select name="sort-by" data-filter-sort="" data-filter-type="sort" class="form-control form-control-sm px-3 rounded-0 py-2" v-model="articleSortOpt" @change="_sortArticle(articleSortOpt)" data-article-sort>
+                                <option value="/blogs/{{ blog.handle }}" selected>Sort Newest to Oldest</option> 
+                                <option value="/blogs/{{ blog.handle }}?sort=article_descending">Sort Oldest to Newest</option> 
+                            </select>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% comment %} layout without sidebar {% endcomment %}
+                <div class="row">
+                    <template v-if="articleSortDesc">
+                        {% for article in blog.articles reversed %}
+                        <div class="col-12">
+                            {% include 'card-article-style-2' %}
+                            <div class="border-bottom border-gray-400 w-75 mx-auto mb-md-8 pb-md-8 mb-5 pb-5"></div>
+                        </div>
+                        {% endfor %}
+                    </template>
+                    <template v-else>
+                        {% for article in blog.articles %}
+                        <div class="col-12">
+                            {% include 'card-article-style-2' %}
+                            <div class="border-bottom border-gray-400 w-75 mx-auto mb-md-8 pb-md-8 mb-5 pb-5"></div>
+                        </div>
+                        {% endfor %}
+                    </template>
+                </div>
+
+                {% if paginate.pages > 1 %}
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <nav>
+                            <ul class="pagination">
+                              {% if paginate.previous %}
+                                <li class="page-item">
+                                  <a class="page-link d-inline-flex align-items-center justify-content-center" href="{{ paginate.previous.url }}" name="{{ paginate.previous.title }}" title="{{ paginate.previous.title }}" aria-label="{{ paginate.previous.title }}">
+                                    <span aria-hidden="true"><i class="fas fa-angle-double-left mr-2"></i></span>
+                                     Prev |
+                                  </a>
+                                </li>
+                              {% endif %}
+                              {% for part in paginate.parts %}
+                                <li class="page-item">
+                                  {% if part.is_link %}
+                                    <a class="page-link d-inline-flex align-items-center justify-content-center" href="{{ part.url }}" name="{{ part.title }}" title="{{ part.title }}" aria-label="{{ part.title }}">
+                                      <span>{{ part.title }}</span>
+                                    </a>
+                                  {% else %}
+                                    {% if part.title == paginate.current_page %}
+                                      <a class="page-link active d-inline-flex align-items-center justify-content-center">
+                                        <span class="active">{{ part.title }}</span>
+                                      </a>
+                                    {% else %}
+                                      <span class="dots d-inline-flex align-items-end justify-content-center">
+                                        <span>{{ part.title }}</span>
+                                      </span>
+                                    {% endif %}
+                                  {% endif %}
+                                </li>
+                              {% endfor %}
+                              <span class="font-size-ex-lg">(Total of {{blog.articles_count}} {{blog.articles_count | pluralize: 'Item', 'Items'}})</span>
+                              {% if paginate.next %}
+                                <li class="page-item">
+                                  <a class="page-link d-inline-flex align-items-center justify-content-center" href="{{ paginate.next.url }}" name="{{ paginate.next.title }}" title="{{ paginate.next.title }}" aria-label="{{ paginate.next.title }}">
+                                    | Next 
+                                    <span aria-hidden="true"><i class="fas fa-angle-double-right ml-2"></i></span>
+                                  </a>
+                                  <link rel="prerender" href="{{ paginate.next.url }}">
+                                </li>
+                              {% endif %}
+                            </ul>
+                          </nav>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endpaginate %}

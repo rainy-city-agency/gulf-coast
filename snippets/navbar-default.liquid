@@ -1,0 +1,285 @@
+<div class="collapse navbar-collapse">
+
+  <div class="w-100 d-flex align-items-center">
+
+    <a v-cloak href="/" class="navbar-brand logo-link mr-5" name="{{ shop.name | escape }}"
+      title="{{ shop.name | escape }}" aria-label="{{ shop.name | escape }}">
+      {% if settings.main_logo_svg != '' %}
+      <img src="{{ settings.main_logo_svg }}" alt="{{ shop.name | escape }}" class="img-fluid"
+        style="width: {{ logo_width }}px">
+      {% elsif logo contains 'no-image' %}
+      <span class="h5 text-primary"><i class="ion-pound text-warning"></i> {{ shop.name | escape }}</span>
+      {% else %}
+      <img src="{{ logo }}" alt="{{ shop.name | escape }}" class="img-fluid" style="width: {{ logo_width }}px">
+      {% endif %}
+    </a>
+    <div class="pt-lg-4 pb-lg-0 py-3 w-100">
+      <div class="">
+        <form action="/search" method="get" role="search" class="search searchForm">
+          <div class="input-group">
+            <input type="hidden" name="type" value="product">
+            <input id="searchInput_mobile" name="q" value="{{ search.terms | escape }}" type="search"
+              aria-label="What are you shopping for today?" placeholder="Search Our Store" autocomplete="off"
+              autocorrect="off" autocapitalize="off" spellcheck="false"
+              class="form-control  rounded-0 pl-3 pr-12 h-auto">
+            <div class="input-group-prepend zindex-sticky">
+              <button type="submit" name="search" title="search" aria-label="Search"
+                class="bg-transparent input-group-text d-block py-2 px-3 border-0"><i
+                  class="icon-search d-flex"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <nav
+        class="navbar navbar-main navbar-expand-lg py-0 px-0 d-lg-flex d-none justify-content-between position-relative">
+        <div class="bottom-nav w-100" style="background-color: #F5F5F5;">
+          <div class="d-flex">
+            <ul class="navbar-nav  align-items-center justify-content-center ">
+              {% for link in linklists[section.settings.main_linklist].links %}
+              {% assign child_list_handle = link.title | handleize %}
+              {%- if megamenu == child_list_handle -%}
+              <li class="position-static nav-item dropdown dropdownDesktop halfmega {% if link.active %} active{% endif %}">
+                <a data-href="{{ link.url }}"
+                  class="text-uppercase nav-menu nav-link d-flex align-items-center justify-content-between  {{ link.handle }}"
+                  role="button" data-toggle="dropdown" aria-expanded="false" name="{{ link.title }}"
+                  title="{{ link.title }}" aria-label="{{ link.title }}">
+                  <span>{{ link.title }}</span>
+                  <i class="align-self-baseline d-flex icon icon-angle-down ml-1"></i>
+                </a>
+                <div class="halfmega-list p-0 border-0 rounded-0 dropdownMenu">
+                  <div>
+                    <div class="row">
+                      <div class="col-md-8 px-md-8 py-6 px-6">
+                        <ul class="list-unstyled row">
+                          {%- for childlink in menus[child_list_handle].links -%}
+                          {%- assign third_list_handle = childlink.title | handleize -%}
+                          {%- if menus[third_list_handle].links != blank -%}
+                            <li class="col">
+                              <h4 class=" font-weight-normal text-uppercase mb-3">{{ childlink.title }}</h4>
+                              <ul class="list-unstyled">
+                                {%- for thirdlink in menus[third_list_handle].links -%}
+                                <li class="py-2 my-1">
+                                  <a href="{{ thirdlink.url }}" name="{{ thirdlink.title }}" title="{{ thirdlink.title }}" aria-label="{{ thirdlink.title }}" class="pb-1">{{ thirdlink.title }}</a></li>
+                                {%- endfor -%}
+                              </ul>
+                            </li>
+                          {%- endif -%}
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                      <div class="col-md-4 megamenuProduct bg-white d-flex justify-content-center align-items-center">
+                        {%- assign featured_product = section.settings.MegaProduct -%}
+                        {% render 'card-product-style-generic' with featured_product as product %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="halfmega-list p-4 border-0 rounded-0">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            {%- for childlink in menus[child_list_handle].links -%}
+                              {%- assign third_list_handle = childlink.title | handleize -%}
+                              {%- if menus[third_list_handle].links != blank -%}
+                                <a class="tab-links nav-link {%if forloop.first%}active{%endif%}" id="v-pills-{{ childlink.title }}-tab"  data-toggle="pill" href="#v-pills-{{ childlink.title }}" role="tab" aria-controls="v-pills-{{ childlink.title }}" aria-selected="true">{{ childlink.title }}</a>
+                              {%- endif -%}
+                            {%- endfor -%}
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <div class="tab-content" id="v-pills-tabContent">
+                            {%- for childlink in menus[child_list_handle].links -%}
+                            {%- assign third_list_handle = childlink.title | handleize -%}
+                              {%- if menus[third_list_handle].links != blank -%}
+                                <div class="tab-pane fade  {%if forloop.first%}show active{%endif%}" id="v-pills-{{ childlink.title }}" role="tabpanel" aria-labelledby="v-pills-{{ childlink.title }}-tab">
+                                  <div class="row">
+                                    <div class="col-9">
+                                      <ul class="list-unstyled megamenu-items">
+                                        {%- for thirdlink in menus[third_list_handle].links -%}
+                                          <li class="my-1">
+                                            <a href="{{ thirdlink.url }}" class="" name="{{ thirdlink.title }}" title="{{ thirdlink.title }}" aria-label="{{ thirdlink.title }}">{{ thirdlink.title }}</a></li>
+                                        {%- endfor -%}
+                                      </ul>
+                                        
+                                    </div>
+      
+                               
+                                    <div class="col-3">
+                                      <div class="megamenu-inside-image position-relative">
+                                        {% if forloop.index == 1 %}
+                                          <img class="img-fluid position-absolute w-100 h-100" src="{{section.settings.ShopImage1 | img_url: 'medium'}}" alt="menu1">
+                                          <div class="megamenu-inside-image-content position-absolute">
+                                            <h3 class="text-white">{{section.settings.shopText1}}</h4>
+                                            <a class="text-white" href="{{section.settings.shopBtnUrl1}}">Shop Now</a>
+                                          </div>
+                                        {% endif %}
+      
+                                        {% if forloop.index == 2 %}
+                                          <img class="img-fluid position-absolute w-100 h-100" src="{{section.settings.ShopImage2 | img_url: 'medium'}}" alt="menu2">
+                                          <div class="megamenu-inside-image-content position-absolute">
+                                            <h3 class="text-white">{{section.settings.shopText2}}</h4>
+                                            <a class="text-white" href="{{section.settings.shopBtnUrl2}}">Shop Now</a>
+                                          </div>
+                                        {% endif %}
+      
+                                        {% if forloop.index == 3 %}
+                                          <img class="img-fluid position-absolute w-100 h-100" src="{{section.settings.ShopImage3 | img_url: 'medium'}}" alt="menu3">
+                                          <div class="megamenu-inside-image-content position-absolute">
+                                            <h3 class="text-white">{{section.settings.shopText3}}</h4>
+                                            <a class="text-white" href="{{section.settings.shopBtnUrl3}}">Shop Now</a>
+                                          </div>
+                                        {% endif %}
+      
+                                        {% if forloop.index == 4 %}
+                                          <img class="img-fluid position-absolute w-100 h-100" src="{{section.settings.ShopImage4 | img_url: 'medium'}}" alt="menu4">
+                                          <div class="megamenu-inside-image-content position-absolute">
+                                            <h3 class="text-white">{{section.settings.shopText4}}</h4>
+                                            <a class="text-white" href="{{section.settings.shopBtnUrl4}}">Shop Now</a>
+                                          </div>
+                                        {% endif %}
+                                      </div>
+                                    </div>
+                                </div>
+                                </div>
+                               
+                              {%- endif -%}
+                            {%- endfor -%}
+                          </div>
+                        </div>
+                      </div>
+                     
+                    </div> -->
+              </li>
+              {%- elsif menus[child_list_handle].links != blank -%}
+              <li class="nav-item dropdown dropdownDesktop{% if link.active %} active{% endif %}">
+                <a data-href="{{ link.url }}"
+                  class="nav-menu text-uppercase nav-link d-flex align-items-center justify-content-between {{ link.handle }}"
+                  role="button" data-toggle="dropdown" aria-expanded="false" name="{{ link.title }}"
+                  title="{{ link.title }}" aria-label="{{ link.title }}">
+                  <span>{{ link.title }}</span>
+                  <i class="align-self-baseline d-flex icon icon-angle-down ml-1"></i>
+                </a>
+                <ul class="dropdown-menu dropdownMenu">
+                  {% for childlink in menus[child_list_handle].links %}
+                  <li>
+                    <a class="font-weight-bold text-uppercase dropdown-item {% if childlink.active %} active{% endif %} {{ childlink.handle }}"
+                      href="{{ childlink.url }}" name="{{ childlink.title }}" title="{{ childlink.title }}"
+                      aria-label="{{ childlink.title }}">
+                      {{ childlink.title }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </li>
+              {% else %}
+              <li class="nav-item {% if link.active %} active{% endif %}">
+                <a class="text-uppercase nav-menu nav-link {{ link.handle }}" href="{{ link.url }}"
+                  name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                  {{ link.title }}
+                </a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+
+
+        </div>
+        <ul class="navbar-nav social-icon-menu align-items-center">
+          {%- if shop.customer_accounts_enabled -%}
+          <li>
+            <a class="nav-link " href="/account" name="account" title="account" rel="nofollow" aria-label="Account">
+              <i class="icon-user pr-1"></i>
+            </a>
+          </li>
+          {%- endif -%}
+          {% if settings.enable_wishlist %}
+          <li>
+            <a class="nav-link  swym-wishlist" href="#swym-wishlist" name="wishlist" rel="nofollow"
+              aria-label="wishlist">
+              <i class="icon-wishlist pr-1"></i>
+            </a>
+          </li>
+          {% endif %}
+          <li>
+            <a class="nav-link position-relative " {% if section.settings.cart_type=='cart_drawer' %}href="#"
+              @click.prevent="_toggleCartDrawer" {% else %}href="/cart" {% endif %} name="cart" rel="nofollow"
+              aria-label="Cart">
+              <i class="icon-cart pr-1"></i>
+              <!-- <span class="d-md-inline-block d-none">Cart</span> -->
+              <!-- <span v-if="cartcart.item_count == 0">(0)</span> -->
+              <span v-text="cart.item_count" class="cart--count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+</div>
+
+<ul class="nav nav-fill w-100 d-flex align-items-center justify-space-between d-lg-none mobile-nav">
+  <div class="d-flex align-items-center">
+    <li class="nav-item text-right">
+      <a class="nav-link" href="#" @click.prevent="_toggleMobileNavDrawer" name="menu" title="menu" rel="nofollow"
+        aria-label="Menu">
+        <i class="icon ion-md-menu"></i>
+      </a>
+    </li>
+    <li class="nav-item ml-3">
+      <a class="nav-link" href="#" rel="nofollow" aria-label="Search">
+        <i class="icon-user"></i>
+      </a>
+    </li>
+  </div>
+  <li class="nav-item ml-3">
+    <a v-cloak href="/" class="navbar-brand text-center" name="{{ shop.name | escape }}"
+      title="{{ shop.name | escape }}" aria-label="{{ shop.name | escape }}">
+      {% if logo == '' and settings.main_logo_svg == '' %}
+      <span class="h5 text-primary"><i class="icon ion-pound text-primary"></i> {{ shop.name | escape }}</span>
+      {% elsif settings.main_logo_svg != '' %}
+      <img src="{{ settings.main_logo_svg }}" alt="{{ shop.name | escape }}" class="img-fluid" style="width: 190px;">
+      {% else %}
+      <img src="{{ logo }}" alt="{{ shop.name | escape }}" class="img-fluid" style="width: 190px;">
+      {% endif %}
+    </a>
+  </li>
+  <div class="d-flex align-items-center justify-content-end pt-md-5 pb-md-3">
+    <!-- <li class="nav-item ml-3">
+      <a class="nav-link" href="#" @click.prevent="_toggleSearch" name="search" title="search" rel="nofollow" aria-label="Search">
+        <i class="fas fa-search text-white"></i>
+      </a>
+    </li> -->
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="icon-wishlist pr-1 font-size-md"></i>
+      </a>
+    </li>
+    <li class="nav-item text-right ml-3 position-relative">
+      <a class="nav-link" {% if section.settings.cart_type=='cart_drawer' %}href="#" @click.prevent="_toggleCartDrawer"
+        {% else %}href="/cart" {% endif %} name="cart" rel="nofollow" aria-label="Cart">
+        <i class="icon-cart pr-1 font-size-md"></i>
+        <span class="d-md-inline-block d-none">Cart</span>
+        <span v-text="cart.item_count" class="cart--count"></span>
+      </a>
+    </li>
+    <!-- <li class="nav-item text-right ml-3">
+      <a class="nav-link" href="#" @click.prevent="_toggleMobileNavDrawer" name="menu" title="menu" rel="nofollow" aria-label="Menu">
+          <i class="icon ion-md-menu"></i>
+      </a>
+    </li> -->
+  </div>
+</ul>
+<form action="/search" method="get" role="search" class="search searchForm pb-1 pt-3 w-100 d-lg-none d-block">
+  <div class="input-group">
+    <input type="hidden" name="type" value="product">
+    <input id="searchInput_mobile" name="q" value="{{ search.terms | escape }}" type="search"
+      aria-label="What are you shopping for today?" placeholder="Search Our Store" autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" class="form-control  rounded-0 pl-3 pr-12 h-auto">
+    <div class="input-group-prepend zindex-sticky">
+      <button type="submit" name="search" title="search" aria-label="Search"
+        class="bg-transparent input-group-text d-block py-2 px-3 border-0"><i class="icon-search d-flex"></i></button>
+    </div>
+  </div>
+</form>

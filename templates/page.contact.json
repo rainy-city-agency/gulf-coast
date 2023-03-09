@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "template_contact": {
+      "type": "template-contact",
+      "settings": {
+        "ratina_image": "shopify:\/\/shop_images\/Building_Front_Banner.jpg",
+        "image": "shopify:\/\/shop_images\/Building_Front_Banner.jpg",
+        "customer_enable": true,
+        "customer_heading": "Customer Support",
+        "customer_caption": "Have specific questions about your order?",
+        "customer_url": "shopify:\/\/pages\/customer-service",
+        "feedback_enable": true,
+        "feedback_heading": "Feedback",
+        "feedback_caption": "Give us a review of our services",
+        "feedback_url": "shopify:\/\/pages\/feedback",
+        "enable_form": true,
+        "map_enable": true,
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d28183.332773185582!2d-82.015257!3d27.996448!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd39eab5dace75%3A0x4e2e3b4b9ddb0b16!2s3650%20Drane%20Field%20Rd%2C%20Lakeland%2C%20FL%2033811%2C%20USA!5e0!3m2!1sen!2sin!4v1615371710420!5m2!1sen!2sin",
+        "loc_enable": true,
+        "loc_title": "STOP BY OUR OFFICE",
+        "loc_sub_title": "Gulf Coast Avionics Corporation",
+        "loc_address": "Lakeland Linder International Airport<br>\n3650 Drane Field Rd, Lakeland, FL 33811",
+        "loc_map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d44943.192749240094!2d-122.76476500000001!3d45.248813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x439c98307be67eaa!2sPacific%20Coast%20Avionics!5e0!3m2!1sen!2sus!4v1618558446823!5m2!1sen!2sus",
+        "loc_other": "",
+        "driving_enable": true,
+        "driving_url": "shopify:\/\/pages\/driving-directions",
+        "driving_img": "shopify:\/\/shop_images\/Hangar_Morning_Banner.jpg",
+        "driving_title": "Driving Directions",
+        "driving_caption": "<p>3650 Drane Field Road<br>\n                Lakeland Linder International Airport<br>\n                Lakeland, Florida 33811<\/p>",
+        "flying_enable": true,
+        "flying_url": "shopify:\/\/pages\/flying-in",
+        "flying_img": "shopify:\/\/shop_images\/LAL.png",
+        "flying_title": "Flying in",
+        "flying_caption": "<p class=\"col-md-5 mx-auto\">Download the Airport Diagram for Lakeland Linder International Airport<\/p>"
+      }
+    }
+  },
+  "order": [
+    "template_contact"
+  ]
+}

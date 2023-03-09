@@ -1,0 +1,63 @@
+{% assign items_per_page = section.settings.items_per_page %}
+{% assign blog_title = blog.title %}
+
+{% if current_tags %}
+  {% capture blog_title %}{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}{% endcapture %}
+{% endif %}
+
+<div data-section-id="{{ section.id }}"  data-template="blog">
+  {% include "template-blog-list" %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Blog Template",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "range",
+        "id": "items_per_page",
+        "label": "Articles Per Page",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Banner Content"
+      },
+      {
+        "type": "image_picker",
+        "id": "ratina_image",
+        "label": "Select Image for Large Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Select Image for Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Select Image for Mobile"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Blog Title",
+        "default": "AIRPLANE NOISE"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sort",
+        "label": "Enable Sorting",
+		"default": true
+      }
+    ]
+  }
+{% endschema %}

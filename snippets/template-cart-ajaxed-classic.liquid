@@ -1,0 +1,182 @@
+<div class="row table-cart">
+    <div class="col-12">
+
+        {% include 'loading-indicator' %}
+
+        <template v-show="ready">
+
+            <form data-cart-form action="/cart" method="post">
+
+                <div class="row">
+                    <div class="col-12 col-lg-9 pr-xl-5">
+                        <div class="border-top border-bottom mb-5 d-md-block d-none">
+                            <div class="border-bottom py-2 border-top my-1">
+                                <div class="row text-uppercase font-weight-semibold py-1">
+                                    <div class="col-md-2 col-4">
+                                        <p class="mb-0 text-left font-weight-bold font-size-ex-sm f-hind">{{ 'cart.label.product' | t }}</p>
+                                    </div>
+                                    <div class="col-4 d-none d-md-block">
+                                    </div>
+                                    <div class="col-lg-2 col-1 d-none d-md-block">
+                                        <p class="mb-0 font-weight-bold font-size-ex-sm f-hind">{{ 'cart.label.price' | t }}</p>
+                                    </div>
+                                    <div class="col-md-3 col-lg-2 col-4">
+                                        <p class="mb-0 text-center text-md-left font-weight-bold font-size-ex-sm f-hind">{{ 'cart.label.quantity' | t }}</p>
+                                    </div>
+                                    <div class="col-md-2 col-4">
+                                        <p class="mb-0 text-right font-weight-bold font-size-ex-sm f-hind">{{ 'cart.label.total' | t }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-for="(item, index, key) in cart.items"
+                            data-cart-item
+                            :key="item.id"
+                            :data-variant-id="item.variant_id"
+                            :data-cart-limit="item.properties && item.properties['cart_limit']" class="row pb-4 mb-4 border-bottom-inside align-items-md-center align-items-start cart-item border-bottom">
+
+                            <div width="100" class="col-md-2 col-4 mb-3 mb-md-0 d-flex for-img-width">
+                                <!-- <div class="ribbon position-absolute d-flex justify-content-start">
+                                <div class="ribbon-left">
+                                    <span><i class="icon ion-md-star"></i></span>
+                                </div>
+                                </div> -->
+                                <img v-if="item.image" :src="_getSizedImageUrl(item.image ,'medium')" :alt="item.product_title" class="img-fluid item-img"/>
+                            </div>
+
+                            <div class="col-md-4 col-8 mb-3 mb-md-0 d-flex flex-column mt-2">
+                                <a :href="item.url" v-text="item.product_title" class="f-hind mb-1 link-item product-title font-size-base primary-link font-weight-bold"></a>
+                                    <p class="mb-0 font-size-sm mb-1" v-if="item.sku != ''" v-text="'Catalog No.: # '+item.sku"></p>
+                                    <p class="mb-0 font-size-sm mb-1" v-if="item.vendor != ''" v-text="'Manufacturer: '+item.vendor"></p>
+                                    <div class="d-block d-md-none mb-1">
+                                        <span class="mb-md-0 mb-1 p-0 font-weight-medium hulkapps-cart-item-price money" :data-line-index="index" :data-key="item.key" v-text="_formatMoney(item.price)"></span>
+                                        <s v-html="_formatMoney(item.compare_at_price)" class="item-price text-gray-500 ml-2" v-if="item.compare_at_price"></s>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <p class="font-size-sm mb-2 text-capitalize" v-for="option in item.product_options" v-if="option.value !== 'Default Title'">
+                                        <span class="mr-1 text-gray-900">${ option.name }:</span>${ option.value }</p>
+                                        <a href="" class="d-none"><i class="far fa-heart"></i> Add to wish List</a>
+                                    </div>
+
+                                    <div width="140" class="offset-0 offset-md-0 d-flex d-md-none cart_quantity align-items-center mr-auto">
+
+                                    <div class="quantity-wrapper" data-qty-container>
+                                        <div class="input-group input-group-sm">
+                                            <div class="input-group-prepend">
+                                                <a href="#" class="input-group-text bg-transparent px-3 py-1 decrease w-auto h-auto" rel="nofollow" aria-label="Decrease" title="Decrease" data-qty-decrease @click.prevent="_updateCart(index+1, $event)">
+                                                    <span class="btn-decrease"><i class="fas fa-minus"></i></span>
+                                                </a>
+                                            </div>
+                                            <input type="number" name="updates[]" aria-label="quantity" :value="item.quantity" step="1" min="1" inputmode="numeric" data-qty-input class="quantity form-control h-auto font-size-base font-weight-semibold text-center border-left-0 input-group-text border-right-0 bg-transparent px-2" readonly>
+                                            <div class="input-group-append">
+                                                <a href="#" class="input-group-text bg-transparent px-3 py-1 increase w-auto h-auto" rel="nofollow" aria-label="Increase" title="Increase" data-qty-increase @click.prevent="_updateCart(index+1, $event)">
+                                                    <span class="btn-increase"><i class="fas fa-plus"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% comment %} <a v-if="item.properties && item.properties['add_mode'] != 'auto'" href="#" class="text-danger lead font-weight-bold ml-2"
+                                        name="{{ 'cart.general.remove' | t }}"
+                                        @click.prevent="_removeFromCart(index+1, $event)">
+                                        <i class="fas fa-close ml-3"></i>
+                                    </a>  {% endcomment %}
+                                    <a href="#" class="ml-3" 
+                                        name="{{ 'cart.general.remove' | t }}"
+                                        @click.prevent="_removeFromCart(index+1, $event)">
+                                        <i class="fas fa-times text-primary"></i>
+                                    </a>
+                                    </div>
+
+                            </div>
+
+                            <div class="col-lg-2 col-1 d-none d-md-block">
+                                <span class="m-0 p-0 font-weight-medium hulkapps-cart-item-price money" :data-line-index="index" :data-key="item.key" v-text="_formatMoney(item.price)"></span>
+                                <s v-html="_formatMoney(item.compare_at_price)" class="item-price text-secondary" v-if="item.compare_at_price"></s>
+                            </div>
+
+                            <div width="140" class="col-md-3 col-lg-2 offset-0 offset-sm-3 offset-md-0 d-md-flex d-none col-6 cart_quantity align-items-center">
+                                <div class="quantity-wrapper" data-qty-container>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-prepend">
+                                            <a href="#" class="input-group-text bg-transparent px-2 py-1 decrease w-auto h-auto" rel="nofollow" aria-label="Decrease" title="Decrease" data-qty-decrease @click.prevent="_updateCart(index+1, $event)">
+                                                <span class="btn-decrease"><i class="fas fa-minus font-size-sm"></i></span>
+                                            </a>
+                                        </div>
+                                        <input type="number" name="updates[]" :id="'updates_'+item.key" aria-label="quantity" :value="item.quantity" step="1" min="1" inputmode="numeric" data-qty-input class="quantity form-control h-auto font-size-base font-weight-semibold text-center border-left-0 input-group-text border-right-0 bg-transparent px-2" @change="_updateCart(index+1, $event)">
+                                        <div class="input-group-append">
+                                            <a href="#" class="input-group-text bg-transparent px-2 py-1 increase w-auto h-auto" rel="nofollow" aria-label="Increase" title="Increase" data-qty-increase @click.prevent="_updateCart(index+1, $event)">
+                                                <span class="btn-increase"><i class="fas fa-plus font-size-sm"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="ml-3" 
+                                    name="{{ 'cart.general.remove' | t }}"
+                                    @click.prevent="_removeFromCart(index+1, $event)">
+                                    <i class="fas fa-times text-primary"></i>
+                                </a>
+                            </div>
+        
+                            <div class="col-md-2 col-sm-3 col-6 text-right font-weight-bold d-md-block d-none">
+                                <s v-if="item.properties && item.properties['promo_product']" class="text-muted money" :data-line-index="index" v-text="_formatMoney(item.price)"></s>
+                                <span v-else class="amount test hulkapps-cart-item-line-price money" data-line-total :data-line-index="index" :data-key="item.key" v-text="_formatMoney(item.line_price)"></span>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="col-md-6 col-12 ml-0 col-lg-3 mx-md-auto mx-lg-0 cart-sidebar">
+                        <div class="border-0 shadow-sm border-gray-900 px-ex-lg-5 px-lg-3 px-4 py-5 sticky-top">
+                        <div>
+                            <h4 class="text-center font-weight-normal mb-5 text-uppercase">Order Summary</h4>
+                            <div class="row no-gutters mb-4" id="ap-cart">
+                                <div class="col">
+                                    <div class="d-flex align-items-start justify-content-between mb-3 font-size-sm"><p class="my-0 font-weight-bold mr-2" v-html="'Items('+cart.item_count+'):'"></p><p class="my-0 text-right font-weight-normal w-50 money" data-cart-total><span v-text="_formatMoney(cart.items_subtotal_price)" id="subtotal"></span></p></div>
+                                    <div class="d-flex align-items-start justify-content-between mb-3 font-size-sm"><p class="my-0 font-weight-bold mr-2">Shipping: </p><p class="my-0 text-right font-weight-normal w-50">calculated at checkout</p></div>
+                                    <div class="d-flex align-items-start justify-content-between mb-3 font-size-sm"><p class="my-0 font-weight-bold mr-2">Total before tax: </p><p class="my-0 text-right font-weight-normal w-50 money" data-cart-total v-text="_formatMoney(cart.total_price)"></p></div>
+                                    <div class="d-flex align-items-start justify-content-between mb-3 font-size-sm"><p class="my-0 font-weight-bold mr-2">Estimated tax to be collected: </p><p class="my-0 text-right font-weight-normal w-50">calculated at checkout</p></div>
+                                </div>
+                            </div>
+                            <div class="text-center d-none">
+                                <div class="pb-4 position-relative text-center"><div class="border-bottom border-gray-500 w-100"></div> </div>
+                                <h5 class="mb-2 text-primary text-capitalize f-open font-weight-medium letter-spacing-normal">Apply gift certificate?</h5>
+                                <p class="terms-conditions-text mt-3 font-size-sm">By placing your order you agree to Gulf Coast Avionics <a href="/pages/terms-of-use" class="text-primary">terms and conditions</a></p>
+                            </div>
+
+                            <button class="btn text-uppercase mb-5 btn-primary btn-block px-3"
+                                type="submit"
+                                name="checkout"
+                                {% if cart_has_subscription_item == 'true' %} onclick="event.preventDefault(); reChargeSaveCartNoteAndRedirect()"{% endif %}>
+                                {{ 'cart.general.checkout' | t }}
+                            </button>
+                            <!-- <div class="my-4 position-relative text-center">
+                                <div class="position-absolute border-bottom border-gray-900 top-50 w-100"></div>
+                                <h6 class="font-weight-light text-uppercase px-3 bg-white d-inline-block mb-0 zindex-sticky position-relative f-open">or</h6>
+                            </div> -->
+                            {% comment %}span wrapper tag is needed by the ReCharce App{% endcomment %}
+                            {% comment %} {% if additional_checkout_buttons %}
+                                <span class="additional-checkout-buttons">
+                                    <div id="additional-checkout-buttons">
+                                        {{ content_for_additional_checkout_buttons }}
+                                    </div>
+                                </span>
+                            {% endif %} {% endcomment %}
+                            {% comment %}span wrapper tag is needed by the ReCharce App{% endcomment %}
+                            <!-- {% if additional_checkout_buttons %}
+                            <span class="additional-checkout-buttons">
+                                <div id="additional-checkout-buttons">
+                                {{ content_for_additional_checkout_buttons }}
+                                </div>
+                            </span>
+                            {% endif %} -->
+
+                            {%- if section.settings.discount_content -%}
+                                {{ section.settings.discount_content }}
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </template>
+    </div>
+</div>

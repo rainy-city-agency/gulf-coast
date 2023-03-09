@@ -1,0 +1,225 @@
+<section class="compareProd">
+  <div class="banner-section " style="background-color: {{ section.settings.section_bg_color }};">
+        <div class="banner-wrapper row ">
+        </div>
+    </div>
+    <div class="container">
+        <!-- Content Blocks  -->
+        <div class="compare-Product ">
+            <div class="diff-slider" data-diff-slider data-flickity='{ 
+                "cellAlign": "left", 
+                "contain": true, 
+                "lazyLoad": true, 
+                "wrapAround": true, 
+                "pageDots": false, 
+                "draggable": false,
+                "fullscreen": true}'>
+                {% if section.blocks.size > 0 %}
+                {% for block in section.blocks %}
+                    <div class="slider-item col-12 text-center header-title">
+                        {% if block.settings.Mainheading != '' %}
+                        <div class="row mb-md-8 mb-4">
+                            <div class="col-md-10 mx-auto position-relative">
+                                <h1 class="overLine section-title d-inline-block mb-0 text-primary text-uppercase letter-spacing font-weight-normal px-lg-6 px-4 bg-white zindex-sticky position-relative">{{ block.settings.Mainheading | escape }}</h1>
+                                <span class="d-md-block d-none w-100 border-bottom border-primary position-absolute top-left-50" style="border-width: 3px !important;"></span>
+                            </div>
+                        </div>
+                        {% endif %}
+                        <!-- <div class="container"> -->
+                            <div class=" row mx-auto justify-content-center py-4 pb-0 ">    
+                                {% assign product = all_products[block.settings.productSelect] %} 
+                                {% assign productA = all_products[block.settings.productSelectA] %} 
+                                <div class="position-relative col-12 col-md-4 my-3 d-flex align-items-stretch justify-content-center {% if forloop.first == true %}mr-md-5 mb-5 mb-md-3{% endif %} {% if forloop.last == true %}ml-md-5 mt-3 mt-5 mt-md-3{% endif %} " >
+                                        <span class="badges position-absolute">
+                                            <img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/before.png?v=1645686727" alt="before">
+                                        </span>
+                                    <div class="card card-product card-product-style-1 text-left border-0 shadow  bg-white rounded pt-5" >
+                                        <div class="card-img text-center  pt-5{% if product.featured_image.size == 0 %}bg-gray-300{% endif %}">
+                                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                                        {% if product.featured_image.size > 0 %}
+                                            <!-- <a href="{{ product.url | within: collection }}"> -->
+                                                <div class="category-image position-relative padding-top-88">
+                                                    <img
+                                                    data-sizes="auto"
+                                                    src="{{ product.featured_image | img_url: 'pico' }}"
+                                                    data-srcset="
+                                                        {{ product.featured_image |  img_url: '400x', scale: 2 }} 320w
+                                                        "
+                                                    class="lazyload position-absolute img-wrapper top-left-50 img-object-contain"
+                                                    alt="{{ product.title | escape }}" data-url="{{ productA.url | within: collection }}"/>
+                                                </div>
+                                            <!-- </a> -->
+                                        {% else %}
+                                            {{ 'product-' | append: current | placeholder_svg_tag: 'img-fluid' }}
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="position-relative col-12 col-md-4 my-3 d-flex align-items-stretch justify-content-center {% if forloop.first == true %}mr-md-5 mb-5 mb-md-3{% endif %} {% if forloop.last == true %}ml-md-5 mt-3 mt-5 mt-md-3{% endif %} " >
+                                        <span class="badges position-absolute">
+                                            <img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/After.png?v=1645686727" alt="After" srcset="">
+                                        </span>
+                                    <div class="card card-product card-product-style-1 text-left border-0 shadow  bg-white rounded pt-5" >
+                                        <div class="card-img text-center  pt-5{% if productA.featured_image.size == 0 %}bg-gray-300{% endif %}">
+                                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                                        {% if productA.featured_image.size > 0 %}
+                                            <!-- <a href="{{ productA.url | within: collection }}"> -->
+                                                <div class="category-image position-relative padding-top-88">
+                                                    <img
+                                                    data-sizes="auto"
+                                                    src="{{ productA.featured_image | img_url: 'pico' }}"
+                                                    data-srcset="
+                                                        {{ productA.featured_image |  img_url: '400x', scale: 2 }} 320w
+                                                        "
+                                                    class="lazyload position-absolute img-wrapper top-left-50 img-object-contain"
+                                                    alt="{{ productA.title | escape }}" data-url="{{ productA.url | within: collection }}"/>
+                                                </div>
+                                            <!-- </a> -->
+                                        {% else %}
+                                            {{ 'product-' | append: current | placeholder_svg_tag: 'img-fluid' }}
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                                </div>         
+                            </div>
+                        
+                            <div class="row justify-content-center flex-column my-4">
+                                <h2 class="text-center mb-3">{{block.settings.ListingTitle}}</h2>
+                                <div class="col-12 col-md-6 d-flex mx-auto justify-content-around">
+                                    <!-- <ul class="row no-gutters"style="text-align: left;list-style-position: inside; padding: 0;">
+                                    {%- assign varUl1 = block.settings.varUl1 | split: ',' -%}
+                                    {% for ul1 in varUl1 %}
+                                    <li class="py-2 font-weight-bold">{{ul1}}</li>
+                                    {% endfor %}
+                                    </ul>
+                                    <ul class="row no-gutters" style="text-align: left;list-style-position: inside; padding: 0;">
+                                        {%- assign varUl2 = block.settings.varUl2 | split: ',' -%}
+                                        {% for ul2 in varUl2 %}
+                                            <li class="py-2 font-weight-bold">{{ul2}}</li>
+                                        {%endfor%}
+                                    </ul> -->
+                                    <ul class="row no-gutters" style="text-align: left;list-style-position: inside; padding: 0;">
+                                        {{ block.settings.varUl1 }}
+                                    </ul>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                {%endfor%}
+                {%endif%}
+            </div>
+            <div class="form my-4">
+                <button class="btn btn-primary d-block mb-3 mb-sm-0 mx-auto"  @click.prevent="_divRequestQuote()">
+                    Request a quote
+                </button>
+                <div class="section-content d-none" style="padding: 0px 0px 5rem;" data-request-quote>
+                <div style="margin:0 auto;" class="pxFormGenerator" id="XoxqSMe3mnaFKgK0zoaLnQ"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="w-75 bg-white mx-auto">
+            <div class="modal-header">
+                <a href="" class="modal-link"><h4 class="modal-title"></h4></a>
+                <button type="button" class="btn btn-primary d-block close text-black" data-dismiss="modal" style="background-color: #d02130;">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img data-sizes="auto" src="" alt="" class="lazyload"  srcset="">
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> -->
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    // Get the modal
+    $(document).ready(function(){
+       $('.category-image img').each(function(){
+           $(this).on('click', function(){
+               $('.flickity-fullscreen-button-exit').trigger('click');
+               var srcAttr = $(this).attr('srcset');
+               var title = $(this).attr('alt');
+               var link = $(this).attr('data-url')
+               open(srcAttr, title, link)
+           })
+       })
+        $(".close").on('click',function(){
+            close()
+        })
+    })
+    function open(srcAttr, title, link) {
+         $("#myModal").find('img').attr('src',srcAttr)
+         $("#myModal").find('.modal-title').text(title)
+         $("#myModal").find('.modal-link').attr('href',link)
+         $("#myModal").modal('show');
+    }
+    function close() {
+        $("#myModal").modal('hide');
+        $("#myModal").find('img').removeAttr('src');
+        $("#myModal").find('.modal-title').text('');
+        $("#myModal").find('.modal-link').removeAttr('href');
+    }
+    </script>
+
+{% schema %}
+  {
+    "name": "Compare Prod",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner Content"
+        },
+        {
+            "type": "color",
+            "id": "section_bg_color",
+            "label": "Background Color",
+            "default": "#f8f9fa"
+        } 
+    ],
+    "blocks": 
+    [
+       {
+            "type": "content",
+            "name": "Product Selection",
+            "settings": 
+            [
+                {
+                    "type": "header",
+                    "content": "Select a products "
+                },
+                {
+                    "type": "text",
+                    "id": "Mainheading",
+                    "label": "Heading Text"
+                },
+                {
+                    "type": "product",
+                    "id": "productSelect",
+                    "label": "Select before product"
+                },
+                {
+                    "type": "product",
+                    "id": "productSelectA",
+                    "label": "Select after product"
+                },
+                {
+                    "type": "text",
+                    "id": "ListingTitle",
+                    "label": "Listing Title",
+                    "default": "List Of Installed Items"
+                },
+                 {
+                     "type": "textarea",
+                     "id": "varUl1",
+                     "label": "first listing"
+                 }
+            ]
+        }
+    ]
+  }
+{% endschema %}
+

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "news_blog": {
+      "type": "news-blog",
+      "settings": {
+        "title": "WHAT'S NEW AT GULF COAST AVIONICS"
+      }
+    }
+  },
+  "order": [
+    "news_blog"
+  ]
+}

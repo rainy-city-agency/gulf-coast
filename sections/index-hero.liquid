@@ -1,0 +1,599 @@
+<!-- Index Hero Section Starts -->
+
+<section class="index-hero main-index-hero d-md-block d-none" >
+
+    <div class="container">
+
+        <div class="carousel" role="tree"
+
+    data-header-slider
+
+    data-flickity='{
+      "contain": true,
+
+      "fade": true,
+
+      "lazyLoad": true,
+
+      "autoPlay": false,
+
+      "wrapAround": false,
+
+      "groupCell": "100%",
+
+      "prevNextButtons": {{section.settings.nav_arrows}},
+
+      "pageDots": {{section.settings.nav_dots}},
+
+      {% if section.settings.auto_play > 0 %}"autoPlay": {{section.settings.auto_play}}000,{% endif %}
+
+      "arrowShape": {"x0": 10, "x1": 60, "y1": 50, "x2": 60, "y2": 45, "x3": 15}
+
+    }'>
+
+        {% for block in section.blocks limit: section.blocks.limit %}
+
+        {% capture current %}{% cycle 1, 2 %}{% endcapture %}
+
+            <div class="w-100 row carousel-cell ">
+
+                <div class="col-lg-6 col-md-6 pl-0">
+
+                    <div class="index-hero-image h-100">
+
+                        {% if block.type == 'image' %}
+
+                        {% if block.settings.image == blank %}
+
+                        {{'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg'}}
+
+                        {% else %}
+
+                        <img
+
+                            data-sizes="auto"
+
+                            src="{{ block.settings.image | img_url: 'small'}}"
+
+                            data-srcset="
+
+                            {{ block.settings.image | img_url: '768x' }} 567w,
+
+                            {{ block.settings.image | img_url: '992x' }} 768w,
+
+                            {{ block.settings.image | img_url: '1200x' }} 992w,
+
+                            {{ block.settings.image | img_url: '1920x' }} 1200w,
+
+                            {{ block.settings.image | img_url: '2560x' }} 1920w{% if block.settings.ratina_image != blank %},
+
+                            {{ block.settings.ratina_image | img_url: '3840x' }} 1921w,
+
+                            {{ block.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+
+                            "
+
+                            class="lazyload img-fluid  h-100" alt="{{ shop.name | escape }}" />
+
+                        {% endif %}
+
+                    {% endif %}
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 col-md-6 position-relative">
+
+                  <div class="">
+
+                    <div class="index-hero-content h-100 d-flex justify-content-center flex-column">
+
+                        <h1 class="display-3" style="color: {{block.settings.heading_txt_color}};">{{ block.settings.heading | escape }}</h1>
+
+                        <h4 class="mb-lg-3 font-italic" style="color: {{ block.settings.caption_txt_color }};">{{ block.settings.caption | escape }}</h4>
+
+                        <div class="index-hero-btn">
+
+                            {% if block.settings.btn_txt != '' %}
+
+                                <a class="btn-animation btn-a-black" href="{% if block.settings.btn_link %}{{ block.settings.btn_link }} {% else %}#{% endif %}">{{ block.settings.btn_txt }}</a>
+
+                            {%endif%}
+
+                            {% if block.settings.btn_txt2 != '' %}
+
+                                <a class="btn-animation btn-a-white" href="{% if block.settings.btn_link2 %}{{ block.settings.btn_link2 }} {% else %}#{% endif %}">{{ block.settings.btn_txt2 }}</a>
+
+                            {%endif%}
+
+                        </div>    
+
+                    </div>
+
+                    <div class="plane-animation">
+
+                      <p><span></span></p>
+
+                      <img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/Plane.svg?v=1646299224" alt="">
+
+                    </div>
+
+                  </div>  
+
+                </div>
+
+            </div>
+
+        {%endfor%}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="px-3 d-md-none d-block main-index-hero">
+  <div class="carousel" role="tree"
+
+    data-header-slider   data-flickity='{
+
+      "contain": true,
+
+      "fade": true,
+
+      "lazyLoad": true,
+
+      "autoPlay": false,
+
+      "wrapAround": false,
+
+      "groupCell": "100%",
+
+      "prevNextButtons": {{section.settings.nav_arrows}},
+
+      "pageDots": {{section.settings.nav_dots}},
+
+      {% if section.settings.auto_play > 0 %}"autoPlay": {{section.settings.auto_play}}000,{% endif %}
+      "arrowShape": {"x0": 10, "x1": 60, "y1": 50, "x2": 60, "y2": 45, "x3": 15}
+    }' >
+      {% for block in section.blocks limit: section.blocks.limit %}
+      {% capture current %}{% cycle 1, 2 %}{% endcapture %}
+        <div class="index-hero-2 mobile-hero carousel-cell w-100" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('{{ block.settings.image_mobile | img_url: 'master'}}');">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-5 mx-auto text-center">
+                        <h1 class="text-white font-weight-bold"  style="color: {{block.settings.heading_txt_color}};">{{ block.settings.heading | escape }}</h1>
+                        <p class="text-white">{{ block.settings.caption | escape }}</p> 
+                        <div class="index-hero-btn">
+                          {% if block.settings.btn_txt != '' %}
+                            <a class="btn-animation btn-a-black" href="{% if block.settings.btn_link %}{{ block.settings.btn_link }} {% else %}#{% endif %}">{{ block.settings.btn_txt }}</a>
+                          {%endif%}
+                          {% if block.settings.btn_txt2 != '' %}
+                            <a class="btn-animation btn-a-white" href="{% if block.settings.btn_link2 %}{{ block.settings.btn_link2 }} {% else %}#{% endif %}">{{ block.settings.btn_txt2 }}</a>
+                          {%endif%}
+                        </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+      {%endfor%}
+    </div>
+</section>
+
+<!-- Index Hero Section ends -->
+
+{% schema %}
+
+{
+
+"name": "Index Hero",
+
+"settings": [
+
+{
+
+    "type": "header",
+
+    "content": "Layout"
+
+  },
+
+  {
+
+    "type": "checkbox",
+
+    "id": "enabled",
+
+    "label": "Enabled?",
+
+    "default": true
+
+  },
+
+  {
+
+    "type": "checkbox",
+
+    "id": "nav_arrows",
+
+    "label": "Arrows Navigation",
+
+    "default": true
+
+  },
+
+  {
+
+    "type": "checkbox",
+
+    "id": "nav_dots",
+
+    "label": "Dots Navigation",
+
+    "default": true
+
+  },
+
+  {
+
+    "type": "range",
+
+    "id": "auto_play",
+
+    "label": "Autoplay",
+
+    "info": "Duration of animation between slides (in seconds). Select the value of 0 if you don't want the slider to autoplay.",
+
+    "min": 0,
+
+    "max": 10,
+
+    "step": 1,
+
+    "default": 0
+
+  }
+
+],
+
+"blocks": [{
+
+    "type": "image",
+
+    "name": "Image Slide",
+
+    "settings": [
+
+      {
+
+        "type": "image_picker",
+
+        "id": "ratina_image",
+
+        "label": "Select Image for Large Desktop"
+
+      },
+
+      {
+
+        "type": "image_picker",
+
+        "id": "image",
+
+        "label": "Select Image for Desktop"
+
+      },
+
+      {
+
+        "type": "image_picker",
+
+        "id": "image_mobile",
+
+        "label": "Select Image for Mobile"
+
+      },
+
+      {
+
+        "type": "header",
+
+        "content": "Content"
+
+      },
+
+      {
+
+        "type": "select",
+
+        "id": "alignment",
+
+        "label": "Alignment",
+
+        "options": [{
+
+            "value": "text-center",
+
+            "label": "Center"
+
+          },
+
+          {
+
+            "value": "text-left",
+
+            "label": "Left"
+
+          },
+
+          {
+
+            "value": "text-right",
+
+            "label": "Right"
+
+          }
+
+        ],
+
+        "default": "text-center"
+
+      },
+
+      {
+
+        "type": "text",
+
+        "id": "heading",
+
+        "label": "Heading"
+
+      },
+
+      {
+
+        "type": "text",
+
+        "id": "caption",
+
+        "label": "Caption"
+
+      },
+
+          {
+
+        "type": "header",
+
+        "content": "Styling"
+
+      },
+
+      {
+
+        "type": "color",
+
+        "id": "heading_txt_color",
+
+        "label": "Heading Color"
+
+      },
+
+      {
+
+        "type": "color",
+
+        "id": "caption_txt_color",
+
+        "label": "Caption Color"
+
+      },
+
+      {
+
+        "type": "header",
+
+        "content": "first Button"
+
+      },
+
+      {
+
+        "type": "text",
+
+        "id": "btn_txt",
+
+        "label": "first Button Text"
+
+      },
+
+      {
+
+        "type": "url",
+
+        "id": "btn_link",
+
+        "label": "first Button Link"
+
+      },
+
+      {
+
+        "type": "header",
+
+        "content": "Second Button"
+
+      },
+
+      {
+
+        "type": "text",
+
+        "id": "btn_txt2",
+
+        "label": "Second Button Text"
+
+      },
+
+      {
+
+        "type": "url",
+
+        "id": "btn_link2",
+
+        "label": "Second Button Link"
+
+      },
+
+      {
+
+        "type": "header",
+
+        "content": "Overlay"
+
+      },
+
+      {
+
+        "type": "checkbox",
+
+        "id": "enable_overlay",
+
+        "label": "Enabled?",
+
+        "default": true
+
+      },
+
+      {
+
+        "type": "color",
+
+        "id": "overlay_bg_color",
+
+        "label": "Overlay Background Color",
+
+        "default": "#000000"
+
+      },
+
+      {
+
+        "type": "range",
+
+        "id": "overlay_opacity",
+
+        "label": "Overlay Opacity",
+
+        "min": 0.1,
+
+        "max": 1,
+
+        "step": 0.1,
+
+        "default": 0.5
+
+      },
+
+      {
+
+        "type": "select",
+
+        "id": "overlay_pattern_img",
+
+        "label": "Overlay Pattern Image",
+
+        "options": [
+
+          {
+
+            "value": "none",
+
+            "label": "None"
+
+          },
+
+          {
+
+            "value": "overlay-pattern-1",
+
+            "label": "Pattern 1"
+
+          },
+
+          {
+
+            "value": "overlay-pattern-2",
+
+            "label": "Pattern 2"
+
+          },
+
+          {
+
+            "value": "overlay-pattern-3",
+
+            "label": "Pattern 3"
+
+          },
+
+          {
+
+            "value": "overlay-pattern-4",
+
+            "label": "Pattern 4"
+
+          },
+
+          {
+
+            "value": "overlay-pattern-5",
+
+            "label": "Pattern 5"
+
+          },
+
+          {
+
+            "value": "overlay-pattern-6",
+
+            "label": "Pattern 6"
+
+          },
+
+          {
+
+            "value": "overlay-pattern-7",
+
+            "label": "Pattern 7"
+
+          }
+
+        ],
+
+        "default": "none"
+
+      }
+
+    ]
+
+}],
+
+"presets": [
+
+{
+
+    "name": "Index Hero",
+
+    "category": "ADVANCED LAYOUT"
+
+}
+
+]
+
+}
+
+{% endschema %}
+

@@ -1,0 +1,50 @@
+<template v-if="!isLoading && collection.products.length > 0" class="pagination" v-cloak>
+  {% if pagination_type == 'page_numbers' %}
+
+    <nav>
+      <ul class="pagination">
+        <li v-if="collection.pagination.previous" class="page-item">
+          <a class="page-link d-inline-flex align-items-center justify-content-center" :href="collection.pagination.previous.url" @click.prevent="_parseFilters($event)" data-filter-type="pagination" :title="collection.pagination.previous.title" aria-label="Previous">
+            <span aria-hidden="true"><i class="icon ion-ios-arrow-back"></i></span>
+            <span class="sr-only">{{ 'collections.pagination.previous' | t }}</span>
+          </a>
+        </li>
+
+        <li v-for="part in collection.pagination.parts" class="page-item">
+          <template v-if="part.is_link">
+            <a class="page-link d-inline-flex align-items-center justify-content-center" :href="part.url" @click.prevent="_parseFilters($event)" data-filter-type="pagination">
+              <span v-text="part.title"></span>
+            </a>
+          </template>
+          <template v-else>
+            <a v-if="part.title == collection.pagination.current_page" class="page-link active d-inline-flex align-items-center justify-content-center">
+              <span v-text="part.title"></span>
+            </a>
+            <span v-else class="dots d-inline-flex align-items-end justify-content-center">
+              <span v-html="part.title"></span>
+            </span>
+          </template>
+        </li>
+
+        <li v-if="collection.pagination.next" class="page-item" >
+          <a class="page-link d-inline-flex align-items-center justify-content-center" :href="collection.pagination.next.url" @click.prevent="_parseFilters($event)" data-filter-type="pagination" :title="collection.pagination.next.title" aria-label="Next">
+            <span aria-hidden="true"><i class="icon ion-ios-arrow-forward"></i></span>
+            <span class="sr-only">{{ 'collections.pagination.next' | t }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  {% else %}
+
+    <div v-if="collection.pagination.next" class="text-center">
+      <a :href="collection.pagination.next.url" rel="nofollow" class="btn btn-primary text-white" @click.prevent="_loadMore($event)">
+        {{ 'collections.pagination.more' | t }}
+      </a>
+    </div>
+    <div v-else class="text-center mt-4">
+      {{ 'collections.pagination.all_loaded' | t }}
+    </div>
+
+  {% endif %}
+</template>

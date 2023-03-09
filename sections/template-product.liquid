@@ -1,0 +1,226 @@
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+{% assign show_vendor = section.settings.show_vendor %}
+{% assign addons_enabled = section.settings.enable_product_addons %}
+{% assign addons_type = section.settings.addons_type %}
+{% assign enable_color_swatches = settings.enable_color_swatches %}
+{% assign enable_size_swatches = settings.enable_size_swatches %}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-template="product"
+  data-product-template="classic-horizontal"
+  data-enable-history-state="true"
+  class="{% if product.has_only_default_variant %}only-default-variant{% endif %}">
+
+  {% include 'template-product-classic-horizontal' %}
+
+  {% if section.settings.enable_related_products %}
+    {% include 'block-related-products' %}
+  {% endif %}
+
+  {% unless product == empty %}
+  <script type="application/json" data-product-json>
+  {
+    "product": {{ product | json }},
+    "options_with_values": {{ product.options_with_values | json }}
+  }
+  </script>
+  {% endunless %}
+</div>
+
+<style>
+  #pills-tabContent #pills-desc p img, .article-body .captioned-image img {
+   	width: auto !important;
+  }
+</style>
+
+<!-- Shopper Approved Product Page Stars and Review Widget Code - sections/template-product.liquid -->
+<script type="text/javascript"> var sa_products_count = 3; var sa_date_format = 'F j, Y'; var sa_product = '{{ product.id }}'; (function(w,d,t,f,o,s,a){ o = 'shopperapproved'; if (!w[o]) { w[o] = function() { (w[o].arg = w[o].arg || []).push(arguments) }; s=d.createElement(t), a=d.getElementsByTagName(t)[0];s.async=1;s.src=f;a.parentNode.insertBefore(s,a)} })(window,document,'script',"//www.shopperapproved.com/product/30192/"+sa_product+".js"); </script>
+<style>
+    #product_page div {
+        line-height: 1.6 !important;
+    }
+
+    #review_header .overall { 
+        vertical-align: -43px; 
+    }    
+
+    @media screen and (max-width: 960px) {
+        #review_header {
+            text-align: center;
+        }
+        #review_image .sa_logo {
+            margin-top: 45px !important;
+            float: unset;
+            margin-left: 10px;
+        }
+    }
+</style>
+<!-- END Shopper Approved Product Page Stars and Review Widget Code - sections/template-product.liquid -->
+
+
+{% schema %}
+  {
+    "name": "Product Template",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Features"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "label": "Show Vendor?",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Warrenty Faqs"
+      },
+      {
+        "type": "text",
+        "id": "warrant_txt",
+        "label": "Text",
+        "default": "Questions about the product protection?"
+      },
+      {
+        "type": "text",
+        "id": "warrant_link_txt",
+        "label": "Link Text",
+        "default": "Warranty FAQs"
+      },
+      {
+        "type": "url",
+        "id": "warranty_url",
+        "label": "Choose Link URL"
+      },
+      {
+        "type": "header",
+        "content": "Claims Icon Base on Product tag"
+      },
+      {
+        "type": "image_picker",
+        "id": "replacement_id",
+        "label": "replacement icon"
+      },
+      {
+        "type": "url",
+        "id": "replacement_id_URL",
+        "label": "replacement icon SVG"
+      },
+      {
+        "type": "text",
+        "id": "replacementText",
+        "label": "Label- Replacement",
+        "default": "Item has a replacement"
+      },
+      {
+        "type": "image_picker",
+        "id": "repair_id",
+        "label": "repair icon"
+      },
+      {
+        "type": "url",
+        "id": "repair_id_URL",
+        "label": "repair icon SVG"
+      },
+      {
+        "type": "text",
+        "id": "repairText",
+        "label": "Label- Repairable",
+        "default": "Repairable Item"
+      },
+      {
+        "type": "image_picker",
+        "id": "Similar_id",
+        "label": "Similar icon"
+      },
+      {
+        "type": "url",
+        "id": "Similar_id_URL",
+        "label": "Similar icon SVG"
+      },
+      {
+        "type": "text",
+        "id": "SimilarText",
+        "label": "Label- Similar",
+        "default": "Similar item(s) available"
+      },
+      {
+        "type": "header",
+        "content": "Question & Answer"
+      },
+      {
+        "type": "text",
+        "id": "QnA_heading",
+        "label": "Heading",
+        "default": "Lorem Ipsum Sit Dolomet?"
+      },
+     {
+       "type": "textarea",
+       "id": "QnA_lead",
+       "label": "Lead text",
+       "default": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+     },
+      {
+        "type": "header",
+        "content": "Related Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_related_products",
+        "label": "Enabled?"
+      },
+      {
+        "type": "text",
+        "id": "related_products_heading_txt",
+        "label": "Heading Text",
+        "default": "Related Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "related_products_nav_arrows",
+        "label": "Arrows Navigation",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "related_products_nav_dots",
+        "label": "Dots Navigation",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "free-shipping",
+        "name": "Free Shipping",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "shipping_icon",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "shipping_title",
+            "label": "Enter Shipping Text"
+          },
+          {
+            "type": "url",
+            "id": "shipping_url",
+            "label": "URL"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+
+{% javascript %}
+{% endjavascript %}
+
+{% stylesheet 'scss' %}
+{% endstylesheet %}

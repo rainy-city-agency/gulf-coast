@@ -1,0 +1,160 @@
+<script type="text/javascript" defer>
+  window.onload = function(){
+    let trekieeJSData = '{{ TrekieeJS[0] }}';
+    var trekieeJS = document.createElement( 'script' );
+    trekieeJS.innerHTML = trekieeJSData;
+    trekieeJS.class = 'analytics';
+    trekieeJS.defer = 'analytics';
+    document.body.appendChild(trekieeJS);
+
+   
+    // App Js which are removed from content_for_header
+    let urlData = '{{urlData[0]}}';
+    urlData = urlData.replace('"https://formbuilder.hulkapps.com/skeletopapp.js?shop=gulfcoastavionics.myshopify.com",',''); 
+    urlData = urlData.replace('"//secure.apps.shappify.com/apps/bundle/generate_bundle.php?shop=gulfcoastavionics.myshopify.com",',''); 
+    urlData = urlData.replace('"//bundles.boldapps.net/bundles_install_check.js?shop=gulfcoastavionics.myshopify.com",',''); 
+    urlData = urlData.replace('"https://brain-assets.boldapps.net/js/analytics.js?shop=gulfcoastavionics.myshopify.com",',''); 
+    urlData = urlData.replace('"https://brain-assets.boldapps.net/js/widget.js?shop=gulfcoastavionics.myshopify.com",',''); 
+    urlData = urlData.replace('"https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=V6a7Bg&shop=gulfcoastavionics.myshopify.com",','');
+    urlData = urlData.replace('"//www.searchanise.com/widgets/shopify/init.js?a=2H7q6x3o2h&shop=gulfcoastavionics.myshopify.com",',''); 
+    urlData = urlData.replace('"https://services.nofraud.com/js/device.js?shop=gulfcoastavionics.myshopify.com",',''); // yet to include
+    urlData = urlData.replace(',"https://cdn.joinclyde.com/scripts/shopify-storefront.min.js?shop=gulfcoastavionics.myshopify.com"',''); 
+    urlData = urlData.split(',');
+    
+    for (i = 0; i < urlData.length; i++) {
+      var linkUrl = urlData[i].replace(/"/g,'');
+      var scriptEle = document.createElement( 'script');
+      scriptEle.defer = true;
+      scriptEle.setAttribute( 'src', linkUrl );
+      document.head.appendChild(scriptEle);
+    }
+    
+    {% if template.name == 'product' %}
+    
+    var generateBundleJS = document.createElement( 'script');
+    generateBundleJS.setAttribute( 'src', '//secure.apps.shappify.com/apps/bundle/generate_bundle.php?shop=gulfcoastavionics.myshopify.com' );
+    generateBundleJS.defer = true;
+    document.body.appendChild(generateBundleJS);
+    
+    var bundleIntallJS = document.createElement( 'script');
+    bundleIntallJS.setAttribute( 'src', '//bundles.boldapps.net/bundles_install_check.js?shop=gulfcoastavionics.myshopify.com' );
+    bundleIntallJS.defer = true;
+    document.body.appendChild(bundleIntallJS);
+    
+    var boldAnalyticsJS = document.createElement( 'script');
+    boldAnalyticsJS.setAttribute( 'src', 'https://brain-assets.boldapps.net/js/analytics.js?shop=gulfcoastavionics.myshopify.com' );
+    boldAnalyticsJS.defer = true;
+    document.body.appendChild(boldAnalyticsJS);
+    
+    var boldWidgetJS = document.createElement( 'script');
+    boldWidgetJS.setAttribute( 'src', 'https://brain-assets.boldapps.net/js/widget.js?shop=gulfcoastavionics.myshopify.com' );
+    boldWidgetJS.defer = true;
+    document.body.appendChild(boldWidgetJS);
+    
+    var joinclydeJS = document.createElement( 'script');
+    joinclydeJS.setAttribute( 'src', 'https://cdn.joinclyde.com/scripts/shopify-storefront.min.js?shop=gulfcoastavionics.myshopify.com' );
+    joinclydeJS.defer = true;
+    document.body.appendChild(joinclydeJS);
+    
+    {% endif %}
+    
+    
+    {% if template.name != 'collection' or template.name != 'product' or template.name != 'index' %}
+    var formBuilderJS = document.createElement( 'script');
+    formBuilderJS.setAttribute( 'src', 'https://formbuilder.hulkapps.com/skeletopapp.js?shop=gulfcoastavionics.myshopify.com' );
+    formBuilderJS.defer = true;
+    document.body.appendChild(formBuilderJS);
+    {% endif %}
+    
+    {% if settings.enable_google_translator %}
+    let paymentLoaded = false;
+    const addTranslationScript = setInterval(function(){
+      const checkoutButtons = document.getElementById('dynamic-checkout-cart');
+      if(checkoutButtons) paymentLoaded = true;
+      if(paymentLoaded == true){        
+        var scriptT = document.createElement( 'script');
+        scriptT.setAttribute( 'src', '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' );
+        document.body.appendChild(scriptT);
+        clearInterval(addTranslationScript);
+      }     
+    }, 500);
+
+    setTimeout(function(){
+      paymentLoaded = true;
+    }, 5000);
+    {% endif %}    
+     
+//     var googletagmanagerJS = document.createElement( 'script');
+//     googletagmanagerJS.setAttribute( 'src', 'https://www.googletagmanager.com/gtag/js?id=UA-6942649-1' );
+//     googletagmanagerJS.defer = true;
+//     document.body.appendChild(googletagmanagerJS);
+    
+//      var googletagmanagerJS = document.createElement( 'script');
+//     googletagmanagerJS.setAttribute( 'src', 'https://www.googletagmanager.com/gtag/js?id=1008185437' );
+//     googletagmanagerJS.defer = true;
+//     document.body.appendChild(googletagmanagerJS);
+
+    var googletagmanager1JS = document.createElement( 'script');
+    googletagmanager1JS.setAttribute( 'src', 'https://www.googletagmanager.com/gtag/js?id=G-FRLLY4GE4J' );
+    googletagmanager1JS.defer = true;
+    document.body.appendChild(googletagmanager1JS);
+
+    var fontawesomeJS = document.createElement( 'script');
+    fontawesomeJS.setAttribute( 'src', 'https://kit.fontawesome.com/5f87502aca.js' );
+    fontawesomeJS.defer = true;
+    document.body.appendChild(fontawesomeJS);
+        
+    var webfontJS = document.createElement( 'script');
+    webfontJS.setAttribute( 'src', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js' );
+    webfontJS.defer = true;
+    document.body.appendChild(webfontJS);
+                                 
+    {% if  page.handle == 'avionics-installations' %}
+    var avionicsJS = document.createElement( 'script' );
+    avionicsJS.setAttribute( 'src', 'https://code.jquery.com/jquery-3.2.1.js' );
+    avionicsJS.defer = true;
+    avionicsJS.crossorigin = true
+    document.body.appendChild(avionicsJS);
+    {% endif %}
+    
+    {% if template.name == 'collection' or template.name == 'search' %}
+    var searchaniseJS = document.createElement( 'script' );
+    searchaniseJS.setAttribute( 'src', '//www.searchanise.com/widgets/shopify/init.js?a=2H7q6x3o2h' );
+    searchaniseJS.defer = true;
+    searchaniseJS.id="searchnizeLoad"
+    searchaniseJS.crossorigin = true
+    document.body.appendChild(searchaniseJS);
+    {% else %}
+      $("#searchInput_mobile" ).keypress(function() {
+        
+        if($("#searchnizeLoad").length == 0){
+          
+           var searchaniseOnloadJS = document.createElement( 'script' );
+          searchaniseOnloadJS.setAttribute( 'src', '//www.searchanise.com/widgets/shopify/init.js?a=2H7q6x3o2h' );
+          searchaniseOnloadJS.defer = true;
+          searchaniseOnloadJS.id="searchnizeLoad"
+          searchaniseOnloadJS.crossorigin = true
+          document.body.appendChild(searchaniseOnloadJS);
+        }
+      });
+    {% endif %}
+
+    {% if template.name == 'product' %}
+    var bundleJS = document.createElement( 'script' );
+    bundleJS.setAttribute( 'src', 'https://bundles.boldapps.net/js/bundles.js' );
+    bundleJS.defer = true;
+    bundleJS.crossorigin = true
+    document.body.appendChild(bundleJS);
+
+    var boldcommerceJS = document.createElement( 'script' );
+    boldcommerceJS.setAttribute( 'src', 'https://static.boldcommerce.com/bold-platform/sf/pr.js' );
+    boldcommerceJS.defer = true;
+    document.body.appendChild(boldcommerceJS);
+
+    {% endif %}
+  }
+</script>
+
+
+
+   

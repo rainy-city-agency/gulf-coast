@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "template_contentBlock": {
+      "type": "template-contentBlock",
+      "blocks": {
+        "30a98e96-52c1-4ea8-9536-62bc5714f92d": {
+          "type": "content",
+          "settings": {
+            "title": "General Content Block 1",
+            "choose_img": "shopify:\/\/shop_images\/aera795_250x_22a10043-eb4a-405d-bdb1-1d036ec07126.jpg",
+            "titleCaption": "Aircraft model",
+            "caption": "<p>Equipment Installed<\/p>\n<p>Gulf Coast Avionics is a leading supplier of avionics, pilot supplies and aircraft services. Since 1984 Gulf Coast Avionics has been providing quality merchandise from name brand manufacturers to keep pilots, aircraft owners and operators flying.<\/p>"
+          }
+        },
+        "44fcad88-c707-4e7b-8c65-112f522106d3": {
+          "type": "content",
+          "settings": {
+            "title": "General Content Block 2",
+            "choose_img": "shopify:\/\/shop_images\/gca-catalog-closeup_952b268b-09ba-455d-9e4c-7b9fc8ed1df4.png",
+            "titleCaption": "",
+            "caption": "<p>Gulf Coast Avionics is a leading supplier of avionics, pilot supplies and aircraft services. Since 1984 Gulf Coast Avionics has been providing quality merchandise from name brand manufacturers to keep pilots, aircraft owners and operators flying.<br><br>Our E-commerce Website and our annual Product Catalog are favorites among aviators around the world. With a comprehensive inventory developed to meet almost any avionics, instrument, or pilot supply need, you're sure to find what you want. You will find our prices unbeatable. We guarantee them to be the lowest in the industry!<\/p>"
+          }
+        },
+        "5c5c4d32-a51d-40a4-b5e5-c287ceebf104": {
+          "type": "content",
+          "settings": {
+            "title": "Reviews",
+            "titleCaption": "",
+            "caption": "<script type=\"text\/javascript\">\n      \/\/ <![CDATA[\n      var sa_review_count = 20; var sa_date_format = 'F j, Y'; function saLoadScript(src) \n      { var js = window.document.createElement(\"script\"); js.src = src; \n      js.type = \"text\/javascript\"; document.getElementsByTagName(\"head\")[0].appendChild(js); } \n      saLoadScript('\/\/www.shopperapproved.com\/merchant\/30192.js');\n      \/\/ ]]>\n      <\/script>\n      <div id=\"review_header\"><\/div>\n      <div id=\"merchant_page\"><\/div>\n      <div id=\"review_image\">\n        <a href=\"http:\/\/www.shopperapproved.com\/reviews\/yourstoreURL.com\/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"><\/a>\n      <\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "30a98e96-52c1-4ea8-9536-62bc5714f92d",
+        "44fcad88-c707-4e7b-8c65-112f522106d3",
+        "5c5c4d32-a51d-40a4-b5e5-c287ceebf104"
+      ],
+      "settings": {
+        "Mainheading": "Content Blocks"
+      }
+    }
+  },
+  "order": [
+    "template_contentBlock"
+  ]
+}

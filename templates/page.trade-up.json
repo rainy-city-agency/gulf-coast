@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "template_trade_up": {
+      "type": "template-trade-up",
+      "blocks": {
+        "headsets": {
+          "type": "headsets",
+          "settings": {
+            "title": "Lightspeed ANR Headsets",
+            "image": "shopify:\/\/shop_images\/tradeup-dconex.jpg",
+            "specification1": "ZULU (Original) Battery Power w\/Dual GA Plugs",
+            "price1": "$300",
+            "specification2": "ZULU.2 Battery Power w\/Dual GA Plugs",
+            "price2": "$400",
+            "specification3": "ZULU.2 Lemo \/ Panel Powered",
+            "price3": "$300",
+            "note": ""
+          }
+        },
+        "6e4e9385-1fed-44a9-bf74-8196fb600a02": {
+          "type": "headsets",
+          "settings": {
+            "title": "David Clark Headets",
+            "image": "shopify:\/\/shop_images\/ezgif-3-749e91241f06.jpg",
+            "specification1": "DC Pro X Battery Power w\/Dual GA Plugs",
+            "price1": "$250",
+            "specification2": "DC Pro X Lemo \/ Panel Power",
+            "price2": "$200",
+            "specification3": "DC One X Battery Power w\/Dual GA Plugs",
+            "price3": "$450",
+            "note": "If your trade-in headset is not listed above, please call us. We will make an offer on most David Clark and Telex headsets."
+          }
+        }
+      },
+      "block_order": [
+        "headsets",
+        "6e4e9385-1fed-44a9-bf74-8196fb600a02"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/plane-cockpit_1200x_391b1e71-3645-4f6a-8721-61fb932ade96.jpg",
+        "heading": "Headset Trade-up Program",
+        "content": "Pacific Coast Avionics Headset Trade-Up Program allows the trade-in of a working headset\n                towards the purchase of a new headset with a value of $650 or higher. The used headset must be in good\n                working order with no exposed wires, cracks, obvious damage, or engravings, and original ear seals in\n                good condition. Any costs involved in repairing the headset or replacing ear seals will reduce the\n                trade-in value. Any non-repairable or unacceptable headset will be returned.",
+        "step1": "Purchase your new headset either online\n                    or by calling <span id=\"spnPhone1\">800-474-9714<\/span>.",
+        "step2": "If you’re calling in your order, let the\n                    sales representative know you are trading in a headset, and a Return Authorization will be provided\n                    you to send with the trade-in. If ordering online, please call Customer Service at <span id=\"spnPhone2\">863-709-9714<\/span> to obtain the Return Authorization.",
+        "step3": "Once we have received, checked out the\n                    headset, and verified the headset is acceptable, we will either issue a credit to the same credit\n                    card used for the new headset purchase, or we will mail a check.",
+        "content2": "Call Customer Service for a Return Authorization and send that with the headset. Once the headset\n                has been received and evaluated, you will receive a telephone call from our Sales Dept to help\n                you place your order for the new headset minus the trade-in value."
+      }
+    }
+  },
+  "order": [
+    "template_trade_up"
+  ]
+}

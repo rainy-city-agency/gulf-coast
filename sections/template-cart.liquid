@@ -1,0 +1,43 @@
+<section
+  data-section-id="{{ section.id }}"
+  data-template="cart"
+  data-cart-ajaxed="true">
+  <div class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-left">
+          <h1 class="text-uppercase f-teko text-uppercase h2 mb-4">{{ 'cart.general.title' | t }}</h1>
+        </div>
+      </div>
+      <template v-if="cart.item_count > 0">
+        {% include 'template-cart-ajaxed-classic' %}
+      </template>
+      <div v-if="cart.item_count == 0" class="row">
+        <div class="col-12 text-center">
+          <p class="">{{ 'cart.general.empty' | t }}</p>
+          {% if section.settings.show_back_btn %}
+          <a href="/collections/all" class="btn btn-primary text-uppercase">{{ 'cart.general.continue_browsing' | t }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Cart Template",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Template"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_back_btn",
+        "label": "Show Back to Shop Button?",
+		    "default": true
+      }
+    ]
+  }
+{% endschema %}

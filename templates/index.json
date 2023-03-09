@@ -1,0 +1,563 @@
+{
+  "sections": {
+    "1646369203271046f3": {
+      "type": "index-hero",
+      "disabled": true,
+      "blocks": {
+        "003506fe-c6f9-481b-b348-48d2b6259b30": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/POSTER_2022_FRLA-3.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/POSTER_2022_FRLA-3.jpg",
+            "alignment": "text-center",
+            "heading": "Sun n Fun Expo   2022 April  5th - 10th",
+            "caption": "Come see us in Building D, Booth D30-33",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "shop all",
+            "btn_link": "shopify:\/\/collections",
+            "btn_txt2": "catalog",
+            "btn_link2": "shopify:\/\/pages\/free-catalog",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "98296f72-dd2c-4117-8622-6bb0925121ce": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/D2_Mach_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/D2_Mach_1.jpg",
+            "alignment": "text-center",
+            "heading": "Garmin D2 Mach 1",
+            "caption": "Accelerate the adventure with Garmin's new Smartwatch!",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "Learn More",
+            "btn_link": "https:\/\/www.gulfcoastavionics.com\/products\/d2-mach-1-gps-aviator-smartwatch?variant=41616363487409",
+            "btn_txt2": "Catalog",
+            "btn_link2": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "563488ca-3312-46e0-b0ce-4073c1299212": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Charlie_Rudder-small.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Charlie_Rudder-small.jpg",
+            "alignment": "text-center",
+            "heading": "Honeycomb Charlie Rudder Pedals",
+            "caption": "PRE-ORDER NOW!",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_txt2": "",
+            "btn_link2": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "a0f7dda9-435c-4266-a7ca-bbc60e14ec89": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/GCA-Holiday-Shipping-Slider-2022.jpg",
+            "image": "shopify:\/\/shop_images\/GCA-Holiday-Shipping-Slider-2022.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/GCA-Holiday-Shipping-Slider-500px-2022.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_txt2": "",
+            "btn_link2": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "overlay_pattern_img": "none"
+          }
+        }
+      },
+      "block_order": [
+        "003506fe-c6f9-481b-b348-48d2b6259b30",
+        "98296f72-dd2c-4117-8622-6bb0925121ce",
+        "563488ca-3312-46e0-b0ce-4073c1299212",
+        "a0f7dda9-435c-4266-a7ca-bbc60e14ec89"
+      ],
+      "settings": {
+        "enabled": true,
+        "nav_arrows": false,
+        "nav_dots": false,
+        "auto_play": 0
+      }
+    },
+    "index_slider": {
+      "type": "index-header-slider",
+      "blocks": {
+        "6eb38806-58e9-4718-bd2f-5dc2026651bd": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/GCA-Holiday-Shipping-Slider-2022.jpg",
+            "image": "shopify:\/\/shop_images\/GCA-Holiday-Shipping-Slider-2022.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/GCA-Holiday-Shipping-Slider-500px-2022.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.1,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "58d6863b-128b-4dfc-bc3a-8b9b19b737d8": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/Garmin-Rebates-Banner.jpg",
+            "image": "shopify:\/\/shop_images\/Garmin-Rebates-Banner.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Garmin-Rebates-Banner-500px_869ca272-d9e4-4de0-b917-8b1298313301.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "https:\/\/www.gulfcoastavionics.com\/collections\/rebates-page",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.1,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "7eec8fee-bc34-4a95-8b0b-722816f14e8f": {
+          "type": "image",
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/Lightspeed-Delta-Zulu-Banner.jpg",
+            "image": "shopify:\/\/shop_images\/Lightspeed-Delta-Zulu-Banner.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Lightspeed-Delta-Zulu-Banner-500px.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "https:\/\/www.gulfcoastavionics.com\/products\/delta-zulu",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.1,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "7dc21519-255f-4956-a2d6-e8b9a4031437": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/Honeycomb-Banner.jpg",
+            "image": "shopify:\/\/shop_images\/Honeycomb-Banner.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Honeycomb-Banner-500px.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "https:\/\/www.gulfcoastavionics.com\/pages\/search-results-page?q=honeycomb",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.1,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "8647bd48-cdd4-492b-905c-8c17f5855635": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/BoseA20-Slider_c26cc0d9-2435-4434-b456-08b74127480d.jpg",
+            "image": "shopify:\/\/shop_images\/BoseA20-Slider_c26cc0d9-2435-4434-b456-08b74127480d.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/BoseA20-Slider-mobile_5660a61e-1ea1-4f9e-b159-9a8d38c76d58.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "shopify:\/\/collections\/bose",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "0abe03d1-39c9-4746-ba48-4be7ca575953": {
+          "type": "image",
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/Garmin-GI275-Slider_1.jpg",
+            "image": "shopify:\/\/shop_images\/Garmin-GI275-Slider_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Garmin-GI275-Slider-mobile_1.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "https:\/\/www.gulfcoastavionics.com\/pages\/search-results-page?q=garmin+gi+275",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "7ba670b0-bc55-4bbb-ba2c-42024e2b1375": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/Hurricane-Ian-Banner.jpg",
+            "image": "shopify:\/\/shop_images\/Hurricane-Ian-Banner.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Hurricane-Ian-Banner-500px.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "b72f14f4-5f72-4f0c-bc4c-f25edf3d631c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/Mach_1_Version_2.jpg",
+            "image": "shopify:\/\/shop_images\/Mach_1_Version_2.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/D2-Mach1-Banner-500px.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "https:\/\/www.gulfcoastavionics.com\/products\/d2-mach-1-gps-aviator-smartwatch?variant=41616363487409",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.1,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "cfbb6378-540f-43c9-a7dd-6cb98267eebd": {
+          "type": "image",
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/AV-30C-Banner.jpg",
+            "image": "shopify:\/\/shop_images\/AV-30C-Banner.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/AV-30C-Banner-500px.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "https:\/\/www.gulfcoastavionics.com\/collections\/featured-products\/products\/av-30-certified?variant=39418657767601",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.1,
+            "overlay_pattern_img": "none"
+          }
+        },
+        "c5e9749e-b2d0-435c-99d4-438ac1bf5872": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "ratina_image": "shopify:\/\/shop_images\/Hurricane-Ian-Banner.jpg",
+            "image": "shopify:\/\/shop_images\/Hurricane-Ian-Banner.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Hurricane-Ian-Banner-500px.jpg",
+            "alignment": "text-center",
+            "heading": "",
+            "caption": "",
+            "heading_txt_color": "",
+            "caption_txt_color": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.1,
+            "overlay_pattern_img": "none"
+          }
+        }
+      },
+      "block_order": [
+        "6eb38806-58e9-4718-bd2f-5dc2026651bd",
+        "58d6863b-128b-4dfc-bc3a-8b9b19b737d8",
+        "7eec8fee-bc34-4a95-8b0b-722816f14e8f",
+        "7dc21519-255f-4956-a2d6-e8b9a4031437",
+        "8647bd48-cdd4-492b-905c-8c17f5855635",
+        "0abe03d1-39c9-4746-ba48-4be7ca575953",
+        "7ba670b0-bc55-4bbb-ba2c-42024e2b1375",
+        "b72f14f4-5f72-4f0c-bc4c-f25edf3d631c",
+        "cfbb6378-540f-43c9-a7dd-6cb98267eebd",
+        "c5e9749e-b2d0-435c-99d4-438ac1bf5872"
+      ],
+      "settings": {
+        "enabled": true,
+        "nav_arrows": true,
+        "nav_dots": true,
+        "auto_play": 3,
+        "enable_section": true,
+        "ship_txt": "Over $250 = free ground shipping",
+        "cash_txt": "Get cash for used avionics",
+        "cash_link": "shopify:\/\/pages\/cash-for-used-avionics",
+        "current_txt": "Current Specials\/Rebates",
+        "current_link": "shopify:\/\/pages\/current-rebates",
+        "sales_txt": "",
+        "choose_catalog": "shopify:\/\/shop_images\/3931-GCA-Catalog-Mockup.png",
+        "catalog_title": "View our Online Catalog",
+        "catalog_link": "shopify:\/\/pages\/free-catalog"
+      }
+    },
+    "index_featured_collection": {
+      "type": "index-featured-collection",
+      "settings": {
+        "heading_txt": "Featured Products",
+        "lead_txt": "",
+        "home_featured_collection": "featured-products",
+        "section_bg_color": "#f5f5f5",
+        "section_txt_color": "#343a40"
+      }
+    },
+    "index_categories": {
+      "type": "index-categories",
+      "disabled": true,
+      "settings": {
+        "enable_section": true,
+        "choose_img1": "shopify:\/\/shop_images\/04.jpg",
+        "icon1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/ADS-B-icon.svg?v=1614161316",
+        "title1": "ADS-B",
+        "choose_url1": "shopify:\/\/collections\/ads-b",
+        "choose_img2": "shopify:\/\/shop_images\/05.jpg",
+        "icon2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/avionics-icon.svg?v=1614161413",
+        "title2": "Instruments",
+        "choose_url2": "shopify:\/\/collections\/instruments",
+        "choose_img3": "shopify:\/\/shop_images\/06.jpg",
+        "icon3": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/Kit-panels-icon.svg?v=1614161477",
+        "title3": "Kit Panels",
+        "choose_url3": "shopify:\/\/collections\/kit-panels",
+        "choose_img4": "shopify:\/\/shop_images\/07.jpg",
+        "icon4": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/GPS-icon.svg?v=1614161436",
+        "title4": "GPS",
+        "choose_url4": "shopify:\/\/collections\/gps",
+        "choose_img5": "shopify:\/\/shop_images\/08.jpg",
+        "icon5": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/handhelds-icon.svg?v=1614161442",
+        "title5": "Handhelds",
+        "choose_url5": "shopify:\/\/collections\/handhelds",
+        "choose_img6": "shopify:\/\/shop_images\/09.jpg",
+        "icon6": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/Install-icon.svg?v=1614161462",
+        "title6": "Installations<br>& Repairs",
+        "choose_url6": "shopify:\/\/collections\/installation-supplies",
+        "choose_img7": "shopify:\/\/shop_images\/10.jpg",
+        "icon7": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/headsets-icon.svg?v=1614161453",
+        "title7": "Headsets",
+        "choose_url7": "shopify:\/\/collections\/pilot-headsets-intercoms",
+        "choose_img8": "shopify:\/\/shop_images\/23.jpg",
+        "icon8": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/pilot-supplies-icon.svg?v=1614161501",
+        "title8": "Pilot Supplies",
+        "choose_url8": "shopify:\/\/collections\/pilot-supplies"
+      }
+    },
+    "logo_list_style_1": {
+      "type": "logo-list-style-1",
+      "blocks": {
+        "logo_content": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/24.jpg",
+            "logo_url": "shopify:\/\/collections\/garmin-avionics"
+          }
+        },
+        "7d030eb0-fb81-46c4-8a83-88e0d8f7044e": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/17.jpg",
+            "logo_url": "shopify:\/\/collections\/aspen-avionics"
+          }
+        },
+        "d266b80d-af69-4c64-ae3c-e54c86eca95e": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/18.jpg",
+            "logo_url": "shopify:\/\/collections\/appareo"
+          }
+        },
+        "b5619e09-8aba-4d65-9155-b292f60e3110": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/19.jpg",
+            "logo_url": "shopify:\/\/collections\/bendixking"
+          }
+        },
+        "53caca07-9795-4b4a-a773-2170b8154fce": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/20.jpg",
+            "logo_url": "shopify:\/\/collections\/jp-instruments"
+          }
+        },
+        "c2ebed8b-0732-4064-b503-819c3f083c7e": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/electronicsInternationalLogo_d16dbfae-dcae-496d-86bf-0d969df56ce2.png",
+            "logo_url": "shopify:\/\/collections\/electronics-international"
+          }
+        },
+        "770dbaf1-a22c-45ff-9e2a-c12059b14b1d": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/PSEng_Logo_Red_Black.png",
+            "logo_url": "shopify:\/\/collections\/ps-engineering"
+          }
+        },
+        "e36ac452-fa19-4d7d-93ed-14e39c05b3c5": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/uAvionix-Logo-1500x603_256x256_977c96a5-8c7d-4820-bb00-a5ad09831ee9.png",
+            "logo_url": "shopify:\/\/collections\/uavionix"
+          }
+        },
+        "607b2f45-cbfb-4e5a-adb7-f0c051688258": {
+          "type": "content",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/WAT-Logo-full-color-WEB.png",
+            "logo_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_content",
+        "7d030eb0-fb81-46c4-8a83-88e0d8f7044e",
+        "d266b80d-af69-4c64-ae3c-e54c86eca95e",
+        "b5619e09-8aba-4d65-9155-b292f60e3110",
+        "53caca07-9795-4b4a-a773-2170b8154fce",
+        "c2ebed8b-0732-4064-b503-819c3f083c7e",
+        "770dbaf1-a22c-45ff-9e2a-c12059b14b1d",
+        "e36ac452-fa19-4d7d-93ed-14e39c05b3c5",
+        "607b2f45-cbfb-4e5a-adb7-f0c051688258"
+      ],
+      "settings": {
+        "heading": "Manufacturers",
+        "collection_URL": "shopify:\/\/pages\/manufacturers",
+        "nav_arrows": true,
+        "nav_dots": false,
+        "auto_play": 0
+      }
+    },
+    "1646369532685439db": {
+      "type": "video-text",
+      "settings": {
+        "heading_txt": "Gulf Coast Avionics has been providing quality merchandise from name brand manufacturers to keep pilots, aircraft owners and operators flying.                           Best price & best service since 1984.",
+        "lead_txt": "Shop all",
+        "btnUrl": "",
+        "Video_URL": "",
+        "videoUrl": "https:\/\/www.youtube.com\/embed\/TCuYi7emaHM"
+      }
+    },
+    "1646369572bd1f87c2": {
+      "type": "index-featured-collection",
+      "disabled": true,
+      "settings": {
+        "heading_txt": "Best Sellers",
+        "lead_txt": "",
+        "home_featured_collection": "featured-products",
+        "section_bg_color": "#f8f9fa",
+        "section_txt_color": "#343a40"
+      }
+    },
+    "16463695867800ddd7": {
+      "type": "custom-review",
+      "blocks": {
+        "c19a1f7b-15ca-4b32-b8d3-a26360b0effb": {
+          "type": "Reviews",
+          "settings": {
+            "total_star": "5",
+            "image_id1": "shopify:\/\/shop_images\/244582987_4523934261002399_3173709400439014693_n.jpg",
+            "heading": "Fast shipping, best prices..!!!",
+            "name_place": "- DENNIS V. - CA",
+            "readmoreUrl": "https:\/\/www.shopperapproved.com\/reviews\/gulfcoastavionics.com\/"
+          }
+        },
+        "4a5d5410-db42-4ae6-9057-a64eb808d183": {
+          "type": "Reviews",
+          "settings": {
+            "total_star": "5",
+            "image_id1": "shopify:\/\/shop_images\/D2_Mach_1.jpg",
+            "heading": "I'm a `repeat offender` at Gulf Coast Avionics. They have always given me a good experience.",
+            "name_place": "- Timothy B. - Indiana",
+            "readmoreUrl": "https:\/\/www.shopperapproved.com\/reviews\/gulfcoastavionics.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "c19a1f7b-15ca-4b32-b8d3-a26360b0effb",
+        "4a5d5410-db42-4ae6-9057-a64eb808d183"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "1646369203271046f3",
+    "index_slider",
+    "index_featured_collection",
+    "index_categories",
+    "logo_list_style_1",
+    "1646369532685439db",
+    "1646369572bd1f87c2",
+    "16463695867800ddd7"
+  ]
+}

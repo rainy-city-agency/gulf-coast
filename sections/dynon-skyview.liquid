@@ -1,0 +1,375 @@
+{% if section.settings.enable %}
+    <section>
+        <div class="breadcrumb-img" {% if section.settings.banner_image != blank %} style="background-image: url({{ section.settings.banner_image | img_url:'master' }})" {% endif %} >
+            <div class="container">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb_Title">
+                        <h1>{{ section.settings.banner_title }}</h1>
+                        <h2>{{ section.settings.banner_heading }}</h2>
+                        <ul class="d-flex justify-content-center list-unstyled">
+                            {{ section.settings.banner_desc }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    
+    <section class="section-content">
+        <form action="/cart/add" method="post" data-skyview-form>
+                                        
+            <div class="container">
+                {% if section.settings.enable-header %}
+                <div class="row">
+                    <div class="col-lg-8 col-md-7">
+                        <p>{{ section.settings.html_desc }}</p>
+                    </div>
+                    <div class="col-lg-4 col-md-5">
+                        {% if section.settings.image != blank %}
+                            <img src="{{ section.settings.image | img_url:'original' }}" alt="dynon"/>
+                        {% else %}
+                            <img src="https://sarasotaavionics.com/images/SKYVIEW-TOP.jpg" />
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+                <div class="product_view">
+                    {% assign count = 0 %}
+                    {% for block in section.blocks %}
+                        <div class="product_step mb-5">
+                            <h3>{{ block.settings.heading }}</h3>
+                            
+                            {% for collection_menu in linklists[block.settings.link].links %}
+                                <div class="infobox mb-4">
+                                    <div class="row m-0">
+                                        <div class="col-12 d-flex align-items-center bg-primary py-3">
+                                            <i class="fa fa-hand-o-up pr-5 text-white"></i>
+                                            <h4 class="m-0 text-white">{{ collection_menu.title }}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        {% comment %}
+                                        <div class="col-md-2 mb-md-0 mb-4">
+                                            {% if collection_menu.url != "#" %}
+                                                <img src="{{ collection_menu.url }}" class="w-100" />
+                                            {% else %}
+                                                <img src="http://sarasotaavionics.com/images/productimages/DYNON/skyviewhdx10.png" class="w-100" />
+                                            {% endif %}
+                                        </div>
+                                        {% endcomment %}
+                                        <div class="col-md-12">
+                                            <div class="d-md-block d-none">
+                                                <div class="d-flex pb-3 mb-3 border-bottom justify-content-between">
+                                                    <div class="col-xs-12 col-sm-2 px-lg-3 px-0"> Part Number </div>
+                                                    <div class="col-xs-12 col-lg-5 col-md-4 px-lg-3 px-0">Description</div>
+                                                    <div class="col-xs-12 col-lg-1 col-md-2 px-lg-3 px-0"> Price </div>
+                                                    <div class="col-xs-12 col-sm-2 px-lg-3 px-0 text-center"> Adjust Qty </div>
+                                                    <div class="col-xs-12 col-sm-1 px-lg-3 px-0 text-center d-lg-block d-none"> Qty
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-1 px-lg-3 px-0 text-center"> Subtotal </div>
+                                                </div>
+                                                
+                                                {% for link in collection_menu.links %}
+                                                    
+                                                    {% for variant in link.object.variants %}
+                                                        {% assign count = count | plus:1 %}
+                                                        <div class="grouping mb-5" data-closest>
+                                                            <div class="d-flex align-items-center justify-content-between product">
+                                                                <div class="col-xs-12 col-sm-2">
+                                                                    <a href="{{ variant.url }}" target="_blank" class="part-number" data-sku>{{ variant.sku | remove: "-HDX" }}</a>
+                                                                </div>
+                                                                <div class="col-xs-12 col-lg-5 col-md-4 description" data-title='{{link.title}}-{{variant.title}}'>
+                                                                    {{ link.title }}
+                                                                </div>
+                                                                <div class="col-xs-12 col-lg-1 col-md-2 price" data-price="{{ variant.price }}">
+                                                                    {{ variant.price | money }}
+                                                                </div>
+                                                                
+                                                                <input data-input type="hidden" value="{{ variant.id }}" name="items[{{ count }}][id]" disabled>
+                                                                
+                                                                <div class="col-xs-12 col-sm-2 text-center data-qty-container">
+                                                                    <div data-qty-container="" class="quantity-wrapper" {% unless variant.available %}style="opacity: 0.2;pointer-events: none;"{% endunless %}>
+                                                                        <div class="input-group input-group-sm justify-content-center">
+                                                                            <div class="input-group-prepend">
+                                                                                <a href="#" rel="nofollow" aria-label="Decrease"
+                                                                                    title="Decrease" data-qty-decrease @click.prevent="_updateQtyNew($event)"
+                                                                                    class="input-group-text bg-transparent px-2 py-1 decrease w-auto h-auto">
+                                                                                    <span class="btn-decrease">
+                                                                                        <i aria-hidden="true"
+                                                                                            class="fas fa-minus font-size-sm"></i>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </div>
+    
+                                                                            <input type="number" name="items[{{ count }}][quantity]" aria-label="quantity" step="1" value="0"
+                                                                                min="1" inputmode="numeric" data-qty-input="" data-id="{{ variant.id }}"
+                                                                                readonly="readonly" :data-cart-limit="product.cart_limit" disabled="disabled"
+                                                                                    data-default-variant-id="{{ variant.id }}"
+                                                                                class="d-none quantity form-control h-auto font-size-base font-weight-semibold text-center border-left-0 input-group-text border-right-0 bg-transparent px-2">
+                                                                            
+                                                                            <div class="input-group-append">
+                                                                                <a href="#" rel="nofollow" aria-label="Increase"
+                                                                                    title="Increase" data-qty-increase @click.prevent="_updateQtyNew($event)"
+                                                                                    class="input-group-text bg-transparent px-2 py-1 increase w-auto h-auto">
+                                                                                    <span class="btn-increase">
+                                                                                        <i aria-hidden="true"
+                                                                                            class="fas fa-plus font-size-sm"></i>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-12 col-sm-1 text-center d-lg-block d-none quantity">
+                                                                    <span class="totalquantity" data-quantity>0</span>
+                                                                </div>
+                                                                <div class="col-xs-12 col-sm-1 text-center">
+                                                                    <span class="subtotal" data-subtotal>$0.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                {% endfor %}
+                                            </div>
+    
+                                            <div class="d-md-none d-block">
+                                            {% for link in collection_menu.links %}
+    
+                                                {% for variant in link.object.variants %}
+                                                    {% assign count = count | plus:1 %}
+                                                    <div data-closest>
+                                                        <div class="d-flex justify-content-between mb-3 align-items-center">
+                                                            <div> Part Number </div>
+                                                            <div><a href="{{ variant.url }}" target="_blank" class="part-number" data-sku>{{ variant.sku | remove: "-HDX" }}</a></div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between mb-3 align-items-center" data-title='{{link.title}}-{{variant.title}}'>
+                                                            <div> Touchscreen Displays </div>
+                                                            <div class="text-center">{{ link.title }}</div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between mb-3 align-items-center"  data-price="{{ variant.price }}">
+                                                            <div> Price </div>
+                                                            <div>{{ variant.price | money }}</div>
+                                                        </div>
+    
+                                                        <input data-input type="hidden" value="{{ variant.id }}" name="items[{{ count }}][id]" disabled>
+    
+                                                        <div class="d-flex justify-content-between mb-3 align-items-center" data-qty-container>
+                                                            <div> Adjust Qty </div>
+                                                            <div class="data-qty-container">
+                                                                <div data-qty-container="" class="quantity-wrapper" {% unless variant.available %}style="opacity: 0.2;pointer-events: none;"{% endunless %}>
+                                                                    <div class="input-group input-group-sm justify-content-center">
+                                                                    
+                                                                        <div class="input-group-prepend">
+                                                                            <a href="#" rel="nofollow" aria-label="Decrease" title="Decrease"
+                                                                                data-qty-decrease @click.prevent="_updateQtyNew($event)"
+                                                                                class="input-group-text bg-transparent px-2 py-1 decrease w-auto h-auto">
+                                                                                <span class="btn-decrease">
+                                                                                    <i aria-hidden="true" 
+                                                                                        class="fas fa-minus font-size-sm"></i>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+    
+                                                                        <input type="number" name="items[{{ count }}][quantity]" aria-label="quantity" step="1" value="0" data-quantity
+                                                                            min="1" inputmode="numeric" data-qty-input="" data-id="{{ variant.id }}"
+                                                                            readonly="readonly" :data-cart-limit="product.cart_limit" disabled="disabled"
+                                                                            data-default-variant-id="{{ variant.id }}"
+                                                                            class="quantity form-control h-auto font-size-base font-weight-semibold text-center border-left-0 input-group-text border-right-0 bg-transparent px-2">
+                                                                            
+                                                                        <div class="input-group-append">
+                                                                            <a href="#" rel="nofollow" aria-label="Increase" title="Increase"
+                                                                                data-qty-increase @click.prevent="_updateQtyNew($event)"
+                                                                                class="input-group-text bg-transparent px-2 py-1 increase w-auto h-auto">
+                                                                                <span class="btn-increase">
+                                                                                    <i aria-hidden="true" 
+                                                                                        class="fas fa-plus font-size-sm"></i>
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+    
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="d-flex justify-content-between mb-3 align-items-center">
+                                                            <div> Subtotal </div>
+                                                            <div data-subtotal>$0.00</div>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="d-flex justify-content-between flex-column flex-sm-row">
+                    <button class="btn btn-primary d-block mb-3 mb-sm-0"  @click.prevent="_divRequestQuote()">
+                        Request a quote
+                    </button>
+                    <button class="btn btn-primary d-block" type="submit" name="add" @click.prevent="_addToCartNew($event)">
+                        <template v-if="isLoading && loadingEvent == 'cartAdding'">
+                            <span class="d-flex align-items-center justify-content-center"><span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span> <span>{{ 'general.wait' | t }}</span></span>
+                        </template>
+                        <template v-else>
+                            <i aria-hidden="true" class="fas fa-shopping-cart pr-1"></i> Add to Cart
+                        </template>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </section>
+    
+    
+    
+    <section class="section-content d-none" style="padding: 0px 0px 5rem;" data-request-quote>
+        <div class="container">
+            <div class="col-md-12 mb-4">
+                <h3>Request a Quote</h3>
+                <span>After selecting the items above that your are interested in, please fill out the
+                    information below and hit "Submit". One of our sales consultants will put together
+                    a quote customized for your aircraft.</span>
+    
+                <form class="sky_from pt-4 request_quote_form" id="formRequestQuote" enctype="multipart/form-data" id="g08Nt83EuthFFuvLAzko1g" data-token="29e390d90b7cfba1">
+                    <div class="d-md-flex mb-3">
+                        <div class="col-lg-3 col-md-6 col-12 px-0 pb-md-0 pb-2" data-closest-1>
+                            <label class="fitText block_label" style="display: block;">First Name</label>
+                            <input name="firstname" type="text" id="firstname" class="form-control required-field">
+                            <div data-error></div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 px-0 pb-md-0 pb-2" data-closest-1>
+                            <label class="fitText block_label" style="display: block;">Last Name</label>
+                            <input name="lastname" type="text" id="lastname" class="form-control required-field">
+                            <div data-error></div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 px-0 pb-md-0 pb-2" data-closest-1>
+                            <label class="fitText block_label" style="display: block;">Phone:</label>
+                            <input name="phone" type="text" id="phone" class="form-control">
+                            <div data-error></div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 px-0 pb-md-0 pb-2" data-closest-1>
+                            <label class="fitText block_label" style="display: block;">Email</label>
+                            <input name="email" type="email" id="email" class="form-control required-field">
+                            <div data-error></div>
+                        </div>
+                    </div>
+                    <div class="d-md-flex mb-3">
+                        <div class="col-md-6 px-0 pb-md-0 pb-2" data-closest-1>
+                            <label class="fitText block_label" style="display: block;">Aircraft Type:</label>
+                            <input name="aircraft" type="text" id="aircraft" class="form-control">
+                            <div data-error></div>
+                        </div>
+                        <div class="col-md-6 px-0 pb-md-0 pb-2" data-closest-1>
+                            <label class="fitText block_label" style="display: block;">When are you planning to install the
+                                equipment?:</label>
+                            <input name="planning" type="text" id="planning" class="form-control">
+                            <div data-error></div>
+                        </div>
+                    </div>
+                    <div class="d-md-flex mb-3">
+                        <div class="col-12 px-0 pb-md-0 pb-2" data-closest-1>
+                            <label class="fitText block_label" style="display: block;">Questions / Comments:</label>
+                            <textarea name="comments" rows="2" cols="20" id="comments"
+                                class="form-control"></textarea>
+                            <div data-error></div>
+                        </div>
+                    </div>
+                    <div class="col-12 px-0">
+                        <button id="service_btn" type="button" class="btn btn-primary d-block">Submit</button>
+    
+                        <h4 id="success-msg" class="d-none mt-3">Request submitted successfully!</h4>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    {% schema %}
+      {
+        "name": "Dynon Template",
+        "settings": [
+            {
+              "type": "header",
+              "content": "Banner"
+            },
+            {
+              "type": "checkbox",
+              "id": "enable",
+              "label": "Enabled?",
+              "default": true
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_image",
+                "label": "Choose an image"
+            },
+            {
+                "type": "text",
+                "id": "banner_title",
+                "label": "Banner Title",
+                "default": "Dynon Skyview Order Worksheet"
+            },
+            {
+                "type": "text",
+                "id": "banner_heading",
+                "label": "Banner Heading",
+                "default": "Build Your Custom Dynon Skyview Panel"
+            },
+            {
+                "type": "html",
+                "id": "banner_desc",
+                "label": "Banner Description",
+                "default": "<li>Dynon Skyview Order Worksheet</li>"
+            },
+            {
+              "type": "header",
+              "content": "Layout"
+            },
+            {
+              "type": "checkbox",
+              "id": "enable-header",
+              "label": "Enabled?",
+              "default": false
+            },
+            {
+                "type": "html",
+                "id": "html_desc",
+                "label": "Description",
+                "default": "Use the worksheet below to compile a list of the components that you need to get the features and capabilities you're looking for in your Dynon Skyview system. Once you have selected all of the items, submit a request at the bottom of the page and we will provide you with a comprehensive quote including a discount based on the package as a whole."
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Choose an image"
+            }
+        ],
+        "blocks": [
+          {
+            "type": "category",
+            "name": "Collection",
+            "settings": [
+              {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading"
+              },
+              {
+                "type": "link_list",
+                "id": "link",
+                "label": "Menu for collection"
+              }
+            ]
+          }
+        ]
+      }
+    {% endschema %}
+    

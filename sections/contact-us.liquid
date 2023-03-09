@@ -1,0 +1,352 @@
+{%- if section.settings.image != blank -%}
+<div class="page-banner">
+    <img
+    data-sizes="auto"
+    src="{{ section.settings.image | img_url: 'small'}}"
+    data-srcset=" 
+      {{ section.settings.image | img_url: '768x' }} 567w,
+      {{ section.settings.image | img_url: '992x' }} 768w,
+      {{ section.settings.image | img_url: '1200x' }} 992w,
+      {{ section.settings.image | img_url: '1920x' }} 1200w,
+      {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+      {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+      {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+      "
+    class="lazyload mw-100 img-wrapper d-none d-sm-block" alt="{{ page.title | escape }}" />
+    {%- if section.settings.image_mobile != blank -%}
+    <img
+        data-sizes="auto"
+        src="{{ section.settings.image_mobile | img_url: 'pico'}}"
+        data-src="{{ section.settings.image_mobile | img_url: '575x' }}"
+        class="mw-100 img-wrapper lazyload d-sm-none" alt="{{ page.title | escape }}" />
+    {%- else -%}
+    <img
+        data-sizes="auto"
+        src="{{ section.settings.image | img_url: 'pico'}}"
+        data-src="
+        {{ section.settings.image | img_url: '575x' }}
+        "
+        class="lazyload mw-100 img-wrapper d-sm-none" alt="{{ page.title | escape }}" />
+    {%- endif -%}
+</div>
+{%- endif -%}
+
+<div class="pt-7 pt-md-10">
+    <div class="container">
+        <div class="row">
+            {%- if section.settings.customer_enable or section.settings.feedback_enable -%}
+            <div class="col-sm-10 mx-auto col-md-4 pr-xl-9 mt-4 mt-md-0 order-2 order-md-1">
+                {%- if section.settings.customer_enable -%}
+                <a href="{%- if section.settings.customer_url != blank -%}{{section.settings.customer_url}}{%- else -%}#{%- endif -%}" class="bg-primary d-block px-4 py-5 py-md-6 text-center text-white mb-5">
+                    <h3 class="font-weight-bold text-uppercase letter-spacing mb-md-4">{{- section.settings.customer_heading -}}</h3>
+                    <span>{{- section.settings.customer_caption -}}</span>
+                </a>
+                {%- endif -%}
+                {%- if section.settings.feedback_enable -%}
+                <a href="{%- if section.settings.feedback_url != blank -%}{{section.settings.feedback_url}}{%- else -%}#{%- endif -%}" class="border border-2 border-primary d-block px-4 py-5 py-md-6 rounded text-center">
+                    <h3 class="font-weight-bold text-uppercase letter-spacing-1 text-primary mb-md-4">{{- section.settings.feedback_heading -}}</h3>
+                    <p class="mb-0 text-primary">{{- section.settings.feedback_caption -}}</p>
+                </a>
+                {%- endif -%}
+            </div>
+            {%- endif -%}
+            <div class="col-md-8 pl-lg-7 order-1 order-md-2">
+                {{ page.content }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{%- if section.settings.enable_form -%}
+<div class="pt-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 mx-auto">
+                <div class="repair-form contact-form">
+                    <div style="margin:0 auto;" class="pxFormGenerator" id="lvkOXMG0WkwlRNonagJyRQ"></div>
+                    <div class="form-footer d-none d-lg-block">
+                        <span class="line"></span>
+                        <span class="plan-img"><img src="//cdn.shopify.com/s/files/1/0541/8313/3361/files/plane-icon-red.png" style="max-width: 42px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endif -%}
+
+{%- if section.settings.map_enable -%}
+<div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28183.332773185582!2d-82.015257!3d27.996448!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd39eab5dace75%3A0x4e2e3b4b9ddb0b16!2s3650%20Drane%20Field%20Rd%2C%20Lakeland%2C%20FL%2033811%2C%20USA!5e0!3m2!1sen!2sin!4v1615371710420!5m2!1sen!2sin" width="100%" height="450" class="d-block" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+{%- endif -%}
+{%- if section.settings.map_enable -%}
+<div class="row no-gutters">
+    <div class="col-md-6">
+        <a href="{%- if section.settings.abt_us_back_img != blank -%}{{section.settings.abt_us_back_img }}{%- else -%}#{%- endif -%}" class="about-feature-item d-block text-center text-white py-10 position-relative h-100 px-4" style="background-image: url({%- if section.settings.abt_us_img_back != blank -%}{{section.settings.abt_us_img_back | img_url: 'master' }}{%- else -%}#{%- endif -%});">
+          {{section.settings.abt_us_hotel}}
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="{%- if section.settings.abt_us_plane_img != blank -%}{{section.settings.abt_us_plane_img }}{%- else -%}#{%- endif -%}" class="about-feature-item d-block text-center text-white py-10 position-relative h-100 px-4" style="background-image: url({%- if section.settings.abt_us_back_plane_img != blank -%}{{section.settings.abt_us_back_plane_img | img_url: 'master'}}{%- else -%}#{%- endif -%});">
+            {{section.settings.abt_us_contact_us}}
+        </a>
+    </div>
+</div>
+{%- endif -%}
+{% schema %}
+    {
+        "name": "Contact",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Banner Content"
+            },
+            {
+
+                "type": "image_picker",
+
+                "id": "ratina_image",
+
+                "label": "Select Image for Large Desktop"
+
+            },
+
+            {
+
+                "type": "image_picker",
+
+                "id": "image",
+
+                "label": "Select Image for Desktop"
+
+            },
+
+            {
+
+                "type": "image_picker",
+
+                "id": "image_mobile",
+
+                "label": "Select Image for Mobile"
+
+            },
+
+            {
+
+                "type": "header",
+
+                "content": "Customer Support"
+
+            },
+
+            {
+
+                "type": "checkbox",
+
+                "id": "customer_enable",
+
+                "label": "Enable"
+
+            },
+
+            {
+
+                "type": "text",
+
+                "id": "customer_heading",
+
+                "label": "Heading Text",
+
+                "default": "Customer Support"
+
+            },
+
+            {
+
+                "type": "textarea",
+
+                "id": "customer_caption",
+
+                "label": "Caption",
+
+                "default": "Have specific questions about your order?"
+
+            },
+
+            {
+
+                "type": "url",
+
+                "id": "customer_url",
+
+                "label": "Choose URL"
+
+            },
+
+            {
+
+                "type": "header",
+
+                "content": "Feedback"
+
+            },
+
+            {
+
+                "type": "checkbox",
+
+                "id": "feedback_enable",
+
+                "label": "Enable"
+
+            },
+
+            {
+
+                "type": "text",
+
+                "id": "feedback_heading",
+
+                "label": "Heading Text",
+
+                "default": "Feedback"
+
+            },
+
+            {
+
+                "type": "textarea",
+
+                "id": "feedback_caption",
+
+                "label": "Caption",
+
+                "default": "Give us a review of our services"
+
+            },
+
+            {
+
+                "type": "url",
+
+                "id": "feedback_url",
+
+                "label": "Choose URL"
+
+            },
+
+            {
+
+                "type": "checkbox",
+
+                "id": "enable_form",
+
+                "label": "Enable Form",
+
+                "default": true
+
+            },
+
+            {
+
+                "type": "header",
+
+                "content": "Map"
+
+            },
+
+            {
+
+                "type": "checkbox",
+
+                "id": "map_enable",
+
+                "label": "Map Enable"
+
+            },
+
+            {
+
+                "type": "header",
+
+                "content": "About Hotel"
+
+            },
+
+            {
+
+                "type": "checkbox",
+
+                "id": "hotel_enable",
+
+                "label": "Hotel Enable"
+
+            },
+
+            {
+
+                "type": "url",
+
+                "id": "abt_us_back_img",
+
+                "label": "Hotel Background Url"
+
+             },
+
+             {
+
+                  "type": "image_picker",
+
+                  "id": "abt_us_img_back",
+
+                  "label": "Hotel Background Image"
+
+              },
+
+             {
+
+                "type": "url",
+
+                "id": "abt_us_plane_img",
+
+                "label": "Plane Background Url"
+
+             },
+
+              {
+
+                  "type": "image_picker",
+
+                  "id": "abt_us_back_plane_img",
+
+                  "label": "Plane Background Image"
+
+              },
+
+              {
+
+                "type": "html",
+
+                "id": "abt_us_hotel",
+
+                "label": "Hotel Description html"
+
+              },
+
+              {
+
+                "type": "html",
+
+                "id": "abt_us_contact_us",
+
+                "label": "Hotel Contact Us html"
+
+              }
+
+        ]
+
+    }
+
+{% endschema %}

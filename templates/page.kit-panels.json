@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "template_kit_panels": {
+      "type": "template-kit-panels",
+      "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+            "enable": true,
+            "choose_img": "shopify:\/\/shop_images\/Panel_Plan.png",
+            "title": "Design",
+            "caption": "<p>Design and layout of an instrument panel can be a tedious and complicated process. Our experienced designers and technicians know how to maximize available space. Our knowledge of avionics and instruments for kit panels results in practical, reliable, affordable designs.<br\/><br\/>Starting with a scale panel drawing and avionics specifications, we transform your ideas into a complete drawing. As part of the design process, we can assist you with placement of items in the panel, as well as interface considerations.<br\/><br\/>Once your panel is laid out, a complete quote is provided including all parts and labor listed. You know exactly what your panel will cost. There are no hidden surprises.<br\/><br\/>Once we have approval to start fabricating the panel, it is laid out by the technician to ensure a perfect fit. A great deal of time goes into the layout before the first hole is drilled.<\/p>"
+          }
+        },
+        "b64f0d73-e481-410b-bf0d-1182cb4c8e96": {
+          "type": "content",
+          "settings": {
+            "enable": true,
+            "choose_img": "shopify:\/\/shop_images\/Harness.png",
+            "title": "WIRING",
+            "caption": "<p>The system interconnect wiring is a critical part of any avionics installation. We use only the best MIL Spec quality wire, connectors, tools and specialized equipment to ensure the installation meets all FAA approved guidelines and manufacturer's instructions.<br\/><br\/>Using manufacturer installation manuals and custom designed interface systems, your panel is completely wired. All non-panel mounted instruments or remote boxes are wired to mating connectors or terminated as needed.<br\/><br\/>Our technicians take the worry out of even the most complicated packages by ensuring all the systems are wired correctly and interfaced together. Each system is double-checked for proper continuity prior to any power being applied.<\/p>"
+          }
+        },
+        "c1a1b67e-09d1-4d26-a2ba-824aebf63ced": {
+          "type": "content",
+          "settings": {
+            "enable": true,
+            "choose_img": "shopify:\/\/shop_images\/Router_43f6f044-d20f-484e-b321-62317d128443.jpg",
+            "title": "FABRICATION",
+            "caption": "<p>Expert panel build-up is our specialty. From avionics to instruments and all associated components, we provide professionally finished panels that are both beautiful and functional. By having all the specialized tools and equipment, we can ensure a proper fit and professional look to your panel.<br\/><br\/>Once panel layout and design is determined, all components are assembled and fitted to your panel. All switches, breakers, light assemblies and other parts are properly wired and installed. The radio stack is fitted to the panel, as well as any required supports or mounting rails.<br\/><br\/>Prior to final assembly, the panel and all sub-assemblies are custom painted as needed. Panels are engraved and all custom placards are provided.<\/p>"
+          }
+        },
+        "60e86a8e-fd91-430e-90d6-825edd8fa285": {
+          "type": "content",
+          "settings": {
+            "enable": true,
+            "choose_img": "shopify:\/\/shop_images\/RV-7_Dual_D1000.jpg",
+            "title": "INSTALLATION",
+            "caption": "<p>Gulf Coast Avionics does professional avionics and instruments installation for a variety of business and personal aircraft. Our experience gives you the best possible installation for your kit aircraft as well.<br\/><br\/>Once all panel, radio, and remote assemblies have been completed, your panel is completely assembled and tested. All systems are inspected, as well as calibrated as needed. After we have confirmed all systems are operational, the panel is then professionally packaged for shipment.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content",
+        "b64f0d73-e481-410b-bf0d-1182cb4c8e96",
+        "c1a1b67e-09d1-4d26-a2ba-824aebf63ced",
+        "60e86a8e-fd91-430e-90d6-825edd8fa285"
+      ],
+      "settings": {
+        "ratina_image": "shopify:\/\/shop_images\/G3X_1200x_091cd75e-d742-4515-a2a4-67d7c0270719.jpg",
+        "image": "shopify:\/\/shop_images\/G3X_1200x_091cd75e-d742-4515-a2a4-67d7c0270719.jpg",
+        "contact_enable": true,
+        "contact_heading": "Contact Us",
+        "contact_caption": "For a free panel package and quote.\nSpecify model aircraft.",
+        "contact_url": "shopify:\/\/pages\/contact",
+        "call_enable": true,
+        "call_img": "shopify:\/\/shop_images\/email-signature-photos-Matt.jpg",
+        "call_heading": "CALL MATT TODAY!",
+        "call_caption": "<a class=\"a-link\" href=\"tel:8637099714,112\">863.709.9714 ext: 112<\/a>\n                                <a class=\"a-link\" href=\"mailto:matt@gca.aero\" target=\"_blank\">Matt@GCA.aero<\/a>",
+        "custom_enable": false,
+        "custom_heading": "Custom Kit Panels",
+        "custom_caption": "View a list of Custom Kit Panels available <br> at Pacific Coast\n                            Avionics.",
+        "custom_url": ""
+      }
+    }
+  },
+  "order": [
+    "template_kit_panels"
+  ]
+}

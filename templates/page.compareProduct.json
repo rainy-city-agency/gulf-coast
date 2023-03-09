@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "template_compareProduct": {
+      "type": "template-compareProduct",
+      "blocks": {
+        "feae524c-549b-45a4-985e-3f5ce3ff320c": {
+          "type": "content",
+          "settings": {
+            "Mainheading": "STRATUS POWER USB CHARGING PORT",
+            "productSelect": "stratus-power",
+            "productSelectA": "stratus-power-pro-usb-ausb-c-panel-mount-charger",
+            "ListingTitle": "List Of Installed Items",
+            "varUl1": "<li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/g3x-touch-for-certified-aircraft-1\" target=\"_blank\">Dual Garmin G3X Displays <\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/gea-24-engine-indication-system-eis-for-g3x\" target=\"_blank\">Garmin EIS Displayed on G3X<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/gtn-650xi\" target=\"_blank\">Dual Garmin GTN 650 Xi GPS\/Nav\/Com<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/gma-345\" target=\"_blank\">Garmin GMA 345 Audio Panel<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/gfc-500-digital-autopilot\" target=\"_blank\">Garmin GFC 500 Digital Autopilot<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\" target=\"_blank\">Garmin GTX 345 Remote ADS-B Transponder<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \">Custom Designed and Fabricated Panel<\/li>"
+          }
+        },
+        "855270ec-bdb3-4a89-9e3c-70e68c481110": {
+          "type": "content",
+          "settings": {
+            "Mainheading": "Aero Point",
+            "productSelect": "aeropoint-200",
+            "productSelectA": "aeropoint-300",
+            "ListingTitle": "List Of Installed Items",
+            "varUl1": "<li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/g500h-txi-touchscreen-flight-display-for-helicopters\" target=\"_blank\">Garmin G500 TXi w\/SVT<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/gtn-650xi\" target=\"_blank\">Garmin GTN 650 Xi GPS\/Nav\/Com<\/a><\/li> \n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/flight-stream-510-multimediacard-mmc\" target=\"_blank\">Flight Stream 510 Connectivity<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/gfc600h-flight-control-system\" target=\"_blank\">Garmin GFC 600 Autopilot w\/Yaw Damper<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \"><a href=\"\/products\/gtx345-ads-b-out-in-transponder\" target=\"_blank\">Garmin GTX 345 ADS-B In\/Out Transponder<\/a><\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \">Garmin GWX 75 Digital Radar<\/li>\n                                    <li class=\"my-2 font-weight-bold col-md-6 \">Custom Designed and Powder Coated Panel<\/li>"
+          }
+        }
+      },
+      "block_order": [
+        "feae524c-549b-45a4-985e-3f5ce3ff320c",
+        "855270ec-bdb3-4a89-9e3c-70e68c481110"
+      ],
+      "settings": {
+        "section_bg_color": "#f8f9fa"
+      }
+    }
+  },
+  "order": [
+    "template_compareProduct"
+  ]
+}

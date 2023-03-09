@@ -1,0 +1,249 @@
+<script defer="defer">
+
+    //run scripts on DOMContentLoaded to avoid affecting site load time
+    window.addEventListener('load', function(){
+      //Only run integration if Extend and ExtendShopify is defined, and the currency is set to USD
+      if (window.Extend && window.ExtendShopify && window.Shopify.currency.active === 'USD') {
+        /*****************************************/
+        /*  Global Variables - THEME SPECIFIC  */
+        /*****************************************/
+        var cartRowItem = 'div[data-cart-item]' // change this to Cart Row Item query
+        var cartRowItemTitle = 'div.col-md-4.col-8.mb-3.mb-md-0.d-flex.flex-column.mt-2 > a'; // change this to Cart Row Item Title query
+        var cartRowItemURL = 'div.col-md-4.col-8.mb-3.mb-md-0.d-flex.flex-column.mt-2 > a'; // change this to Cart Row Item URL query
+        var cartRowItemImage = 'section > div > div > div.row.table-cart > div > form > div > div.col-12.col-lg-9.pr-xl-5 > div> div.col-md-2.col-4.mb-3.mb-md-0.d-flex.for-img-width > img'; // change this to Cart Row Item Image query
+        var cartRowItemQuantity = 'input[name="updates[]"]'; // change this to Cart Row Item Quantity query
+        var cartRowMetaCatalog = 'div.row.table-cart > div > form > div > div.col-12.col-lg-9.pr-xl-5 > div > div.col-md-4.col-8.mb-3.mb-md-0.d-flex.flex-column.mt-2 > p';
+        var cartRowMetaTitle = 'div.row.table-cart > div > form > div > div.col-12.col-lg-9.pr-xl-5 > div > div.col-md-4.col-8.mb-3.mb-md-0.d-flex.flex-column.mt-2 > div.mb-2 > p';
+        var warrantyContainer = 'div.col-md-4.col-8.mb-3.mb-md-0.d-flex.flex-column.mt-2'; // change this to Cart Row Item Container where you want the warranty appended
+        var localCart = {{ cart | json }}; // Shopify Cart Object
+        var slice = Array.prototype.slice; // IE11 Utility
+  
+        //fail safes for cart and slice
+        if(!localCart || !slice) return;
+  
+        /***********************/
+        /*  util functions  */
+        /***********************/
+        //findAll(element) - fully browser compatible alternative to querySelectorAll to search for children in document OR a parentElement
+        function findAll(elementToFind, parentElement) {
+          var items = parentElement ? parentElement.querySelectorAll(elementToFind) : document.querySelectorAll(elementToFind);
+          return items ? slice.call(items, 0) : [];
+        }
+  
+        /**************************************/
+        /*  refreshCart - THEME SPECIFIC  */
+        /**************************************/
+        //hardRefreshes based on location
+        function refreshCart() {
+          location.href = location.hash ? location.href.substring(0, location.href.indexOf('#')) : location.href;
+        }
+  
+        /***********************/
+        /*  createElement  */
+        /***********************/
+        //createElement(product) - takes in cart lineItem, and creates the extend-cart-offer element
+        function createElement(product){
+          // removes existing cart-offer elements before creating new ones
+          var extendOffer = product.querySelector('#extend-cart-offer');
+          if (extendOffer) { extendOffer.parentNode.removeChild(extendOffer); }
+  
+          //grab href from product name and fail safe
+          var url = product.querySelector(cartRowItemURL);
+          if(!url) return;
+  
+          //grab the variantId out of the URL
+          var regEx = /\d+$/;
+          var variantId = url.href ? url.href.match(regEx)[0] : null;
+  
+          //select quantity value
+          var quantity = product.querySelector(cartRowItemQuantity).value;
+  
+          //parent container to append offer
+          var container = product.querySelector(warrantyContainer);
+  
+          //fail safes
+          if(!variantId || !quantity || !container) return;
+  
+          //create new element & set id, data-extend-variant, and data-extend-quantity attributes
+          var extendOffer = document.createElement('div');
+          extendOffer.id = 'extend-cart-offer';
+          extendOffer.setAttribute('data-extend-variant', variantId);
+          extendOffer.setAttribute('data-extend-quantity', quantity);
+          //append extendOffer to container element (THEME SPECIFIC)
+          container.append(extendOffer);
+        }
+  
+        /************************/
+        /*  Handle Styling  */
+        /************************/
+        //finds all cartRowItems and styles only Extend warranties
+        function handleStyling() {
+  
+          var index = 0;
+  
+          findAll(cartRowItem).forEach(function(el) {
+            //Set each item in the cart to NOT be Extend Item
+            var isExtend = false;
+  
+            //create element for each product
+            createElement(el)
+  
+            //Grabbing title of each cart Row Item
+            var title = el.querySelector(cartRowItemTitle);
+  
+            //title fail safe
+            if(!title) return;
+  
+            //if it's a warranty set isExtend to true and remove links
+            if (title.innerText.toLowerCase().indexOf('extend protection') > -1){
+              isExtend = true;
+  
+              //select and remove pointerEvents from warranty image and fail safe
+              var image = el.querySelector(cartRowItemImage)
+              if(!image) return;
+  
+              //select and remove pointerEvents from warranty image
+              image.style.pointerEvents = "none";
+  
+              //select and remove pointerEvents from warranty title
+              title.style.pointerEvents = "none";
+  
+              var catalogMeta = el.querySelector(cartRowMetaCatalog);
+              var titleMeta = el.querySelector(cartRowMetaTitle);
+  
+              var warrantableProduct = localCart.items[index].properties.Product;
+              if(!warrantableProduct) return;
+  
+              catalogMeta.innerText = 'Product: ' + warrantableProduct;
+  
+              var productTerm = localCart.items[index].properties.Term;
+              if(!productTerm) return;
+  
+              titleMeta.innerText = 'Term: ' + productTerm;
+            }
+  
+            index++;
+          });
+        }
+  
+        /************************/
+        /* initializeCartOffer */
+        /************************/
+        //invokes handleStyling and finds all offers in the cart, handling both normalization and balancing
+        function initializeCartOffer() {
+          //handles styling and creates offer elements
+          handleStyling();
+  
+          //find all offer elements
+          findAll('#extend-cart-offer').forEach(function(el){
+            //grab attributes out of element
+            var variantId = el.getAttribute('data-extend-variant')
+            var quantity = el.getAttribute('data-extend-quantity')
+            //if there's already a warranty in cart, return
+            if(ExtendShopify.warrantyAlreadyInCart(variantId, localCart.items)){
+              return
+            }
+  
+            //render all other buttons
+            Extend.buttons.renderSimpleOffer(el, {
+              referenceId: variantId,
+              onAddToCart: function (options) {
+                ExtendShopify.addPlanToCart(
+                  {
+                    plan: options.plan,
+                    product: options.product,
+                    quantity: quantity,
+                  },
+                  function (err) {
+                    // an error occurred
+                    if (err) {
+                      return;
+                    } else {
+                      refreshCart();
+                    }
+                  }
+                );
+              },
+            });
+          })
+  
+          //Normalization ensures there is a 1:1 relationship between the product and the warranty
+          ExtendShopify.normalizeCart({cart: localCart, balance: true}, function (err, data) {
+            if (data && data.updates) {
+              //calls refreshCart to update the cart for normalization 
+              refreshCart();
+            }
+          });
+        }
+  
+          initializeCartOffer();
+        //initializeCartOffer when script is initially rendered
+  
+        //refreshCart event listener dispatched from theme.js
+        window.addEventListener("refreshCart", function() {
+          //fetch the cart using jQuery and set localCart to newCart and initializeCartOffers again
+          $.getJSON("/cart.js", function (newCart) {
+            localCart = newCart;
+            initializeCartOffer();
+          })
+        })
+  
+        function callRefreshCart() {
+          setTimeout(function() {
+            window.dispatchEvent(Extend.CustomEvent('refreshCart'));
+          }, 500)
+        }
+  
+        var inputs = findAll('input[name="updates[]"]');
+        var increases = findAll('.increase'); 
+        var decreases = findAll('.decrease');
+        var removes = findAll('a[name="Remove"]');
+  
+        if (window.location.href.indexOf("cart") != -1) {
+          inputs.forEach(
+            function(button) {
+              button.addEventListener('change', callRefreshCart);
+            }
+          );
+  
+          increases.forEach(
+            function(inc) {
+              inc.addEventListener('click', callRefreshCart);
+            }
+          );
+  
+          decreases.forEach(
+            function(dec) {
+              dec.addEventListener('click', callRefreshCart);
+            }
+          );
+  
+          setTimeout(function() {
+            // do something
+            removes.forEach(
+              function(rem) {
+                rem.addEventListener('click', callRefreshCart);
+              }
+            );
+          }, 500)
+        }
+      }
+    })
+  
+  </script>
+  
+  <style>
+    
+    #extend-cart-offer{
+        margin-top: 8px;
+    }
+  
+    #extend-offers-modal-iframe {
+      z-index: 999999999!important;
+    }
+  
+    #extend-learn-more-modal-iframe {
+      z-index: 999999999!important;
+    }
+  
+  </style>

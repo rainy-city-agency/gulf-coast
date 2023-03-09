@@ -1,0 +1,457 @@
+<section class="section-content template-product-classic">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-7 col-md-6 product-main-section">
+
+        <div class="product-images-wrapper pr-lg-4 text-center row">
+
+          {%- if featured_image != blank and product.images.size > 1 -%}
+          <div class="col-2 d-none d-lg-block">
+            <div class="carousel carousel-nav  mt-lg-4" role="tree" data-flickity='{
+
+              "asNavFor": ".carousel-main",
+
+              "adaptiveHeight": true,
+
+              "contain": true,
+
+              "groupCells": 1,
+
+              "prevNextButtons": true,
+
+              "pageDots": false,
+
+              "arrowShape": {"x0": 10, "x1": 60, "y1": 50, "x2": 60, "y2": 45, "x3": 15}
+
+            }'>
+
+              {% for image in product.images %}
+
+              <a href="#" class="carousel-cell" role="treeitem">
+
+                <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}"
+                  class="img-fluid img-wrapper img-object-contain">
+
+              </a>
+
+
+              {% endfor %}
+
+            </div>
+          </div>
+
+          <div class="col-lg-10">
+            <div class="carousel carousel-main col-9" role="tree" data-carousel-main data-flickity='{
+
+              "adaptiveHeight": true,
+  
+              "contain": true,
+  
+              "prevNextButtons": true,
+  
+              "pageDots": false,
+
+              "groupCells": 1,
+              "lazyLoad": true
+  
+              }'>
+
+              {%- for image in product.images -%}
+
+              <div class="product-carousel-cell equal-height w-100 d-flex align-items-center justify-content-center">
+
+                <img class="carousel-cell img-fluid mx-auto lazyload" role="treeitem"
+                  data-flickity-lazyload-src="{{ image.src | img_url: 'large' }}" data-flickity-lazyload-srcset="
+  
+                {{ image.src | img_url: '650x' }} 576w,
+  
+                {{ image.src | img_url: '1280x' }} 768w,
+  
+                {{ image.src | img_url: '1440x' }} 992w,
+  
+                {{ image.src | img_url: '1920x' }} 1200w
+  
+                "
+                  alt="{% if image.alt != ''%}{{ image.alt | escape }}{% else %}{{ product.title | escape }}{%- endif -%}" />
+
+                {% comment %}data-variant-title="{{ image.alt | escape }}" {% endcomment %}
+
+              </div>
+
+              {%- endfor -%}
+
+            </div>
+          </div>
+
+
+
+
+          {% elsif product.images.size == 1 %}
+
+          <div class="single-product-wrapper">
+
+            <img data-sizes="auto" src="{{ product.featured_image | img_url: '500x' }}" data-srcset="{{ product.featured_image | img_url: '500x' }} 400w,
+
+                {{ product.featured_image | img_url: '950x' }} 850w" class="img-fluid mx-auto lazyload"
+              alt="{{ product.title  | replace:'"','' }}"/>
+
+          </div>
+
+          {%- else -%}
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+          {{ 'product-' | append: current | placeholder_svg_tag: 'img-fluid' }} {%- endif -%} </div>
+
+          </div>
+
+
+
+          <div class="col-lg-5 col-md-6">
+
+            <div class="product-details-wrapper mt-5 mt-lg-0">
+
+
+
+              <div class="align-items-center">
+
+                <!-- {%- if show_vendor and product.vendor != '' -%}
+
+                <h3 class="mb-2 font-weight-bold letter-spacing">{{ product.vendor | link_to_vendor }}</h3>
+
+                {%- endif -%} -->
+
+
+
+                <h1 class="h3 font-weight-bold mb-3 mb-md-4 d-block">{{ product.title
+                  }}</h1>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  {% unless product.tags contains 'special_price' or product.tags contains 'call_price' %}
+
+                  <s v-if="_formatMoney(currentVariant.compare_at_price) > _formatMoney(currentVariant.price)"
+                    class="h4 text-gray-600 mr-2 f-open" v-html="_formatMoney(currentVariant.compare_at_price)"></s>
+
+                  <span class="h4 mb-0 actual-price font-weight-regular text-primary f-open"
+                    v-html="_formatMoney(currentVariant.price)"></span>
+
+                  {% endunless %}
+                  <div id="product_just_stars" class="reg"></div>
+                </div>
+                {% if product.tags contains 'gift_card' %}
+
+                <span class="d-block money" data-product-id="{{ product.id }}">{{product.price | money}} Gift
+                  Certificate</span>
+
+                {% endif %}
+
+                {%- if product.metafields.content.short_desc != '' -%}
+
+                <span class="d-block mb-1">{{- product.metafields.content.short_desc -}}</span>
+
+                {%- endif -%}
+
+
+
+                <!-- Shopper Approved product star - snippets/template-product-classic-horizontal -->
+
+
+
+                <!-- END Shopper Approved product star - snippets/template-product-classic-horizontal -->
+
+
+
+                <div class="catelog-number">
+
+                  <p class="mb-1" v-if="currentVariant.sku != null">Part No: <span
+                      v-text="currentVariant.sku"></span></p>
+
+                  {% if show_vendor and product.vendor != '' %}
+
+                  <p class="">Manufacturer: <a href="/collections/{{ product.vendor | handleize}}"
+                      class="text-capitalize text-primary">{{ product.vendor }}</a></p>
+
+                  {%- endif -%}
+
+                </div>
+
+
+
+              </div>
+
+
+
+              {%if section.settings.enable_warrenty %}
+
+              <p class="font-weight-bold mt-4 d-inline-block mb-0">{{ section.settings.warrant_txt }} <a
+                  href="{% if section.settings.warranty_url %}{{ section.settings.warranty_url }}{% else %}#{% endif %}"
+                  class="text-primary pl-1">{{ section.settings.warrant_link_txt }}</a>.</p>
+
+              {%endif%}
+
+
+
+              {% if product.tags contains 'special_price' %}
+
+              <div class="special-price">
+
+                <span
+                  class="actual-price font-weight-bold text-primary f-open font-weight-bold d-block h4 mb-0 text-capitalize">Special
+                  price</span>
+
+                <!-- <span class="text-uppercase font-weight-bold d-block text-capitalize subnote font-size-md mt-2">(Add to cart to view)</span> -->
+
+                <p class="mt-md-4 mt-3 font-size-lg font-weight-bold">Regular Price: <span
+                    v-html="_formatMoney(currentVariant.compare_at_price)"></span></p>
+
+              </div>
+
+              {% endif %}
+
+
+
+              <div class="price-wrapper mt-4">
+
+
+
+                {%include 'claims-icons'%}
+
+                {% if product.tags contains 'call_price' %}
+
+                <span class="h2 actual-price font-weight-bold text-primary f-open d-block">Call for price</span>
+
+                {% else %}
+
+                {%- include 'form-product' -%}
+
+                {% endif %}
+
+              </div>
+
+
+
+              <div class="shipping-order-info d-flex flex-wrap">
+
+                {% for block in section.blocks limit:3 %}
+
+                <div class="order-info-item d-flex align-items-center mr-4 my-3">
+
+                  <div class="order-info-img mr-2">
+
+                    <img src="{{ block.settings.shipping_icon | img_url: 'master' }}" alt="">
+
+                  </div>
+
+                  <a href="{{ block.settings.shipping_url }}">{{ block.settings.shipping_title }}</a>
+
+                </div>
+
+                {% endfor %}
+
+              </div>
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+</section>
+
+<section class="section-content pt-0">
+
+  <div class="container">
+
+
+
+    {%- render 'shappify-bdl-load-bundle' -%}
+
+
+
+    <div class="product-tabs">
+
+      <ul class="nav nav-pills mb-0 row" id="pills-tab" role="tablist">
+
+        {%- if product.description != '' -%}
+
+        <li class="col-md-3 col-6 nav-item text-center">
+
+          <a class="nav-link h5 letter-spacing-normal mb-0 text-primary font-weight-bold rounded-0 f-open py-lg-4 py-3 active"
+            id="pills-desc-tab0" data-toggle="pill" href="#pills-desc" role="tab" aria-controls="pills-desc"
+            aria-selected="true">Description</a>
+
+        </li>
+
+        {%- endif -%}
+
+        {%- if product.metafields.content.features -%}
+
+        <li class="col-md-3 col-6 nav-item text-center">
+
+          <a class="nav-link h5 letter-spacing-normal mb-0 text-primary font-weight-bold rounded-0 f-open py-lg-4 py-3 {% if product.description == '' %}active{% endif %}"
+            id="pills-profile-tab1" data-toggle="pill" href="#pills-features" role="tab" aria-controls="pills-features"
+            aria-selected="{% if product.description == '' %}true{% else %}false{% endif %}">Features</a>
+
+        </li>
+
+        {%- endif -%}
+
+        {%- if product.metafields.content.specifications -%}
+
+        <li class="col-md-3 col-6 nav-item text-center">
+
+          <a class="nav-link h5 letter-spacing-normal mb-0 text-primary font-weight-bold rounded-0 f-open py-lg-4 py-3"
+            id="pills-profile-tab2" data-toggle="pill" href="#pills-spec" role="tab" aria-controls="pills-spec"
+            aria-selected="false">Specifications</a>
+
+        </li>
+
+        {%- endif -%}
+
+        {%- if product.metafields.content.rebate -%}
+
+        <li class="col-md-3 col-6 nav-item text-center">
+
+          <a class="nav-link h5 letter-spacing-normal mb-0 text-primary font-weight-bold rounded-0 f-open py-lg-4 py-3"
+            id="pills-profile-tab3" data-toggle="pill" href="#pills-rebate" role="tab" aria-controls="pills-rebate"
+            aria-selected="false">Rebate</a>
+
+        </li>
+
+        {%- endif -%}
+
+
+
+        <li class="col-md-3 col-6 nav-item text-center">
+
+          <a class="nav-link h5 letter-spacing-normal mb-0 text-primary font-weight-bold rounded-0 f-open py-lg-4 py-3"
+            id="pills-QandA-tab4" data-toggle="pill" href="#pills-QandA" role="tab" aria-controls="pills-QandA"
+            aria-selected="true">Questions & Answers</a>
+
+        </li>
+
+      </ul>
+
+
+      <div class="tab-content border-top border-transparent" id="pills-tabContent">
+
+        {%- if product.description != '' -%}
+
+        <div class="tab-pane fade p-lg-8 p-md-6 p-4 show active" id="pills-desc" role="tabpanel"
+          aria-labelledby="pills-desc-tab">
+
+          {{ product.description }}
+
+        </div>
+
+        {%- endif -%}
+
+        {%- if product.metafields.content.features -%}
+
+        <div
+          class="tab-pane fade p-lg-8 p-md-6 p-4 bg-gray-200 {% if product.description == '' %}show active{% endif %}"
+          id="pills-features" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+          {{- product.metafields.content.features -}}
+
+        </div>
+
+        {%- endif -%}
+
+        {%- if product.metafields.content.specifications -%}
+
+        <div class="tab-pane fade p-lg-8 p-md-6 p-4 bg-gray-200" id="pills-spec" role="tabpanel"
+          aria-labelledby="pills-profile-tab">
+
+          {{- product.metafields.content.specifications -}}
+
+        </div>
+
+        {%- endif -%}
+
+        {%- if product.metafields.content.rebate -%}
+
+        <div class="tab-pane fade p-lg-8 p-md-6 p-4 bg-gray-200" id="pills-rebate" role="tabpanel"
+          aria-labelledby="pills-profile-tab">
+
+          {{- product.metafields.content.rebate -}}
+
+        </div>
+
+        {%- endif -%}
+
+        <div class="tab-pane fade p-lg-8 p-md-6 p-4 bg-gray-200" id="pills-QandA" role="tabpanel"
+          aria-labelledby="pills-profile-tab">
+
+          {% render 'questions-answers' %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- Shopper Approved Product Page Review Widget Code - snippets/template-product-classic-horizontal.liquid -->
+
+<section class="section-content pt-0">
+
+  <div class="container">
+
+    <h3>Product Reviews from Verified Customers</h3>
+
+    <div id="shopper_review_page">
+      <div id="review_header"></div>
+
+      <div id="product_page"></div>
+
+      <div id="review_image"><a href="https://www.shopperapproved.com/reviews/gulfcoastavionics.com/" onclick="var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; 
+
+      var certheight=screen.availHeight-90; 
+
+      window.open(this.href,'shopperapproved','location='+nonwin+',scrollbars=yes,width=620,height='+certheight+',menubar=no,toolbar=no'); 
+
+      return false;" target="_blank" rel="nofollow"></a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- END Shopper Approved Product Page Review Widget Code - snippets/template-product-classic-horizontal.liquid -->
+
+<style>
+  .product-images-wrapper .carousel-main .flickity-button{
+    display: none ;
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+<script>
+$(document).ready(function(){
+  $('.carousel-nav .flickity-button').on('click',function(){
+      $('.carousel-nav .carousel-cell.is-selected').addClass('is-nav-selected').siblings().removeClass('is-nav-selected');
+  })
+
+  $('.carousel-nav .flickity-button.next').on('click',function(){
+      $('.carousel-main .flickity-button.next').click();
+  })
+
+
+  $('.carousel-nav .flickity-button.previous').on('click',function(){
+      $('.carousel-main .flickity-button.previous').click();
+  })
+})
+</script>

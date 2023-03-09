@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "template_blog": {
+      "type": "template-blog",
+      "settings": {
+        "items_per_page": 10,
+        "ratina_image": "shopify:\/\/shop_images\/blog-header_1920x_cd861a03-b316-4799-a1ee-1023751f085b.jpg",
+        "image": "shopify:\/\/shop_images\/blog-header_1920x_cd861a03-b316-4799-a1ee-1023751f085b.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/blog-header_1920x_cd861a03-b316-4799-a1ee-1023751f085b.jpg",
+        "title": "AIRPLANE NOISE",
+        "enable_sort": true
+      }
+    }
+  },
+  "order": [
+    "template_blog"
+  ]
+}

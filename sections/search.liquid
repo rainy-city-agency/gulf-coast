@@ -1,0 +1,43 @@
+<section data-section-id="{{ section.id }}" class="template-search section-content">
+    <div class="container">
+  
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>
+            {% if search.performed %}
+              {% if search.results_count == 0 %}
+                {{ 'general.search.no_results_html' | t: terms: search.terms }}
+              {% else %}
+                {{ 'general.search.results_for_html' | t: terms: search.terms }}
+              {% endif %}
+            {% else %}
+              {{ 'general.search.title' | t }}
+            {% endif %}
+          </h3>
+        </div>
+      </div>
+  
+      <div class="row mt-4">
+        <div class="col-lg-5 ml-auto mr-auto text-center">
+          <form action="/search" method="get" role="search" class="search">
+            <input type="hidden" name="type" value="product"> 
+            <div class="input-group mb-5">
+              <input type="search" name="q" id="Search" aria-label="search" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" class="form-control">
+              <div class="input-group-append">
+                 <button type="submit" class="btn btn-primary">{{ 'general.search.submit' | t }}</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="row mt-5">
+        <div class="col-12">
+          {% include 'searchanise-navigation' %}
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  

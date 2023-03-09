@@ -1,0 +1,21 @@
+  <script>
+    window.theme = {
+      moneyFormat: {{ shop.money_format | json }},
+      productExcludeTag: {{ settings.product_exclude_tag_text | json }},
+      colorSwatchesEnabled: {{ settings.enable_color_swatches }},
+      sizeSwatchesEnabled: {{ settings.enable_size_swatches }},
+      productReviewsEnabled: {{ settings.enable_product_reviews | json }},
+      utilitiesAppEnabled: {{ settings.enable_utilities_app | json }},
+      customersID: {% if customer %}{{ customer.id }}{% else %}null{% endif %},
+      customerEmail: {% if customer %}'{{ customer.email }}'{% else %}null{% endif %},
+      loginHelper: {
+        enable: {% if settings.enable_login %}true{% else %}false{% endif %},
+        account_not_found: '{% if settings.account_not_found %}{{ settings.account_not_found | escape }}{% else %}null{% endif %}',
+        account_enable: '{% if settings.account_enable %}{{ settings.account_enable | escape }}{% else %}null{% endif %}',
+        account_disable: '{% if settings.account_disable %}{{ settings.account_disable | escape }}{% else %}null{% endif %}',
+        account_invited: '{% if settings.account_invited %}{{ settings.account_invited | escape }}{% else %}null{% endif %}',
+        account_declined: '{% if settings.account_not_found %}{{ settings.account_not_found | escape }}{% else %}null{% endif %}'
+      }
+    };
+  </script>
+

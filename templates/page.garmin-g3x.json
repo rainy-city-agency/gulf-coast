@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "garmin_g3x": {
+      "type": "garmin-g3x",
+      "blocks": {
+        "category": {
+          "type": "category",
+          "settings": {
+            "heading": "STEP 1 – SELECT DISPLAYS",
+            "link": "garmin-step-1"
+          }
+        },
+        "db2598ea-79dd-4239-821d-24d838c72170": {
+          "type": "category",
+          "settings": {
+            "heading": "STEP 2 – SELECT STANDARD OR HIGH-PERFORMANCE LRU KIT",
+            "link": "garmin-step-2"
+          }
+        },
+        "8870077e-9c0b-4df4-8d9e-009043dd3b0d": {
+          "type": "category",
+          "settings": {
+            "heading": "STEP 3 – SELECT SYSTEM CONNECTOR KITS",
+            "link": "garmin-step-3"
+          }
+        },
+        "7e4a3fb7-8d76-4106-b978-79282f195557": {
+          "type": "category",
+          "settings": {
+            "heading": "STEP 4 – SELECT ENGINE\/AIRFRAME OPTIONS (IF APPLICABLE)",
+            "link": "garmin-step-4"
+          }
+        },
+        "03a000f3-c310-4a3b-83cc-ff57fae18d8b": {
+          "type": "category",
+          "settings": {
+            "heading": "STEP 5 – SELECT ADDITIONAL OPTIONS",
+            "link": "garmin-step-5"
+          }
+        }
+      },
+      "block_order": [
+        "category",
+        "db2598ea-79dd-4239-821d-24d838c72170",
+        "8870077e-9c0b-4df4-8d9e-009043dd3b0d",
+        "7e4a3fb7-8d76-4106-b978-79282f195557",
+        "03a000f3-c310-4a3b-83cc-ff57fae18d8b"
+      ],
+      "settings": {
+        "enable": true,
+        "banner_image": "shopify:\/\/shop_images\/Garmin_G3X_Configuration_Page_Banner_Option_2_88459c8e-2666-4582-a532-cb21adc10986.png",
+        "banner_title": "Garmin G3X Quote & Order Worksheet",
+        "banner_heading": "Build Your Custom Garmin G3X Package",
+        "banner_desc": "Use the worksheet below to compile a list of the components that you need to get the features and <br>capabilities you're looking for in your Garmin G3X system. Once you have selected all of the items, <br>submit a request at the bottom of the page and we will provide you with a comprehensive <br>quote including a discount based on the package as a whole.",
+        "enable-header": false,
+        "html_desc": "Use the worksheet below to compile a list of the components that you need to get the features and capabilities you're looking for in your Garmin G3X system. Once you have selected all of the items, submit a request at the bottom of the page and we will provide you with a comprehensive quote including a discount based on the package as a whole."
+      }
+    }
+  },
+  "order": [
+    "garmin_g3x"
+  ]
+}

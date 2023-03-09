@@ -1,0 +1,24 @@
+<h1 class="d-none"></h1>
+<div
+data-section-id="{{ section.id }}"
+data-template="collection"
+data-collection-ajaxed="false"
+data-product-card-type="type_1"
+data-pagination-limit="20">
+
+{% include "template-collection-grid" %}
+
+</div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

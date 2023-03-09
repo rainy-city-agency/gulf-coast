@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "template_faqs": {
+      "type": "template-faqs",
+      "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet?",
+            "txt": "<p>Morbi tempus elit at finibus viverra. In malesuada laoreet rhoncus. Cras id est eget est congue semper. Nullam facilisis varius orci a vestibulum. Nullam ex lorem, fringilla at semper luctus.<\/p>"
+          }
+        },
+        "31bc4537-3125-4e52-8917-7aa5e10821cf": {
+          "type": "content",
+          "settings": {
+            "heading": "Lorem ipsum dolor consectetur adipiscing elit?",
+            "txt": "<p><br\/><\/p><p>Morbi tempus elit at finibus viverra. In malesuada laoreet rhoncus. Cras id est eget est congue semper. Nullam facilisis varius orci a vestibulum. Nullam ex lorem, fringilla at semper luctus, ullamcorper eu magna. Morbi urna mauris, venenatis in velit sit amet, pulvinar porta lorem.<\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "6e687872-6c21-47e2-9fc9-5c159635b39e": {
+          "type": "content",
+          "settings": {
+            "heading": "Consectetur adipiscing elit?",
+            "txt": "<p><br\/><\/p><p>In malesuada laoreet rhoncus. Cras id est eget est congue semper. Nullam facilisis varius orci a vestibulum. Nullam ex lorem, fringilla at semper luctus, ullamcorper eu magna. Morbi urna mauris, venenatis in velit sit amet, pulvinar porta lorem. <\/p><p><br\/><br\/><\/p>"
+          }
+        },
+        "25e8b76e-7893-4da6-ab65-99b2838fb7e5": {
+          "type": "content",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit adipiscing elit?",
+            "txt": "<p><br\/><\/p><p>Aliquam luctus in quam ut placerat. Suspendisse id odio nec augue posuere luctus. Nulla eu tortor dolor. In posuere accumsan ex, sollicitudin efficitur enim eleifend luctus. Maecenas at nisi ac enim dignissim egestas in nec justo. Vestibulum feugiat odio ullamcorper lobortis tristique. Nulla quis blandit est. Mauris vitae mauris nunc. Pellentesque tempor mollis ante in aliquam. Nullam sed justo dapibus, pellentesque tellus nec, maximus arcu. Praesent ut tincidunt libero. Nam enim tortor, venenatis vitae ornare quis, tempus vel quam. Pellentesque sagittis arcu a ligula molestie vulputate.<\/p><p><br\/><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content",
+        "31bc4537-3125-4e52-8917-7aa5e10821cf",
+        "6e687872-6c21-47e2-9fc9-5c159635b39e",
+        "25e8b76e-7893-4da6-ab65-99b2838fb7e5"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "template_type": "accordion"
+      }
+    }
+  },
+  "order": [
+    "template_faqs"
+  ]
+}

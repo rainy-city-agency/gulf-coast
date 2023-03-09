@@ -1,0 +1,281 @@
+<style>
+    div.snize-filters-sidebar{
+      border: 0 !important;
+    }
+    div.snize .snize-product-filters-block{
+      border-bottom: 1px solid #c8c8c8 !important;
+    }
+    
+    div.snize div.snize-product-filters-title span{
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      font-size: .94rem;
+      font-family: Montserrat,sans-serif;
+      text-transform: uppercase;
+      padding-left: 10px;
+    }
+    div.snize ul.snize-product-filters-list li{
+      padding: .25rem 0;
+    }
+    div.snize ul.snize-product-filters-list li > label{
+      color: #212529;
+      font-size: 15px;
+      letter-spacing: 0;
+      cursor: pointer;
+    }
+    div.snize ul.snize-product-filters-list li .snize-filter-checkbox span{
+      width: 12px;
+      height: 12px;
+      border: 1px solid #c8c8c8;
+      border-radius: 0;
+      margin-right: 12px;
+      box-shadow: none;
+    }
+    div.snize ul.snize-product-filters-list li label > span{
+      font-size: 15px;
+      letter-spacing: 0;
+      cursor: pointer;
+      padding: 0 0 0 28px;
+    font-weight: 300;
+    }
+    div.snize ul.snize-product-filters-list li .snize-filter-checkbox span:after{
+      width: 8px;
+      height: 8px;
+      content: "";
+      background: #b31519;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      transform: none;
+      border: 0;
+    }
+    div.snize ul.snize-product-filters-list li .snize-filter-checkbox input[type=checkbox]:checked + span{
+      border-color: #b31519;
+      box-shadow: none;
+    }
+    div.snize div.snize-filters-dropdown-title{
+      border-radius: 0;
+      padding: 7px 15px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      border: 1px solid #ced4da;
+      color: #495057;
+      background-color: #fff;
+    }
+    .snize-main-panel-dropdown a.snize-main-panel-dropdown-button{
+      border-radius: 0 !important;
+      padding: 7px 15px !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      line-height: 20px !important;
+      border: 1px solid #ced4da !important;
+      color: #495057 !important;
+      background-color: #fff !important;
+    }
+    div.snize-collection-mode div.snize-main-panel{
+      margin-top: 2rem;
+    }
+    div.snize div.snize-main-panel-view-mode{
+      margin: 10px 0 5px 0;
+    }
+    div.snize div.snize-main-panel-view-mode a{
+      background-size: 36px !important;
+      width: 36px !important;
+      height: 36px !important;
+    }
+    
+    .snize-product-filters-title{
+        display: flex;
+        align-items: center;
+    justify-content: space-between;
+    }
+    div.snize div.snize-product-filters-title{
+      padding: 13px 0;
+    }
+    .snize-product-filters-title span{
+        font-weight: 600;
+        letter-spacing: 1.5px;
+    }
+    .snize-product-filters-title i{
+        order: 2;
+           background-image: none !important;
+        font-size: 26px;
+        line-height: 1;
+        width: auto !important;
+        height: auto !important;
+    }
+    div.snize i.snize-product-filters-reset, div.snize i.snize-product-filters-search-field-clear{
+        width: 11px !important;
+        height: 11px !important;
+        display: none;
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeFJREFUeNq0lb9LgkEYx++VlJoyFwtUoqnhRV1schQqaKnN/opaKmguiIba+gOE2lordGurRasliArtBy1mk6SDfb9yJ2/XXZbWAx+Qe+75vOe9z3vn5HI5YYkRkAWzIA5GQQM8gBtwBA7Aq6l4wDA2CJbBCghquQCYlMyBDbANdkDdO9GnFY6Dc7BpkJoiKOVnstYojoBT4IrfhytrI7qYf//Qm+ghItIx5BUvgZToP1LS1RaHwJo+w3EckUwmRSgU+lLNMeY4xxCrnOKTLTWsZ+PxuHBdV2QymU9y/uYYc4lEwiSmK0vxtClbqVREo9EQgUCgI1dSjjFXLpdtWzLj4ANhNmrKekXNZrM95vf729JCoSCq1apNXOGKw7YsCymglELC312kjDDF7+IfguJnW1JthVqpWrn+Qg3xQvF1t/3lnubz+Tb6C7VEieITUyYajXakak/Vnit5LBaziY/ZFXzsrd7LbH72KVtKf1FcKaWlUkm0Wi1d+gYmeGyyakueaJ1gQbFYtHbLN11BV1WdFbvg8g+a4Uq6OocQD+kF8NSH9BHMqwPfex7zuknLp/ay0rR0GG+QOzAF1kHtB8KanMua+253Xl2+yD2wyANFXqZjMs8P6oItBfZtl+mHAAMAUBGqLkfcaCQAAAAASUVORK5CYII=)  !important;
+    } 
+    div.snize i.snize-product-filters-reset:after, div.snize i.snize-product-filters-search-field-clear:after{
+        display: none;
+    }
+    .snize-product-filters-title i:after{
+        content:"\f1fc";
+        display: inline-block;
+        font-family: "Ionicons";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-rendering: auto;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .snize-product-filters-title i.snize-product-filters-open:after{
+       content: "\f102";
+    }
+    div.snize ul.snize-product-filters-list{
+        padding: 0;
+        max-height: 250px;
+    }
+    div.snize .snize-product-filters-block:hover {
+        background-color: transparent;
+    }
+    div.snize ul.snize-product-filters-list li:hover .snize-filter-checkbox span {
+        box-shadow: none;
+    }
+    .snize-filters-dropdown .snize-filters-dropdown-content .snize-product-filters-list{
+        padding: 0 10px 0 10px;
+    }
+    #snize-search-results-grid-mode .snize-product{
+       box-shadow: 0 15px 60px 0 rgba(0,0,0,.08);
+    }
+    #snize-search-results-grid-mode span.snize-thumbnail{
+        height: 275px;
+    }
+    #snize-search-results-grid-mode span.snize-overhidden{
+             padding: 1.25rem;
+        text-align: center;
+    }
+    #snize-search-results-grid-mode li.snize-product span.snize-title{
+        font-size: 16px;
+        font-family: Montserrat,sans-serif;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0;
+        text-align:left;
+    }
+    #snize-search-results-grid-mode span.snize-description{
+     text-align:left;
+    }
+    #snize-search-results-grid-mode .snize-price-list{
+     text-align:left;
+    }
+    div.snize li.snize-product .snize-price-list .snize-price{
+          font-size: 18px;
+        letter-spacing: 0;
+        font-weight: 300;
+    
+    }
+    #snize-search-results-grid-mode span.snize-discounted-price{
+       color: #adb5bd;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    #snize-search-results-grid-mode li.snize-product .snize-button{
+        position: unset;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin: 1rem auto 0 auto;
+        padding: 13px 25px;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: Montserrat,sans-serif;
+        font-size: .89rem;
+        letter-spacing: 3px;
+        border-radius: 30px;
+        width: auto;
+    }
+    #snize-search-results-grid-mode .snize-overhidden{
+    text-align: center;
+    }
+    .snize-product-filters-block .snize-product-filters-list li label.active span{
+    color: #991b1d;
+    }
+    .snize-search-results-main-content #snize-search-results-grid-mode .snize-product {
+        width: calc(33.333% - 2%) !important;
+    }
+    div.snize div.snize-pagination ul li a {
+      padding: 0 12px !important;
+    }
+    div.snize div.snize-pagination ul li a, div.snize div.snize-pagination ul li span{
+        border: none;
+        border-bottom: 2px solid transparent;
+        font-size: 13px;
+        font-family: Montserrat,sans-serif;
+        font-weight: 400;
+        padding: 5px;
+        margin: 0 5px;
+        background: none;
+    }
+    
+    div.snize div.snize-pagination ul li a.active, div.snize div.snize-pagination ul li a:hover{
+        background-color: transparent;
+        color: #b31519;
+        font-weight: 700;
+        border-color: #b31519;
+        padding: 0 12px !important;
+    }
+    div.snize div.snize-pagination ul li a.disabled, div.snize div.snize-pagination ul li span.disabled{
+     border:0;
+    }
+    #snize-search-results-list-mode li.snize-product{
+      border:0;
+      box-shadow: 0 15px 60px 0 rgba(0,0,0,.08);
+      margin: 1.5rem 0;
+    }
+    #snize_results.snize-mobile-design.snize-new-version #snize-search-results-grid-mode li.snize-product{
+      border: none !important;
+    }
+    #snize-search-results-list-mode span.snize-thumbnail{
+      border:0;
+    }
+    #snize-search-results-list-mode .snize-price-list{
+          display: block;
+    }
+    #snize-search-results-list-mode li.snize-product .snize-button{
+     position: unset;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin: 1rem auto 0 auto;
+        padding: 13px 25px;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: Montserrat,sans-serif;
+        font-size: .89rem;
+        letter-spacing: 3px;
+        border-radius: 30px;
+        width: auto;
+    }
+    .snize-search-results:not(.snize-mobile-design) #snize-search-results-list-mode li.snize-product:hover .snize-button, .snize-mobile-design #snize-search-results-list-mode li.snize-product.mobile-in-view .snize-button{
+        margin-left: 0;
+    }
+    @media (min-width:1350px){
+    div.snize div.snize-filters-sidebar{
+       width: 260px;
+    }
+    .snize-four-columns,#snize-search-results-list-mode{
+        width: 970px !important;
+    }
+    }
+    @media (min-width:768px) and (max-width:1199px){
+    .snize-search-results-main-content #snize-search-results-grid-mode .snize-product {
+        width: calc(50% - 2%) !important;
+    }
+    }
+    @media (max-width:767px){
+    .snize-search-results-main-content #snize-search-results-grid-mode .snize-product {
+        width: calc(100% - 2%) !important;
+    }
+    }
+    
+    </style>

@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "template_prod_quote": {
+      "type": "template-prod-quote",
+      "settings": {
+        "product_quotes_img": "shopify:\/\/shop_images\/mustang-p51_c854c545-dcf6-412d-b6ae-b556a72d1685.jpg",
+        "product_quotes_title": ""
+      }
+    }
+  },
+  "order": [
+    "template_prod_quote"
+  ]
+}

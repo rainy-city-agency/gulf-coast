@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "template_manufacturers": {
+      "type": "template-manufacturers",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Manufacturers.png",
+        "enable_categories": true,
+        "main_linklist": "manufacturers-categories"
+      }
+    }
+  },
+  "order": [
+    "template_manufacturers"
+  ]
+}

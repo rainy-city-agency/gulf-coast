@@ -1,0 +1,312 @@
+<!doctype html> 
+  <html lang="{{ shop.locale }}">
+  <head>
+    {% include 'style-tags', layout: 'theme' %}
+  
+    {% comment %} Preconnet {% endcomment %}
+    <link rel="dns-prefetch" href="https://cdn.shopify.com" />
+    
+    <link rel="preconnect" href="https://v.shopify.com" />
+    <link rel="preconnect" href="https://cdn.shopifycloud.com" />
+    <!-- <link rel="preconnect" href="https://shopifyorderlimits.s3.amazonaws.com" /> -->
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="alternate" href="{{ canonical_url }}" hreflang="en-us" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="">
+    {% include 'social-meta-tags' %}
+  
+    {% if settings.enable_meta_noindex %}
+      <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+
+    {% if template contains 'eaa-members' %}
+    <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+    
+    {% if settings.favicon_image != '' %}
+      <link rel="shortcut icon" href="{{ settings.favicon_image | img_url: '32x32' }}" type="image/png">
+    {% endif %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+{% capture seo_title %}
+      {{ page_title }}
+      {% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} - {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}
+      {% if current_page != 1 %} - {{ 'general.meta.page' | t: page: current_page }}{% endif %}
+      {% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}
+    {% endcapture %}
+  
+    <title>{{ seo_title }}</title>
+  
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% else %}
+      <meta name="description" content="{{ seo_title }}">
+    {% endif %}
+  
+    <!--  content start  -->
+<!--     {%- capture CFH -%}{{content_for_header }}
+  {{ 'bold-brain-widget.css' | asset_url | stylesheet_tag }}
+  {%- endcapture -%}
+    {%- assign asyncloadFunction  =  CFH | split: 'function asyncLoad()' -%}
+    {%- assign asyncload = asyncloadFunction[1] | split: 'var urls = [' -%}
+    {%- assign urlData = asyncload[1] | split: '];' -%}
+    
+    {% assign storeTrekiee  = CFH | split: '<script class="analytics">' %}
+    {% assign TrekieeJS  = storeTrekiee[1] | split: '</script>' %}
+    {{ content_for_header | replace: urlData[0], '' | replace: TrekieeJS[0], '' }} -->
+    <!--  content end  -->
+
+    {{content_for_header }}
+  {{ 'bold-brain-widget.css' | asset_url | stylesheet_tag }}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                })(window,document,'script','dataLayer','GTM-5LG7WMT');</script>
+    <!-- End Google Tag Manager -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    {%- if settings.enable_google_translator -%}
+    <script type="text/javascript" defer>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+      }
+    </script>
+    {%- endif -%}
+    {% include 'swymSnippet' %}
+
+    {% include 'hulk_po_vd.liquid' %}
+    
+    <!-- Extend - Add necessary SDK script tags and configure the store -->
+    <script src="https://sdk.helloextend.com/extend-sdk-client/v1/extend-sdk-client.min.js" defer="defer"></script>  
+    <script src="https://sdk.helloextend.com/extend-sdk-client-shopify-addon/v1/extend-sdk-client-shopify-addon.min.js" defer="defer"></script>  
+    <script defer="defer">
+      window.addEventListener('DOMContentLoaded', function(){
+        Extend.config({ storeId: '9666dd9e-e6cd-41d7-9bf4-27539e3d8f09', environment: 'production' })
+      })
+    </script>
+
+    <!-- Extend - Render polyfills to enable IE11 support -->
+    {% render 'extend-polyfills' %}
+
+    <!-- Extend - Render aftermarket integration snippet -->
+    {% render 'extend-aftermarket-integration' %}
+
+    <!-- Extend -- Load cart integration script -->
+    {% render 'extend-cart-integration' %}
+
+    <!-- Extend -- Load cart integration script -->
+    {% render 'extend-sidecart-integration' %}
+
+    <!-- Extend - End Extend code -->
+  </head>
+  
+  {% capture body %}
+  <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}" {% if template.name == 'index' %}data-template="index"{% elsif template.name == 'page' %}data-template="page"{% endif %}>
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LG7WMT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+     <script type="text/javascript" async>
+        // Font files
+        var cloudflare = document.createElement('link');
+        cloudflare.rel = 'stylesheet';
+        cloudflare.type = 'text/css';
+        cloudflare.media = 'all';
+        cloudflare.href = '//cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css';
+        cloudflare.id = 'cloudflare'
+        document.getElementsByTagName('head')[0].appendChild(cloudflare);
+    </script>
+    
+   
+    {% include 'legacy-support-scripts' %}
+    {% include 'fonts-loader' %}
+    
+    <div id="app" :class="{'loading': isLoading}" v-cloak>
+      <div class="overlay site-overlay" :class="{'show': isOverlayVisible}" data-site-overlay></div>
+      <vue-snotify></vue-snotify>
+     
+      {% section 'header' %}
+      {{ content_for_layout }}
+      {% section 'footer' %}
+  
+      {% section 'mobile-navigation' %}
+    
+      {% include 'cart-drawer' %}
+      {% section 'search-layer' %}
+    </div>
+  
+    <div data-app-scripts></div>
+  
+    {% comment %} If you store has customer accounts disabled, you can remove the following JS file {% endcomment %}
+    {% if template contains 'customers'  %}
+      {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+    {% endif %}
+  
+    {% include 'theme-global-vars' %}
+  
+    {% include 'script-tags', layout: 'theme' %}
+  
+    {% comment %} Other JSON data {% endcomment %}
+    {%- if template == 'product' -%}
+      {% include 'json-swatches-data-colorlist' %}
+    {%- endif -%}
+    {% include 'json-structured-data' %}
+    <script src="//www.searchserverapi.com/widgets/shopify/init.js?a=2H7q6x3o2h"></script>
+
+    {% unless template contains 'product' or handle contains 'store-reviews' %}
+    <script>
+      (function(w,d,s,l,i) { w[l]=w[l]||[];w[l].push( { 'gtm.start':new Date().getTime(),event:'gtm.js' } );
+                            var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='//www.shopperapproved.com/schema/'+i+'.js';
+                            f.parentNode.insertBefore(j,f);} )(window,document,'script','saData','30192-sSFXP');
+    </script>
+    {% endunless %}
+
+
+  
+    
+  
+    <script type="text/javascript" async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=V6a7Bg"></script>
+  
+    {% if template == 'product' %}
+    	{%- render 'bold-common' -%}
+    {% endif %}
+    
+    {%- render 'bold-pr' -%}
+    <style>
+      .snize-ac-results .snize-thumbnail img[src^="data:image"], .snize-search-results .snize-thumbnail img[src^="data:image"]{
+        content: url('https://cdn.shopify.com/s/files/1/0541/8313/3361/files/No_image.jpg?v=1618213695') !important;
+      }
+   </style>
+    
+ 
+  <!-- Shopper Approved Style & Script - layout/theme -->
+  <style>
+    #app {
+      padding-top: 120px;
+    }
+    .merchant_review .comments, .product_review .comments{
+    	line-height: 1.5em !important;
+    }
+    #merchant_page #sa_sort, #product_page #sa_sort{
+    	margin: 0px 5px;
+      height: auto !important;
+    }
+    .star_container{
+      	text-align:center !important;
+    	margin: 0px auto !important;
+        height: 39px;
+    }
+    {% comment %} .flickity-slider .card-product-style-1 .card-body{
+    	min-height: 150px;
+    } {% endcomment %}
+    #product_just_stars{
+      display: inline-block;
+      margin: 10px 0px;
+    }
+    #product_just_stars .ind_cnt {
+        display: inline !important;
+        padding-left: 8px !important;
+        font-size: 14px !important;
+        vertical-align: 3px !important;
+/*       border-right: 1px solid #000;
+      padding-right: 10px;
+      margin-right: 10px; */
+    }
+    #product_just_stars .ind_cnt span, 
+    #product_just_stars a.sa_jump_to_reviews {
+      color: #a90533!important;
+      text-decoration: underline;
+    }
+    #product_just_stars .ind_cnt span:hover{
+    	text-decoration: none;
+    }
+    #ab-tiny-widget{
+      display: inline-block !important;
+      vertical-align: 3px!important;
+      margin: 10px 0px !important;
+    }
+    #ab-tiny-widget, #ab-tiny-widget a{
+      margin-left: 0px !important;
+      color: #a90533!important;
+    }
+    #ab-tiny-widget a{
+      text-decoration: underline;
+    }
+    #ab-tiny-widget a:hover{
+      text-decoration: none;
+    }
+
+    .group-stars .on,
+    #product_just_stars .on,
+    .product_review .stars .on,
+    #review_header .stars .on,
+    .merchant_review .stars .on {
+       filter: invert(38%) sepia(88%) saturate(5953%) hue-rotate(341deg) brightness(82%) contrast(99%);
+    }
+    .group-stars .off,
+    #product_just_stars .off,
+    .product_review .stars .off,
+    #review_header .stars .off,
+    .merchant_review .stars .off {
+       filter: invert(38%) sepia(88%) saturate(5953%) hue-rotate(341deg) brightness(82%) contrast(99%);
+    }
+    .group-stars .half,
+    #product_just_stars .half,
+    .product_review .stars .half,
+    #review_header .stars .half,
+    .merchant_review .stars .half {
+       filter: invert(38%) sepia(88%) saturate(5953%) hue-rotate(341deg) brightness(82%) contrast(99%);
+    }
+
+  </style>
+  <script type="text/javascript"> function saLoadScript(src) { var js = window.document.createElement('script'); js.src = src; js.type = 'text/javascript'; document.getElementsByTagName("head")[0].appendChild(js); } saLoadScript("https://www.shopperapproved.com/widgets/group2.0/30192.js"); </script>
+  <script type="text/javascript">
+  setTimeout(function(){
+    $("div.snize-item span.snize-overhidden span.snize-title").each(function() {
+          //var itemIDHTML = $(this).html();
+          //var itemID = itemIDHTML .split("</span>");
+          var itemID = $(this).parents("li.snize-product").attr('id');
+          itemID = itemID.replace('snize-product-', '');
+          $( this ).after( '<div class="star_container ' + $.trim(itemID) + '"></div>' );
+    });
+    reloadShopperApprovedStars();
+  },5000);
+  </script>
+  
+  <!-- END Shopper Approved Style & Script - layout/theme -->
+    
+  {{ 'crucial-commerce-page-speed.js' | asset_url | script_tag }}
+{{ '//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js?23' | script_tag }}
+</body>
+  {% endcapture %}
+  
+  {{body}}
+
+    <script>
+      var _rollbarConfig = {
+        accessToken: "4e3cfcded52c479b9adf084cbab0033a",
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+          environment: "production"
+        }
+      };
+
+      !function(r){var e={};function o(n){if(e[n])return e[n].exports;var t=e[n]={i:n,l:!1,exports:{}};return r[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=e,o.d=function(r,e,n){o.o(r,e)||Object.defineProperty(r,e,{enumerable:!0,get:n})},o.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},o.t=function(r,e){if(1&e&&(r=o(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)o.d(n,t,function(e){return r[e]}.bind(null,t));return n},o.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return o.d(e,"a",e),e},o.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},o.p="",o(o.s=0)}([function(r,e,o){"use strict";var n=o(1),t=o(5);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdn.rollbar.com/rollbarjs/refs/tags/v2.23.0/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";var n=o(2),t=o(3);function a(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}var l=0;function i(r,e){this.options=r,this._rollbarOldOnError=null;var o=l++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}var s=o(4),d=function(r,e){return new i(r,e)},c=function(r){return new s(d,r)};function u(r){return a((function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)}))}i.prototype.loadFull=function(r,e,o,n,t){var l=!1,i=e.createElement("script"),s=e.getElementsByTagName("script")[0],d=s.parentNode;i.crossOrigin="",i.src=n.rollbarJsUrl,o||(i.async=!0),i.onload=i.onreadystatechange=a((function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){i.onload=i.onreadystatechange=null;try{d.removeChild(i)}catch(r){}l=!0,function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,a,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(a=n.args||[],i=0;i<a.length;++i)if("function"==typeof(l=a[i])){l(e);break}}"function"==typeof t&&t(e)}()}})),d.insertBefore(i,s)},i.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<p.length;++f)i.prototype[p[f]]=u(p[f]);r.exports={setupShim:function(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var l=new c(e);return a((function(){e.captureUncaught&&(l._rollbarOldOnError=r.onerror,n.captureUncaughtExceptions(r,l,!0),e.wrapGlobalEventHandlers&&t(r,l,!0)),e.captureUnhandledRejections&&n.captureUnhandledRejections(r,l,!0);var a=e.autoInstrument;return!1!==e.enabled&&(void 0===a||!0===a||"object"==typeof a&&a.network)&&r.addEventListener&&(r.addEventListener("load",l.captureLoad.bind(l)),r.addEventListener("DOMContentLoaded",l.captureDomContentLoaded.bind(l))),r[o]=l,l}))()}},Rollbar:c}},function(r,e,o){"use strict";function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null);var t=e.handleUncaughtException.apply(e,n);o&&o.apply(r,n),"anonymous"===t&&(e.anonymousErrorsPending+=1)}r.exports={captureUncaughtExceptions:function(r,e,o){if(r){var t;if("function"==typeof e._rollbarOldOnError)t=e._rollbarOldOnError;else if(r.onerror){for(t=r.onerror;t._rollbarOldOnError;)t=t._rollbarOldOnError;e._rollbarOldOnError=t}e.handleAnonymousErrors();var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};o&&(a._rollbarOldOnError=t),r.onerror=a}},captureUnhandledRejections:function(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}}},function(r,e,o){"use strict";function n(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports=function(r,e,o){if(r){var t,a,l="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(t=0;t<l.length;++t)r[a=l[t]]&&r[a].prototype&&n(e,r[a].prototype,o)}}},function(r,e,o){"use strict";function n(r,e){this.impl=r(e,this),this.options=e,function(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}(n.prototype)}n.prototype._swapAndProcessMessages=function(r,e){var o,n,t;for(this.impl=r(this.options);o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=n},function(r,e,o){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){for(var o,n,t=(r=r||{}).globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+
+    </script>
+      {% render 'dynamic-scripts', urlData:urlData %}
+
+  </html>

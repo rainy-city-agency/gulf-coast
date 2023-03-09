@@ -1,0 +1,201 @@
+<section class="kit-panels">
+    {%- if section.settings.image != blank -%}
+        <div class="banner-section">
+            <div class="banner-wrapper">
+                <img
+                data-sizes="auto"
+                src="{{ section.settings.image | img_url: 'small'}}"
+                data-srcset="
+                    {% if section.settings.image_mobile != blank %}
+                        {{ section.settings.image_mobile | img_url: '768x' }} 567w,
+                    {% endif%}
+                    {{ section.settings.image | img_url: '992x' }} 768w,
+                    {{ section.settings.image | img_url: '1200x' }} 992w,
+                    {{ section.settings.image | img_url: '1920x' }} 1200w,
+                    {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+                    {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+                    {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+                    "
+                class="lazyload img-wrapper img-fluid" alt="{{ page.title | escape }}" />
+            </div>
+        </div>
+    {%- endif -%}
+    <div class="container py-4 pb-0">
+        <h1 class="font-weight-bold letter-spacing text-uppercase text-center text-primary my-3 my-md-5">{{- section.settings.Mainheading -}}</h3>
+
+        <!-- Content Blocks  -->
+        {% if section.blocks.size > 0 %}
+            {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.productSelect] %}
+
+                <div class="blocks mb-5">
+                    <h2 class="font-weight-bold letter-spacing text-uppercase text-primary mb-3 mb-md-5">{{ block.settings.title }}</h1>
+                    <div class="row align-items-center justify-content-center">
+                        {%- if block.settings.choose_img != blank -%}
+                        <div class="col-lg-4 col-md-5 mb-md-0 mb-4">
+                            <img src="{{ block.settings.choose_img | img_url: 'pico'}}"
+                            data-src="{{ block.settings.choose_img | img_url: '500x' }} 400w,
+                                        {{ block.settings.choose_img | img_url: '600x' }} 500w"
+                                alt="{{block.settings.title}}"
+                                class="mw-100 img-wrapper lazyload" />
+                        </div>
+                        {%- endif -%}
+                        <div class="{%- if block.settings.choose_img != blank -%}col-lg-8 col-md-7{%else%}col-12{%endif%} d-flex flex-column ">
+                            {% if block.settings.titleCaption != '' %}
+                                <h3 class="font-weight-bold letter-spacing text-uppercase text-center text-primary mb-3 mb-md-5">{{ block.settings.titleCaption }}</h2>
+                            {% endif %}
+                            {% if block.settings.caption != '' %}
+                                <h4>{{ block.settings.caption }}</h3>
+                            {%endif%}
+                            {% if block.settings.btn_txt != '' %}
+                                <a {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %} class="w-50 d-inline-flex justify-content-center btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }} mb-2">{{ block.settings.btn_txt }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {%endfor%}
+        {% endif %}
+    </div>
+</section>
+<style>
+#review_header .percentage {
+    width: 215px !important;
+}
+</style>
+{% schema %}
+  {
+    "name": "Content Block Template",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "ratina_image",
+            "label": "Select Image for Large Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image for Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Select Image for Mobile"
+        },
+        {
+            "type": "text",
+            "id": "Mainheading",
+            "label": "Heading Text"
+        }  
+    ],
+    "blocks": [{
+        "type": "content",
+        "name": "Information Item",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "choose_img",
+                "label": "Choose Image"
+            },
+            {
+                "type": "text",
+                "id": "titleCaption",
+                "label": "Title"
+            },
+            {
+                "type": "textarea",
+                "id": "caption",
+                "label": "Caption"
+            },
+            {
+                "type": "header",
+                "content": "Button"
+              },
+              {
+                "type": "text",
+                "id": "btn_txt",
+                "label": "Button Text"
+              },
+              {
+                "type": "url",
+                "id": "btn_link",
+                "label": "Button Link"
+              },
+              {
+                "type": "select",
+                "id": "btn_type",
+                "label": "Button Type",
+                "options": [{
+                    "value": "outline",
+                    "label": "Outline"
+                  },
+                  {
+                    "value": "",
+                    "label": "Solid"
+                  }
+                ],
+                "default": ""
+              },
+              {
+                "type": "select",
+                "id": "btn_variant",
+                "label": "Button Variant",
+                "options": [
+                  {
+                    "value": "primary",
+                    "label": "Primary"
+                  },
+                  {
+                    "value": "secondary",
+                    "label": "Secondary"
+                  },
+                  {
+                    "value": "accent",
+                    "label": "Accent"
+                  },
+                  {
+                    "value": "light",
+                    "label": "Light"
+                  },
+                  {
+                    "value": "dark",
+                    "label": "Dark"
+                  }
+                ],
+                "default": "primary"
+              },
+              {
+                "type": "select",
+                "id": "btn_size",
+                "label": "Button Size",
+                "options": [{
+                    "value": "",
+                    "label": "Default"
+                  },
+                  {
+                    "value": "btn-sm",
+                    "label": "Small"
+                  },
+                  {
+                    "value": "btn-lg",
+                    "label": "Large"
+                  }
+                ],
+                "default": ""
+              }
+        ]
+    }]
+  }
+{% endschema %}

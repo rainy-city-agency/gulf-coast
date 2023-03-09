@@ -1,0 +1,123 @@
+{%- assign collection = collections[section.settings.home_featured_collection] -%}
+
+{% unless section.settings.home_featured_collection == blank or collection == empty or collection.products_count == 0 %}
+
+<section class="section-content clearfix"  data-section-id="{{ section.id }}" data-grid-type="grid" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+
+      <div class="container">
+        <div class="row index-featured-section">
+          <div class="col-12 text-center">
+              {% if section.settings.heading_txt != '' %}
+              <div class="row mb-md-7 mb-4">
+                <div class="position-relative d-flex justify-content-between align-items-center w-100 custom-dashed-border best-seller-border">
+                    <h2 class="letter-spacing-normal display-4 d-inline-block title-dash-line font-weight-normal mb-0 position-relative px-3 section-title zindex-sticky">{{ section.settings.heading_txt | escape }}</h2>
+                    <h6 class="text-uppercase text-primary font-weight-medium letter-spacing-1 mb-0 d-none d-md-block"> <a href="#" class="text-primary">shop all</a> </h6>
+                </div>
+              </div>
+              {% endif %}
+              {% if section.settings.lead_txt != '' %}
+                <p class="lead px-lg-6">
+                    {{ section.settings.lead_txt }}
+                </p>
+              {% endif %}
+          </div>
+      </div>
+      </div>
+      
+      {% comment %}
+        Loop through products in your Frontpage collection.
+       This collection is created by default, but you must add products to it.
+      {% endcomment %}
+      <!-- <div class="position-relative d-lg-block d-none animation" id="animation-{{ section.settings.heading_txt | escape | handleize }}" >
+        <div class="best-seller-animation ">
+          <p class="mb-0"><span class="animation-main seller-animation"></span></p>
+          <img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/Plane.svg?v=1646299224" alt="">
+        </div>
+      </div> -->
+    
+      <div class="featured-products-wrap" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row justify-content-center featured-products" data-carousel-main data-flickity='{
+          "adaptiveHeight": false,
+          "contain": true,
+          "cellAlign": "left",
+          "wrapAround": false,
+          "prevNextButtons": true,
+          "pageDots": false,
+          "groupCells" : false,
+          "lazyLoad": true,
+          "arrowShape":  {"x0": 10, "x1": 60, "y1": 50, "x2": 70, "y2": 40, "x3": 30}
+        }'>
+          {%- for product in collection.products limit: 8 -%}
+            <script type="application/json" class="bold-product-json">{{ product | json }}</script>
+            <div class="col-6 col-md-3 col-ex-lg-3 my-3 d-flex align-items-stretch justify-content-center" >
+              {% include 'card-product-style-generic' %}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="container">
+        <div class="row index-featured-section d-md-none pt-3">
+          <div class="col-12 text-center">
+            <div class="position-relative d-flex justify-content-between align-items-center w-100">
+              <h6 class="text-uppercase text-primary font-weight-medium letter-spacing-1 mb-0 d-none d-md-block"> <a href="#" class="text-primary">shop all</a> </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+{%- endunless -%}
+
+
+{% schema %}
+  {
+    "name": "Best Seller",
+    "class": "index-featured-collectiion clearfix",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "text",
+        "id": "heading_txt",
+        "label": "Heading Text",
+        "default": "Featured Collection"
+      },
+      {
+        "type": "textarea",
+        "id": "lead_txt",
+        "label": "Lead Text"
+      },
+      {
+        "type": "header",
+        "content": "Collection"
+      },
+      {
+        "type": "collection",
+        "id": "home_featured_collection",
+        "label": "Select Collection"
+      },
+      {
+        "type": "header",
+        "content": "Styling"
+      },
+      {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Background Color",
+        "default": "#f8f9fa"
+      },
+      {
+        "type": "color",
+        "id": "section_txt_color",
+        "label": "Text Color",
+        "default": "#343a40"
+      }
+    ],
+    "presets": [{
+      "name": "Best Seller",
+      "category": "Collection"
+    }]
+  }
+{% endschema %}
+

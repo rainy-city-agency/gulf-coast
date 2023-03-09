@@ -1,0 +1,83 @@
+<!-- Video Text Section Starts -->
+<section class="video-text section-content pb-0 px-3 px-lg-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 order-2 order-md-1 px-0">
+                <div class="align-items-start d-flex flex-column h-100 justify-content-center video-text-content">
+                    <h4 class="text-white">{{section.settings.heading_txt}}</h4>
+                    <a class="btn btn-primary text-uppercase" href="{{section.settings.btnUrl}}">{{section.settings.lead_txt}}</a>    
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 order-1 order-md-2 px-0">
+                <div class="video-play position-relative h-100">
+                    <iframe class="border-0 w-100 h-100" src="
+                    {%- if section.settings.Video_URL != blank-%}
+                    {{section.settings.Video_URL}}
+                    {%else%}
+                    {{section.settings.videoUrl}}
+                    {%- endif -%} ">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Text Section ends -->
+{% schema %}
+{
+"name": "Video Text",
+"class": "clearfix",
+"settings": [
+{
+"type": "header",
+"content": "Content"
+},
+{
+"type": "text",
+"id": "heading_txt",
+"label": "Heading Text",
+"default": "Featured Collection"
+},
+{
+"type": "text",
+"id": "lead_txt",
+"label": "Button Text",
+"default": "Shop all"
+},
+{
+    "type": "url",
+    "id": "btnUrl",
+    "label": "Button URL"
+},
+{
+"type": "header",
+"content": "Video"
+},
+  {
+    "type": "video_url",
+    "id": "Video_URL",
+    "accept": [
+        "youtube",
+        "vimeo"
+    ],
+    "label": "Video URL"
+  },
+  {
+      "type": "header",
+      "content": "OR"
+  },
+    {
+        "type": "text",
+        "id": "videoUrl",
+        "label": "Video URL"
+    }
+],
+"presets": [
+{
+    "name": "Video Text",
+    "category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}

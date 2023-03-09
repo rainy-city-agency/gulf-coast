@@ -1,0 +1,32 @@
+<script>
+    function swymCallbackFn() {
+      // your API calls go here
+      //over ride the swym cart api to support custom slider cart 
+      var replayAddToCartOriginalFn = _swat.replayAddToCart;
+      window._swat.replayAddToCart = function() {
+        //save the successCallback
+        var successCallbackFn = arguments[2];
+        arguments[2] = function(data) {
+          if (successCallbackFn && updateThirdPartyCartFn) {
+            successCallbackFn(data);
+            updateThirdPartyCartFn(data);
+          };
+        }
+        //call the orginal fn
+        replayAddToCartOriginalFn.apply(this, arguments);
+      };
+      //runs on success callback.
+      function updateThirdPartyCartFn(productData) {
+        // Successfully added to cart API, Now call your slider cart here.
+        console.log("Trigger your cart update here ");
+        console.log(" you can also append data to your custom cart using this API", "https://shopify.dev/docs/themes/ajax-api");        
+        $('.swym-wishlist-notifications-container').css('display','none');
+        app._getCartData();
+        app._toggleCartDrawer();
+      }
+    }
+    if (!window.SwymCallbacks) {
+      window.SwymCallbacks = [];
+    }
+    window.SwymCallbacks.push(swymCallbackFn);
+  </script>

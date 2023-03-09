@@ -1,0 +1,397 @@
+@charset 'UTF-8';
+
+/**
+ * Insert your styles with Liquid below.
+ */
+
+ // Vue.js helper directive => hides elements
+[v-cloak] {
+  display: none !important;
+}
+
+// helper classes to hide fonts while loading and avoid FOUC
+/*
+.wf-loading,
+.wf-inactive{
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6,
+  p{
+    display: none !important;
+    transition: none !important;
+  }
+}
+*/
+
+// Password strength meter background image
+.pass-colorbar {
+  background-image: url('{{ "passwordstrength.jpg" | asset_url }}');
+}
+
+
+@font-face {
+  font-family: "gca-icon";
+  src:url("../assets/gca-icon.eot");
+  src:url("../assets/gca-icon.eot?#iefix") format("embedded-opentype"),
+    url("../assets/gca-icon.woff") format("woff"),
+    url("../assets/gca-icon.ttf") format("truetype"),
+    url("../assets/gca-icon.svg#gca-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "gca-icon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "gca-icon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-right:before {
+  content: "\62";
+}
+.icon-angle-down:before {
+  content: "\63";
+}
+.icon-angle-left:before {
+  content: "\64";
+}
+.icon-angle-up:before {
+  content: "\65";
+}
+.icon-user:before {
+  content: "\61";
+}
+.icon-wishlist:before {
+  content: "\66";
+}
+.icon-cart:before {
+  content: "\67";
+}
+.icon-arrow-rg:before {
+  content: "\68";
+}
+.icon-arrow-lft:before {
+  content: "\69";
+}
+.icon-search:before {
+  content: "\6a";
+}
+.icon-news-arrow:before {
+  content: "\6b";
+}
+.icon-search{
+  color: #9B9C9A;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/Oswald-Bold.eot');
+  src: url('../assets/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/Oswald-Bold.woff2') format('woff2'),
+      url('../assets/Oswald-Bold.woff') format('woff'),
+      url('../assets/Oswald-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/Oswald-ExtraLight.eot');
+  src: url('../assets/Oswald-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('../assets/Oswald-ExtraLight.woff2') format('woff2'),
+      url('../assets/Oswald-ExtraLight.woff') format('woff'),
+      url('../assets/Oswald-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/Oswald-Regular.eot');
+  src: url('../assets/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../assets/Oswald-Regular.woff2') format('woff2'),
+      url('../assets/Oswald-Regular.woff') format('woff'),
+      url('../assets/Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/Oswald-Light.eot');
+  src: url('../assets/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+      url('../assets/Oswald-Light.woff2') format('woff2'),
+      url('../assets/Oswald-Light.woff') format('woff'),
+      url('../assets/Oswald-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/Oswald-SemiBold.eot');
+  src: url('../assets/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/Oswald-SemiBold.woff2') format('woff2'),
+      url('../assets/Oswald-SemiBold.woff') format('woff'),
+      url('../assets/Oswald-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/Oswald-Medium.eot');
+  src: url('../assets/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../assets/Oswald-Medium.woff2') format('woff2'),
+      url('../assets/Oswald-Medium.woff') format('woff'),
+      url('../assets/Oswald-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-BlackItalic.eot');
+  src: url('../assets/WorkSans-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-BlackItalic.woff2') format('woff2'),
+      url('../assets/WorkSans-BlackItalic.woff') format('woff'),
+      url('../assets/WorkSans-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-Black.eot');
+  src: url('../assets/WorkSans-Black.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-Black.woff2') format('woff2'),
+      url('../assets/WorkSans-Black.woff') format('woff'),
+      url('../assets/WorkSans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-Bold.eot');
+  src: url('../assets/WorkSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-Bold.woff2') format('woff2'),
+      url('../assets/WorkSans-Bold.woff') format('woff'),
+      url('../assets/WorkSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-BoldItalic.eot');
+  src: url('../assets/WorkSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-BoldItalic.woff2') format('woff2'),
+      url('../assets/WorkSans-BoldItalic.woff') format('woff'),
+      url('../assets/WorkSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-ExtraBold.eot');
+  src: url('../assets/WorkSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-ExtraBold.woff2') format('woff2'),
+      url('../assets/WorkSans-ExtraBold.woff') format('woff'),
+      url('../assets/WorkSans-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-ExtraBoldItalic.eot');
+  src: url('../assets/WorkSans-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-ExtraBoldItalic.woff2') format('woff2'),
+      url('../assets/WorkSans-ExtraBoldItalic.woff') format('woff'),
+      url('../assets/WorkSans-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-ExtraLight.eot');
+  src: url('../assets/WorkSans-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-ExtraLight.woff2') format('woff2'),
+      url('../assets/WorkSans-ExtraLight.woff') format('woff'),
+      url('../assets/WorkSans-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-ExtraLightItalic.eot');
+  src: url('../assets/WorkSans-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-ExtraLightItalic.woff2') format('woff2'),
+      url('../assets/WorkSans-ExtraLightItalic.woff') format('woff'),
+      url('../assets/WorkSans-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-Italic.eot');
+  src: url('../assets/WorkSans-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-Italic.woff2') format('woff2'),
+      url('../assets/WorkSans-Italic.woff') format('woff'),
+      url('../assets/WorkSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-LightItalic.eot');
+  src: url('../assets/WorkSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-LightItalic.woff2') format('woff2'),
+      url('../assets/WorkSans-LightItalic.woff') format('woff'),
+      url('../assets/WorkSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-Medium.eot');
+  src: url('../assets/WorkSans-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-Medium.woff2') format('woff2'),
+      url('../assets/WorkSans-Medium.woff') format('woff'),
+      url('../assets/WorkSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-Light.eot');
+  src: url('../assets/WorkSans-Light.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-Light.woff2') format('woff2'),
+      url('../assets/WorkSans-Light.woff') format('woff'),
+      url('../assets/WorkSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-MediumItalic.eot');
+  src: url('../assets/WorkSans-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-MediumItalic.woff2') format('woff2'),
+      url('../assets/WorkSans-MediumItalic.woff') format('woff'),
+      url('../assets/WorkSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-SemiBold.eot');
+  src: url('../assets/WorkSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-SemiBold.woff2') format('woff2'),
+      url('../assets/WorkSans-SemiBold.woff') format('woff'),
+      url('../assets/WorkSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-Regular.eot');
+  src: url('../assets/WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-Regular.woff2') format('woff2'),
+      url('../assets/WorkSans-Regular.woff') format('woff'),
+      url('../assets/WorkSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-ThinItalic.eot');
+  src: url('../assets/WorkSans-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-ThinItalic.woff2') format('woff2'),
+      url('../assets/WorkSans-ThinItalic.woff') format('woff'),
+      url('../assets/WorkSans-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-Thin.eot');
+  src: url('../assets/WorkSans-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-Thin.woff2') format('woff2'),
+      url('../assets/WorkSans-Thin.woff') format('woff'),
+      url('../assets/WorkSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/WorkSans-SemiBoldItalic.eot');
+  src: url('../assets/WorkSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/WorkSans-SemiBoldItalic.woff2') format('woff2'),
+      url('../assets/WorkSans-SemiBoldItalic.woff') format('woff'),
+      url('../assets/WorkSans-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+

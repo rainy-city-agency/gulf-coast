@@ -1,0 +1,62 @@
+{% if product.available %}
+    {% for tag in product.tags %}
+    {% if tag contains 'replacement' %}
+        {% assign replacement = tag %}
+    {% endif %}
+
+    {% if tag contains 'repairable' %}
+        {% assign Repairable = tag %}
+    {% endif %}
+
+    {% if tag contains 'similar_item' %}
+        {% assign similar_item = tag %}
+    {% endif %}
+    {% endfor %}
+
+    <div class="claim-info d-flex flex-wrap">
+        {% if replacement != blank %}
+            <div class="order-info-item d-flex flex-column align-items-center mr-4 my-3">
+                <div class="order-info-img d-flex justify-content-center mb-2">    
+                    {% if section.settings.replacement_id_URL %}
+                        <img src="{{section.settings.replacement_id_URL}}" alt="replacement_id" srcset="">                
+                    {% else %}
+                        <img src="{{section.settings.replacement_id | img_url: '200x'}}" alt="replacement_id" srcset="">                
+                    {% endif %}
+                </div>  
+                {% if section.settings.replacementText %}
+                    <p>{{section.settings.replacementText }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+        
+        {% if Repairable != blank %}
+            <div class="order-info-item d-flex flex-column align-items-center mr-4 my-3">
+                <div class="order-info-img d-flex justify-content-center mb-2">
+                    {% if section.settings.repair_id_URL %}
+                        <img src="{{section.settings.repair_id_URL}}" alt="repair_id" srcset="">                
+                    {% else %}
+                        <img src="{{section.settings.repair_id | img_url: '200x'}}" alt="repair_id" srcset="">                
+                    {% endif %}
+                </div>
+                {% if section.settings.repairText %}
+                    <p>{{section.settings.repairText }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {% if similar_item != blank %}
+            <div class="order-info-item d-flex flex-column align-items-center mr-4 my-3">
+                <div class="order-info-img d-flex justify-content-center mb-2">
+                    {% if section.settings.Similar_id_URL %}
+                        <img src="{{section.settings.Similar_id_URL}}" alt="Similar_id" srcset="">                
+                    {% else %}
+                        <img src="{{section.settings.Similar_id | img_url: '200x'}}" alt="Similar_id" srcset="">                
+                    {% endif %}
+                </div>
+                {% if section.settings.SimilarText %}
+                    <p>{{section.settings.SimilarText }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+{% endif %}

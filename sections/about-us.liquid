@@ -1,0 +1,110 @@
+{%- if section.settings.image != blank -%}
+<div class="page-banner mb-6 mb-md-11">
+    <img
+    data-sizes="auto"
+    src="{{ section.settings.image | img_url: 'small'}}"
+    data-srcset="
+      {{ section.settings.image | img_url: '768x' }} 567w,
+      {{ section.settings.image | img_url: '992x' }} 768w,
+      {{ section.settings.image | img_url: '1200x' }} 992w,
+      {{ section.settings.image | img_url: '1920x' }} 1200w,
+      {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+      {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+      {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+      "
+    class="lazyload mw-100 img-wrapper d-none d-sm-block" alt="{{ page.title | escape }}" />
+
+    {%- if section.settings.image_mobile != blank -%}
+    <img
+        data-sizes="auto"
+        src="{{ section.settings.image_mobile | img_url: 'pico'}}"
+        data-src="{{ section.settings.image_mobile | img_url: '575x' }}"
+        class="mw-100 img-wrapper lazyload d-sm-none" alt="{{ page.title | escape }}" />
+    {%- else -%}
+    <img
+        data-sizes="auto"
+        src="{{ section.settings.image | img_url: 'pico'}}"
+        data-src="
+        {{ section.settings.image | img_url: '575x' }}
+        "
+        class="lazyload mw-100 img-wrapper d-sm-none" alt="{{ page.title | escape }}" />
+    {%- endif -%}
+</div>
+{%- endif -%}
+  <div class="container mb-9">
+    <h1 class="font-weight-bold letter-spacing text-uppercase text-primary mb-3 mb-md-8 text-center">{{page.title}}</h1>
+      <div>{{page.content}}</div>
+  </div>
+<div class="row no-gutters">
+  <!-- {% if section.settings.abt_us_back_img != blank %}
+    <div class="col-md-6">
+        <a href="{%- if section.settings.hotel_url != blank -%}{{section.settings.hotel_url}}{%- else -%}#{%- endif -%}" class="about-feature-item d-block text-center text-white py-10 position-relative h-100 px-4" style="background-image: url({{section.settings.abt_us_back_img | img_url: 'grande'}});">
+          <div class="position-relative zindex-sticky">
+            <h3 class="font-weight-bold text-uppercase">{{section.settings.hotel_title}}</h3>
+            {{section.settings.hotel_caption}}
+          </div>
+        </a>
+    </div>
+  {% endif %} -->
+  {% if section.settings.abt_us_back_plane_img != blank %}
+    <div class="col-12">
+        <a href="{%- if section.settings.plane_url != blank -%}{{section.settings.plane_url}}{%- else -%}#{%- endif -%}" class="about-feature-item d-block text-center text-white py-10 position-relative h-100 px-4" style="background-image: url({{section.settings.abt_us_back_plane_img | img_url: 'grande'}});">
+          <div class="position-relative zindex-sticky">
+            <h3 class="font-weight-bold text-uppercase">{{section.settings.plane_title}}</h3>
+            {{section.settings.plane_caption}}
+          </div>
+        </a>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "About Us",
+  "settings": [
+  {
+    "type": "header",
+    "content": "Banner Content"
+},
+{
+    "type": "image_picker",
+    "id": "ratina_image",
+    "label": "Select Image for Large Desktop"
+},
+{
+    "type": "image_picker",
+    "id": "image",
+    "label": "Select Image for Desktop"
+},
+{
+    "type": "image_picker",
+    "id": "image_mobile",
+    "label": "Select Image for Mobile"
+},
+{
+  "type": "header",
+  "content": "Bottom Content"
+},
+    {
+        "type": "image_picker",
+        "id": "abt_us_back_plane_img",
+        "label": "Plane Background Image"
+      },
+      {
+        "type": "text",
+        "id": "plane_title",
+        "label": "Plane Title"
+      },
+      {
+        "type": "textarea",
+        "id": "plane_caption",
+        "label": "Plane Caption"
+      },
+      {
+        "type": "url",
+        "id": "plane_url",
+        "label": "Choose URL"
+      }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,152 @@
+<section class="news-archive d-block">
+    {%- if section.settings.image != blank -%}
+      <div class="banner-section">
+          <div class="banner-wrapper">
+          <img
+      data-sizes="auto"
+      src="{{ section.settings.image | img_url: 'small'}}"
+      data-srcset="
+        {{ section.settings.image | img_url: '768x' }} 567w,
+        {{ section.settings.image | img_url: '992x' }} 768w,
+        {{ section.settings.image | img_url: '1200x' }} 992w,
+        {{ section.settings.image | img_url: '1920x' }} 1200w,
+        {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+        {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+        {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+        "
+      class="lazyload mw-100 img-wrapper d-none d-sm-block" alt="{{ page.title | escape }}" />
+  
+      {%- if section.settings.image_mobile != blank -%}
+      <img
+          data-sizes="auto"
+          src="{{ section.settings.image_mobile | img_url: 'pico'}}"
+          data-src="{{ section.settings.image_mobile | img_url: '575x' }}"
+          class="mw-100 img-wrapper lazyload d-sm-none" alt="{{ page.title | escape }}" />
+      {%- else -%}
+      <img
+          data-sizes="auto"
+          src="{{ section.settings.image | img_url: 'pico'}}"
+          data-src="
+          {{ section.settings.image | img_url: '575x' }}
+          "
+          class="lazyload mw-100 img-wrapper d-sm-none" alt="{{ page.title | escape }}" />
+      {%- endif -%}
+        </div>
+
+      </div>
+    {%- endif -%}
+    {% paginate blog.articles by 12 %}
+      <div class="container">
+          <div class="section-content">
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <h1 class="font-weight-bold letter-spacing text-uppercase text-primary mb-3 mb-md-5">{{ section.settings.title}}</h1>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-10 mx-auto">
+                      <div class="news-list section-padding">
+                          <div class="row">
+                            {% for article in blog.articles %}
+                              <div class="col-md-4 col-sm-6 mb-md-7 mb-6 text-sm-center text-left item">
+                                  <a href="{{article.url }}" class="primary-link d-inline-block mb-3 font-weight-bold">{{article.title }}</a>
+                                  <p class="mb-md-4 mb-3">{{ article.published_at  | date: "%A, %B %d, %Y" }}</p>
+                                  {% if article.content %}
+                                    {% assign articleContent = article.content | strip_html | truncate: 150,'...' %}
+                                    {{-articleContent-}}
+                                  {% endif %}
+                                <a href="{{article.url }}" class="primary-link font-weight-bold d-block">read more</a>
+                              </div>
+                             {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+            {% if paginate.pages > 1 %}
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <nav>
+                            <ul class="pagination">
+                              {% if paginate.previous %}
+                                <li class="page-item">
+                                  <a class="page-link d-inline-flex align-items-center justify-content-center" href="{{ paginate.previous.url }}" name="{{ paginate.previous.title }}" title="{{ paginate.previous.title }}" aria-label="{{ paginate.previous.title }}">
+                                    <span aria-hidden="true"><i class="fas fa-angle-double-left mr-2"></i></span>
+                                     Prev |
+                                  </a>
+                                </li>
+                              {% endif %}
+                              {% for part in paginate.parts %}
+                                <li class="page-item">
+                                  {% if part.is_link %}
+                                    <a class="page-link d-inline-flex align-items-center justify-content-center" href="{{ part.url }}" name="{{ part.title }}" title="{{ part.title }}" aria-label="{{ part.title }}">
+                                      <span>{{ part.title }}</span>
+                                    </a>
+                                  {% else %}
+                                    {% if part.title == paginate.current_page %}
+                                      <a class="page-link active d-inline-flex align-items-center justify-content-center">
+                                        <span class="active">{{ part.title }}</span>
+                                      </a>
+                                    {% else %}
+                                      <span class="dots d-inline-flex align-items-end justify-content-center">
+                                        <span>{{ part.title }}</span>
+                                      </span>
+                                    {% endif %}
+                                  {% endif %}
+                                </li>
+                              {% endfor %}
+                              <span class="font-size-ex-lg">(Total of {{blog.articles_count}} {{blog.articles_count | pluralize: 'Item', 'Items'}})</span>
+                              {% if paginate.next %}
+                                <li class="page-item">
+                                  <a class="page-link d-inline-flex align-items-center justify-content-center" href="{{ paginate.next.url }}" name="{{ paginate.next.title }}" title="{{ paginate.next.title }}" aria-label="{{ paginate.next.title }}">
+                                    | Next 
+                                    <span aria-hidden="true"><i class="fas fa-angle-double-right ml-2"></i></span>
+                                  </a>
+                                  <link rel="prerender" href="{{ paginate.next.url }}">
+                                </li>
+                              {% endif %}
+                            </ul>
+                          </nav>
+                    </div>
+                </div>
+                {% endif %}
+            
+            
+          </div>
+      </div>
+    {% endpaginate %}
+  </section>
+
+  {% schema %}
+      {
+          "name": "Blog Settings",
+          "settings": [
+              {
+                  "type": "header",
+                  "content": "Banner Content"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "ratina_image",
+                  "label": "Select Image for Large Desktop"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "Select Image for Desktop"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image_mobile",
+                  "label": "Select Image for Mobile"
+              },
+              {
+                  "type": "text",
+                  "id": "title",
+                  "label": "Title",
+				          "default": "WHAT'S NEW AT PACIFIC COAST AVIONICS"
+              }
+          ]
+      }
+  {% endschema %}
+  

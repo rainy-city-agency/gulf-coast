@@ -1,0 +1,36 @@
+<section class="product-quote">
+    <div class="banner-section">
+        <div class="banner-wrapper">
+            <img src="{{section.settings.product_quotes_img  |  img_url: 'master'}}"
+                class="img-wrapper img-fluid mw-100" />
+        </div>
+    </div>
+    <div class="container position-relative">
+        <div class="page-content section-content pb-0">
+            <h1 class="text-primary font-weight-bold letter-spacing mb-md-6 mb-4 text-uppercase text-center">{{section.settings.product_quotes_title }}</h1>
+            <div style="margin:0 auto;" class="pxFormGenerator" id="XoxqSMe3mnaFKgK0zoaLnQ"></div>
+        </div>
+        <div class="form-footer d-none d-lg-block"><span class="line"></span> <span class="plan-img"><img
+                    src="//cdn.shopify.com/s/files/1/0541/8313/3361/files/plane-icon-red.png"
+                    style="max-width: 42px;"></span></div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "product-quote",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "product_quotes_img",
+      "label": "banner image"
+    },
+    {
+      "type": "text",
+      "id": "product_quotes_title",
+      "label": "form title"
+    }
+  ]
+}
+{% endschema %}

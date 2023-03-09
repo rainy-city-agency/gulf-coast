@@ -1,0 +1,119 @@
+{
+  "sections": {
+    "template_trade_in": {
+      "type": "template-trade-in",
+      "blocks": {
+        "trade_in": {
+          "type": "trade_in",
+          "settings": {
+            "title": "Used aera® 795",
+            "image": "shopify:\/\/shop_images\/aera795_250x_22a10043-eb4a-405d-bdb1-1d036ec07126.jpg",
+            "description_heading": "Trade-In Should Include:",
+            "description": "<li>Aera 795<\/li>\n                        <li>Yoke Mount<\/li>\n                        <li>Cigarette lighter adapter<\/li>\n                        <li>Home A\/C cradle dock<\/li>\n                        <li>GA25 remote GPS antenna<\/li>\n                        <li>USB Cable<\/li>\n                        <li>Carrying Case<\/li>",
+            "tradein_value": "$400",
+            "note": ""
+          }
+        },
+        "87438e35-8581-4cb3-938a-faeaebc194bc": {
+          "type": "trade_in",
+          "settings": {
+            "title": "Used aera® 796",
+            "image": "shopify:\/\/shop_images\/aera795_250x_22a10043-eb4a-405d-bdb1-1d036ec07126.jpg",
+            "description_heading": "Trade-In Should Include:",
+            "description": "<li>Aera 796<\/li>\n                        <li>Yoke Mount<\/li>\n                        <li>XM Receiver\/Antenna<\/li>\n                        <li>Cigarette lighter adapter<\/li>\n                        <li>Home A\/C cradle dock<\/li>\n                        <li>GA25 remote GPS antenna<\/li>\n                        <li>USB Cable<\/li>\n                        <li>Carrying Case<\/li>",
+            "tradein_value": "$500*",
+            "note": "*Must include GXM-xx XM Antenna"
+          }
+        },
+        "4f78cbc8-0166-47c7-b8a0-66b3abb1e16f": {
+          "type": "trade_in",
+          "settings": {
+            "title": "Used GPSMAP 695",
+            "image": "shopify:\/\/shop_images\/gpsmap695_b3eaf01b-7dc0-4466-ba9d-7744f2fc7742.jpg",
+            "description_heading": "Trade-In Should Include:",
+            "description": "<li>GPSMAP 695<\/li>\n<li>Yoke Mount<\/li>\n<li>12\/24 Volt Power Cable<\/li>\n<li>AC Adapter<\/li>\n<li>USB Cable<\/li>\n<li>GA 25 Remote Antenna with Suction Cup<\/li>\n<li>Mount<\/li>\n<li>Protective Cover<\/li>\n<li>Owner's Manual<\/li>\n<li>Quick Start Guide<\/li>",
+            "tradein_value": "$200",
+            "note": ""
+          }
+        },
+        "a2797a39-088b-4557-acc7-6a5398723768": {
+          "type": "trade_in",
+          "settings": {
+            "title": "Used GPSMAP 696",
+            "image": "shopify:\/\/shop_images\/gpsmap695_b3eaf01b-7dc0-4466-ba9d-7744f2fc7742.jpg",
+            "description_heading": "Trade-In Should Include:",
+            "description": "<li>GPSMAP 695<\/li>\n<li>Yoke Mount<\/li>\n<li>GXM 40 XM Antenna<\/li>\n<li>12\/24 Volt Power Cable<\/li>\n<li>AC Adapter<\/li>\n<li>USB Cable<\/li>\n<li>GA 25 Remote Antenna with Suction Cup<\/li>\n<li>Mount<\/li>\n<li>Protective Cover<\/li>\n<li>Owner's Manual<\/li>\n<li>Quick Start Guide<\/li>",
+            "tradein_value": "$300*",
+            "note": "*Must include GXM-xx XM Antenna"
+          }
+        },
+        "0086218f-2848-493b-bfb8-f28825965bc1": {
+          "type": "trade_in",
+          "settings": {
+            "title": "Used aera® 500",
+            "image": "shopify:\/\/shop_images\/aera500_c8fe1189-5e01-4659-92c1-fb3ff8b1df1b.jpg",
+            "description_heading": "Trade-In Should Include:",
+            "description": "<li>aera® 500<\/li>\n<li>Yoke Mount<\/li>\n<li>Automotive Friction Mount<\/li>\n<li>Vehicle Power Cable<\/li>\n<li>Battery<\/li>\n<li>USB Cable<\/li>\n<li>Pilot's Guide<\/li>\n<li>Quick Start Guide<\/li>",
+            "tradein_value": "$200",
+            "note": ""
+          }
+        },
+        "079f1390-2b42-4c0b-8497-42b3aa44c156": {
+          "type": "trade_in",
+          "settings": {
+            "title": "Used aera® 510",
+            "image": "shopify:\/\/shop_images\/aera560.jpg",
+            "description_heading": "Trade-In Should Include:",
+            "description": "<li>aera® 500<\/li>\n<li>GXM™ 40 XM Antenna<\/li>\n<li>Yoke Mount<\/li>\n<li>Automotive Friction Mount<\/li>\n<li>Vehicle Power Cable<\/li>\n<li>Battery<\/li>\n<li>A\/C Adapter<\/li>\n<li>USB Cable<\/li>\n<li>Pilot's Guide<\/li>\n<li>Quick Start Manuals<\/li>",
+            "tradein_value": "$300",
+            "note": "*Must include GXM-xx XM Antenna"
+          }
+        },
+        "d6e13870-febd-46d2-a92f-61ebcb8e7f7a": {
+          "type": "trade_in",
+          "settings": {
+            "title": "Used aera® 550",
+            "image": "shopify:\/\/shop_images\/aera560.jpg",
+            "description_heading": "Trade-In Should Include:",
+            "description": "<li>aera® 500<\/li>\n<li>Yoke Mount<\/li>\n<li>Automotive Friction Mount<\/li>\n<li>Vehicle Power Cable<\/li>\n<li>Battery<\/li>\n<li>USB Cable<\/li>\n<li>Pilot's Guide<\/li>\n<li>Quick Start Manuals<\/li>\n<li>Carrying Case<\/li>",
+            "tradein_value": "$200",
+            "note": ""
+          }
+        },
+        "77e77056-b64e-4423-9ba7-4cb63feb33ab": {
+          "type": "trade_in",
+          "settings": {
+            "title": "Used aera® 560",
+            "image": "shopify:\/\/shop_images\/aera560.jpg",
+            "description_heading": "Trade-In Should Include:",
+            "description": "<li>aera® 500<\/li>\n<li>GXM™ 40 XM Antenna<\/li>\n<li>Yoke Mount<\/li>\n<li>Automotive Friction Mount<\/li>\n<li>Vehicle Power Cable<\/li>\n<li>Battery<\/li>\n<li>A\/C Adapter<\/li>\n<li>USB Cable<\/li>\n<li>Pilot's Guide<\/li>\n<li>Quick Start Manuals<\/li>\n<li>Carrying Case<\/li>",
+            "tradein_value": "$300*",
+            "note": "*Must include GXM-xx XM Antenna"
+          }
+        }
+      },
+      "block_order": [
+        "trade_in",
+        "87438e35-8581-4cb3-938a-faeaebc194bc",
+        "4f78cbc8-0166-47c7-b8a0-66b3abb1e16f",
+        "a2797a39-088b-4557-acc7-6a5398723768",
+        "0086218f-2848-493b-bfb8-f28825965bc1",
+        "079f1390-2b42-4c0b-8497-42b3aa44c156",
+        "d6e13870-febd-46d2-a92f-61ebcb8e7f7a",
+        "77e77056-b64e-4423-9ba7-4cb63feb33ab"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/plane-cockpit_1200x_391b1e71-3645-4f6a-8721-61fb932ade96.jpg",
+        "heading": "What's your trade in worth?",
+        "subheading": "See the great trade-in vaules offered by Gulf Coast Avionics",
+        "content_image": "shopify:\/\/shop_images\/trade-in1_570x_9c9b8b6c-c591-4375-a767-7f1552a94f2c.jpg",
+        "content1": "Trade-in applies towards a purchase of a new Garmin GPSMAP 695, 696, or Aera 500, 510, 550, 560, \n                795, 796 and 660. Trade-in must be complete with all accessories listed below, and the unit must \n                look good cosmetically and be in good working condition. <span class=\"text-decoration\">Any unit not meeting this requirement will have a lesser trade-in value or may be returned.<\/span>",
+        "content2": "<li class=\"py-1\">1. Once you receive your new Garmin GPS, please call our customer service number at 800-474-9714 with your invoice number and model of unit to be traded. A Return Authorization Number (RMA) will be provided for the return of your trade-in to Gulf Coast Avionics.<\/li>\n                <li class=\"py-1\">2. After we receive your trade-in and it is verified that the unit is complete with applicable accessories and in good cosmetic and working condition, we will credit you the trade-in value. Trade-ins with missing accessories will add delay to the credit process.<\/li>",
+        "content3": "To verify current trade-in values, please call 800-474-9714 or email us at <a class=\"trade-email font-weight-bold\" href=\"mailto:info@gca.aero\">info@gca.aero<\/a>. We will beat any other supplier's price on any unit."
+      }
+    }
+  },
+  "order": [
+    "template_trade_in"
+  ]
+}

@@ -1,0 +1,34 @@
+{% assign cart_type = section.settings.cart_type %}
+
+
+{% case cart_type %}
+
+  {% when 'cart_dropdown' %}
+
+    <a id="cartDropdown" class="nav-link cart-dropdown text-white" href="#" name="cart" title="cart" rel="nofollow" aria-label="Cart">
+      <i class="fas fa-shopping-cart pr-1"></i>
+        <span class="d-md-inline-block d-none">Cart</span> (0)
+      <span v-if="cart.item_count > 0" v-text="cart.item_count" class=""></span>
+    </a>
+    <b-popover target="cartDropdown" placement="bottom" container="cartDropdown" triggers="hover focus" class="d-none">
+      <template slot="title">{{ 'cart.general.title' | t }}</template>
+      {% include 'cart-dropdown' %}
+    </b-popover>
+
+  {% when 'cart_drawer' %}
+
+    <a class="nav-link text-white pr-lg-0" href="#" @click.prevent="_toggleCartDrawer" rel="nofollow" name="cart" title="cart" rel="nofollow" aria-label="Cart">
+      <i class="fas fa-shopping-cart pr-1"></i>
+      <span class="d-md-inline-block d-none">Cart</span> (0)
+      <span v-if="cart.item_count > 0" v-text="cart.item_count" class=""></span>
+    </a>
+
+  {% else %}
+
+    <a class="nav-link text-white pr-lg-0" href="/cart" name="cart" title="cart" rel="nofollow" aria-label="Cart">
+      <i class="fas fa-shopping-cart pr-1"></i>
+      <span class="d-md-inline-block d-none">Cart</span> (0)
+      <span v-if="cart.item_count > 0" v-text="cart.item_count" class=""></span>
+    </a>
+
+{% endcase %}

@@ -1,0 +1,208 @@
+{%- if section.settings.image != blank -%}
+<div class="page-banner d-md-block d-none">
+    <img
+    data-sizes="auto"
+    src="{{ section.settings.image | img_url: 'small'}}"
+    data-srcset="
+        {% if section.settings.image_mobile != blank %}
+            {{ section.settings.image_mobile | img_url: '768x' }} 567w,
+        {% endif%}
+        {{ section.settings.image | img_url: '992x' }} 768w,
+        {{ section.settings.image | img_url: '1200x' }} 992w,
+        {{ section.settings.image | img_url: '1920x' }} 1200w,
+        {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+        {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+        {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+        "
+    class="lazyload mw-100 img-wrapper" alt="{{ page.title | escape }}" />
+</div> 
+{%- endif -%}
+
+{%- if section.settings.image_mobile != blank -%}
+<div class="page-banner d-md-none d-block">
+    <img
+    data-sizes="auto"
+    src="{{ section.settings.image_mobile | img_url: 'small'}}"
+    data-srcset="
+            {{ section.settings.image_mobile | img_url: '768x' }} 567w,
+        "
+    class="lazyload mw-100 img-wrapper" alt="{{ page.title | escape }}" />
+</div> 
+{%- endif -%}
+
+
+<div class="pt-7 pt-md-10">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 mx-auto col-md-4 pr-xl-9 mt-4 mt-md-0 order-2 order-md-1">
+                {%- if section.settings.contact_enable -%}
+                <a href="{%- if section.settings.contact_url != blank -%}{{section.settings.contact_url}}{%- else -%}#{%- endif -%}" class="bg-primary d-block px-4 py-5 py-md-6 text-center text-white mb-5">
+                    <h3 class="font-weight-bold text-uppercase letter-spacing mb-md-4">{{- section.settings.contact_heading -}}</h3>
+                    <span>{{- section.settings.contact_caption -}}</span>
+                </a>
+                {%- endif -%}
+                {%- if section.settings.call_enable -%}
+                <div class="border border-2 border-primary d-block px-4 py-5 py-md-6 rounded text-center mb-5 cursor-pointer">
+                    <div class="">
+                        {% if section.settings.call_img != blank %}
+                        <div class="user-image mb-lg-0 mb-md-3 mb-0">
+                            <img src="{{ section.settings.call_img | img_url: '100x'}}"
+                                alt="{{section.settings.call_heading}}"
+                                class="mw-100" />
+                        </div>
+                        {% endif %}
+                        <div class="user-details text-center">
+                            <h3 class="font-weight-bold text-uppercase letter-spacing-1 text-primary mb-md-3">{{section.settings.call_heading}}</h3>
+                            {{ section.settings.call_caption }}
+                        </div>
+                    </div>
+                </div>
+                {%- endif -%}
+
+            </div>
+
+            <div class="col-md-8 pl-lg-7 order-1 order-md-2">
+                <h1 class="font-weight-bold letter-spacing text-uppercase text-primary mb-3 mb-md-8">{{ page.title | escape }}</h1>
+                {% if page.content %}
+                    {{- page.content -}}
+                {% endif %}
+              </div>
+
+        </div>
+    </div>
+</div>
+
+{% if section.blocks.size > 0 %}
+<div class="mt-5 mt-md-11">
+    <div class="container">
+        <div class="row">
+          {% for block in section.blocks %}
+            <div class="col-sm-10 mx-auto col-md-4 mb-4 mb-md-0">
+                <a href="{%- if block.settings.financing_url != blank -%}{{block.settings.financing_url}}{%- else -%}#{%- endif -%}" 
+                class="border text-center d-block border-2 rounded px-4 py-6 h-100 {% cycle 'blue', 'sky' , 'green'%}" style="border-radius: 5px;">
+                    {% if  block.settings.financing_img != blank %}
+                    <img src="{{ block.settings.financing_img | img_url: 'medium'}}" alt="{{ page.title | escape }}" class="mb-4 mw-100" style="max-height: 50px;">
+                    {% else %}
+                    <h3 class="font-weight-normal f-teko letter-spacing mb-md-5 mb-3">{{ block.settings.financing_title }}</h3>
+                    {% endif %}
+                    <p class="mb-0">{{block.settings.financing_text}}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+
+{% schema %}
+  {
+    "name": "Avionics Template",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "ratina_image",
+            "label": "Select Image for Large Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image for Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Select Image for Mobile"
+        },
+        {
+            "type": "header",
+            "content": "Contact Us"
+        },
+        {
+            "type": "checkbox",
+            "id": "contact_enable",
+            "label": "Enable"
+        },
+        {
+            "type": "text",
+            "id": "contact_heading",
+            "label": "Heading Text",
+            "default": "Contact Us"
+        },
+        {
+            "type": "textarea",
+            "id": "contact_caption",
+            "label": "Caption",
+            "default": "Have specific questions about your order?"
+        },
+        {
+            "type": "url",
+            "id": "contact_url",
+            "label": "Choose URL"
+        },
+        {
+            "type": "header",
+            "content": "Call Today"
+        },
+        {
+            "type": "checkbox",
+            "id": "call_enable",
+            "label": "Enable"
+        },
+        {
+            "type": "image_picker",
+            "id": "call_img",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "call_heading",
+            "label": "Heading Text",
+            "default": "CALL MATT TODAY!"
+        },
+        {
+            "type": "textarea",
+            "id": "call_caption",
+            "label": "Caption"
+        }
+    ],
+    "blocks": [{
+        "type": "content",
+        "limit": 3,
+        "name": "Financing Buttons",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "url",
+                "id": "financing_url",
+                "label": "Choose URL"
+            },
+            {
+                "type": "image_picker",
+                "id": "financing_img",
+                "label": "Choose Image"
+            },
+            {
+                "type": "text",
+                "id": "financing_title",
+                "label": "Title",
+                "default": "NAFCO"
+            },
+            {
+                "type": "textarea",
+                "id": "financing_text",
+                "label": "Caption"
+            }
+        ]
+    }]
+   
+  }
+{% endschema %}

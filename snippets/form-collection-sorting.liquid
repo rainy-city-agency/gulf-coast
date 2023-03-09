@@ -1,0 +1,8 @@
+<form>
+    <label for="sortBy" class="bg-gray-200 h6 font-weight-bold f-open text-initial border-bottom-0 rounded-0 py-3 px-3 w-100 mb-3">{{ 'collections.sorting.title' | t }}:</label>
+    <select class="form-control form-control-sm" id="sortBy" name="sort-by" @change="_parseFilters($event)" data-filter-sort data-filter-type="sort">
+        <option value="manual">---</option>
+        <option value="price-ascending">{{ 'collections.sorting.price_ascending' | t }}</option>
+        <option value="price-descending">{{ 'collections.sorting.price_descending' | t }}</option>
+    </select>
+</form>

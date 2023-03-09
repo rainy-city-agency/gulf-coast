@@ -1,0 +1,120 @@
+<section data-template="account" data-account-template class="section-content account-page">
+  <div class="container" >
+
+    <div class="row">
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-9">
+        <h3 class="font-weight-bold letter-spacing text-uppercase text-primary mb-3 text-center">{{ 'customer.orders.title' | t }}</h3>
+      </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-3">
+            {% include 'sidebar-account' %}
+        </div>
+
+        <div class="col-lg-9">
+
+            {% paginate customer.orders by 20 %}
+              {% if customer.orders.size != 0 %}
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead class="bg-gray-200">
+                      <tr>
+                        <th class="text-uppercase small font-weight-bold">{{ 'customer.orders.order_number' | t }}</th>
+                        <th class="text-uppercase small font-weight-bold">{{ 'customer.orders.date' | t }}</th>
+                        <th class="text-uppercase small font-weight-bold">{{ 'customer.orders.payment_status' | t }}</th>
+                        <th class="text-uppercase small font-weight-bold">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                        <th class="text-uppercase small font-weight-bold">{{ 'customer.orders.total' | t }}</th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                      {% for order in customer.orders %}
+                        <tr>
+                          <td><a  class="text-primary font-weight-bold" href="{{ order.customer_url }}" title="">{{ order.name}}</a></td>
+                          <td>{{ order.created_at | date: format: 'month_day_year' }}</td>
+                          <td>{{ order.financial_status_label }}</td>
+                          <td>{{ order.fulfillment_status_label }}</td>
+                          <td>{{ order.total_price | money }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+
+              {% else %}
+                <div class="alert alert-warning">
+                  {{ 'customer.orders.none' | t }}
+                </div>
+              {% endif %}
+
+              {% if paginate.pages > 1 %}
+                <div class="text-center">
+                  {% include 'pagination' %}
+                </div>
+              {% endif %}
+
+            {% endpaginate %}
+
+        </div>
+    </div>
+
+  </div>
+</section>
+
+{% assign cust_email = customer.email %}
+{% assign xhrchangeCutomerDetailUrl = '/gift_cards/search.json?query=email:' | append: cust_email %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer>
+  var header = {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  };
+  const configS = {
+    url: '{{xhrchangeCutomerDetailUrl}}',
+    method: 'get',
+    data: [],
+    key: 'customer_email',
+    customer_email: '{{cust_email}}',
+    hash: "{% include 'ha-hash', url: xhrchangeCutomerDetailUrl, method: 'get', variable: cust_email %}"
+  };
+
+  $.ajax({
+    url: '/tools/ha-api/shopify/common',
+    type: 'POST',
+    data: JSON.stringify(configS),
+    dataType: "JSON",
+    headers: header,
+    success: function (response) { 
+      if(response.gift_cards.length > 0){
+        var innerHtml = '';
+        for(var i=0; i<response.gift_cards.length; i++){
+          if(response.gift_cards[i].customer_id == '{{customer.id}}'){
+            var expires_on = '--';
+            if(response.gift_cards[i].expires_on != null){
+              expires_on = response.gift_cards[i].expires_on;
+            }
+            innerHtml += '<tr>'
+            +'<td class="text-primary font-weight-bold">•••• •••• •••• ' + response.gift_cards[i].last_characters + '</td>'
+            + '<td> $'+ response.gift_cards[i].initial_value +'</td>'
+            +'<td> $'+ response.gift_cards[i].balance +'</td>'
+            +'<td>'+ expires_on +'</td>'
+            '</tr>';
+          }
+        }
+
+        if(innerHtml.length > 0){
+          var html = '<div class="row"><div class="col-lg-3"></div><div class="col-lg-9"><h3 class="font-weight-bold letter-spacing text-uppercase text-primary mb-3 text-center">Gift Card History</h3><div class="table-responsive"><table class="table table-bordered"><thead class="bg-gray-200"><tr><th class="text-uppercase small font-weight-bold">Last Characters</th><th class="text-uppercase small font-weight-bold">Initial Value</th><th class="text-uppercase small font-weight-bold">Balance</th><th class="text-uppercase small font-weight-bold">Expires On</th></tr></thead><tbody class="bg-white">'
+            + innerHtml +
+            '</tbody></table></div></div></div>';
+          $('[data-account-template] .container').append(html);
+        }
+      }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+    }
+  });
+</script>

@@ -1,0 +1,322 @@
+<div class="container mt-md-11">
+    <div class="row align-items-center ">
+        {%- if section.settings.installation_enable -%}
+        <div class="col-sm-4 text-center mb-3 mb-md-0">
+            <h5 class="font-weight-bold">{{ section.settings.installation_heading }}</h5>
+            <p class="mb-1">{{ section.settings.installation_text }}</p>
+            <ul class="list-unstyled">
+                {% if section.blocks.size > 0 and section.settings.package_enable %}
+                {% for block in section.blocks %}
+                    <li>
+                        <a href="{%- if block.settings.popup_url != blank -%}{{block.settings.popup_url}}{%- else -%}#{%- endif -%}" 
+                            class="text-primary" data-toggle="modal"
+                            data-target="#packageModal" @click="_choosePackages('modal_{{block.settings.popup_text | handleize}}');">{{block.settings.popup_text}}</a>
+                    </li>
+                {%endfor%}
+                {% endif %}
+            </ul>
+        </div>
+        {%- endif -%}
+        <div class="col-sm-8">
+            <div class="text-center py-8 py-md-14 quote-banner" {% if section.settings.installation_ing != blank %}style="background-image: url({{ section.settings.installation_ing |  img_url: 'large'}});"{% endif %}>
+                <div class="position-relative zindex-sticky">
+                    <p class="text-white mb-4">{{ section.settings.load_heading }}</p>
+                    <h2 class="font-weight-bold letter-spacing text-white mb-6">{{ section.settings.load_text }}</h2>
+                    <a href="{%- if section.settings.load_url != blank -%}{{section.settings.load_url}}{%- else -%}#{%- endif -%}" class="btn btn-light text-primary text-white">{{ section.settings.btn_txt }} <span class="ml-4"><i class="fas fa-chevron-right align-middle"></i></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-8 mt-md-13">
+    <div class="container">
+        <div class="row">
+            {%- if section.settings.slider_enable -%}
+            <div class="col-10 col-md-8 mx-auto">
+                <div class="diff-slider" data-diff-slider data-flickity='{ "cellAlign": "left", "contain": true, "lazyLoad": true, "wrapAround": true, "pageDots": false, "draggable": false }'>
+                    {% if section.blocks.size > 0 %}
+                    {% if section.settings.slider_enable %}
+                    {% assign count = 0 %}
+                    {% for block in section.blocks %}
+                     {% if block.type == 'slider'%}
+                     {% assign count = count | plus: 1 %}
+                    <div class="slider-item w-100" data-item data-custom-index="{{count}}">
+                        <h1 class="font-weight-bold text-primary text-uppercase">{{block.settings.title}}</h1>
+                        <div class="cocoen">
+                            <img data-sizes="auto"
+                                 src="{{ block.settings.slider_img1 | img_url: 'large'}}"
+                                 data-srcset="
+                                              {{ block.settings.slider_img1 | img_url: '768x' }} 567w,
+                                              {{ block.settings.slider_img1 | img_url: '992x' }} 768w,
+                                              {{ block.settings.slider_img1 | img_url: '1200x' }} 992w"
+                                 alt="{{block.settings.title}}" class="img-wrapper lazyload">
+                        </div>
+                        <div class="caption text-center mt-7">
+                            <h5>{{ block.settings.slider_des1 }}</h5>
+                            <ul class="list-unstyled row no-gutters">
+                                {{ block.settings.call_caption }}
+                            </ul>
+                        </div>
+                    </div>
+                  {% endif %}
+                    {%endfor%}
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            {%- endif -%}
+        </div>
+    </div>
+</div>
+
+{% if section.blocks.size > 0 and section.settings.package_enable %}
+<div class="modal fade" id="packageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-packages-modal>
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="border-0 modal-content rounded-0">
+            <div class="modal-header px-4 border-0">
+                <button type="button" class="close pt-0" data-dismiss="modal" aria-label="Close" @click="_closePackages()">
+                    <span aria-hidden="true" class="font-weight-light h1">&times;</span>
+                </button>
+            </div>
+            {% for block in section.blocks %}
+            <div class="modal-body px-4 d-none" id="modal_{{block.settings.popup_text | handleize}}" data-modal-body>
+                {% if block.settings.choose_img != blank %}
+                    <img src="{{block.settings.choose_img | img_url: 'grande' }}"
+                        alt="{{block.settings.product_title }}">
+                {% endif %}
+                <h2>{{block.settings.product_title }}</h2>
+                {% if block.settings.product_content != blank %}
+                    {{ block.settings.product_content }}
+                {% endif %}
+                <h1 class="display-3 font-weight-bold letter-spacing text-uppercase">{{block.settings.feature_title }}</h1>
+                {% if block.settings.feature_content != blank %}
+                    {{ block.settings.feature_content }}
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% assign collection = collections[section.settings.choose_collection] %}
+{% if section.settings.enable_related_products and collection != empty and collection.products_count != 0 %}
+<div class="pb-8">
+    <section class="section-related-products section-content pt-0" >
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+      
+              {% if section.settings.related_products_heading_txt != '' %}
+                <h2 class="section-title mb-4 f-teko text-uppercase font-weight-normal letter-spacing text-left d-flex align-items-center" style="white-space: nowrap;"><span>{{ section.settings.related_products_heading_txt }}</span><div class="d-block title-line w-100 ml-2" style="border-top: 3px solid #a90533;"></div></h2>
+              {% endif %}
+      
+              <div class="carousel"
+                   role="tree"
+                  data-flickity='{
+                    "adaptiveHeight": true,
+                    "contain": true,
+                    "wrapAround": false,
+                    "freeScroll": false,
+                    "groupCells": "100%",
+                    "accessibility": true,
+                    "setGallerySize": true,
+                    "dragThreshold": 20,
+                    "prevNextButtons": {{section.settings.related_products_nav_arrows}},
+                    "pageDots": {{section.settings.related_products_nav_dots}},
+                    {% if section.settings.related_products_auto_play > 0 %}"autoPlay": {{section.settings.related_products_auto_play}}000,{% endif %}
+                    "arrowShape": {"x0": 10, "x1": 60, "y1": 50, "x2": 70, "y2": 40, "x3": 30}
+                  }'>
+                  {% for product in collection.products limit: 4 %}
+                    {% unless product.tags contains productExcludeTag %}
+                        <script type="application/json" class="bold-product-json">{{ product | json }}</script>
+                        <div class="carousel-cell d-flex equal-height col-6 col-md-4" role="treeitem">
+                        {% include 'card-product-style-generic' %}
+                        </div>
+                    {% endunless %}
+                  {% endfor %}
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Installation Packages",
+    "settings": [
+        {
+            "type": "header",
+            "content": "installation Content"
+        },
+        {
+            "type": "checkbox",
+            "id": "installation_enable",
+            "label": "Enable"
+        },
+        {
+            "type": "text",
+            "id": "installation_heading",
+            "label": "Heading Title"
+        },
+        {
+            "type": "text",
+            "id": "installation_text",
+            "label": "Heading Text"
+        },
+        {
+            "type": "checkbox",
+            "id": "package_enable",
+            "label": "Enable"
+        },
+        {
+            "type": "image_picker",
+            "id": "installation_ing",
+            "label": "Select Image"
+        },
+        {
+            "type": "text",
+            "id": "load_heading",
+            "label": "Heading Title"
+        },
+        {
+            "type": "text",
+            "id": "load_text",
+            "label": "Heading Title"
+        },
+        {
+            "type": "text",
+            "id": "btn_txt",
+            "label": "Button Text",
+            "default": "See More"
+        },
+        {
+            "type": "url",
+            "id": "load_url",
+            "label": "Choose URL"
+        },
+        {
+            "type": "checkbox",
+            "id": "slider_enable",
+            "label": "Enable slider"
+        },
+        {
+          "type": "header",
+          "content": "Related Products"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_related_products",
+          "label": "Enabled?"
+        },
+        {
+            "type": "collection",
+            "id": "choose_collection",
+            "label": "Choose Collection"
+        },
+        {
+          "type": "text",
+          "id": "related_products_heading_txt",
+          "label": "Heading Text",
+          "default": "Related Products"
+        },
+        {
+          "type": "checkbox",
+          "id": "related_products_nav_arrows",
+          "label": "Arrows Navigation",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "related_products_nav_dots",
+          "label": "Dots Navigation",
+          "default": true
+        }
+    ],
+    "blocks": [{
+        "type": "content",
+        "name": "Package",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "text",
+                "id": "popup_text",
+                "label": "Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "choose_img",
+                "label": "Choose Image"
+            },
+            {
+                "type": "header",
+                "content": "Product Content"
+            },
+            {
+                "type": "text",
+                "id": "product_title",
+                "label": "Title",
+                "default": "GARMIN"
+            },
+            {
+                "type": "richtext",
+                "id": "product_content",
+                "label": "Content"
+            },
+            {
+                "type": "header",
+                "content": "Feature Content"
+            },
+            {
+                "type": "text",
+                "id": "feature_title",
+                "label": "Title",
+                "default": "Product Features"
+            },
+            {
+                "type": "richtext",
+                "id": "feature_content",
+                "label": "Content"
+            }
+        ]},
+        {
+		"type": "slider",
+        "name": "Slider",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Slider Title"
+            },
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "image_picker",
+                "id": "slider_img1",
+                "label": "Slider Image 1"
+            },
+            {
+                "type": "text",
+                "id": "slider_des1",
+                "label": "Description Title",
+                "default": "FEATURING"
+            },
+            {
+                "type": "textarea",
+                "id": "call_caption",
+                "label": "Caption"
+            }
+        ]
+		}
+    ]
+   
+  }
+{% endschema %}

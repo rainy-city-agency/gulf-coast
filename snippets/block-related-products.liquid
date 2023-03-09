@@ -1,0 +1,69 @@
+{% assign productExcludeTag = settings.product_exclude_tag_text %}
+
+{% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
+  {% assign found_a_collection = false %}
+  {% for c in product.collections %}
+      {% if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 %}
+          {% assign found_a_collection = true %}
+          {% assign collection = c %}
+      {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if product.tags contains 'gift_card' %}
+  {% assign collection = collections['gift-cards'] %}
+{% endif %}
+
+<section class="section-related-products section-content pt-0" >
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <div class="mb-md-5 mb-4">
+          <div class="position-relative d-flex justify-content-between align-items-center w-100 related-dashed-border">
+            {% if section.settings.related_products_heading_txt != '' %}
+            <h2 class="section-title mb-0 letter-spacing text-left d-flex align-items-center" style="white-space: nowrap;"><span>{{ section.settings.related_products_heading_txt }}</span><div class="d-block title-line w-100 ml-2" style="border-top: 3px solid #a90533;"></div></h2>
+          {% endif %}           
+            <h6 class="text-uppercase text-primary font-weight-bold letter-spacing-1 mb-0 d-none d-md-block">shop all</h6>
+        </div>
+        </div>
+
+
+        <div class="carousel"
+             role="tree"
+            data-flickity='{
+              "adaptiveHeight": true,
+              "contain": true,
+              "wrapAround": false,
+              "freeScroll": false,
+              "groupCells": "100%",
+              "accessibility": true,
+              "setGallerySize": true,
+              "dragThreshold": 20,
+              "prevNextButtons": {{section.settings.related_products_nav_arrows}},
+              "pageDots": {{section.settings.related_products_nav_dots}},
+              {% if section.settings.related_products_auto_play > 0 %}"autoPlay": {{section.settings.related_products_auto_play}}000,{% endif %}
+              "arrowShape": {"x0": 10, "x1": 60, "y1": 50, "x2": 70, "y2": 40, "x3": 30}
+            }'>
+            {% assign current_product = product %}
+            {% assign current_product_found = false %}
+
+            {% for product in collection.products limit: 10 %}
+              {% if product.handle == current_product.handle %}
+                {% assign current_product_found = true %}
+              {% else %}
+                {% unless current_product_found == false and forloop.last and product.tags %}
+                  {% unless product.tags contains productExcludeTag %}
+                    <script type="application/json" class="bold-product-json">{{ product | json }}</script>
+                    <div class="carousel-cell d-flex equal-height col-6 col-md-3" role="treeitem">
+                      {% include 'card-product-style-generic' %}
+                    </div>
+                  {% endunless %}
+                {% endunless %}
+              {% endif %}
+            {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

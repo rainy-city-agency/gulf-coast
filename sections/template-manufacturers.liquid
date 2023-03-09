@@ -1,0 +1,84 @@
+<section class="manufacturers">
+    {%- if section.settings.image != blank -%}
+    <div class="banner-section">
+        <div class="banner-wrapper">
+            <img
+            data-sizes="auto"
+            src="{{ section.settings.image | img_url: 'small'}}"
+            data-srcset="
+                {% if section.settings.image_mobile != blank %}
+                    {{ section.settings.image_mobile | img_url: '768x' }} 567w,
+                {% endif%}
+                {{ section.settings.image | img_url: '992x' }} 768w,
+                {{ section.settings.image | img_url: '1200x' }} 992w,
+                {{ section.settings.image | img_url: '1920x' }} 1200w,
+                {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+                {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+                {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+                "
+            class="lazyload img-wrapper mw-100 img-fluid" alt="{{ page.title | escape }}" />
+        </div>
+    </div>
+    {%- endif -%}
+
+    <div class="page-content section-content">
+        <div class="container position-relative">
+            <h1 class="text-primary font-weight-bold letter-spacing mb-md-8 mb-5 text-uppercase text-center">{{ page.title }}</h1>
+             {%- if section.settings.enable_categories -%}
+                <div class="row">
+                    <div class="col-lg-10 col-11 mx-auto text-center manufacturers-grid">
+                        <div class="row">
+                            {% for link in linklists[section.settings.main_linklist].links %}
+                                <div class="col-md-4 col-sm-6 mb-3">
+                                    <a href="{{ link.url }}" class="manufactures-list px-2 py-md-5 py-4 w-100 text-inital font-weight-bold d-block" title="{{ link.title }}" aria-label="{{ link.title }}">{{ link.title }}</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+             {%- endif -%}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "manufacturers Template",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "ratina_image",
+            "label": "Select Image for Large Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image for Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Select Image for Mobile"
+        },
+        {
+            "type": "header",
+            "content": "manufacturers list"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_categories",
+            "label": "Enable",
+            "default": true
+        },
+        {
+            "type": "link_list",
+            "id": "main_linklist",
+            "label": "Select Categories"
+        }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,415 @@
+{%- if section.settings.enable_section -%}
+<section class="section-content categories pb-0" data-section-id="{{ section.id }}">
+    <div class="row no-gutters">
+        <div class="col-md-6">
+            <div class="row no-gutters">
+                {%- if section.settings.choose_img1 != blank -%}
+                <div class="col-lg-3 col-sm-6 category-content left-side">
+                    <a href="{%- if section.settings.choose_url1 != blank -%}{{- section.settings.choose_url1 -}}{%- else -%}#{%- endif -%}">
+                    <div class="category-overlay narrow">
+                        <img data-sizes="auto"
+                        class="category-image lazyload" src="{{section.settings.choose_img1 | img_url: 'pico' }}"
+                        data-srcset="
+                            {{ section.settings.choose_img1 | img_url: '350x' }} 300w
+                            "
+                        alt="{{ section.settings.title1 | escape }}">
+                    </div>
+                    <div class="category-title d-flex align-items-center">
+                        {%- if section.settings.icon1 != '' -%}
+                        <img class="ads-b" style="display: block !important;" src="{{section.settings.icon1}}" alt="{{ section.settings.title1 | escape }}">
+                        {%- endif -%}
+                        {%- if section.settings.title1 != '' -%}
+                        <h5 class="mb-0 text-white">{{- section.settings.title1 -}}</h5>
+                        {%- endif -%}
+                    </div>
+                    </a>
+                </div>
+                {%- endif -%}
+                {%- if section.settings.choose_img2 != blank -%}
+                <div class="col-lg-9 col-sm-6 category-content">
+                    <a href="{%- if section.settings.choose_url2 != blank -%}{{- section.settings.choose_url2 -}}{%- else -%}#{%- endif -%}">
+                    <div class="category-overlay wide adjusted">
+                        <img data-sizes="auto"
+                        class="category-image lazyload" src="{{section.settings.choose_img2 | img_url: 'pico' }}"
+                        data-srcset="
+                            {{ section.settings.choose_img2 | img_url: '400x' }} 320w,
+                            {{ section.settings.choose_img2 | img_url: '850x' }} 768w
+                            "
+                        alt="{{ section.settings.title2 | escape }}">
+                    </div>
+                    <div class="category-title d-flex align-items-center">
+                        {%- if section.settings.icon2 != '' -%}
+                        <img class="instruments" src="{{section.settings.icon2}}"  alt="{{ section.settings.title2 | escape }}"> 
+                        {%- endif -%}
+                        {%- if section.settings.title2 != '' -%}
+                        <h5 class="mb-0 text-white">{{- section.settings.title2 -}}</h5>
+                        {%- endif -%}
+                    </div>
+                    </a>
+                </div>
+                {%- endif -%}
+            </div>
+            <div class="row no-gutters">
+                {%- if section.settings.choose_img3 != blank -%}
+                <div class="col-lg-9 col-sm-6 category-content left-side">
+                    <a href="{%- if section.settings.choose_url3 != blank -%}{{- section.settings.choose_url3 -}}{%- else -%}#{%- endif -%}">
+                    <div class="category-overlay wide">
+                        <img data-sizes="auto"
+                        class="category-image lazyload" src="{{section.settings.choose_img3 | img_url: 'pico' }}"
+                        data-srcset="
+                            {{ section.settings.choose_img3 | img_url: '400x' }} 320w,
+                            {{ section.settings.choose_img3 | img_url: '850x' }} 768w
+                            "
+                        alt="{{ section.settings.title3 | escape }}">
+                    </div>
+                    <div class="category-title d-flex align-items-center">
+                        {%- if section.settings.icon3 != '' -%}
+                        <img class="kit-panels" src="{{section.settings.icon3}}"  alt="{{ section.settings.title3 | escape }}"> 
+                        {%- endif -%}
+                        {%- if section.settings.title3 != '' -%}
+                        <h5 class="mb-0 text-white">{{- section.settings.title3 -}}</h5>
+                        {%- endif -%}
+                    </div>
+                    </a>
+                </div>
+                {%- endif -%}
+                {%- if section.settings.choose_img4 != blank -%}
+                <div class="col-lg-3 col-sm-6 category-content">
+                    <a href="{%- if section.settings.choose_url4 != blank -%}{{- section.settings.choose_url4 -}}{%- else -%}#{%- endif -%}">
+                    <div class="category-overlay narrow">
+                        <img data-sizes="auto"
+                        class="category-image lazyload" src="{{section.settings.choose_img4 | img_url: 'pico' }}"
+                        data-srcset="
+                            {{ section.settings.choose_img4 | img_url: '400x' }} 320w
+                            "
+                        alt="{{ section.settings.title4 | escape }}">
+                    </div>
+                    <div class="category-title d-flex align-items-center">
+                        {%- if section.settings.icon4 != '' -%}
+                        <img class="gps" src="{{section.settings.icon4}}"  alt="{{ section.settings.title4 | escape }}"> 
+                        {%- endif -%}
+                        {%- if section.settings.title4 != '' -%}
+                        <h5 class="mb-0 text-white">{{- section.settings.title4 -}}</h5>
+                        {%- endif -%}
+                    </div>
+                    </a>
+                </div>
+                {%- endif -%}
+            </div>
+        </div>
+
+        <div class="col-md-6 for-inline">
+           <div class="row no-gutters">
+              {%- if section.settings.choose_img5 != blank -%}
+              <div class="col-lg-4 col-sm-6 category-content">
+                <a href="{%- if section.settings.choose_url5 != blank -%}{{- section.settings.choose_url5 -}}{%- else -%}#{%- endif -%}">
+                    <div class="category-overlay tall">
+                       <img class="category-image lazyload" data-sizes="auto" src="{{section.settings.choose_img5 | img_url: 'pico' }}"
+                       data-srcset="
+                           {{ section.settings.choose_img5 | img_url: '500x' }} 400w
+                           "
+                       alt="{{ section.settings.title5 | escape }}">
+                    </div>
+                    <div class="category-title d-flex align-items-center">
+                       {%- if section.settings.icon5 != '' -%}
+                       <img class="handhelds" src="{{section.settings.icon5}}"  alt="{{ section.settings.title5 | escape }}">
+                       {%- endif -%}
+                       {%- if section.settings.title5 != '' -%}
+                        <h5 class="mb-0 text-white">{{- section.settings.title5 -}}</h5>
+                       {%- endif -%}
+                    </div>
+                 </a>
+              </div>
+              {%- endif -%}
+              <div class="col-lg-8">
+                {%- if section.settings.choose_img6 != blank -%}
+                 <div class="category-content right-side">
+                    <a href="{%- if section.settings.choose_url6 != blank -%}{{- section.settings.choose_url6 -}}{%- else -%}#{%- endif -%}">
+                       <div class="category-overlay">
+                          <img class="category-image lazyload" data-sizes="auto" src="{{section.settings.choose_img6 | img_url: 'pico' }}"
+                          data-srcset="
+                              {{ section.settings.choose_img6 | img_url: '400x' }} 320w,
+                              {{ section.settings.choose_img6 | img_url: '850x' }} 768w
+                              "
+                          alt="{{ section.settings.title6 | escape }}">
+                       </div>
+                       <div class="category-title d-flex align-items-center">
+                          {%- if section.settings.icon6 != '' -%}
+                          <img class="installs" src="{{section.settings.icon6}}"  alt="{{ section.settings.title6 | escape }}">
+                          {%- endif -%}
+                          {%- if section.settings.title6 != '' -%}
+                            <h5 class="mb-0 text-white">{{- section.settings.title6 -}}</h5>
+                          {%- endif -%}
+                       </div>
+                    </a>
+                 </div>
+                 {%- endif -%}
+                 <div class="row no-gutters">
+                    {%- if section.settings.choose_img7 != blank -%}
+                    <div class="col-lg-6 col-sm-6 category-content">
+                        <a href="{%- if section.settings.choose_url7 != blank -%}{{- section.settings.choose_url7 -}}{%- else -%}#{%- endif -%}">
+                          <div class="category-overlay">
+                             <img class="category-image lazyload" data-sizes="auto" src="{{section.settings.choose_img7 | img_url: 'pico' }}"
+                             data-srcset="
+                                 {{ section.settings.choose_img7 | img_url: '400x' }} 320w
+                                 "
+                             alt="{{ section.settings.title7 | escape }}">
+                          </div>
+                          <div class="category-title d-flex align-items-center">
+                            {%- if section.settings.icon7 != '' -%}
+                            <img class="headsets" src="{{section.settings.icon7}}"  alt="{{ section.settings.title7 | escape }}">
+                            {%- endif -%}
+                            {%- if section.settings.title7 != '' -%}
+                                <h5 class="mb-0 text-white">{{- section.settings.title7 -}}</h5>
+                            {%- endif -%}
+                          </div>
+                       </a>
+                    </div>
+                    {%- endif -%}
+                    {%- if section.settings.choose_img8 != blank -%}
+                    <div class="col-lg-6 col-sm-6 category-content right-side">
+                        <a href="{%- if section.settings.choose_url8 != blank -%}{{- section.settings.choose_url8 -}}{%- else -%}#{%- endif -%}">
+                          <div class="category-overlay wide">
+                             <img class="category-image lazyload" data-sizes="auto" src="{{section.settings.choose_img8 | img_url: 'pico' }}"
+                             data-srcset="
+                                 {{ section.settings.choose_img8 | img_url: '400x' }} 320w
+                                 "
+                             alt="{{ section.settings.title8 | escape }}">
+                          </div>
+                          <div class="category-title d-flex align-items-center">
+                            {%- if section.settings.icon8 != '' -%}
+                            <img class="pilot-supplies" src="{{section.settings.icon8}}"  alt="{{ section.settings.title8 | escape }}">
+                            {%- endif -%}
+                            {%- if section.settings.title8 != '' -%}
+                                <h5 class="mb-0 text-white">{{- section.settings.title8 -}}</h5>
+                            {%- endif -%}
+                          </div>
+                       </a>
+                    </div>
+                    {%- endif -%}
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Featured Collections",
+    "class": "index-categories",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "enable_section",
+            "label": "Enable Section",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Collection Content 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "choose_img1",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "icon1",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title1",
+            "label": "Title"
+        },
+        {
+            "type": "url",
+            "id": "choose_url1",
+            "label": "Choose URL"
+        },
+        {
+            "type": "header",
+            "content": "Collection Content 2"
+        },
+        {
+            "type": "image_picker",
+            "id": "choose_img2",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "icon2",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title2",
+            "label": "Title"
+        },
+        {
+            "type": "url",
+            "id": "choose_url2",
+            "label": "Choose URL"
+        },
+        {
+            "type": "header",
+            "content": "Collection Content 3"
+        },
+        {
+            "type": "image_picker",
+            "id": "choose_img3",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "icon3",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title3",
+            "label": "Title"
+        },
+        {
+            "type": "url",
+            "id": "choose_url3",
+            "label": "Choose URL"
+        },
+        {
+            "type": "header",
+            "content": "Collection Content 4"
+        },
+        {
+            "type": "image_picker",
+            "id": "choose_img4",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "icon4",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title4",
+            "label": "Title"
+        },
+        {
+            "type": "url",
+            "id": "choose_url4",
+            "label": "Choose URL"
+        },
+        {
+            "type": "header",
+            "content": "Collection Content 5"
+        },
+        {
+            "type": "image_picker",
+            "id": "choose_img5",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "icon5",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title5",
+            "label": "Title"
+        },
+        {
+            "type": "url",
+            "id": "choose_url5",
+            "label": "Choose URL"
+        },
+        {
+            "type": "header",
+            "content": "Collection Content 6"
+        },
+        {
+            "type": "image_picker",
+            "id": "choose_img6",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "icon6",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title6",
+            "label": "Title"
+        },
+        {
+            "type": "url",
+            "id": "choose_url6",
+            "label": "Choose URL"
+        },
+        {
+            "type": "header",
+            "content": "Collection Content 7"
+        },
+        {
+            "type": "image_picker",
+            "id": "choose_img7",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "icon7",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title7",
+            "label": "Title"
+        },
+        {
+            "type": "url",
+            "id": "choose_url7",
+            "label": "Choose URL"
+        },
+        {
+            "type": "header",
+            "content": "Collection Content 8"
+        },
+        {
+            "type": "image_picker",
+            "id": "choose_img8",
+            "label": "Choose Image"
+        },
+        {
+            "type": "text",
+            "id": "icon8",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title8",
+            "label": "Title"
+        },
+        {
+            "type": "url",
+            "id": "choose_url8",
+            "label": "Choose URL"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Featured Collections",
+        "category": "Collection"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

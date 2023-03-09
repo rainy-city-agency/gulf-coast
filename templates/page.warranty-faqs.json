@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "template_warranty_faqs": {
+      "type": "template-warranty-faqs",
+      "blocks": {
+        "plan": {
+          "type": "plan",
+          "settings": {
+            "title": "Do I qualify for Clyde Protection Plan options?",
+            "caption": "<p>The Clyde Protection Plan is available to you if all of the following are true:<\/p>\n                                    <ul>\n                                        <li>You are a customer in the United States of America (excluding territories)<\/li>\n                                        <li>You purchased directly from Retailer on Retailer’s Website URL<\/li>\n                                        <li>Your order was placed on or after March 24th, 2020.<\/li>\n                                        <li>You purchased an eligible product<\/li>\n                                    <\/ul>"
+          }
+        },
+        "6f86b656-315b-4933-b8d9-f4a8df3e18e9": {
+          "type": "plan",
+          "settings": {
+            "title": "How do I purchase a protection plan?",
+            "caption": "<p>There are three ways to add a Clyde Protection Plan to your product:<\/p>\n                                    <ul>\n                                        <li>\n<strong>Pacific Coast Avionics’s website:<\/strong> Customers can choose the Clyde protection plan option at checkout when purchasing their product. <\/li>\n                                        <li>\n                                            <strong>Through the link in the post-purchase email within 30 days of purchasing the product:<\/strong> After purchase, customers will receive an email from Clyde offering the option to add protection. \n                                            Customers can click the link in the email which will direct them to the Clyde website. When using the email to purchase a Clyde protection plan, there is no need to create a \n                                            Clyde account prior to the purchase of the plan. \n                                        <\/li>\n                                        <li>\n                                            <strong>Directly from Clyde’s customer portal, <a href=\"https:\/\/www.HiClyde.com\" target=\"_blank\">HiClyde.com<\/a>:<\/strong> Customers have 30 days from the date of purchase or the delivery date (if provided to Clyde) \n                                            to purchase a protection plan. It will be necessary to create a Clyde account prior to completing the plan purchase through this method. Customers must use the same email address that was \n                                            used when purchasing a product when creating an account to link to their sales order.\n                                        <\/li>\n                                    <\/ul>"
+          }
+        },
+        "492674e7-1363-4d4b-8bcc-799fa29f2200": {
+          "type": "plan",
+          "settings": {
+            "title": "When are you ineligible to purchase a Clyde Protection Plan",
+            "caption": "<ul>\n                                        <li>Customers cannot purchase a protection plan after an accident occurs<\/li>\n                                        <li>Customers cannot purchase a protection plan after 30 days from the product’s purchase date or delivery date if provided to Clyde.<\/li>\n                                    <\/ul>"
+          }
+        },
+        "d314f511-25a2-456a-ad56-956d2f7ca41b": {
+          "type": "claim",
+          "settings": {
+            "title": "How can I file a claim?",
+            "caption": "<p>\n                                        To file a claim on <a href=\"https:\/\/www.HiClyde.com\" target=\"_blank\">HiClyde.com<\/a>, customers have two options. They can log into their account, select the appropriate product, and click “File a Claim,” or they can file a claim as a guest by \n                                        entering the Contract ID found in their confirmation email into the homepage on <a href=\"https:\/\/www.HiClyde.com\" target=\"_blank\">HiClyde.com<\/a>. Customers typically receive an update on their claim within 48-72 hours and can check in on the \n                                        status of their claim in their Clyde account at any time. \n                                    <\/p>"
+          }
+        },
+        "ce6889fd-3b2e-4f93-9705-c4270f90d83c": {
+          "type": "claim",
+          "settings": {
+            "title": "Can I file multiple claims?",
+            "caption": "<p>\n                                        Yes, you can file multiple claims using your Clyde Protection Plan during the course of the contract’s term. You are covered for multiple repairs up to the value of the original product purchase price. \n                                        <br><br>\n                                        If your claim is approved for a replacement product, then your contract is void. You will have the option to purchase a new protection plan for your replacement on <a href=\"https:\/\/www.HiClyde.com\" target=\"_blank\">HiClyde.com<\/a>.\n                                    <\/p>"
+          }
+        },
+        "5f64215a-5556-4327-9a0c-1fb8d59836c6": {
+          "type": "claim",
+          "settings": {
+            "title": "Is there a deductible?",
+            "caption": "<p>\n                                        There are no deductibles.\n                                    <\/p>"
+          }
+        },
+        "e159288b-49a4-4439-8ad8-e24a571a9c7e": {
+          "type": "faq",
+          "settings": {
+            "title": "Is the Clyde Protection Plan transferable?",
+            "caption": "<p>\n                                        Yes, this plan may be transferred to any person in the United States. To initiate the transfer of a plan, contact Clyde at <a href=\"mailto:protection@hiclyde.com\">protection@hiclyde.com<\/a>.\n                                    <\/p>"
+          }
+        },
+        "af220b59-2f27-4134-bd5b-faf721fabb2f": {
+          "type": "faq",
+          "settings": {
+            "title": "Does this Plan provide coverage for theft or lost items?",
+            "caption": "<p>\n                                        No, this Plan <em>does not cover<\/em> for loss or theft. \n                                    <\/p>"
+          }
+        },
+        "3e26bfda-a624-4a35-b0d5-f4ffa4835902": {
+          "type": "faq",
+          "settings": {
+            "title": "Can the Clyde Protection Plan be canceled?",
+            "caption": "<p>\n                                        Yes, plans may be canceled. Reimbursement will be prorated based on time remaining on the contract and reduced by value of any claims previously covered.  A full refund is available if the cancellation \n                                        is made within 30 days of purchase. <br><br>\n                                        Please contact <a href=\"mailto:support@gca.areo\">support@gca.areo<\/a> to cancel your Clyde contract.\n                                    <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "plan",
+        "6f86b656-315b-4933-b8d9-f4a8df3e18e9",
+        "492674e7-1363-4d4b-8bcc-799fa29f2200",
+        "d314f511-25a2-456a-ad56-956d2f7ca41b",
+        "ce6889fd-3b2e-4f93-9705-c4270f90d83c",
+        "5f64215a-5556-4327-9a0c-1fb8d59836c6",
+        "e159288b-49a4-4439-8ad8-e24a571a9c7e",
+        "af220b59-2f27-4134-bd5b-faf721fabb2f",
+        "3e26bfda-a624-4a35-b0d5-f4ffa4835902"
+      ],
+      "settings": {
+        "ratina_image": "shopify:\/\/shop_images\/mustang-p51_c854c545-dcf6-412d-b6ae-b556a72d1685.jpg",
+        "image": "shopify:\/\/shop_images\/mustang-p51_c854c545-dcf6-412d-b6ae-b556a72d1685.jpg",
+        "enable_faq_1": true,
+        "faq_title_1": "Purchase A Protection Plan",
+        "enable_faq_2": true,
+        "faq_title_2": "Claims",
+        "enable_faq_3": true,
+        "faq_title_3": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "template_warranty_faqs"
+  ]
+}

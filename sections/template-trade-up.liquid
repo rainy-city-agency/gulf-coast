@@ -1,0 +1,225 @@
+<section class="section-content pt-0">
+    {% if section.settings.image != blank %}
+    <div class="hero-image small">
+            <img
+            data-sizes="auto"
+            src="{{ section.settings.image | img_url: 'small'}}"
+            data-srcset="
+                {% if section.settings.image_mobile != blank %}
+                    {{ section.settings.image_mobile | img_url: '768x' }} 567w,
+                {% endif%}
+                {{ section.settings.image | img_url: '992x' }} 768w,
+                {{ section.settings.image | img_url: '1200x' }} 992w,
+                {{ section.settings.image | img_url: '1920x' }} 1200w,
+                {{ section.settings.image | img_url: '2560x' }} 1920w{% if section.settings.ratina_image != blank %},
+                {{ section.settings.ratina_image | img_url: '3840x' }} 1921w,
+                {{ section.settings.ratina_image | img_url: '5120x' }} 2560w{% endif%}
+                "
+            class="lazyload img-fluid" alt="{{ page.title | escape }}" />
+    </div>
+    {% endif %}
+    <div class="container">
+        <div class="col-md-10 col-12 mx-auto">
+            {% if section.settings.heading != blank %}
+            <h1 class="text-uppercase font-weight-bold text-center text-danger letter-spacing-2 mb-7 pt-md-14 pt-8">{{ section.settings.heading }}</h1>
+            {% endif %}
+            {% if section.settings.content != blank %}
+            <p class="mb-3">{{ section.settings.content }}</p>
+            {% endif %}
+            <h5 class="mt-4 mb-2">Trade-up Process</h5>
+            {% if section.settings.step1 != blank or section.settings.step2 != blank or section.settings.step3 != blank %}
+            <ul class="trade-up-steps list-unstyled">
+                {% if section.settings.step1 != blank %}
+                <li class="py-1"><span class="font-weight-bold">Step 1.</span> {{ section.settings.step1 }}</li>
+                {% endif %}
+                {% if section.settings.step2 != blank %}
+                <li class="py-1"><span class="font-weight-bold">Step 2.</span> {{ section.settings.step2 }}</li>
+                {% endif %}
+                {% if section.settings.step3 != blank %}
+                <li class="py-1"><span class="font-weight-bold">Step 3.</span> {{ section.settings.step3 }}</li>
+                {% endif %}
+            </ul>
+            {% endif %}
+            <h5 class="mt-4 mb-2">If Sending the Trade-in Headset First</h5>
+            {% if section.settings.content2 != blank %}
+            <p class="mb-3">
+                {{ section.settings.content2 }}
+            </p>
+            {% endif %}
+            <div class="text-center text-md-left">
+                <h5 class="mt-4 mb-2">The Following Headsets are Eligible for Trade-In</h5>
+                {% for block in section.blocks %}
+                <div class="row mb-6">
+                    <div class="col-md-9 col-12">
+                        {% if block.settings.title != blank %}
+                        <p class="mb-3">
+                            <span style="font-weight: bold; text-decoration: underline;">{{ block.settings.title }}</span>
+                        </p>
+                        {% endif %}
+                        {% if block.settings.specification1 != blank and block.settings.price1 != blank %}
+                        <div class="row px-lg-5 font-weight-bold mb-3 mb-md-0">
+                            <div class="col-xl-7 col-lg-8 col-md-10 col-12">
+                                {{ block.settings.specification1 }}
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-2 col-12">
+                                {{ block.settings.price1 }}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.specification2 != blank and block.settings.price2 != blank %}
+                        <div class="row px-lg-5 font-weight-bold mb-3 mb-md-0">
+                            <div class="col-xl-7 col-lg-8 col-md-10 col-12">
+                                {{ block.settings.specification2 }}
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-2 col-12">
+                                {{ block.settings.price2 }}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.specification3 != blank and block.settings.price3 != blank %}
+                        <div class="row px-lg-5 font-weight-bold mb-3 mb-md-0">
+                            <div class="col-xl-7 col-lg-8 col-md-10 col-12">
+                                {{ block.settings.specification3 }}
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-2 col-12">
+                                {{ block.settings.price3 }}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.note != blank %}
+                        <p class="">
+                            {{ block.settings.note }}
+                        </p>
+                        {% endif %}
+                    </div>
+                    {% if block.settings.image != blank %}
+                    <div class="col-2 d-none d-md-block ml-auto">
+                        <img class="img-fluid" src="{{ block.settings.image | img_url: '160x' }}"
+                            alt="Headset img">
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Page Trade up",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "ratina_image",
+            "label": "Select Image for Large Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image for Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Select Image for Mobile"
+        },
+        {
+            "type": "header",
+            "content": "Page Content"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+        },
+        {
+            "type": "header",
+            "content": "Trade up process steps"
+        },
+        {
+            "type": "textarea",
+            "id": "step1",
+            "label": "Step 1"
+        },
+        {
+            "type": "textarea",
+            "id": "step2",
+            "label": "Step 2"
+        },
+        {
+            "type": "textarea",
+            "id": "step3",
+            "label": "Step 3"
+        },
+        {
+            "type": "textarea",
+            "id": "content2",
+            "label": "Content 2"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "headsets",
+            "name": "Headset",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "textarea",
+                    "id": "specification1",
+                    "label": "Specification 1"
+                },
+                {
+                    "type": "text",
+                    "id": "price1",
+                    "label": "Price 1"
+                },
+                {
+                    "type": "textarea",
+                    "id": "specification2",
+                    "label": "Specification 2"
+                },
+                {
+                    "type": "text",
+                    "id": "price2",
+                    "label": "Price 2"
+                },
+                {
+                    "type": "textarea",
+                    "id": "specification3",
+                    "label": "Specification 3"
+                },
+                {
+                    "type": "text",
+                    "id": "price3",
+                    "label": "Price 3"
+                },
+                {
+                    "type": "textarea",
+                    "id": "note",
+                    "label": "Note"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

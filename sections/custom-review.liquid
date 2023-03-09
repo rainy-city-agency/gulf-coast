@@ -1,0 +1,152 @@
+<!-- Custom Review Section Starts -->
+<section class="custom-review section-content">
+    <div class="row w-100 m-0">
+        <div class="col-xl-3 col-md-1 col-2">
+            <div class="review-animation d-xl-none d-block"><p class="mb-0"><span></span></p> <img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/Plane.svg?v=1646299224" alt=""></div>
+            <div class="square-border d-xl-block d-none" id="square-border">
+                <!-- <p class="w-100"><span class="d-inline-block"></span></p> -->
+
+                <img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/Plane.svg?v=1646299224" class="animation-mains PlaneAnimation" alt="">
+            </div>
+        </div>
+        <div class="col-xl-9 col-md-11 col-10 review-sec pl-0" style="background-color: #F5F5F5;" data-flickity='{ "contain": true, "prevNextButtons":true, "pageDots": false }'>
+            {% for block in section.blocks %}
+                <div class="row w-100 px-5" >
+                    <div class="col-md-4">
+                        <div class="review-title">
+                            <h2 class="mb-md-4">Reviews</h2>
+                            <div class="rating-image">
+                                <ul class="list-unstyled mb-3 d-flex">
+                                    {% assign StarNumbers = block.settings.total_star %}
+                                    {% for stars in (1 .. StarNumbers)%}
+                                            <li><a href="#"><img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/Icon_ionic-ios-star.svg?v=1644000511" alt=""></a></li>                            
+                                    {% endfor %}
+                                    {% assign StarNumbers1 = StarNumbers | plus: 1 %}
+                                    {% for star in ( StarNumbers1 ..5) %}
+                                        <li><a href="#"><img src="https://cdn.shopify.com/s/files/1/0541/8313/3361/files/svgexport-10.svg?v=1648625281" alt=""></a></li>                            
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <p class="mb-lg-7">“{{block.settings.heading}}”</p>
+                            <h5 class="text-right letter-spacing-1 font-weight-medium mb-lg-9">{{block.settings.name_place}}</h5>
+                            <h5 class=" text-uppercase letter-spacing-1 font-weight-bold"><a href="{{block.settings.readmoreUrl}}" class=" text-primary">read more reviews</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-md-8 pr-0">
+                        <div class="w-100 row" data-flickity='{ "contain": true, "cellAlign": "left", "prevNextButtons":false, "pageDots": false }'>
+                            {% for i in (1 .. 5) %}
+                                {%- assign image_id = 'image_id' | append: i-%}
+                                {% assign image = block.settings[image_id] %}
+                                {% if image != blank%}
+                                    <div class="col-lg-4 col-md-6 col-10 pr-0 py-3 py-md-0">
+                                        <div class="review-image">
+                                            <img class="img-fluid" src="{{ image | img_url: 'master'}}" alt="image_id">
+                                        </div>
+                                    </div>
+                                {%endif%}
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            {%endfor%}
+        </div>
+        <!-- <div class="col-md-9 ml-auto pt-4 pb-3" style="background-color: #F5F5F5;" >
+            <h5 class="pl-3 text-primary text-uppercase letter-spacing-1 font-weight-bold">read more reviews</h5>
+        </div> -->
+    </div>
+</section>
+
+<!-- Custom Review Section ends -->
+{% schema %}
+{
+"name": "Custom Review",
+"settings": [
+
+],
+"blocks": [
+    {
+    "type": "Reviews",
+    "name": "Review Slides",
+    "settings": [
+    {
+        "type": "select",
+        "id": "total_star",
+        "label": "review Stars",
+        "options": [{
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          }
+        ],
+        "default": "5"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_id1",
+        "label": "Select 1st Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_id2",
+        "label": "Select 2nd Image "
+      },
+      {
+        "type": "image_picker",
+        "id": "image_id3",
+        "label": "Select 3rd Image "
+      },
+      {
+        "type": "image_picker",
+        "id": "image_id4",
+        "label": "Select 4th Image "
+      },
+      {
+        "type": "image_picker",
+        "id": "image_id5",
+        "label": "Select 5th Image "
+      },
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "name_place",
+        "label": "Name & place"
+      },
+      {
+        "type": "url",
+        "id": "readmoreUrl",
+        "label": "Add URL on read more"
+      }
+    ]
+  }],
+"presets": [
+{
+    "name": "Custom Review",
+    "category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}

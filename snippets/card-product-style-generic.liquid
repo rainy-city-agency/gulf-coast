@@ -1,0 +1,63 @@
+<div class="card card-product card-product-style-1 text-left border-0 shadow-none" v-match-heights="{el: ['.card-body']}">
+  <span class="badges">
+    {% if product.compare_at_price > product.price %}
+    <span class="badge badge-right badge-danger px-3 py-2 text-uppercase" >
+      {{ 'products.product.on_sale' | t | escape }}
+    </span>
+    {% elsif product.tags contains 'call_price' %} 
+    <span class="badge badge-right badge-danger" >
+      Call For Pricing
+    </span>
+    {% elsif product.tags contains 'special_price' %}
+    <span class="badge badge-right badge-danger" >
+      Special Price
+    </span>
+    {% endif %}
+  </span>
+  <span class="text-right">
+    <i class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}" data-variant-id="{{product.variants[0].id}}" data-product-url="{{ shop.url }}{{ product.url }}" data-with-epi="true" ></i>
+  </span>
+  <div class="card-img text-center {% if product.featured_image.size == 0 %}bg-gray-300{% endif %}">
+    {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+    {% if product.featured_image.size > 0 %}
+        <a href="{{ product.url | within: collection }}">
+          <div class="category-image position-relative padding-top-88">
+              <img
+                data-sizes="auto"
+                src="{{ product.featured_image | img_url: 'pico' }}"
+                data-srcset="
+                  {{ product.featured_image |  img_url: '400x', scale: 2 }} 320w
+                  "
+                class="lazyload position-absolute img-wrapper top-left-50 img-object-contain"
+                alt="{{ product.title | escape }}"/>
+          </div>
+        </a>
+    {% else %}
+        {{ 'product-' | append: current | placeholder_svg_tag: 'img-fluid' }}
+    {% endif %}
+  </div>
+  <div class="card-body px-2 position-relative pb-0">
+    <div class="row">
+      <div class="col-12">
+        {%- if product.vendor != '' -%}
+        <h5 class="vender text-uppercase mb-2 letter-spacing-normal">{{ product.vendor | link_to_vendor }}</h5>
+        {%- endif -%}
+          <a class="card-title d-block" href="{{ product.url | within: collection }}">{{ product.title }}</a>
+
+      </div>
+      {% unless product.tags contains 'call_price' %} 
+      <div class="col-12">
+        <span class="price m-0 p-0 h6 text-primary font-weight-bold f-open money" data-product-id="{{ product.id }}">
+          {% if product.tags contains 'special_price' %}
+            {% unless product.compare_at_price == product.price %}
+              {{ product.compare_at_price | money }}
+            {% endunless %}
+          {% else %}
+            {{ product.price | money }}
+          {% endif %}
+        </span>
+      </div>
+      {% endunless %}
+    </div>
+  </div>
+</div>

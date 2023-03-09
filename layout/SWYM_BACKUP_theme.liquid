@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="{{ shop.locale }}">
+<head>
+  {% include 'style-tags', layout: 'theme' %}
+  <link rel="stylesheet" href="{{ 'twentytwenty.css' | asset_url }}">
+
+  {% comment %} Preconnet {% endcomment %}
+  <link rel="preconnect" href="https://cdn.shopify.com" />
+  <link rel="preconnect" href="https://v.shopify.com" />
+  <link rel="preconnect" href="https://cdn.shopifycloud.com" />
+  <link rel="preconnect" href="https://ajax.googleapis.com" />
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+  <link rel="preconnect" href="https://shopifyorderlimits.s3.amazonaws.com" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="">
+  {% include 'social-meta-tags' %}
+
+  {% if settings.enable_meta_noindex %}
+    <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  {% if settings.favicon_image != '' %}
+    <link rel="shortcut icon" href="{{ settings.favicon_image | img_url: '32x32' }}" type="image/png">
+  {% endif %}
+
+  {% capture seo_title %}
+    {{ page_title }}
+    {% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} - {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}
+    {% if current_page != 1 %} - {{ 'general.meta.page' | t: page: current_page }}{% endif %}
+    {% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}
+  {% endcapture %}
+
+  <title>{{ seo_title }}</title>
+
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% else %}
+    <meta name="description" content="{{ seo_title }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+  <script src="https://kit.fontawesome.com/5f87502aca.js" crossorigin="anonymous"></script>
+
+  {% if settings.enable_product_reviews %}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/combine/npm/filepond-plugin-image-preview@4.2.1/dist/filepond-plugin-image-preview.min.css,npm/filepond@4.4.11/dist/filepond.min.css">
+  {% endif %}
+
+  {% include 'legacy-support-scripts' %}
+  {% include 'fonts-loader' %}
+
+  <!--  content start  -->
+  {%- capture CFH -%}{{content_for_header }}
+{{ 'bold-brain-widget.css' | asset_url | stylesheet_tag }}
+{%- endcapture -%}
+  {%- assign asyncloadFunction  =  CFH | split: 'function asyncLoad()' -%}
+  {%- assign asyncload = asyncloadFunction[1] | split: 'var urls = [' -%}
+  {%- assign urlData = asyncload[1] | split: '];' -%}
+  {{ CFH | replace: urlData[0], '' }}
+  <!--  content end  -->
+  {%- render 'bold-pr' -%}
+  {%- render 'bold-common' -%}
+
+  {%- if settings.enable_google_translator -%}
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+  {%- endif -%}
+
+  {%- if template.name == 'collection' or template.name == 'search' -%}
+  <script src="//www.searchanise.com/widgets/shopify/init.js?a=2H7q6x3o2h"></script>
+  {%- endif -%}
+
+  {% if page.handle == 'avionics-installations' %}
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  {% endif %}
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src=“https://www.googletagmanager.com/gtag/js?id=UA-6942649-1”></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-6942649-1');
+  </script>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5LG7WMT');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    .snize-ac-results .snize-thumbnail img[src^="data:image"], .snize-search-results .snize-thumbnail img[src^="data:image"]{
+      content: url('https://cdn.shopify.com/s/files/1/0541/8313/3361/files/No_image.jpg?v=1618213695') !important;
+    }
+  </style>
+  
+</head>
+
+{% capture body %}
+<body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}" {% if template.name == 'index' %}data-template="index"{% elsif template.name == 'page' %}data-template="page"{% endif %}>
+  <div id="app" :class="{'loading': isLoading}" v-cloak>
+    <div class="overlay site-overlay" :class="{'show': isOverlayVisible}" data-site-overlay></div>
+    <vue-snotify></vue-snotify>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LG7WMT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    {% section 'header' %}
+    {{ content_for_layout }}
+    {% section 'footer' %}
+
+    {% section 'mobile-navigation' %}
+    {% section 'newsletter-popup' %}
+    {% include 'cart-drawer' %}
+    {% section 'search-layer' %}
+  </div>
+
+  {% comment %}
+  placeholder to dynamically append embedded scripts outside of Vue.js main app wrapper div
+  so as to avoid Vue.js template compiling errors.
+  {% endcomment %}
+  <div data-app-scripts></div>
+
+  {% if template == 'cart' %}
+    {{ '/services/javascripts/countries.js' | script_tag }}
+  {% endif %}
+
+  {% comment %} If you store has customer accounts disabled, you can remove the following JS file {% endcomment %}
+  {% if template contains 'customers'  %}
+    {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+  {% endif %}
+
+  {% include 'theme-global-vars' %}
+
+  {% include 'script-tags', layout: 'theme' %}
+
+  {% comment %} Other JSON data {% endcomment %}
+  {%- if template == 'product' -%}
+  {% include 'json-swatches-data-colorlist' %}
+  {%- endif -%}
+  {% include 'json-structured-data' %}
+
+  {% comment %} {% include 'json-tracking-data' %} {% endcomment %}
+
+  <script defer>
+    window.onload = function() {
+      let urlData = '{{urlData[0]}}';
+      // urlData = urlData.replace('"https:\/\/d3hw6dc1ow8pp2.cloudfront.net\/reviewsWidget.min.js?shop=ctainc.myshopify.com",','');
+      urlData = urlData.split(',');
+      for (i = 0; i < urlData.length; i++) {
+        // var linkUrl = urlData[i].replaceAll('"','');
+        var linkUrl = urlData[i].replace(/"/g,'');
+        var s = document.createElement( 'script' );
+        s.setAttribute( 'src', linkUrl );
+        s.defer = true;
+        document.head.appendChild(s);
+      }
+    };
+  </script>
+
+  <!---------Shopper Approved------->
+<script type="text/javascript">
+  function saLoadScript(src) { var js = window.document.createElement('script'); 
+  js.src = src; js.type = 'text/javascript'; document.getElementsByTagName("head")[0].appendChild(js); } 
+  saLoadScript('//www.shopperapproved.com/widgets/group2.0/30192.js'); 
+</script>
+<style>
+    .group-stars .ind_cnt {
+    font-size: 12px;
+    display: initial;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 10px;
+}
+    #merchant_page #sa_sort {
+    display: inline;
+    width: inherit;
+    height: 32px;
+    font-size: 12px;
+}
+    #product_page #sa_sort {
+    display: inline;
+    width: inherit;
+    height: 16px;
+    font-size: 13px;
+}
+</style>
+<!-----------End Shopper Approved------>
+{% comment %}
+{% if template == 'product' %}
+<script type="text/javascript">
+  var sa_product = '{{ product.handle }}'; function saLoadScript(src) 
+  { var js = window.document.createElement("script"); js.src = src; js.type = "text/javascript"; 
+  document.getElementsByTagName("head")[0].appendChild(js); } 
+  saLoadScript('//www.shopperapproved.com/product/30192/'+sa_product+'.js');
+
+  var sa_products_count = 10; var sa_date_format = 'F j, Y'; var sa_product = '{{ product.handle }}'; 
+  function saLoadScript(src) { var js = window.document.createElement("script"); js.src = src; 
+  js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js); } 
+  saLoadScript('//www.shopperapproved.com/product/30192/'+sa_product+'.js'); 
+</script>
+{% endif %}
+{% endcomment %}
+
+<script type="text/javascript">(function() { var js = window.document.createElement("script"); 
+  js.src = '//www.shopperapproved.com/seals/certificate.js'; js.type = "text/javascript"; 
+  document.getElementsByTagName("head")[0].appendChild(js); })();</script>    
+  
+  {% unless template contains 'product' or handle contains 'store-reviews' %}
+  <script>
+    (function(w,d,s,l,i) { w[l]=w[l]||[];w[l].push( { 'gtm.start':new Date().getTime(),event:'gtm.js' } );
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='//www.shopperapproved.com/schema/'+i+'.js';
+    f.parentNode.insertBefore(j,f);} )(window,document,'script','saData','30192-sSFXP');
+  </script>
+  {% endunless %}
+
+  <script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+  <script type="text/javascript">
+    KlaviyoSubscribe.attachToForms('#email_signup', {
+    hide_form_on_success: true
+    });
+  </script>
+
+  <script type="text/javascript" async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=V6a7Bg"></script>
+  {% include 'swymSnippet' %}
+</body>
+{% endcapture %}
+
+{{body}}
+
+</html>

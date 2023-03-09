@@ -1,0 +1,23 @@
+{% assign article_image = article.image.src | img_url %}
+
+<div class="card bg-white no-gutters flex-column flex-md-row border-0 shadow-none rounded-0">
+  <div class="col-lg-3 col-md-4 col-sm-5 bg-img lazyload" data-bg="{{ article.image.src | img_url: '1200x' }}" style="background-image:url({{ article.image.src | img_url: 'pico' }})">
+
+    {% unless article_image contains 'no-image' %}
+      <div class="card-img d-block d-md-none rounded-0 mx-auto">
+        <img
+          src="{{ article.image.src | img_url: 'pico'}}"
+          data-src="{{ article.image.src | img_url: '800x500', crop: 'center' }}"
+          class="img-fluid lazyload"
+          alt="{{ article.image.alt | escape }}" />
+      </div>
+    {% endunless %}
+    </div>
+
+  <div class="col-lg-9 col-md-8 col-sm-7 p-4 d-flex align-content-around flex-wrap text-md-left text-center">
+    <div class="card-body py-0">
+      <h5 class="mb-2"><a class="primary-link f-open text-initial font-weight-bold letter-spacing-normal h5 mb-0" href="{{ article.url }}">{{ article.title }}</a></h5>
+        <time class="font-size-base text-gray-800">{{ article.published_at | date: "%A, %B %d, %Y" }}</time>
+    </div>
+  </div>
+</div>

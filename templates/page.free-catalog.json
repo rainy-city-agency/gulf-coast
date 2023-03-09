@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "free_catalog": {
+      "type": "free-catalog",
+      "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+            "enable": true,
+            "choose_img": "shopify:\/\/shop_images\/daria-sukhorukova-6343-unsplash_large_c4afbe0d-b6b1-422d-856f-d340e14e72c3.jpg",
+            "title": "Interactive Catalog",
+            "caption": "Check out the new online catalog. Interactive pages, downloadable pdf versions, keyword search, and more!",
+            "choose_url": "shopify:\/\/pages\/catalog-2021"
+          }
+        },
+        "f12f390e-750f-4af6-a772-f67e6e6733d6": {
+          "type": "content",
+          "settings": {
+            "enable": true,
+            "choose_img": "shopify:\/\/shop_images\/skycraft-studios-1340768-unsplash_large_728f1d77-7ee3-4462-bc6f-0c9ac0b7299e.jpg",
+            "title": "Download PDF",
+            "caption": "Download a PDF version of our catalog for your convenience. Click here to download now!",
+            "choose_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0541\/8313\/3361\/files\/3878-2022-GCA-Catalog-Digital.pdf?v=1651605318"
+          }
+        }
+      },
+      "block_order": [
+        "content",
+        "f12f390e-750f-4af6-a772-f67e6e6733d6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/essky-plane_1.jpg",
+        "customer_enable": true,
+        "customer_heading": "CONTACT US",
+        "customer_caption": "Have questions or concerns?",
+        "customer_url": "shopify:\/\/pages\/contact",
+        "feedback_enable": true,
+        "feedback_heading": "Feedback",
+        "feedback_caption": "Give us a review of our services",
+        "feedback_url": "shopify:\/\/pages\/feedback",
+        "enable_form": true,
+        "catalog_heading": "CATALOG BY  MAIL",
+        "catalog_description": "If you would like a FREE copy of our Product Catalog sent to you by U.S. Mail, please fill out the form below. If your postal address is outside the U.S., please click the link above for our online interactive catalog."
+      }
+    }
+  },
+  "order": [
+    "free_catalog"
+  ]
+}

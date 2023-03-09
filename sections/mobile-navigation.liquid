@@ -1,0 +1,159 @@
+{% assign main_menu = section.settings.main_menu_linklist %}
+{%- assign megamenu = section.settings.mega_menu | handleize -%}
+{% assign footermenu = section.settings.footer_mob %}
+<!-- Add "opened-drawer" class in mobile-nav-drawer class -->
+<!-- For Inside submenu add "open" class in the dropdown-menu and dropdown class -->
+<div data-section-id="{{ section.id }}" class="mobile-nav-drawer d-flex flex-column" :class="{'opened-drawer shadow-lg': isMobileNavDrawerOpen}" v-touch:swipe.left="_toggleMobileNavDrawer">
+
+  <div class="drawer-header d-flex justify-content-between align-items-center px-4 mx-1 pt-5 pb-4">
+    {% assign logo = section.settings.main_logo | img_url: '200x' %}
+    {% if section.settings.main_logo_svg != '' %}
+    <a href="/" class="navbar-brand" name="{{ shop.name | escape }}" title="{{ shop.name | escape }}"
+      aria-label="{{ shop.name | escape }}">
+      <img src="{{ section.settings.main_logo_svg }}" alt="{{ shop.name | escape }}" class="img-fluid"
+        style="max-width: {{ section.settings.logo_max_width }}px">
+    </a>
+    {% elsif section.settings.mobile_nav_show_logo and logo != blank %}
+    <a href="/" class="navbar-brand" name="{{ shop.name | escape }}" title="{{ shop.name | escape }}"
+      aria-label="{{ shop.name | escape }}">
+      <img src="{{ logo }}" alt="{{ shop.name | escape }}" class="img-fluid"
+        style="max-width: {{ section.settings.logo_max_width }}px">
+    </a>
+    {% endif %}
+    <a href="#" class="btn-close ml-auto float-right" @click.prevent="_toggleMobileNavDrawer" name="close" title="close"
+      rel="nofollow" aria-label="Close">
+      <i class="icon ion-md-close"></i>
+    </a>
+  </div>
+
+  <div class="drawer-body">  
+    {% if main_menu %}
+      <nav class="navbar-mobile navbar-mobile-slide">
+        <ul class="navbar-nav">
+          {% for link in linklists[main_menu].links %}
+            {% assign child_list_handle = link.title | handleize %}
+            {% if menus[child_list_handle].links != blank %}
+              <li class="nav-item dropdown second-level" data-menuListing>
+                <a data-menuoption class="3 nav-link submenu-toggle d-flex align-items-center {{ link.handle }}" href="#" role="button" data-toggle="open" data-target="#submenu-{{ child_list_handle }}" aria-expanded="false" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                  <span class="nav-link-title">{{ link.title }}</span> <i class="icon-angle-right text-center font-size-lg"></i>
+                </a>
+                <div class="pt-2 submenu dropdown-menu toggle-content" id="submenu-{{ child_list_handle }}"  data-type="content"  data-submenuDrawer>
+                  <a class="nav-link d-flex align-items-center font-weight-bold text-danger close-submenu fw-bold text-uppercase py-3 {{ link.title }}" data-menuBack
+                    tabindex="0" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                    <i class="icon-angle-left me-2 justify-content-start"></i><span class="menu-title">{{ link.title }}</span>
+                  </a>
+                {% for childlink in menus[child_list_handle].links %}
+                  {% assign grand_child_list_handle = childlink.title | handleize %}
+                  <ul class="list-unstyled">
+                    <li data-menulisting class="nav-item dropdown third-level">
+                      <a data-menuoption class="2 nav-link d-flex align-items-cente {{ childlink.handle }} d-flex align-items-center justify-content-between" href="{{ childlink.url }}"  name="{{ childlink.title }}" title="{{ childlink.title }}" aria-label="{{ childlink.title }}"
+                    {% if menus[grand_child_list_handle].links != blank %}role="button" data-toggle="collapse" data-target="#submenu-{{ grand_child_list_handle }}" aria-expanded="false" name="{{ childlink.title }}" title="{{ childlink.title }}"{% endif%}>
+                      {{ childlink.title }}
+                      {% if menus[grand_child_list_handle].links != blank %} <i class="icon-angle-right text-center font-size-lg"></i>{% endif %}
+                    </a>  
+                    {% if menus[grand_child_list_handle].links != blank %}
+                      <div class="pt-2 submenu dropdown-menu toggle-content" id="submenu-{{ grand_child_list_handle }}" data-submenuDrawer>
+                        <a class="nav-link d-flex align-items-cente font-weight-bold text-danger close-submenu fw-bold text-uppercase py-3 {{ childlink.title }}" data-menuBack
+                          tabindex="0" name="{{ childlink.title }}" title="{{ childlink.title }}" aria-label="{{ childlink.title }}">
+                          <i class="icon-angle-left me-2 justify-content-start"></i><span class="menu-title">{{ childlink.title }}</span>
+                        </a>
+                        {% for grandchildlink in menus[grand_child_list_handle].links %}                         
+                          <a class="nav-link d-flex align-items-center {{ grandchildlink.handle }}" href="{{ grandchildlink.url }}" name="{{ grandchildlink.title }}" title="{{ grandchildlink.title }}" aria-label="{{ grandchildlink.title }}">
+                            {{ grandchildlink.title }}
+                          </a>                         
+                        {% endfor %}
+                        </div>                      
+                    {% endif %}
+                      </li>
+                    </ul>
+                {% endfor %}                  
+                </div>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="{{ link.url }}" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    <nav class="navbar-mobile navbar-mobile-secondary">
+      <ul class="navbar-nav">
+      </ul>
+    </nav>
+  </div>
+{% if footermenu %}
+  <div class="drawer-footer">
+    <ul class="list-unstyled">
+    {% for link in linklists[footermenu].links %}
+      <li class="my-3"><a href="{{ link.url }}"  name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">{{ link.title }}</a></li>
+    {%endfor%}
+    </ul>
+  </div>
+{% endif %}
+</div>
+
+{% schema %}
+{
+"name": "Mobile Navigation",
+"settings": [
+{
+"type": "header",
+"content": "Logo"
+},
+{
+"type": "checkbox",
+"id": "mobile_nav_show_logo",
+"label": "Show Logo?",
+"default": true
+},
+{
+"type": "image_picker",
+"id": "main_logo",
+"label": "Select Image"
+},
+{
+"type": "text",
+"id": "main_logo_svg",
+"label": "Select main logo SVG"
+},
+{
+"type": "range",
+"id": "logo_max_width",
+"min": 5,
+"max": 300,
+"step": 5,
+"unit": "px",
+"label": "Logo width",
+"default": 180
+},
+{
+"type": "header",
+"content": "Menus"
+},
+{
+"type": "link_list",
+"id": "main_menu_linklist",
+"label": "Select Main Menu",
+"default": "main-menu"
+},
+{
+"type": "link_list",
+"id": "footer_mob",
+"label": "Select footer menu"
+}
+]
+}
+{% endschema %}
+
+
+
+
+
+{% javascript %}
+
+{% endjavascript %}
