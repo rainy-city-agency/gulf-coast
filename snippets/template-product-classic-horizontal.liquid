@@ -16,9 +16,9 @@
 
               "adaptiveHeight": true,
 
-              "contain": true,
+            
 
-              "groupCells": 1,
+             
 
               "prevNextButtons": true,
 
@@ -30,12 +30,12 @@
 
               {% for image in product.images %}
 
-              <a href="#" class="carousel-cell" role="treeitem">
+              <div index={{ forloop.index }} class="carousel-cell thumbimg" role="treeitem" data-img="{{ image.src | img_url: 'large' }}">
 
                 <img src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}"
-                  class="img-fluid img-wrapper img-object-contain">
+                  class="img-fluid img-wrapper img-object-contain thumbimgs">
 
-              </a>
+              </div>
 
 
               {% endfor %}
@@ -45,23 +45,23 @@
 
           <div class="col-lg-10">
             <div class="carousel carousel-main col-9" role="tree" data-carousel-main data-flickity='{
-
+              
               "adaptiveHeight": true,
   
-              "contain": true,
+             
   
               "prevNextButtons": true,
   
               "pageDots": false,
 
-              "groupCells": 1,
+              
               "lazyLoad": true
   
               }'>
 
               {%- for image in product.images -%}
 
-              <div class="product-carousel-cell equal-height w-100 d-flex align-items-center justify-content-center">
+              <div index={{ forloop.index }} class="product-carousel-cell equal-height w-100 d-flex align-items-center justify-content-center">
 
                 <img class="carousel-cell img-fluid mx-auto lazyload" role="treeitem"
                   data-flickity-lazyload-src="{{ image.src | img_url: 'large' }}" data-flickity-lazyload-srcset="
@@ -452,6 +452,38 @@ $(document).ready(function(){
 
   $('.carousel-nav .flickity-button.previous').on('click',function(){
       $('.carousel-main .flickity-button.previous').click();
-  })
+  });
+ setTimeout(function() {
+    var newcode = $('.form-control.form-control-sm').val();
+    var flkty =  $('.carousel-main').data('flickity');
+   
+  var valueSelected = newcode;
+  var slectnew =valueSelected.replace("'","");
+  var image = $(".variantselect option[data-var='"+slectnew+"']").attr('data-varimg');
+  $(".thumbimg").each(function() {
+  var galery_image = $(this).attr("data-img");
+      if(image == galery_image){
+         var getindex = parseInt($(this).attr("index"))-1;
+        flkty.selectCell(getindex);
+        return false;
+      }
+    });
+ },1000);
+  $('.form-control.form-control-sm').change(function () {
+     var flkty =  $('.carousel-main').data('flickity');
+   
+  var valueSelected = this.value;
+  var slectnew =valueSelected.replace("'","");
+  var image = $(".variantselect option[data-var='"+slectnew+"']").attr('data-varimg');
+  $(".thumbimg").each(function() {
+  var galery_image = $(this).attr("data-img");
+      if(image == galery_image){
+         var getindex = parseInt($(this).attr("index"))-1;
+        flkty.selectCell(getindex);
+        return false;
+      }
+    });
+  });
 })
+
 </script>

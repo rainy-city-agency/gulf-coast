@@ -101,10 +101,12 @@
   {% comment %} DO NOT REMOVE THIS {% endcomment %}
   <div class="row" style="display: none !important;">
     <div class="col">
-        <select name="id" data-productid="{{ product.id }}">
+        <select name="id" data-productid="{{ product.id }}" class="variantselect">
           {% for variant in product.variants %}
               <option
+                data-varimg="{{ variant.image.src | img_url: 'large' }}"
                 data-sku="{{ variant.sku }}"
+                data-var="{{ variant.title | replace:"'","" }}"
                 value="{{ variant.id }}"
                 data-product-id="{{ product.id }}"
                 data-variant-id="{{ variant.id }}"
