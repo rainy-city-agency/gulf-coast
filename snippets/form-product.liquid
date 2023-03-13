@@ -12,7 +12,8 @@
 
   <div class="row">
     <div class="col-12 mb-2">
-      {% unless product.has_only_default_variant %}
+     <div style="{% if product.has_only_default_variant %}display:none;{% endif %}">
+      
         {% for option in product.options_with_values %}
           {% assign option_name = option.name | downcase %}
           <div class="selector-wrapper">
@@ -86,7 +87,7 @@
           </div>
         {% endfor %}
 
-      {% endunless %}
+     </div>
 
         <!-- Extend -- Add offer element -->
         <div id="extend-offer"></div>
@@ -104,6 +105,10 @@
         <select name="id" data-productid="{{ product.id }}" class="variantselect">
           {% for variant in product.variants %}
               <option
+                data-inventoryleft="{{ variant.inventory_quantity }}"
+                data-inventorypolicy="{{ variant.inventory_policy }}"
+                data-inv_manage="{{ variant.inventory_management }}"
+                data-var_available="{{ variant.available }}"
                 data-varimg="{{ variant.image.src | img_url: 'large' }}"
                 data-sku="{{ variant.sku }}"
                 data-var="{{ variant.title | replace:"'","" }}"

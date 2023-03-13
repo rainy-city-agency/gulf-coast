@@ -146,14 +146,20 @@
 
                 {% endif %}
 
-                {%- if product.metafields.content.short_desc != '' -%}
-
-                <span class="d-block mb-1">{{- product.metafields.content.short_desc -}}</span>
-
-                {%- endif -%}
-
-
-
+                {% comment %} Inventory tracking on product page {% endcomment %}
+              
+              <div id="variant-inventory">
+              {% if current_variant.available %}
+              {% if current_variant.inventory_management == "shopify" and current_variant.inventory_policy != "continue" %}
+              <h2><strong><span style="color: rgb(255, 0, 0);"><span style="font-size: 26px;" class="stock_data">{{ current_variant.inventory_quantity }} left In Stock</span></span></strong></h2>
+              {% else %}
+              <h2><strong><span style="color: rgb(255, 0, 0);"><span style="font-size: 26px;" class="stock_data">In Stock!</span></span></strong></h2>
+              {% endif %}
+              {% else %}
+              <h2><strong><span style="color: rgb(255, 0, 0);"><span style="font-size: 26px;" class="stock_data">Out Of Stock</span></span></strong></h2>
+              
+              {% endif %}
+            </div> 
                 <!-- Shopper Approved product star - snippets/template-product-classic-horizontal -->
 
 
@@ -460,6 +466,7 @@ $(document).ready(function(){
   var valueSelected = newcode;
   var slectnew =valueSelected.replace("'","");
   var image = $(".variantselect option[data-var='"+slectnew+"']").attr('data-varimg');
+ 
   $(".thumbimg").each(function() {
   var galery_image = $(this).attr("data-img");
       if(image == galery_image){
@@ -470,11 +477,29 @@ $(document).ready(function(){
     });
  },1000);
   $('.form-control.form-control-sm').change(function () {
-     var flkty =  $('.carousel-main').data('flickity');
-   
+  var flkty =  $('.carousel-main').data('flickity');
   var valueSelected = this.value;
   var slectnew =valueSelected.replace("'","");
   var image = $(".variantselect option[data-var='"+slectnew+"']").attr('data-varimg');
+  var datainventory = $(".variantselect option[data-var='"+slectnew+"']").attr('data-inventoryleft');
+  var inv_policy = $(".variantselect option[data-var='"+slectnew+"']").attr('data-inventorypolicy'); 
+  var inv_manage = $(".variantselect option[data-var='"+slectnew+"']").attr('data-inv_manage');
+  var var_available = $(".variantselect option[data-var='"+slectnew+"']").attr('data-var_available');
+  
+  console.log(var_available);
+  console.log(datainventory);
+  if(var_available == 'true'){
+    if(inv_manage =='shopify' && inv_policy !='continue'){
+      
+      $(".stock_data").html(datainventory+ " left In Stock");
+    }
+    else{
+      $(".stock_data").html("In Stock!");
+    }
+  }
+  else{
+    $(".stock_data").html("Out Of Stock");
+  }
   $(".thumbimg").each(function() {
   var galery_image = $(this).attr("data-img");
       if(image == galery_image){
